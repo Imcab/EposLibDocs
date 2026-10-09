@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&display=swap");
+
 /* EposLib - a classic technical manual: white paper, dark red ink, serif type,
    thin rules, square corners, no shadows. Light scheme only. */
 
@@ -9,6 +11,8 @@
   --epos-rule: #c9c2b8;
   --epos-paper: #ffffff;
   --epos-code-bg: #f4f2ee;
+  --epos-heading: #111111;
+  --epos-heading-font: "Archivo", "Helvetica Neue", Arial, sans-serif;
 }
 
 [data-md-color-scheme="default"] {
@@ -52,10 +56,20 @@ body {
 }
 .md-typeset h1,
 .md-typeset h2,
-.md-typeset h3 {
-  color: var(--epos-red);
+.md-typeset h3,
+.md-typeset h4 {
+  color: var(--epos-heading);
+  font-family: var(--epos-heading-font);
   font-weight: 700;
-  letter-spacing: 0;
+  letter-spacing: -0.01em;
+}
+.md-typeset h4 {
+  font-size: 0.9rem;
+}
+.md-header__topic,
+.md-tabs__link,
+.md-nav__title {
+  font-family: var(--epos-heading-font);
 }
 
 /* Title with a double rule under it, like a printed manual. */
@@ -64,6 +78,7 @@ body {
   margin-bottom: 0.4em;
   padding-bottom: 0.3em;
   border-bottom: 3px double var(--epos-red);
+  font-weight: 800;
 }
 .md-typeset h2 {
   margin-top: 2em;
@@ -147,4 +162,77 @@ body {
 .md-footer-meta__inner,
 .md-copyright {
   color: var(--epos-muted);
+}
+
+
+/* The "unofficial" banner. */
+.md-banner {
+  background: #1c1c1c;
+  color: #f2f2f2;
+  font-size: 0.68rem;
+}
+.md-banner strong {
+  color: #ffb3b3;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-right: 0.4em;
+}
+
+/* Figures: plots and diagrams on white, with a caption. */
+.md-typeset figure {
+  margin: 1.4em auto;
+}
+.md-typeset figure img {
+  border: 1px solid var(--epos-rule);
+  background: #ffffff;
+}
+.md-typeset figcaption {
+  font-size: 0.72rem;
+  color: var(--epos-muted);
+  font-style: italic;
+  max-width: 44rem;
+}
+
+/* Mermaid diagrams in the site's colors. */
+.md-typeset .mermaid {
+  --md-mermaid-font-family: var(--epos-heading-font);
+  --md-mermaid-edge-color: var(--epos-ink);
+  --md-mermaid-node-bg-color: #faf8f5;
+  --md-mermaid-node-fg-color: var(--epos-ink);
+  --md-mermaid-label-bg-color: #ffffff;
+  --md-mermaid-label-fg-color: var(--epos-ink);
+  text-align: center;
+}
+
+/* Math a touch larger than the body. */
+.md-typeset .arithmatex {
+  font-size: 1.05em;
+}
+
+/* API reference: signatures in a ruled box. */
+.md-typeset .api-signature {
+  border-left: 4px solid var(--epos-red);
+  background: var(--epos-code-bg);
+  padding: 0.4em 0.8em;
+}
+
+/* Every admonition type in the site's red, not Material's per-type colors. */
+.md-typeset .admonition,
+.md-typeset details {
+  border-color: var(--epos-rule) !important;
+  border-left-color: var(--epos-red) !important;
+}
+.md-typeset .admonition > .admonition-title,
+.md-typeset details > summary {
+  background-color: var(--epos-code-bg) !important;
+}
+.md-typeset .admonition > .admonition-title::before,
+.md-typeset details > summary::before,
+.md-typeset details > summary::after {
+  background-color: var(--epos-red) !important;
+}
+
+/* Logos sit on the page, without the figure frame. */
+.md-typeset img[alt="maxon"] {
+  border: none !important;
 }

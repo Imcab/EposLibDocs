@@ -39,7 +39,7 @@ PASS  profile_position
       back at 0 qc
 PASS  cyclic_velocity
         t=0.00s  target=     0  actual=     0 rpm
-        t=0.20s  target=   400  actual=   218 rpm
+        t=0.20s  target=   400  actual=   213 rpm
         t=0.40s  target=   800  actual=   619 rpm
         t=0.60s  target=  1000  actual=   978 rpm
         t=0.80s  target=  1000  actual=   999 rpm
@@ -51,9 +51,9 @@ PASS  cyclic_velocity
         t=2.00s  target=  1000  actual=   999 rpm
         t=2.20s  target=  1000  actual=   999 rpm
         t=2.40s  target=  1000  actual=   999 rpm
-        t=2.60s  target=   800  actual=   957 rpm
-        t=2.80s  target=   400  actual=   578 rpm
-        t=3.00s  target=     0  actual=   163 rpm
+        t=2.60s  target=   800  actual=   941 rpm
+        t=2.80s  target=   400  actual=   558 rpm
+        t=3.00s  target=     0  actual=   158 rpm
 PASS  cyclic_torque
       rated torque 0.4500 Nm, commanding 0.0500 Nm
         t=0.00s  torque=    0 per mille  velocity=     0 rpm
@@ -70,19 +70,19 @@ PASS  cyclic_position
         t=0.00s  target=   0.00 deg  actual=   0.00 deg
         t=0.25s  target=  14.15 deg  actual=  11.77 deg
         t=0.50s  target=  20.00 deg  actual=  19.52 deg
-        t=0.75s  target=  14.13 deg  actual=  16.88 deg
-        t=1.00s  target=  -0.01 deg  actual=   3.11 deg
-        t=1.25s  target= -14.16 deg  actual= -10.73 deg
-        t=1.50s  target= -20.00 deg  actual= -19.76 deg
-        t=1.75s  target= -14.13 deg  actual= -16.88 deg
-        t=2.00s  target=   0.01 deg  actual=  -4.35 deg
-        t=2.25s  target=  14.15 deg  actual=  10.73 deg
-        t=2.50s  target=  20.00 deg  actual=  19.75 deg
-        t=2.75s  target=  14.13 deg  actual=  16.17 deg
-        t=3.00s  target=  -0.02 deg  actual=   3.73 deg
-        t=3.25s  target= -14.15 deg  actual= -10.72 deg
+        t=0.75s  target=  14.14 deg  actual=  16.18 deg
+        t=1.00s  target=  -0.00 deg  actual=   3.12 deg
+        t=1.25s  target= -14.15 deg  actual= -11.77 deg
+        t=1.50s  target= -20.00 deg  actual= -19.52 deg
+        t=1.75s  target= -14.14 deg  actual= -16.54 deg
+        t=2.00s  target=   0.00 deg  actual=  -3.12 deg
+        t=2.25s  target=  14.15 deg  actual=  11.76 deg
+        t=2.50s  target=  20.00 deg  actual=  19.65 deg
+        t=2.75s  target=  14.14 deg  actual=  16.54 deg
+        t=3.00s  target=  -0.00 deg  actual=   3.74 deg
+        t=3.25s  target= -14.15 deg  actual= -11.76 deg
         t=3.50s  target= -20.00 deg  actual= -19.52 deg
-        t=3.75s  target= -14.13 deg  actual= -16.54 deg
+        t=3.75s  target= -14.14 deg  actual= -16.53 deg
 PASS  homing
       supported: 37 34 33 27 23 18 17 11 7 2 1 -1 -2 -3 -4
       negative limit active: no
@@ -156,6 +156,16 @@ PASS  digital_io
       output A: 1, pins 0x0001
       analog input 1: 1.234 V
       index latched at 2000 qc (1 edges)
+PASS  step_profile
+      recorded profile to /out/step_profile.csv
+PASS  step_velocity
+      recorded velocity to /out/step_velocity.csv
+PASS  step_position
+      recorded position to /out/step_position.csv
+PASS  step_torque
+      recorded torque to /out/step_torque.csv
+PASS  telemetry_logger
+      20 rows written to /out/telemetry.csv
 PASS  multi_drive
       supply: left 48.0 V, right 48.0 V
         t=0.00s  left     0 rpm  right     0 rpm
@@ -168,3 +178,4 @@ PASS  multi_drive
         t=3.50s  left   600 rpm  right  -599 rpm
 not run (epos4_sim does not model Profile Velocity): profile_velocity - compiled only
 failures: 0
+done

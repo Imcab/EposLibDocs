@@ -4,10 +4,15 @@ site_url: https://imcab.github.io/EposLibDocs/
 repo_url: https://github.com/Imcab/EposLib
 repo_name: Imcab/EposLib
 edit_uri: ""
-copyright: EposLib is licensed under Apache-2.0.
+copyright: >-
+  EposLib is an independent, unofficial project, licensed under Apache-2.0.
+  It is not affiliated with or endorsed by maxon. maxon and EPOS4 are trademarks of maxon international ltd.
 
 theme:
   name: material
+  custom_dir: overrides
+  logo: assets/logo.svg
+  favicon: assets/favicon.svg
   language: en
   font:
     text: Source Serif 4
@@ -45,7 +50,15 @@ markdown_extensions:
   - pymdownx.details
   - pymdownx.highlight
   - pymdownx.inlinehilite
-  - pymdownx.superfences
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.caret
+  - pymdownx.keys
   - pymdownx.tabbed:
       alternate_style: true
   - pymdownx.snippets:
@@ -54,6 +67,10 @@ markdown_extensions:
 
 extra_css:
   - stylesheets/extra.css
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js
 
 nav:
   - Home: index.md
@@ -65,6 +82,13 @@ nav:
       - First run: getting-started/first-run.md
       - Simulation: getting-started/simulation.md
       - Using EposLib in your package: getting-started/your-package.md
+  - The EPOS4:
+      - epos4/index.md
+      - Architecture: epos4/architecture.md
+      - Control loops: epos4/control-loops.md
+      - Operating modes: epos4/operating-modes.md
+      - Motion profiles: epos4/motion-profiles.md
+      - Motor and thermal model: epos4/motor-and-thermal.md
   - Concepts:
       - concepts/index.md
       - Architecture: concepts/architecture.md
@@ -72,6 +96,7 @@ nav:
       - The CiA 402 state machine: concepts/state-machine.md
       - Units: concepts/units.md
       - Threading and timing: concepts/threading.md
+      - How EposLib works inside: concepts/internals.md
   - Network:
       - network/index.md
       - The network description (bus.yml): network/bus-yml.md
@@ -107,6 +132,8 @@ nav:
       - Configuration: examples/configuration.md
       - Encoder setup: examples/encoder-setup.md
       - Digital I/O and touch probe: examples/digital-io.md
+      - Step response: examples/step-response.md
+      - Telemetry logger: examples/telemetry-logger.md
   - Troubleshooting:
       - troubleshooting/index.md
       - CAN bus: troubleshooting/can-bus.md
@@ -115,6 +142,14 @@ nav:
       - FAQ: troubleshooting/faq.md
   - Reference:
       - reference/index.md
+      - API reference:
+          - reference/api/index.md
+          - CanBus: reference/api/canbus.md
+          - Epos4: reference/api/epos4.md
+          - Configurator: reference/api/configurator.md
+          - Encoder: reference/api/encoder.md
+          - StatusSignal: reference/api/status-signal.md
+          - MechanismScale: reference/api/mechanism-scale.md
       - Device error codes: reference/error-codes.md
       - SDO abort codes: reference/sdo-abort-codes.md
       - Configuration fields: reference/configuration-fields.md
@@ -122,6 +157,7 @@ nav:
       - Object dictionary: reference/object-dictionary.md
       - Hardware: reference/hardware.md
       - Changelog: reference/changelog.md
+      - Credits and sources: reference/credits.md
 
 validation:
   links:

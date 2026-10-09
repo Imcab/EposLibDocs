@@ -1,6 +1,6 @@
 # Examples
 
-Complete programs, each one a single `.cpp` file. They live in the
+Fourteen complete programs, each one a single `.cpp` file. They live in the
 [`examples/`](https://github.com/Imcab/EposLibDocs/tree/main/examples) folder of the
 documentation repository as a `colcon` package, `eposlib_examples`, and every one of them is
 **compiled and run against `epos4_sim` before the documentation is published** - except
@@ -21,6 +21,8 @@ output of that run.
 | [Configuration](configuration.md) | read everything, change part, save |
 | [Encoder setup](encoder-setup.md) | sensor slots, resolution, angles at the output |
 | [Digital I/O and touch probe](digital-io.md) | inputs, outputs, analog channels, latching the index position |
+| [Step response](step-response.md) | record target vs. actual to CSV, for tuning and plotting |
+| [Telemetry logger](telemetry-logger.md) | supply, temperature, current, I²t, state and EMCY to CSV |
 
 ## Building them
 

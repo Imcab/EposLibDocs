@@ -28,6 +28,44 @@ std::printf("%s\n", epos4::signals::ToString(state));
 motor - the manual's «Power Disable» - which is when the axis, gear and encoder objects
 may be written.
 
+<figure markdown="span">
+  ![Device state machine](../assets/maxon/manual/fig2-3-state-machine.jpg){ width="560" }
+  <figcaption>The CiA 402 device state machine of the EPOS4: the eight states, grouped by whether power reaches the motor, and the numbered transitions. © maxon - EPOS4 Firmware Specification, Figure 2-3 (p. 2-14).</figcaption>
+</figure>
+
+```mermaid
+stateDiagram-v2
+  direction LR
+  [*] --> NotReady: power on
+  NotReady: Not ready to switch on
+  SOD: Switch on disabled
+  RTSO: Ready to switch on
+  SO: Switched on
+  OE: Operation enabled
+  QSA: Quick stop active
+  FRA: Fault reaction active
+  F: Fault
+  NotReady --> SOD: 1 (automatic)
+  SOD --> RTSO: 2 Shutdown
+  RTSO --> SO: 3 Switch on
+  SO --> OE: 4 Enable operation
+  OE --> SO: 5 Disable operation
+  SO --> RTSO: 6 Shutdown
+  RTSO --> SOD: 7 Disable voltage
+  OE --> RTSO: 8 Shutdown
+  OE --> SOD: 9 Disable voltage
+  SO --> SOD: 10 Disable voltage
+  OE --> QSA: 11 Quick stop
+  QSA --> SOD: 12 Disable voltage
+  FRA --> F: 14 (automatic)
+  F --> SOD: 15 Fault reset
+  QSA --> OE: 16 Enable operation
+  OE --> FRA: 13 error
+```
+
+`Enable()` follows 2, 3, 4; `Disable()` sends *Disable voltage* (7, 9, 10 or 12, from wherever
+the drive is); `ClearFault()` performs 15; `QuickStop()` is 11 and `Enable()` from there is 16.
+
 ## Enable and disable
 
 ```text

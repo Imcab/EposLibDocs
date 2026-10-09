@@ -23,6 +23,8 @@ set(EXAMPLES
   configuration
   encoder_setup
   digital_io
+  step_response
+  telemetry_logger
 )
 
 foreach(example ${EXAMPLES})

@@ -55,6 +55,109 @@ whose reset clears the position - check it before any move to an absolute positi
 | `kCurrentThresholdPositiveSpeed` | -3 | a hard stop | the current threshold |
 | `kCurrentThresholdNegativeSpeed` | -4 | a hard stop | the current threshold |
 
+### What each method does
+
+The drawings show the axis travel (top bar), the switches or index pulses below it, and the
+path of the run: numbered segments, the **home offset** (`homeOffsetMoveDistance`) and the
+final **home position** (`homePosition`). Drawings © maxon - EPOS4 Firmware Specification,
+section 3.5.3.
+
+??? example "Method 1 - `kNegativeLimitSwitchAndIndex`"
+    <figure markdown="span">
+      ![Homing method 1](../assets/maxon/manual/fig3-13-homing-1.jpg){ width="560" }
+      <figcaption>© maxon - EPOS4 Firmware Specification, Figure 3-13 (p. 3-31).</figcaption>
+    </figure>
+
+??? example "Method 2 - `kPositiveLimitSwitchAndIndex`"
+    <figure markdown="span">
+      ![Homing method 2](../assets/maxon/manual/fig3-14-homing-2.jpg){ width="560" }
+      <figcaption>© maxon - EPOS4 Firmware Specification, Figure 3-14 (p. 3-31).</figcaption>
+    </figure>
+
+??? example "Method 7 - `kHomeSwitchPositiveSpeedAndIndex`"
+    <figure markdown="span">
+      ![Homing method 7](../assets/maxon/manual/fig3-15-homing-7.jpg){ width="560" }
+      <figcaption>© maxon - EPOS4 Firmware Specification, Figure 3-15 (p. 3-32).</figcaption>
+    </figure>
+
+??? example "Method 11 - `kHomeSwitchNegativeSpeedAndIndex`"
+    <figure markdown="span">
+      ![Homing method 11](../assets/maxon/manual/fig3-16-homing-11.jpg){ width="560" }
+      <figcaption>© maxon - EPOS4 Firmware Specification, Figure 3-16 (p. 3-32).</figcaption>
+    </figure>
+
+??? example "Method 17 - `kNegativeLimitSwitch`"
+    <figure markdown="span">
+      ![Homing method 17](../assets/maxon/manual/fig3-17-homing-17.jpg){ width="560" }
+      <figcaption>© maxon - EPOS4 Firmware Specification, Figure 3-17 (p. 3-33).</figcaption>
+    </figure>
+
+??? example "Method 18 - `kPositiveLimitSwitch`"
+    <figure markdown="span">
+      ![Homing method 18](../assets/maxon/manual/fig3-18-homing-18.jpg){ width="560" }
+      <figcaption>© maxon - EPOS4 Firmware Specification, Figure 3-18 (p. 3-33).</figcaption>
+    </figure>
+
+??? example "Method 23 - `kHomeSwitchPositiveSpeed`"
+    <figure markdown="span">
+      ![Homing method 23](../assets/maxon/manual/fig3-19-homing-23.jpg){ width="560" }
+      <figcaption>© maxon - EPOS4 Firmware Specification, Figure 3-19 (p. 3-33).</figcaption>
+    </figure>
+
+??? example "Method 27 - `kHomeSwitchNegativeSpeed`"
+    <figure markdown="span">
+      ![Homing method 27](../assets/maxon/manual/fig3-20-homing-27.jpg){ width="560" }
+      <figcaption>© maxon - EPOS4 Firmware Specification, Figure 3-20 (p. 3-34).</figcaption>
+    </figure>
+
+??? example "Method 33 - `kIndexNegativeSpeed`"
+    <figure markdown="span">
+      ![Homing method 33](../assets/maxon/manual/fig3-21-homing-33.jpg){ width="560" }
+      <figcaption>© maxon - EPOS4 Firmware Specification, Figure 3-21 (p. 3-34).</figcaption>
+    </figure>
+
+??? example "Method 34 - `kIndexPositiveSpeed`"
+    <figure markdown="span">
+      ![Homing method 34](../assets/maxon/manual/fig3-22-homing-34.jpg){ width="560" }
+      <figcaption>© maxon - EPOS4 Firmware Specification, Figure 3-22 (p. 3-34).</figcaption>
+    </figure>
+
+??? example "Method 37 - `kActualPosition (drive disabled)`"
+    <figure markdown="span">
+      ![Homing method 37](../assets/maxon/manual/fig3-23-homing-37-disabled.jpg){ width="560" }
+      <figcaption>© maxon - EPOS4 Firmware Specification, Figure 3-23 (p. 3-35).</figcaption>
+    </figure>
+
+??? example "Method 37 - `kActualPosition (drive enabled: moves the offset distance)`"
+    <figure markdown="span">
+      ![Homing method 37](../assets/maxon/manual/fig3-24-homing-37-enabled.jpg){ width="560" }
+      <figcaption>© maxon - EPOS4 Firmware Specification, Figure 3-24 (p. 3-35).</figcaption>
+    </figure>
+
+??? example "Method -1 - `kCurrentThresholdPositiveSpeedAndIndex`"
+    <figure markdown="span">
+      ![Homing method -1](../assets/maxon/manual/fig3-25-homing-m1.jpg){ width="560" }
+      <figcaption>© maxon - EPOS4 Firmware Specification, Figure 3-25 (p. 3-35).</figcaption>
+    </figure>
+
+??? example "Method -2 - `kCurrentThresholdNegativeSpeedAndIndex`"
+    <figure markdown="span">
+      ![Homing method -2](../assets/maxon/manual/fig3-26-homing-m2.jpg){ width="560" }
+      <figcaption>© maxon - EPOS4 Firmware Specification, Figure 3-26 (p. 3-36).</figcaption>
+    </figure>
+
+??? example "Method -3 - `kCurrentThresholdPositiveSpeed`"
+    <figure markdown="span">
+      ![Homing method -3](../assets/maxon/manual/fig3-27-homing-m3.jpg){ width="560" }
+      <figcaption>© maxon - EPOS4 Firmware Specification, Figure 3-27 (p. 3-36).</figcaption>
+    </figure>
+
+??? example "Method -4 - `kCurrentThresholdNegativeSpeed`"
+    <figure markdown="span">
+      ![Homing method -4](../assets/maxon/manual/fig3-28-homing-m4.jpg){ width="560" }
+      <figcaption>© maxon - EPOS4 Firmware Specification, Figure 3-28 (p. 3-36).</figcaption>
+    </figure>
+
 Negative values are maxon-specific. Helpers:
 
 - `signals::RequiredInput(method)` - the input function a method needs, or `nullopt`.

@@ -119,7 +119,112 @@ EXAMPLES = [
       "An output function is assigned to a pin once, then switched by function.",
       "The touch probe latches inside the drive, to encoder resolution."],
      "2", None),
+    ("step_response", "step-response", "Step response",
+     "Command a reference and record how the axis follows it, to CSV: the raw material for "
+     "tuning gains and for the plots of this documentation. Four modes: a Profile Position "
+     "move, a CSV velocity trapezoid, a CSP sine, and a CST torque step.",
+     ["Records the lock-free cached feedback every SYNC period - no bus traffic added.",
+      "The target column is in the mode's own unit, so target and actual compare directly.",
+      "Change one gain, record again, overlay the two CSVs: that is tuning."],
+     "2 velocity out.csv", None),
+    ("telemetry_logger", "telemetry-logger", "Telemetry logger",
+     "Record a drive's health - supply, temperature, current, I2t, PWM duty cycle, state, last "
+     "EMCY - to CSV at a fixed rate. What a rover logs on every drive during a run, to know "
+     "afterwards why a joint stopped. Read-only.",
+     ["One `RefreshAll()` per row: every value of the row comes from the same moment.",
+      "A value whose read failed is left empty, never filled with a stale number.",
+      "`fflush` after each row: the file survives a crash or a pulled battery."],
+     "2 run.csv 60 5", None),
 ]
+
+
+WALK = {
+"device_info": """1. **Bus and device.** `CanBus` gets the interface, the master DCF and the master's node-ID; the `Epos4` is declared before `Start()` so the master routes its PDOs.
+2. **`WaitUntilReady()`** blocks until the node answers an SDO request (5 s at most).
+3. **Boot status.** The boot completes shortly after the first SDO answer, so the program polls `GetBootStatus().count` for up to 2 s. `'L'` (*already operational*) is advisory; any other letter means the configuration download did not complete.
+4. **Identity** - four SDO reads of `0x1018`, plus `0x1000`, `0x1008`, `0x2100`, `0x1F56`, `0x1F57` - rendered with the hardware name and the firmware file name.
+5. **PDOs.** `IsPdoActive()` turns true on the first TPDO; `CheckPdoMapping()` reads the eight PDO channels over SDO and compares them with the master's concise DCF.
+6. **State, faults, history.** `IsFaulted()` triggers `DescribeLastError()`; the history (`0x1003`) survives a fault reset.
+7. **Power.** `RefreshAll()` reads supply, temperature and current concurrently.
+8. **Motor data.** `Refresh(MotorConfigs&)` reads `0x6402`, `0x3001`, `0x3002` and the computed rated torque `0x6076`.""",
+"profile_position": """1. **Mechanism before start.** `SetMechanism(2000, 1/100)` makes quantities convertible; it touches nothing on the bus.
+2. **Profile once.** `Apply(MotionProfileConfigs)` writes `0x6081`, `0x6083`, `0x6084`; every later move inherits them.
+3. **Enable** walks the state machine to *Operation enabled* (three Controlword commands).
+4. **Move 1** - `SetControl(ProfilePosition{}.WithPosition(start + 10000))`: switches to mode 1 if needed, puts the target in RPDO1, and performs the setpoint handshake. It returns when the drive has *accepted* the target.
+5. **`WaitForTarget()`** waits for *target reached* to drop (it may still be set from before) and then to rise, watching for a fault meanwhile.
+6. **Move 2** is relative and in degrees at the output: 90° through 1:100 is 25 motor turns = 50 000 qc, at a 1500 rpm override (written to `0x6081` before the handshake).
+7. **Back to the start, disable.**
+
+On hardware, watch `GetFollowingError()` during the moves: it should stay well inside `LimitConfigs::followingErrorWindow`.""",
+"profile_velocity": """1. **Enable**, then **`SetControl(ProfileVelocity)`**: mode 3, the acceleration and deceleration overrides, and the target velocity into RPDO2. There is no handshake in PVM.
+2. **Monitor** velocity and averaged current every 200 ms - the current shows what holding that speed costs.
+3. **Stop on the ramp:** a target of 0, then wait for *speed is zero* (Statusword bit 12 in PVM).
+4. **Disable.**
+
+The ramp takes `rpm / acceleration` seconds each way. See [Motion profiles](../epos4/motion-profiles.md).""",
+"cyclic_velocity": """1. **PDOs are mandatory** for the cyclic modes - the program checks `IsPdoActive()` and stops otherwise.
+2. **Interpolation period = SYNC period** (`CyclicConfigs::interpolationTimePeriodMs = 10`), or the drive steps between setpoints.
+3. **`EnterCyclicVelocityMode()`** switches to mode 9 once (SDO) and starts publishing 0 rpm on every SYNC.
+4. **The loop** computes the trapezoid, stages it (an atomic store), checks `IsCyclicHealthy()`, and sleeps until the next absolute 10 ms tick.
+5. **Braking:** with the target at 0 the drive's velocity loop brakes actively; the program waits until the cached velocity is under 10 rpm before `ExitCyclicMode()` and `Disable()`.""",
+"cyclic_torque": """1. **Rated torque first.** Every CST value is relative to `0x6076`; a 0 means the motor data is missing and the program refuses to run.
+2. **`EnterCyclicTorqueMode()`** seeds the published torque with the torque the axis produces now and reads the rated torque once.
+3. **The loop** stages `0.05_Nm` - converted to thousandths with the rated torque read at entry, no bus access - and checks two things every cycle: the velocity limit and `IsCyclicHealthy()`.
+4. **On exit** it stages 0 for five SYNC periods so the zero reaches the drive, then leaves the cyclic mode and disables.
+
+On a free shaft the motor accelerates to its no-load speed; on a blocked one the torque is held. See [Motor and thermal model](../epos4/motor-and-thermal.md).""",
+"cyclic_position": """1. **`EnterCyclicPositionMode()`** seeds the target with the actual position, so the first SYNC holds the axis exactly where it is.
+2. **The origin** is converted to degrees at the output with `GetMechanism().ToAngle()`.
+3. **The loop** stages `origin + 20° sin(2π 0.5 t)` as a `units::angle::degree_t`; `StageTargetPosition()` converts it to quadcounts arithmetically.
+4. **Back to the origin** for 300 ms, then exit and disable.
+
+The actual position lags the target by the two-to-three SYNC latency of the cyclic path - visible in the plot below.""",
+"homing": """1. **Supported methods** from `0x60E3`.
+2. **Map the switches** (`DigitalInputConfigs`): without a mapped switch `Home()` refuses the method rather than search blindly.
+3. **Configure the run** (`HomingConfigs`): search speeds, acceleration, offset move, home position.
+4. **Polarity check:** a limit switch already active before the run usually means an inverted polarity.
+5. **`Home()`** blocks until *homing attained* + *target reached*, or *homing error*, or the timeout.
+6. **`SetPosition(1000)`** declares the current position to be 1000 qc without moving, through method 37, and restores the homing configuration.""",
+"multi_drive": """1. **One `CanBus`**, two devices at nodes 2 and 3, declared before `Start()`. The DCF (from `config/two_drives/bus.yml`) describes both.
+2. **`RefreshAll()`** across the two drives reads both supplies in parallel - each drive has its own SDO channel.
+3. **Enable and enter CSV on both.** If either fails, both are disabled.
+4. **The loop** stages a velocity per wheel each period: forward, then turn in place. Both setpoints leave in the RPDOs of the same SYNC, so the wheels act together.
+5. **Health per wheel** every cycle; stop both if one fails.""",
+"fault_monitor": """1. **The emergency callback** is registered before `Start()`. It runs on the CANopen thread, so it only prints and sets an atomic flag - never a blocking call into the device.
+2. **Telemetry** at 2 Hz with `RefreshAll()`, plus the lock-free last EMCY code.
+3. **On a fault** - flagged by the callback or seen by `IsFaulted()` - describe it from the chapter 7 tables, say whether the reset will clear the position, and `ClearFault()`, which sends the NMT reset communication first for heartbeat and CAN-passive faults.""",
+"configuration": """1. **`Refresh(Epos4Configuration&)`** reads every group; objects absent on this hardware are left unset.
+2. **A sparse change:** only four fields are set, so only four objects are written - the gains and motor data are untouched.
+3. **`Apply()`** validates, refuses «Power Disable» objects while powered, and stops at the first refused write.
+4. **Read back** the two groups changed.
+5. **`Save()`** (`0x1010`) only with `--save`: without it the change is gone at the next power cycle.""",
+"encoder_setup": """1. **Sensor slots** from `0x3000:01`, and the main sensor resolution `0x3000:05`.
+2. **Encoder 1** from `0x3010`: pulses per revolution, converted to quadcounts (×4).
+3. **The mechanism** from the drive's resolution, or computed from the pulses when the drive reports 0 (as the simulator does).
+4. **The output angle and velocity**, as `units::` quantities.""",
+"digital_io": """1. **Inputs**, by name, by function word (`0x60FD`) and by pin (`0x3141:01`).
+2. **Output A** assigned to output 1 (`0x3151:01`), switched on, read back by function and by pin, switched off.
+3. **Analog:** input 1 in volts; general purpose output A set to 1.5 V.
+4. **Touch probe** armed on the index pulse, then a relative move of 4000 qc so the index passes; the latched position and edge count are read back and the probe disarmed.""",
+"step_response": """1. **Choose a mode** on the command line; the recorder writes one row per SYNC period from the cached (PDO) feedback.
+2. **profile** - a PPM move: the drive generates the ramp. (`epos4_sim` moves PPM at a fixed slow rate, so this trace is only meaningful on hardware.)
+3. **velocity** - a trapezoid staged every period in CSV.
+4. **position** - a 20° sine in CSP.
+5. **torque** - a 0.05 N·m step in CST, cut off above 1500 rpm.
+
+Plot the CSV with anything - the documentation's own plots come from `scripts/plots.py`.""",
+"telemetry_logger": """1. **Seven signals** refreshed together each row with `RefreshAll()`.
+2. **A failed read is an empty field**, so a gap in the log is visible as a gap.
+3. **The last EMCY** comes from the lock-free cache, which still answers when the node has gone silent.
+4. **`fflush` every row.**""",
+}
+
+PLOTS = {
+"cyclic_velocity": ("step_velocity", "The same kind of trapezoid, recorded with step_response against epos4_sim."),
+"cyclic_torque": ("step_torque", "A torque step recorded with step_response against epos4_sim (rated torque 0.45 N m)."),
+"cyclic_position": ("step_position", "The sine, recorded with step_response against epos4_sim."),
+"step_response": ("step_velocity", "Output of `step_response ... velocity`, plotted."),
+}
 
 
 def outputs(log_path):
@@ -145,10 +250,23 @@ def main():
         dcf = dcf or "install/eposlib/share/eposlib/config/epos4_network/master.dcf"
         lines = [f"# {title}\n\n{desc}\n\n"]
         lines.append("## Key points\n\n" + "".join(f"- {p}\n" for p in points) + "\n")
+        if name in WALK:
+            lines.append("## Step by step\n\n" + WALK[name] + "\n\n")
+        if name in PLOTS:
+            plot, caption = PLOTS[name]
+            lines.append(f'<figure markdown="span">\n  ![{title}](../assets/plots/{plot}.svg)\n'
+                         f'  <figcaption>{caption}</figcaption>\n</figure>\n\n')
         lines.append("## Running it\n\n```bash\n")
         lines.append(f"ros2 run eposlib_examples {name} \\\n  {dcf} can0 {args}".rstrip() + "\n```\n\n")
         lines.append(f"## Source\n\n```cpp title=\"examples/src/{name}.cpp\"\n--8<-- \"src/{name}.cpp\"\n```\n\n")
         out = runs.get(name)
+        if name == "step_response":
+            out = runs.get("step_velocity")
+        if name == "telemetry_logger":
+            csv = DOCS / "scripts" / "data" / "telemetry.csv"
+            if csv.exists():
+                lines.append("## Output against epos4_sim (run.csv)\n\n```text\n" + csv.read_text().strip() + "\n```\n")
+            out = None
         if out:
             lines.append("## Output against epos4_sim\n\n```text\n" + "\n".join(out).rstrip() + "\n```\n")
         elif name == "profile_velocity":

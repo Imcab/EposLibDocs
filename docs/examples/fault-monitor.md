@@ -8,6 +8,12 @@ React to faults as they happen: an emergency callback flags the main loop, which
 - `IsWarning()` filters codes the drive keeps running through.
 - `ClearsPosition()` says when homing is lost; `ClearFault()` sends the NMT reset a lost heartbeat needs.
 
+## Step by step
+
+1. **The emergency callback** is registered before `Start()`. It runs on the CANopen thread, so it only prints and sets an atomic flag - never a blocking call into the device.
+2. **Telemetry** at 2 Hz with `RefreshAll()`, plus the lock-free last EMCY code.
+3. **On a fault** - flagged by the callback or seen by `IsFaulted()` - describe it from the chapter 7 tables, say whether the reset will clear the position, and `ClearFault()`, which sends the NMT reset communication first for heartbeat and CAN-passive faults.
+
 ## Running it
 
 ```bash

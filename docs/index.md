@@ -1,19 +1,38 @@
----
-hide:
-  - navigation
----
-
 # EposLib
 
 <p class="epos-tagline">A C++ API for maxon EPOS4 positioning controllers over CANopen.</p>
 
-EposLib drives maxon EPOS4 controllers over CANopen (CiA 301 / CiA 402), built
-on [Lely CANopen](https://opensource.lely.com/canopen/). It is plain CMake with
-no ROS dependency, yet it builds under `colcon` like any other package, so it
-fits a ROS 2 workspace without tying the library to one.
+<div class="grid" markdown>
 
-The API is device-oriented: a `CanBus` owns the CANopen master, and each drive
-is an `Epos4` constructed against it with its node-ID.
+<div markdown>
+
+![maxon](assets/maxon/maxon-logo.png){ width="200" }
+
+EposLib drives **maxon EPOS4** positioning controllers - the digital servo controllers maxon
+makes for its brushed DC and brushless EC motors - over **CANopen** (CiA 301 / CiA 402),
+built on [Lely CANopen](https://opensource.lely.com/canopen/). It is plain CMake with no ROS
+dependency, yet it builds under `colcon` like any other package, so it fits a ROS 2
+workspace without tying the library to one.
+
+The API is device-oriented: a `CanBus` owns the CANopen master, and each drive is an
+`Epos4` constructed against it with its node-ID.
+
+</div>
+
+<figure markdown="span">
+  ![EPOS4 Module 50/15](assets/maxon/products/module-50-15.jpg){ width="260" }
+  <figcaption>An EPOS4 Module 50/15, the drive EposLib was tested on. Photo © maxon, EPOS4 Feature Chart.</figcaption>
+</figure>
+
+</div>
+
+!!! warning "Unofficial"
+    EposLib is an independent open-source project. It is **not** made, endorsed or supported
+    by maxon. "maxon", "EPOS4" and "EPOS Studio" are trademarks of maxon international ltd.;
+    the logo, product photos and manual figures in this documentation are © maxon and are
+    reproduced only to identify and explain the hardware, with their source given under each
+    one. For maxon's own documentation and software, see
+    [maxongroup.com](https://www.maxongroup.com/en/drives-and-systems/controls/positioning-controllers).
 
 [Source on GitHub](https://github.com/Imcab/EposLib) ·
 [Changelog](https://github.com/Imcab/EposLib/blob/main/CHANGELOG.md) ·
@@ -239,6 +258,7 @@ EposLib is **pre-1.0**: the API may still change between minor versions.
 
 | | |
 |---|---|
+| Learning what the EPOS4 is and how it controls a motor | [The EPOS4](epos4/index.md), [Control loops](epos4/control-loops.md) |
 | New to EposLib | [Getting Started](getting-started/index.md), then [First run](getting-started/first-run.md) |
 | New to CANopen or CiA 402 | [Concepts](concepts/index.md) |
 | Setting up a robot's network | [The network description](network/bus-yml.md), [Multiple drives](network/multi-drive.md) |

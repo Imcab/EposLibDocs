@@ -8,6 +8,13 @@ Read the inputs by function and by pin, assign and switch a general purpose outp
 - An output function is assigned to a pin once, then switched by function.
 - The touch probe latches inside the drive, to encoder resolution.
 
+## Step by step
+
+1. **Inputs**, by name, by function word (`0x60FD`) and by pin (`0x3141:01`).
+2. **Output A** assigned to output 1 (`0x3151:01`), switched on, read back by function and by pin, switched off.
+3. **Analog:** input 1 in volts; general purpose output A set to 1.5 V.
+4. **Touch probe** armed on the index pulse, then a relative move of 4000 qc so the index passes; the latched position and edge count are read back and the probe disarmed.
+
 ## Running it
 
 ```bash

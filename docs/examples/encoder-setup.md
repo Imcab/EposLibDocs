@@ -8,6 +8,13 @@ Inspect the feedback configuration: which sensor is in each slot, the encoder's 
 - `QuadCountsPerRevolution()`: 500 pulses are 2000 quadcounts.
 - `SetMechanismFromDevice()` takes the resolution from the drive; only the gear ratio is yours.
 
+## Step by step
+
+1. **Sensor slots** from `0x3000:01`, and the main sensor resolution `0x3000:05`.
+2. **Encoder 1** from `0x3010`: pulses per revolution, converted to quadcounts (×4).
+3. **The mechanism** from the drive's resolution, or computed from the pulses when the drive reports 0 (as the simulator does).
+4. **The output angle and velocity**, as `units::` quantities.
+
 ## Running it
 
 ```bash

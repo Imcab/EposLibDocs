@@ -8,6 +8,14 @@ Read a drive's entire configuration, change three fields, read them back, and sa
 - `Apply()` validates first and refuses «Power Disable» objects while powered.
 - `Save()` makes the change survive a power cycle; without `--save` it does not.
 
+## Step by step
+
+1. **`Refresh(Epos4Configuration&)`** reads every group; objects absent on this hardware are left unset.
+2. **A sparse change:** only four fields are set, so only four objects are written - the gains and motor data are untouched.
+3. **`Apply()`** validates, refuses «Power Disable» objects while powered, and stops at the first refused write.
+4. **Read back** the two groups changed.
+5. **`Save()`** (`0x1010`) only with `--save`: without it the change is gone at the next power cycle.
+
 ## Running it
 
 ```bash

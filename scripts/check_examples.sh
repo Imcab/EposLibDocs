@@ -17,6 +17,7 @@ docker run --rm --privileged --user root -e SHOW="${SHOW:-4}" \
   -v "$EPOSLIB":/src/EposLib:ro \
   -v "$UNITS":/src/ros2units:ro \
   -v "$DOCS/examples":/src/eposlib_examples:ro \
+  -v "$DOCS/scripts/data":/out \
   "$IMAGE" bash -c '
 set -o pipefail
 ip link add dev vcan0 type vcan && ip link set up vcan0
@@ -59,6 +60,14 @@ run cyclic_position  $CFG/epos4.eds 30  $BIN/cyclic_position  $CFG/master.dcf vc
 run homing           $CFG/epos4.eds 60  $BIN/homing           $CFG/master.dcf vcan0 2
 run fault_monitor    $CFG/epos4.eds 30  $BIN/fault_monitor    $CFG/master.dcf vcan0 2 3
 run digital_io       $CFG/epos4.eds 30  $BIN/digital_io       $CFG/master.dcf vcan0 2
+
+# Recorded traces, kept in scripts/data/ for the plots.
+for mode in profile velocity position; do
+  run step_$mode $CFG/epos4.eds 30 $BIN/step_response $CFG/master.dcf vcan0 2 $mode /out/step_$mode.csv
+done
+run step_torque      /ws/rated.eds  30  $BIN/step_response    $CFG/master.dcf vcan0 2 torque /out/step_torque.csv
+run telemetry_logger $CFG/epos4.eds 30  $BIN/telemetry_logger $CFG/master.dcf vcan0 2 /out/telemetry.csv 4 5
+chown --reference=/out /out/*.csv 2>/dev/null
 
 # Two simulated drives, nodes 2 and 3, on the two-drive network.
 $SIM $CFG/epos4.eds 3 vcan0 > /ws/sim_node3.log 2>&1 & node3=$!

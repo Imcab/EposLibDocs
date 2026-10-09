@@ -8,6 +8,14 @@ Two drives on one bus - a left and a right wheel at nodes 2 and 3 - driven forwa
 - `RefreshAll()` over signals of different drives reads them in parallel.
 - Each wheel is checked with `IsCyclicHealthy()` every cycle.
 
+## Step by step
+
+1. **One `CanBus`**, two devices at nodes 2 and 3, declared before `Start()`. The DCF (from `config/two_drives/bus.yml`) describes both.
+2. **`RefreshAll()`** across the two drives reads both supplies in parallel - each drive has its own SDO channel.
+3. **Enable and enter CSV on both.** If either fails, both are disabled.
+4. **The loop** stages a velocity per wheel each period: forward, then turn in place. Both setpoints leave in the RPDOs of the same SYNC, so the wheels act together.
+5. **Health per wheel** every cycle; stop both if one fails.
+
 ## Running it
 
 ```bash

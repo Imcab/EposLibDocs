@@ -9,6 +9,15 @@ Give an incremental encoder an absolute zero: map the switches to their inputs, 
 - `IsPositionReferenced()` confirms the reference.
 - `SetPosition(1000)` uses homing method 37 and restores the homing configuration afterwards.
 
+## Step by step
+
+1. **Supported methods** from `0x60E3`.
+2. **Map the switches** (`DigitalInputConfigs`): without a mapped switch `Home()` refuses the method rather than search blindly.
+3. **Configure the run** (`HomingConfigs`): search speeds, acceleration, offset move, home position.
+4. **Polarity check:** a limit switch already active before the run usually means an inverted polarity.
+5. **`Home()`** blocks until *homing attained* + *target reached*, or *homing error*, or the timeout.
+6. **`SetPosition(1000)`** declares the current position to be 1000 qc without moving, through method 37, and restores the homing configuration.
+
 ## Running it
 
 ```bash

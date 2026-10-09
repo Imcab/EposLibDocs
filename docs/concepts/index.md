@@ -11,5 +11,7 @@ one explains a class of problems before it happens.
   `Enable()` walks through them, and why faults are never cleared for you.
 - **[Units](units.md)** - quadcounts, rpm, thousandths of rated torque, and how to work in
   degrees and newton metres instead.
+- **[How EposLib works inside](internals.md)** - every important call followed down to the
+  objects and frames, with sequence diagrams.
 - **[Threading and timing](threading.md)** - which calls block, which are lock-free, and
   the rules for calling them from a control loop.
