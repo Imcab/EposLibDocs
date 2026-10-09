@@ -1,0 +1,3365 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="C++ API for maxon EPOS4 controllers over CANopen">
+      
+      
+      
+        <link rel="canonical" href="https://imcab.github.io/EposLibDocs/reference/changelog/">
+      
+      
+        <link rel="prev" href="../hardware/">
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Changelog - EposLib</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Serif+4:300,300i,400,400i,700,700i%7CIBM+Plex+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Source Serif 4";--md-code-font:"IBM Plex Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#changelog" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="EposLib" class="md-header__button md-logo" aria-label="EposLib" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            EposLib
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Changelog
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Imcab/EposLib" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Imcab/EposLib
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../getting-started/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Getting Started
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../concepts/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Concepts
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../network/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Network
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../api/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  API Usage
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../examples/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Examples
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../troubleshooting/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Troubleshooting
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Reference
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="EposLib" class="md-nav__button md-logo" aria-label="EposLib" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    EposLib
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Imcab/EposLib" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Imcab/EposLib
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../getting-started/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting Started
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Getting Started
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/requirements/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Requirements
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/installation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/can-setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Setting up the CAN bus
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/first-run/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    First run
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/simulation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Simulation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/your-package/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Using EposLib in your package
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../concepts/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Concepts
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Concepts
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Architecture
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/canopen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CANopen primer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/state-machine/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The CiA 402 state machine
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/units/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Units
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/threading/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Threading and timing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../network/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Network
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Network
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../network/bus-yml/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The network description (bus.yml)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../network/pdo-mapping/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PDO mapping
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../network/sync-heartbeat/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SYNC and heartbeat
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../network/multi-drive/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Multiple drives
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../api/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    API Usage
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    API Usage
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/lifecycle/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bus and device lifecycle
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/enabling/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Enabling and stopping
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/control-requests/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Control requests
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/cyclic-control/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cyclic control
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/homing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Homing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/status-signals/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Status signals
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/encoders/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Encoders
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/io/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Digital and analog I/O
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/safety/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Brake, stops and protection
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/diagnostics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Diagnostics and faults
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/raw-access/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Raw object access
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/core/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The core library
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../examples/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Examples
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Examples
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/device-info/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Device information
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/profile-position/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Profile position
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/profile-velocity/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Profile velocity
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/cyclic-velocity/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cyclic velocity
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/cyclic-torque/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cyclic torque
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/cyclic-position/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cyclic position
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/homing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Homing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/multi-drive/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Multiple drives
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/fault-monitor/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fault monitor
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/encoder-setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Encoder setup
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/digital-io/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Digital I/O and touch probe
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../troubleshooting/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Troubleshooting
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_7" id="__nav_7_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Troubleshooting
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../troubleshooting/can-bus/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CAN bus
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../troubleshooting/boot-and-pdo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Boot and PDOs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../troubleshooting/faults/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Common faults
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../troubleshooting/faq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAQ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reference
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_8" id="__nav_8_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Reference
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../error-codes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Device error codes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sdo-abort-codes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SDO abort codes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../configuration-fields/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Configuration fields
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../enumerations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Enumerations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../object-dictionary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Object dictionary
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hardware/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hardware
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Changelog
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Changelog
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#unreleased" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        [Unreleased]
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="[Unreleased]">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#added" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Added
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#changed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Changed
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#removed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Removed
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fixed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fixed
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#010-2026-09-24" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        [0.1.0] - 2026-09-24
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="[0.1.0] - 2026-09-24">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#added_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Added
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#known-limitations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Known limitations
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#unreleased" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        [Unreleased]
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="[Unreleased]">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#added" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Added
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#changed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Changed
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#removed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Removed
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fixed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fixed
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#010-2026-09-24" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        [0.1.0] - 2026-09-24
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="[0.1.0] - 2026-09-24">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#added_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Added
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#known-limitations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Known limitations
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="changelog">Changelog<a class="headerlink" href="#changelog" title="Permanent link">#</a></h1>
+<p>All notable changes to <code>eposlib</code> are recorded here.
+The format follows <a href="https://keepachangelog.com/en/1.1.0/">Keep a Changelog</a>,
+and the project uses <a href="https://semver.org/">semantic versioning</a>.</p>
+<p>Pre-1.0 means the API may still change between minor versions. It will reach
+1.0.0 once it has been verified against a physical EPOS4, with the cyclic path
+and a homing run exercised on a real axis.</p>
+<p>All object indices, bit layouts and error tables are transcribed from the
+<strong>EPOS4 Firmware Specification, edition 2026-07, rel13740</strong> and the <strong>EPOS4
+Communication Guide, edition 2026-04, rel13604</strong>.</p>
+<hr />
+<h2 id="unreleased">[Unreleased]<a class="headerlink" href="#unreleased" title="Permanent link">#</a></h2>
+<h3 id="added">Added<a class="headerlink" href="#added" title="Permanent link">#</a></h3>
+<ul>
+<li><code>Epos4::GetBootStatus()</code> and <code>signals::BootStatus</code>: how the master's last
+  NMT boot of the node went - the CiA 302-2 error status ('D' vendor-ID
+  mismatch, 'J' configuration download failed, ...) and Lely's text for it.
+  A node whose boot failed still answers SDO, so <code>WaitUntilReady()</code> returned
+  true on it and nothing else said so.</li>
+<li>
+<p><code>CanBus::Start()</code> may be called again after <code>Stop()</code>: the previous master
+  is torn down, every device gets a new driver and the network boots again.
+  Devices, and the signal references taken from them, stay valid.
+  Verified on vcan0 against <code>epos4_sim</code>: Stop, Start, the node boots again,
+  <code>Enable()</code> succeeds and PDOs flow.</p>
+</li>
+<li>
+<p><strong>PDO mapping inspection</strong> (read-only, <code>signals/PdoMapping.hpp</code>):
+  <code>Epos4::ReadPdoMapping()</code> reads the four RPDOs and four TPDOs - COB-ID,
+  transmission type, inhibit time and mapped objects (6.2.15-6.2.30) - and
+  <code>signals::Describe()</code> prints them one line per channel.
+  <code>Epos4::CheckPdoMapping()</code> compares them with what the master configured
+  at boot, the concise DCF it holds for the node (0x1F22), and lists every
+  difference. A drive whose mapping differs from the master's raises no
+  error anywhere else - the master decodes its frames with the wrong layout
+  and reads plausible values - so this turns that into an explicit report.
+  It also reports channels valid on the drive that the network description
+  does not configure. <code>api_demo</code> runs the check after boot.
+  Verified on vcan0 against <code>epos4_sim</code>, including a TPDO remapped behind
+  the master's back (Position demand in place of Position actual: same
+  size, plausible values, caught).</p>
+</li>
+<li>
+<p><strong><code>Refresh()</code> reads back everything <code>Apply()</code> can write.</strong> Every
+  configuration group now declares its fields once, as a list of field -&gt;
+  object (<code>configs/ConfigFields.hpp</code>); <code>Apply()</code> writes the set fields from
+  that list and <code>Refresh()</code> fills every field from it, so a field can no
+  longer be written to one object and read from another, or written and
+  never read. <code>Configurator::Refresh(Epos4Configuration&amp;)</code> used to read a
+  dozen fields; it now reads all of them, and every group has its own
+  <code>Refresh()</code> beside its <code>Apply()</code>, as do the encoder groups on <code>Encoder</code>.
+  A refresh keeps going past an object it cannot read and returns the first
+  error; objects only some variants or firmware have
+  (<code>Presence::kHardwareDependent</code> / <code>kFirmwareDependent</code>) are simply left
+  unset when absent.</p>
+</li>
+<li>New configuration groups:</li>
+<li><code>CommunicationConfigs</code>: producer and consumer heartbeat (0x1016,
+    0x1017), error behavior (0x1029), USB/RS232 timeouts and RS232 bit
+    rate, CAN bit rate and Node-ID - written last, since they take effect
+    only after save and restart - and the SYNC/EMCY COB-IDs, read-only.</li>
+<li><code>ProtectionConfigs</code>: supply under/overvoltage limits (0x2201), written
+    in the order the manual makes always valid, and the power stage
+    temperature limit (0x3201:04, not kept by Save()).</li>
+<li><code>CustomPersistentMemoryConfigs</code>: the four application words of 0x210C.</li>
+<li><code>AnalogInputConfigs</code> (functions, offset/gain calibration, and the
+    current and velocity set-value lines of 0x3170/0x3171, written before
+    the functions) and <code>AnalogOutputConfigs</code>.</li>
+<li><code>VelocityObserverConfigs</code> (0x30A3) and <code>DualLoopConfigs</code> (0x30AE),
+    whose filter coefficients trigger the update bit of 0x30AE:40 after
+    them; <code>Validate()</code> refuses coefficients without <code>filterActive</code>, because
+    that same word switches the filter.</li>
+<li>Fields that were missing from existing groups: gear direction (0x3003:04),
+  the position I gain unit (0x30A1:09), high-speed digital output 2
+  (0x3151:04, Disk 60/8 and 60/12), the halt option (0x605D, firmware
+  0x0180+), SSI commutation offset, position bits and additional delay
+  (0x3012:0A, :0B, :0E), and, read-only, the encoders' index positions and
+  the SSI refresh frequency.</li>
+<li><code>Epos4Configuration::Validate()</code>, run by <code>Configurator::Apply()</code> before
+  the first write: input mappings (digital and analog) and the dual loop
+  filter.</li>
+<li><code>MotorConfigs::ratedTorque</code> reads back «Motor rated torque» (0x6076), the
+  value every torque object is a per mille of; read-only, since the drive
+  computes it.</li>
+<li>Status signals: <code>GetMotorI2tPercent()</code> and <code>GetPowerStageI2tPercent()</code>
+  (0x3200), <code>GetPwmDutyCyclePerMille()</code> (0x3203), <code>GetStoInputs()</code> and
+  <code>GetStoCardStatus()</code> (0x3202).</li>
+<li>
+<p><code>test_config_types</code> checks the data type and access of every
+  configuration field against the maxon EDS in <code>config/epos4_network</code>, so a
+  field of the wrong width fails CI instead of a drive.</p>
+</li>
+<li>
+<p>More feedback: <code>GetTorqueAveraged()</code> and <code>GetVelocityAveraged()</code>
+  (0x30D2, 0x30D3), and per-sensor position and velocity on the encoder
+  subsystem - <code>GetSensorPosition()</code>, <code>GetSensorVelocity()</code>,
+  <code>GetSensorVelocityAveraged()</code> (0x60E4, 0x60E5).</p>
+</li>
+<li>Analog I/O: <code>GetAnalogInputVoltage()</code>, <code>GetAnalogInputGeneralPurpose()</code>,
+  <code>GetAnalogOutputVoltage()</code> in volts, and <code>SetAnalogOutput()</code>, refused
+  beyond the +-4 V of section 6.2.87 rather than clamped.</li>
+<li>Capabilities: <code>GetSupportedDriveModes()</code> / <code>SupportsMode()</code> (0x6502) and
+  <code>GetSupportedHomingMethods()</code> (0x60E3). <code>SetControl()</code> now refuses a mode
+  the drive does not implement with <code>not_supported</code>, and <code>Home()</code> a method
+  it does not list, before anything is written. A drive answering 0 or an
+  all-zero list is treated as unknown and nothing is refused on it.</li>
+<li><code>GetCanBitRate()</code> (0x200A, the rate in use) and <code>GetActiveFieldbus()</code>.</li>
+<li><code>DeviceIdentity</code> also carries the device type (0x1000), the device name
+  (0x1008), the full 64-bit serial number (0x2100), the program software
+  identification (0x1F56) and the flash status (0x1F57); <code>Describe()</code>
+  calls out firmware whose flash status is not "valid program available".</li>
+<li>
+<p><code>epos4_sim</code> fills in the values a drive computes and the EDS leaves
+  empty, from the specification's defaults, and models analog I/O and the
+  per-sensor feedback.</p>
+</li>
+<li>
+<p><code>SetPosition(position)</code>: declares the axis to be somewhere without moving
+  it - homing method 37, «Actual position», with the Home offset move
+  distance zeroed for the run. The homing method, 0x30B0, 0x30B1 and the
+  operating mode are restored afterwards.</p>
+</li>
+<li>Digital outputs: <code>SetDigitalOutput(function, active)</code>,
+  <code>IsOutputActive()</code>, <code>GetDigitalOutputs()</code> (0x60FE, by function) and
+  <code>GetDigitalOutputPins()</code> (0x3150:01, by pin, after polarity). The
+  drive-owned holding brake and Ready/Fault bits are refused.</li>
+<li>Touch probe 1: <code>controls::TouchProbe</code> (trigger, edges, single or
+  continuous, encoded per Table 6-164 and validated against its notes),
+  <code>ArmTouchProbe()</code>, <code>DisarmTouchProbe()</code>, and <code>GetTouchProbe()</code> returning
+  status, both latched positions and both edge counters together.</li>
+<li>Statusword signals that were missing: <code>IsPositionReferenced()</code> (bit 15),
+  <code>HasHomingError()</code>, <code>IsAtZeroSpeed()</code> (PVM bit 12), <code>IsFollowingCommand()</code>
+  (CSP/CSV/CST bit 12), <code>IsRemote()</code>, <code>IsVoltageEnabled()</code>.</li>
+<li>
+<p><code>epos4_sim</code> implements Homing Mode against a virtual axis - end stops,
+  limit switches, a home switch and an index per revolution - covering
+  every method of section 3.5.3; plus digital output pins and touch probe
+  latching. <code>Home()</code> and <code>SetPosition()</code> had never been executed before.</p>
+</li>
+<li>
+<p><strong>The lock-free cyclic path for velocity and torque</strong>, next to position:
+  <code>EnterCyclicVelocityMode()</code> / <code>EnterCyclicTorqueMode()</code> and
+  <code>StageTargetVelocity()</code> / <code>StageTargetTorque()</code>. Each SYNC publishes the
+  active mode's target (0x607A, 0x60FF or 0x6071). Setpoints are seeded to
+  hold the axis: velocity mode starts at zero, torque mode at the torque the
+  axis is producing - zero would drop a load on a vertical joint.
+  All three <code>StageTarget*()</code> take raw units or quantities (<code>90_deg</code>,
+  <code>15_rpm</code>, <code>0.5_Nm</code>) and return false rather than guess when a quantity
+  cannot be converted. Torque in N m uses the rated torque read once when
+  entering the mode, so the loop never does an SDO read. Verified on vcan0:
+  1500 rpm gives 50000 counts/s at 2000 counts/rev, and the RPDO carries
+  the targets with no SDO traffic while cycling.</p>
+</li>
+<li><code>TorqueSetpoint</code>: the cyclic torque target and every torque offset
+  (0x60B2) take N m as well as thousandths of rated torque; position and
+  velocity offsets (0x60B0, 0x60B1) take quantities too.</li>
+<li>
+<p><code>epos4_sim</code> models Cyclic Synchronous Velocity and Torque, and publishes
+  Velocity actual (0x606C) and Torque actual (0x6077) in every mode.</p>
+</li>
+<li>
+<p><code>test_device_lifecycle</code>: what a device allows before the bus starts.</p>
+</li>
+<li><code>core::CyclicState</code> in <code>epos4_core</code>: the state the cyclic path shares
+  between the control loop and the CANopen thread, and the rule for trusting
+  it, moved out of the device so it can be tested without a bus. The clock
+  is passed in, so "unhealthy once PDOs stop" is tested between two time
+  points instead of by sleeping. Every member is statically asserted to be
+  lock-free. <code>test_cyclic_state</code> covers it with 15 tests.</li>
+<li><code>Epos4::GetCachedErrorCode()</code> and <code>GetTimeSinceLastEmergency()</code>: the last
+  EMCY and its age, lock-free. They still answer when the node has gone
+  silent, which is when an SDO read of 0x603F cannot.</li>
+<li><strong>Drives now watch the master's heartbeat.</strong> <code>epos4_network/bus.yml</code> sets
+  <code>heartbeat_consumer: true</code>, so <code>dcfgen</code> writes «Consumer heartbeat time»
+  (0x1016) into each drive, and the master's heartbeat goes from 1000 ms to
+  100 ms, which makes the timeout 300 ms instead of 3 s. When the process
+  running the master dies, the drive raises «CAN heartbeat error» (0x8130),
+  applies «Abort connection option code» (0x6007) and drops to NMT
+  pre-operational. Before this, a drive in CSP kept obeying the last setpoint
+  of a master that no longer existed. <code>epos4_sim</code> models the same reaction.
+  Verified by <code>SIGKILL</code>ing the master process mid-operation: EMCY 0x8130
+  300 ms after the last heartbeat, then no PDOs and NMT state 0x7F.</li>
+<li><code>ClearFault()</code> recovers from communication faults. For a lost heartbeat
+  (0x8130) and CAN passive mode (0x8120) chapter 7 requires an NMT reset
+  communication before the fault reset, or the fault reset is ignored.
+  <code>ClearFault()</code> now sends it, waits until the master has booted the node
+  again, then resets the fault; its default timeout grows to 3 s to cover
+  that. <code>signals::RequiresCommunicationReset()</code> decides, derived from the
+  recovery text transcribed from the manual rather than a separate list.
+  Verified by freezing the master for 1 s: cleared in about 540 ms, then
+  re-enabled with PDOs flowing again.</li>
+<li><code>StatusSignal::IsNear(target, tolerance)</code>, and the free functions
+  <code>signals::RefreshAll(...)</code> and <code>signals::IsAllGood(...)</code>. <code>RefreshAll</code>
+  refreshes concurrently: each drive's CANopen driver has its own thread, so
+  SDO reads to different drives overlap instead of queueing. There is
+  deliberately no <code>WaitForUpdate()</code>: signals here are pulled, not pushed at a
+  configured rate as in Phoenix, and the cyclic data that is pushed already
+  has <code>GetTimeSinceLastPdo()</code>. <code>test_status_signal</code> covers them.</li>
+<li>Power and thermal status signals, in physical units: <code>GetMotorCurrent()</code>
+  and <code>GetMotorCurrentAveraged()</code> (0x30D1, amperes), <code>GetSupplyVoltage()</code>
+  (0x2200:01, volts), <code>GetPowerStageTemperature()</code> and
+  <code>GetPowerStageTemperatureLimit()</code> (0x3201:01 and :04, degrees Celsius).
+  The motion signals stay in counts and rpm, the units a drive is tuned in;
+  these have no meaningful raw unit. <code>ToVoltage()</code> and <code>ToTemperature()</code>
+  join the conversions. <code>api_demo</code> prints them, and <code>epos4_sim</code> reports a
+  48 V supply, 35 degC and a current that rises while moving.</li>
+<li><code>Epos4::GetIdentity()</code> and <code>signals/Identity.hpp</code>: the identity object
+  (0x1018) decoded - hardware from Table 6-66, and the firmware named the way
+  maxon names its release files (<code>EPOS4_0170h_6552h_0000h_0000h</code>). Worth
+  logging once per drive at start-up.</li>
+</ul>
+<h3 id="changed">Changed<a class="headerlink" href="#changed" title="Permanent link">#</a></h3>
+<ul>
+<li><strong>One package, <code>eposlib</code>, at the root of the repository, built with plain
+  CMake.</strong> No ROS is needed to build or use it: <code>cmake -S . -B build</code> on
+  any Linux with Lely CANopen, and it still builds under colcon through its
+  package.xml (<code>build_type</code> cmake). A sourced ROS environment is searched
+  for dependencies (its AMENT_PREFIX_PATH), but none is required.</li>
+<li><code>find_package(eposlib)</code> gives <code>eposlib::eposlib</code> (the device API) and
+    <code>eposlib::core</code> (the pure CiA 402 logic), plus <code>eposlib_generate_dcf()</code>
+    so a robot turns its own <code>bus.yml</code> into a master DCF, with or without
+    ROS. The ament <code>generate_dcf()</code> from lely_core_libraries is no longer
+    used.</li>
+<li>Lely is found through pkg-config (<code>liblely-coapp</code>); ros2units through
+    its header; tests use the system GoogleTest; uncrustify runs as a test
+    when <code>ament_uncrustify</code> is on the PATH.</li>
+<li>Libraries are <code>libeposlib.so</code> and <code>libeposlib_core.so</code>; tools and
+    examples install to <code>lib/eposlib</code>; the example networks to
+    <code>share/eposlib/config</code>. The C++ namespace stays <code>epos4</code>.</li>
+<li><code>epos4_driver</code> and <code>epos4_bringup</code> are gone as separate packages; their
+    content is this one.</li>
+<li>Units come from <strong>ros2units</strong> (https://github.com/Imcab/ros2units), the
+  robot's shared units package, instead of the <code>robot_units</code> copy that lived
+  in this repository. Same nholthaus/units v2.3.5 underneath, so no type
+  changes; the include is now <code>&lt;ros2units/units.h&gt;</code>. <code>epos.repos</code> at the
+  workspace root pins it: <code>vcs import src &lt; epos.repos</code>.</li>
+</ul>
+<h3 id="removed">Removed<a class="headerlink" href="#removed" title="Permanent link">#</a></h3>
+<ul>
+<li>The <code>epos4_ros2_control</code> hardware plugin, the <code>epos4_interfaces</code> package and
+  the ros2_control bring-up (URDF, xacro macros, controllers, launch file).
+  The library is the product; how a robot integrates it with ROS belongs to
+  that robot. Nothing in <code>epos4_driver</code> depended on them. <code>epos4_bringup</code>
+  keeps the CANopen network description, which the library needs.</li>
+</ul>
+<h3 id="fixed">Fixed<a class="headerlink" href="#fixed" title="Permanent link">#</a></h3>
+<ul>
+<li><strong>Every device call before <code>CanBus::Start()</code> crashed.</strong> <code>Enable()</code>,
+  <code>Disable()</code>, <code>Halt()</code>, <code>QuickStop()</code>, <code>Home()</code>, <code>SetControl()</code>, every
+  status signal, <code>ReadObject()</code> / <code>WriteObject()</code> and the <code>Configurator</code>
+  dereferenced the driver, which only exists once the bus has started.
+  They now fail with <code>not_connected</code> (or false); the signals, the cyclic
+  state and the last EMCY live in <code>Epos4::Shared</code>, created with the device,
+  and the driver only holds references into it. <code>test_device_lifecycle</code>
+  covers each of them.</li>
+<li><strong>A device call after <code>CanBus::Stop()</code> hung forever.</strong> SDO transfers are
+  completed or timed out by the bus thread, so once its loop had stopped a
+  <code>Disable()</code> in a shutdown path waited on a future nothing would ever
+  set. Calls now fail with <code>not_connected</code> at once when the bus is stopped,
+  and give up with <code>timed_out</code> after 2 s if its loop dies mid-call; a call
+  given up on is skipped if it has not started, so a write reported as
+  timed out does not land later. Verified on vcan0: returns in 0 ms.</li>
+<li><strong><code>Stop()</code> then <code>Start()</code> hung in <code>Start()</code>.</strong> It replaced the master
+  under the drivers registered with it, and <code>Attach()</code> kept the old
+  drivers. See <em>Added</em>.</li>
+<li>
+<p><strong>A destroyed <code>Epos4</code> stayed registered with its bus</strong>, which attached the
+  dangling pointer on the next <code>Start()</code>; on vcan0 the process died at exit.
+  The destructor now unregisters the device and destroys its driver on the
+  bus thread, where the master dispatches to it, as does attaching a device
+  to a running bus.</p>
+</li>
+<li>
+<p><code>config/epos4_network/bus.yml</code> disables RPDO3 and RPDO4. The drive's
+  defaults leave them valid (Controlword with target position / velocity on
+  0x400/0x500 + node-ID), and dcfgen only touches the PDOs a network lists,
+  so any other device sending on those IDs would have been commanding the
+  axis. Found by the new mapping check.</p>
+</li>
+<li><strong>Configuration fields of the wrong width or access, each of which aborts
+  the SDO on a drive and stops <code>Apply()</code> halfway:</strong></li>
+<li>«Electrical inductance» (0x3002:02) and «Velocity controller filter
+    cut-off frequency» (0x30A2:05) are UNSIGNED16; they were written as 32
+    bits.</li>
+<li>«Main sensor resolution» and «Max system speed» (0x3000:05/06) are
+    read-only; <code>AxisConfigs</code> and <code>SensorsConfigs</code> wrote them. They are now
+    read back only.</li>
+<li>«SSI refresh frequency» (0x3012:07) is read-only UNSIGNED32; it was
+    written as 16 bits.</li>
+<li>«Following error time out» (0x6066) accepts only 0 (6.2.106); it is
+    now read back only.
+  Found by reading the whole configuration from <code>epos4_sim</code> (which enforces
+  the real EDS) and writing it back.</li>
+<li><strong><code>Configurator::Apply()</code> wrote objects the manual only allows in «Power
+  Disable»</strong> - axis configuration, pole pairs, gear (except its max input
+  speed), SI units and encoders - whatever the drive state, so applying one
+  to an enabled drive aborted it partway. Such an Apply now returns
+  <code>operation_not_permitted</code> before the first write while power is on, as
+  <code>Encoder::Apply()</code> already did; <code>RestoreDefaults()</code> too (6.2.7). The rule
+  lives in <code>configs::RequiresPowerDisabled()</code> and
+  <code>signals::IsPowerDisabled()</code>.</li>
+<li>A half-set SinCos resolution (only <code>periodsPerTurn</code> or only
+  <code>interpolationBits</code>) filled the other half with 8 periods; the default of
+  0x3011:02 is 0x00080004, which is <strong>2048</strong> periods (Table 6-119). The
+  resolution came out 256 times too coarse.</li>
+<li><code>DigitalInputConfigs::Validate()</code> refuses touch probe on high-speed inputs
+  1 and 3, which Table 6-131 excludes.</li>
+<li><code>AnalogIncrementalEncoderType</code> and <code>SsiEncodingType</code> default to the
+  drive's own defaults (with index; Gray code), like
+  <code>IncrementalEncoderType</code> already did, so a partly filled type means what
+  the drive would assume.</li>
+<li>Section numbers cited in comments that pointed at the wrong object.</li>
+<li><code>Configurator::Apply(Epos4Configuration)</code> now validates the digital input
+  mapping, as the per-group <code>Apply()</code> always did.</li>
+<li>
+<p>«Electrical resistance» (0x3002:01) is documented in mOhm, not uOhm.</p>
+</li>
+<li>
+<p><strong><code>Home()</code> could report a run attained that had not started, and a
+  second PPM move could be taken as accepted without the drive seeing
+  it.</strong> With the Controlword in a synchronous RPDO, the drive applies it
+  at the SYNC after it arrives and answers on the TPDO of the SYNC after
+  that; reading the Statusword before then returned the previous run's
+  bits. The handshakes now wait for a PDO after the third SYNC, both after
+  raising bit 4 and after lowering it, so every edge reaches the drive.
+  Measured on the bus: 20 ms at a 10 ms SYNC.</p>
+</li>
+<li><code>Home()</code> refused homing when the limit switch was mapped as the
+  "without limit error" variant (24, 25), which section 6.2.75 reserves
+  for exactly that use. <code>signals::SatisfiesHomingInput()</code> accepts both.</li>
+<li><code>HomingConfigs::currentThreshold</code> was <code>int16_t</code>; 0x30B2 is UNSIGNED16.</li>
+<li>The cyclic <code>SetControl()</code> overloads switched the drive's mode before
+  validating the request; a request that could not be converted then
+  failed with the mode already changed. Everything is resolved first now.</li>
+<li><strong><code>CanBus</code> could hang forever on destruction.</strong> <code>Stop()</code> submitted the
+  deconfigure-and-shutdown and then called <code>loop-&gt;stop()</code> at once, racing
+  it. When the loop stopped first, <code>ctx-&gt;shutdown()</code> never ran, socket reads
+  and timers stayed pending, and <code>~AsyncMaster</code> spun in <code>io_can_net_fini()</code>
+  waiting for operations no loop would ever complete. Found by
+  <code>RefreshAll</code>, which leaves more SDO transfers in flight: 9 hangs in 12
+  runs. <code>Stop()</code> now lets the loop return by itself once shutdown has
+  cancelled everything, forcing it only after a 2 s grace period: 0 in 24.</li>
+<li>The PDO mapping limitation listed under 0.1.0 does not exist. Lely's
+  <code>BasicSlave</code> applies the mapping the master downloads at boot. What failed
+  was the recipe: <code>epos4_sim</code> answers with the maxon identity (vendor <code>0xFB</code>),
+  but was being run against the <code>sim_network</code> DCF, which expects the
+  <code>canopen_fake_slaves</code> mock (vendor <code>0x555</code>). The master aborts the boot with
+  <code>es='D'</code> before downloading the concise DCF, so the simulator kept its EDS
+  default mapping and the master decoded those frames with its own. Run
+  <code>epos4_sim</code> against <code>epos4_network</code>.</li>
+<li><strong>Profile Position and Profile Velocity never moved while PDOs were
+  mapped.</strong> Their targets were written over SDO only, but Target position and
+  Target velocity sit in RPDOs with transmission type 1, so the master
+  re-sent its own stale copy (0) on the next SYNC and the drive latched that
+  on «New setpoint». The handshake still completed, so nothing reported it.
+  Every mapped output now goes through the RPDO first, falling back to SDO
+  only when the object is not mapped - the rule the Controlword already
+  followed.</li>
+<li><code>epos4_sim</code> evaluated the Controlword as soon as it was written, before
+  the rest of the same RPDO. Target position follows the Controlword in
+  RPDO1, so the simulator latched the previous target. It now defers the
+  Controlword until the whole frame has been applied, as a real drive does.</li>
+<li>
+<p><strong><code>SetMechanism()</code> before <code>CanBus::Start()</code> crashed.</strong> It went through
+  the encoder, which was only created when the bus attached the device -
+  but devices must be declared, and their mechanism set, before
+  <code>CanBus::Start()</code>. The configurator and the encoder are now owned by
+  <code>Epos4</code> and created in its constructor. <code>api_demo</code> never hit this
+  because it sets the mechanism after starting the bus.</p>
+</li>
+<li>
+<p><code>epos4_sim</code> never moved under Cyclic Synchronous Position. Every new
+  target re-armed the motion timer, and with a 10 ms SYNC against a 20 ms
+  tick the timer was pushed out before it could fire.</p>
+</li>
+<li><code>Epos4::SetEmergencyCallback()</code> called before <code>CanBus::Start()</code> was
+  silently dropped. It is now kept and installed when the device attaches.</li>
+<li><code>Epos4::GetTimeSinceLastPdo()</code> dereferenced a null pointer before
+  <code>CanBus::Start()</code>.</li>
+<li>The cyclic path could publish a stale zero on its first SYNC. The seeded
+  target and the «active» flag were both stored relaxed, so on a weakly
+  ordered CPU (ARM) the bus thread could see the path active before it saw
+  the seed - the very swing to the origin the seed exists to prevent. The
+  flag is now stored with release and loaded with acquire.</li>
+<li><code>QuickStop()</code> and <code>Halt()</code> issued during cyclic operation lasted one SYNC:
+  the Controlword went into the RPDO, and <code>OnSync</code> then republished the copy
+  taken when the cyclic path started. Every Controlword write now updates
+  that copy.</li>
+<li>Reads that prefer PDO trusted any PDO ever received. A drive that drops to
+  pre-operational stops sending PDOs but still answers SDO, so its last
+  Statusword by PDO kept saying «Operation enabled» while it sat in «Fault»,
+  and <code>ClearFault()</code> returned true on a faulted axis. Mapped values are now
+  used only if a PDO arrived within 100 ms; otherwise the drive is asked.</li>
+<li><code>epos4_sim</code> now tells the two NMT resets apart: reset node restarts
+  everything, reset communication leaves the CiA 402 state alone, and a
+  fault reset after a lost heartbeat is ignored until a reset communication
+  arrives, as on the drive.</li>
+<li><code>Epos4::IsPdoActive()</code> dereferenced a null pointer before
+  <code>CanBus::Start()</code>.</li>
+<li><code>Configurator::Save()</code> and <code>RestoreDefaults()</code> addressed 0x1010 / 0x1011
+  with bare hexadecimal instead of the object dictionary constants.</li>
+</ul>
+<hr />
+<h2 id="010-2026-09-24">[0.1.0] - 2026-09-24<a class="headerlink" href="#010-2026-09-24" title="Permanent link">#</a></h2>
+<p>First working version. A device-oriented API for maxon EPOS4 controllers over
+CANopen, built on Lely. The library core carries no ROS dependency.</p>
+<h3 id="added_1">Added<a class="headerlink" href="#added_1" title="Permanent link">#</a></h3>
+<p><strong>Object dictionary</strong> (<code>epos4::od</code>)
+- 556 index and sub-index constants generated from the device EDS
+  (EPOS4 Module 50/15), split into <code>comm</code> (CiA 301), <code>maxon_comm</code>, <code>maxon</code> and
+  <code>cia402</code> namespaces. Code written against <code>cia402</code> is portable to any CiA 402
+  drive; the <code>maxon</code> namespaces are not. No other file in the library contains
+  a bare hexadecimal object address.</p>
+<p><strong>CiA 402 state machine</strong> (<code>epos4::core</code>)
+- <code>Decode()</code> maps a raw Statusword to one of the eight states of Table 2-5,
+  masking the bits the manual marks as <em>don't care</em>. Returns <code>std::nullopt</code>
+  for a pattern that matches none of them rather than inventing a state.
+- <code>Controlword</code> builds the command words of Table 2-7 as a
+  read-modify-write, preserving the operating-mode bits and generating the
+  rising edge that Fault reset requires.
+- <code>PlanStep()</code> answers "what do I send this cycle" from the current state and
+  a goal. Stateless: the drive reports where it is, so no progress has to be
+  tracked. Never emits a fault reset on its own.</p>
+<p><strong>Device</strong> (<code>epos4::Epos4</code>, <code>epos4::CanBus</code>)
+- <code>CanBus</code> owns the Lely stack and runs the event loop on its own thread.
+  Devices are declared against a bus and attached when it starts.
+- <code>Enable()</code>, <code>Disable()</code>, <code>ClearFault()</code>, <code>Halt()</code>, <code>QuickStop()</code>,
+  <code>Home()</code>, <code>WaitUntilReady()</code>.
+- <code>SetControl()</code> for all six operating modes: Profile Position, Profile
+  Velocity, Cyclic Synchronous Position / Velocity / Torque, and Homing.
+  The PPM setpoint handshake of Table 3-15 is performed internally.
+- 18 status signals with caching, timestamps and staleness, covering position,
+  velocity, torque, following error, the mode-specific Statusword bits and the
+  holding brake state.
+- <code>ReadObject()</code> / <code>WriteObject()</code> for anything the API does not wrap.</p>
+<p><strong>Configuration</strong> (<code>epos4::configs</code>)
+- Thirteen configuration groups: motor, gear, axis, current / position /
+  velocity controllers, motion profile, limits, homing, stop options, holding
+  brake, standstill detection and digital outputs.
+- Every field is <code>std::optional</code>: only what is explicitly set gets written, so
+  a partially filled configuration cannot wipe tuned gains.
+- <code>Save()</code> (0x1010) and <code>RestoreDefaults()</code> (0x1011).</p>
+<p><strong>Feedback</strong> (<code>epos4::Encoder</code>, via <code>Epos4::GetEncoder()</code>)
+- All five sensor types: digital incremental 1 and 2, analog SinCos, SSI
+  absolute and digital Hall, plus the sensor-slot layout in 0x3000:01.
+- Bitfield words are typed rather than raw. The Hall word's layout is the
+  mirror of the incremental one (polarity on bit 0, method on bit 4), and a
+  test asserts the two encodings differ.
+- <code>Apply()</code> refuses while the motor is powered, as the manual requires, rather
+  than letting the drive abort each write and leaving the configuration half
+  applied.
+- Unit helpers for the factor of four between encoder pulses and quadcounts.</p>
+<p><strong>Diagnostics</strong> (<code>epos4::signals</code>)
+- All 73 device error codes of Table 7-186 with the cause, effect and recovery
+  from sections 7.2.1 to 7.2.72, including the three ranges (0x1080-0x1088,
+  0x5480-0x5483, 0x6180-0x61F0) that a point lookup would miss.
+- All 26 SDO abort codes of Table 7-187.
+- <code>IsWarning()</code> distinguishes the codes the drive keeps running through.
+- <code>ClearsPosition()</code> flags the six errors whose reset loses the homing
+  reference.
+- <code>SetEmergencyCallback()</code> delivers EMCY frames without polling;
+  <code>GetErrorHistory()</code> reads 0x1003, which survives a fault reset.</p>
+<p><strong>PDO</strong>
+- Mapping is declared in the network description and generated by <code>dcfgen</code>
+  into both the master's dictionary and the concise configuration pushed to
+  the drive, so the two ends cannot drift apart.
+- Status reads come from the mapped values with no bus traffic once PDOs are
+  flowing; cyclic setpoints ride the next SYNC instead of an SDO round trip.
+- <code>IsPdoActive()</code> and <code>GetTimeSinceLastPdo()</code>.</p>
+<p><strong>Simulator</strong> (<code>epos4_sim</code>)
+- A CANopen slave that implements the CiA 402 transitions properly and loads
+  the real maxon EDS, so the identity check passes and the production
+  configuration can be used against it. Written because the mock in
+  <code>canopen_fake_slaves</code> answers 0x0040 to every Controlword write and never
+  advances, which makes the enable sequence untestable.</p>
+<p><strong>Tests</strong>
+- 54 tests, none of which need a bus or hardware.</p>
+<h3 id="known-limitations">Known limitations<a class="headerlink" href="#known-limitations" title="Permanent link">#</a></h3>
+<ul>
+<li><strong>Nothing has run against a physical EPOS4.</strong> Everything is verified against
+  the simulator.</li>
+<li>~~Profile Position motion cannot be verified in simulation: Lely's
+  <code>BasicSlave</code> does not remap its PDOs at run time.~~ Wrong diagnosis, see
+  <em>Unreleased</em>.</li>
+<li>Homing and the cyclic modes are implemented but unexercised.</li>
+<li><code>Configurator::Refresh()</code> reads back a subset of the configuration.</li>
+<li>Not yet wrapped: digital and analog inputs, analog outputs, power
+  limitation, thermal protection, functional safety, dual-loop position
+  control, the velocity observer and touch probe.</li>
+<li>The <code>epos4_ros2_control</code> and <code>epos4_interfaces</code> packages are empty.</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../hardware/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Hardware">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Hardware
+              </div>
+            </div>
+          </a>
+        
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      EposLib is licensed under Apache-2.0.
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.indexes", "navigation.top", "navigation.footer", "search.highlight", "search.suggest", "content.code.copy", "content.code.annotate", "toc.follow"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -10,25 +10,31 @@
       
       
       
+        <link rel="canonical" href="https://imcab.github.io/EposLibDocs/troubleshooting/boot-and-pdo/">
       
+      
+        <link rel="prev" href="../can-bus/">
+      
+      
+        <link rel="next" href="../faults/">
       
       
         
       
       
-      <link rel="icon" href="/EposLibDocs/assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
-        <title>EposLib</title>
+        <title>Boot and PDOs - EposLib</title>
       
     
     
-      <link rel="stylesheet" href="/EposLibDocs/assets/stylesheets/main.ec1eaa64.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
-        <link rel="stylesheet" href="/EposLibDocs/assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -47,9 +53,9 @@
       
     
     
-      <link rel="stylesheet" href="/EposLibDocs/stylesheets/extra.css">
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
     
-    <script>__md_scope=new URL("/EposLibDocs/",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -71,6 +77,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#boot-and-pdos" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -81,7 +92,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="/EposLibDocs/." title="EposLib" class="md-header__button md-logo" aria-label="EposLib" data-md-component="logo">
+    <a href="../.." title="EposLib" class="md-header__button md-logo" aria-label="EposLib" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -101,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              
+              Boot and PDOs
             
           </span>
         </div>
@@ -188,7 +199,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="/EposLibDocs/." class="md-tabs__link">
+      <a href="../.." class="md-tabs__link">
         
   
   
@@ -209,7 +220,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="/EposLibDocs/getting-started/" class="md-tabs__link">
+        <a href="../../getting-started/" class="md-tabs__link">
           
   
   
@@ -231,7 +242,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="/EposLibDocs/concepts/" class="md-tabs__link">
+        <a href="../../concepts/" class="md-tabs__link">
           
   
   
@@ -253,7 +264,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="/EposLibDocs/network/" class="md-tabs__link">
+        <a href="../../network/" class="md-tabs__link">
           
   
   
@@ -275,7 +286,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="/EposLibDocs/api/" class="md-tabs__link">
+        <a href="../../api/" class="md-tabs__link">
           
   
   
@@ -297,7 +308,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="/EposLibDocs/examples/" class="md-tabs__link">
+        <a href="../../examples/" class="md-tabs__link">
           
   
   
@@ -315,11 +326,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="/EposLibDocs/troubleshooting/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
           
   
   
@@ -341,7 +354,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="/EposLibDocs/reference/" class="md-tabs__link">
+        <a href="../../reference/" class="md-tabs__link">
           
   
   
@@ -377,7 +390,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="/EposLibDocs/." title="EposLib" class="md-nav__button md-logo" aria-label="EposLib" data-md-component="logo">
+    <a href="../.." title="EposLib" class="md-nav__button md-logo" aria-label="EposLib" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -407,7 +420,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/EposLibDocs/." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   
@@ -469,7 +482,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="/EposLibDocs/getting-started/" class="md-nav__link ">
+            <a href="../../getting-started/" class="md-nav__link ">
               
   
   
@@ -513,7 +526,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/EposLibDocs/getting-started/requirements/" class="md-nav__link">
+      <a href="../../getting-started/requirements/" class="md-nav__link">
         
   
   
@@ -541,7 +554,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/EposLibDocs/getting-started/installation/" class="md-nav__link">
+      <a href="../../getting-started/installation/" class="md-nav__link">
         
   
   
@@ -569,7 +582,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/EposLibDocs/getting-started/can-setup/" class="md-nav__link">
+      <a href="../../getting-started/can-setup/" class="md-nav__link">
         
   
   
@@ -597,7 +610,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/EposLibDocs/getting-started/first-run/" class="md-nav__link">
+      <a href="../../getting-started/first-run/" class="md-nav__link">
         
   
   
@@ -625,7 +638,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/EposLibDocs/getting-started/simulation/" class="md-nav__link">
+      <a href="../../getting-started/simulation/" class="md-nav__link">
         
   
   
@@ -653,7 +666,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/EposLibDocs/getting-started/your-package/" class="md-nav__link">
+      <a href="../../getting-started/your-package/" class="md-nav__link">
         
   
   
@@ -721,7 +734,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="/EposLibDocs/concepts/" class="md-nav__link ">
+            <a href="../../concepts/" class="md-nav__link ">
               
   
   
@@ -765,7 +778,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/EposLibDocs/concepts/architecture/" class="md-nav__link">
+      <a href="../../concepts/architecture/" class="md-nav__link">
         
   
   
@@ -793,7 +806,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/EposLibDocs/concepts/canopen/" class="md-nav__link">
+      <a href="../../concepts/canopen/" class="md-nav__link">
         
   
   
@@ -821,7 +834,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/EposLibDocs/concepts/state-machine/" class="md-nav__link">
+      <a href="../../concepts/state-machine/" class="md-nav__link">
         
   
   
@@ -849,7 +862,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/EposLibDocs/concepts/units/" class="md-nav__link">
+      <a href="../../concepts/units/" class="md-nav__link">
         
   
   
@@ -877,7 +890,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/EposLibDocs/concepts/threading/" class="md-nav__link">
+      <a href="../../concepts/threading/" class="md-nav__link">
         
   
   
@@ -943,7 +956,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="/EposLibDocs/network/" class="md-nav__link ">
+            <a href="../../network/" class="md-nav__link ">
               
   
   
@@ -987,7 +1000,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/EposLibDocs/network/bus-yml/" class="md-nav__link">
+      <a href="../../network/bus-yml/" class="md-nav__link">
         
   
   
@@ -1015,7 +1028,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/EposLibDocs/network/pdo-mapping/" class="md-nav__link">
+      <a href="../../network/pdo-mapping/" class="md-nav__link">
         
   
   
@@ -1043,7 +1056,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/EposLibDocs/network/sync-heartbeat/" class="md-nav__link">
+      <a href="../../network/sync-heartbeat/" class="md-nav__link">
         
   
   
@@ -1071,7 +1084,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/EposLibDocs/network/multi-drive/" class="md-nav__link">
+      <a href="../../network/multi-drive/" class="md-nav__link">
         
   
   
@@ -1155,7 +1168,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="/EposLibDocs/api/" class="md-nav__link ">
+            <a href="../../api/" class="md-nav__link ">
               
   
   
@@ -1199,7 +1212,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/EposLibDocs/api/lifecycle/" class="md-nav__link">
+      <a href="../../api/lifecycle/" class="md-nav__link">
         
   
   
@@ -1227,7 +1240,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/EposLibDocs/api/enabling/" class="md-nav__link">
+      <a href="../../api/enabling/" class="md-nav__link">
         
   
   
@@ -1255,7 +1268,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/EposLibDocs/api/control-requests/" class="md-nav__link">
+      <a href="../../api/control-requests/" class="md-nav__link">
         
   
   
@@ -1283,7 +1296,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/EposLibDocs/api/cyclic-control/" class="md-nav__link">
+      <a href="../../api/cyclic-control/" class="md-nav__link">
         
   
   
@@ -1311,7 +1324,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/EposLibDocs/api/homing/" class="md-nav__link">
+      <a href="../../api/homing/" class="md-nav__link">
         
   
   
@@ -1339,7 +1352,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/EposLibDocs/api/status-signals/" class="md-nav__link">
+      <a href="../../api/status-signals/" class="md-nav__link">
         
   
   
@@ -1367,7 +1380,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/EposLibDocs/api/configuration/" class="md-nav__link">
+      <a href="../../api/configuration/" class="md-nav__link">
         
   
   
@@ -1395,7 +1408,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/EposLibDocs/api/encoders/" class="md-nav__link">
+      <a href="../../api/encoders/" class="md-nav__link">
         
   
   
@@ -1423,7 +1436,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/EposLibDocs/api/io/" class="md-nav__link">
+      <a href="../../api/io/" class="md-nav__link">
         
   
   
@@ -1451,7 +1464,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/EposLibDocs/api/safety/" class="md-nav__link">
+      <a href="../../api/safety/" class="md-nav__link">
         
   
   
@@ -1479,7 +1492,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/EposLibDocs/api/diagnostics/" class="md-nav__link">
+      <a href="../../api/diagnostics/" class="md-nav__link">
         
   
   
@@ -1507,7 +1520,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/EposLibDocs/api/raw-access/" class="md-nav__link">
+      <a href="../../api/raw-access/" class="md-nav__link">
         
   
   
@@ -1535,7 +1548,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/EposLibDocs/api/core/" class="md-nav__link">
+      <a href="../../api/core/" class="md-nav__link">
         
   
   
@@ -1617,7 +1630,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="/EposLibDocs/examples/" class="md-nav__link ">
+            <a href="../../examples/" class="md-nav__link ">
               
   
   
@@ -1661,7 +1674,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/EposLibDocs/examples/device-info/" class="md-nav__link">
+      <a href="../../examples/device-info/" class="md-nav__link">
         
   
   
@@ -1689,7 +1702,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/EposLibDocs/examples/profile-position/" class="md-nav__link">
+      <a href="../../examples/profile-position/" class="md-nav__link">
         
   
   
@@ -1717,7 +1730,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/EposLibDocs/examples/profile-velocity/" class="md-nav__link">
+      <a href="../../examples/profile-velocity/" class="md-nav__link">
         
   
   
@@ -1745,7 +1758,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/EposLibDocs/examples/cyclic-velocity/" class="md-nav__link">
+      <a href="../../examples/cyclic-velocity/" class="md-nav__link">
         
   
   
@@ -1773,7 +1786,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/EposLibDocs/examples/cyclic-torque/" class="md-nav__link">
+      <a href="../../examples/cyclic-torque/" class="md-nav__link">
         
   
   
@@ -1801,7 +1814,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/EposLibDocs/examples/cyclic-position/" class="md-nav__link">
+      <a href="../../examples/cyclic-position/" class="md-nav__link">
         
   
   
@@ -1829,7 +1842,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/EposLibDocs/examples/homing/" class="md-nav__link">
+      <a href="../../examples/homing/" class="md-nav__link">
         
   
   
@@ -1857,7 +1870,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/EposLibDocs/examples/multi-drive/" class="md-nav__link">
+      <a href="../../examples/multi-drive/" class="md-nav__link">
         
   
   
@@ -1885,7 +1898,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/EposLibDocs/examples/fault-monitor/" class="md-nav__link">
+      <a href="../../examples/fault-monitor/" class="md-nav__link">
         
   
   
@@ -1913,7 +1926,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/EposLibDocs/examples/configuration/" class="md-nav__link">
+      <a href="../../examples/configuration/" class="md-nav__link">
         
   
   
@@ -1941,7 +1954,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/EposLibDocs/examples/encoder-setup/" class="md-nav__link">
+      <a href="../../examples/encoder-setup/" class="md-nav__link">
         
   
   
@@ -1969,7 +1982,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/EposLibDocs/examples/digital-io/" class="md-nav__link">
+      <a href="../../examples/digital-io/" class="md-nav__link">
         
   
   
@@ -2001,6 +2014,8 @@
       
   
   
+    
+  
   
   
     
@@ -2022,20 +2037,23 @@
     
     
       
+        
+        
+      
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="/EposLibDocs/troubleshooting/" class="md-nav__link ">
+            <a href="../" class="md-nav__link ">
               
   
   
@@ -2053,13 +2071,13 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_7" id="__nav_7_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_7" id="__nav_7_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_7">
             <span class="md-nav__icon md-icon"></span>
             
@@ -2079,7 +2097,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/EposLibDocs/troubleshooting/can-bus/" class="md-nav__link">
+      <a href="../can-bus/" class="md-nav__link">
         
   
   
@@ -2104,10 +2122,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="/EposLibDocs/troubleshooting/boot-and-pdo/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Boot and PDOs
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -2123,6 +2168,81 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#cob-ids" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A configuration write was refused
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#identity-mismatch-d-m" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Identity mismatch ('D', 'M')
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1000-general-error" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        "General error" reading 1000 at start
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#no-pdos-no-error" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        No PDOs, no error
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#plausible-but-wrong-values" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Plausible but wrong values
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -2135,7 +2255,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/EposLibDocs/troubleshooting/faults/" class="md-nav__link">
+      <a href="../faults/" class="md-nav__link">
         
   
   
@@ -2163,7 +2283,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/EposLibDocs/troubleshooting/faq/" class="md-nav__link">
+      <a href="../faq/" class="md-nav__link">
         
   
   
@@ -2235,7 +2355,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="/EposLibDocs/reference/" class="md-nav__link ">
+            <a href="../../reference/" class="md-nav__link ">
               
   
   
@@ -2279,7 +2399,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/EposLibDocs/reference/error-codes/" class="md-nav__link">
+      <a href="../../reference/error-codes/" class="md-nav__link">
         
   
   
@@ -2307,7 +2427,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/EposLibDocs/reference/sdo-abort-codes/" class="md-nav__link">
+      <a href="../../reference/sdo-abort-codes/" class="md-nav__link">
         
   
   
@@ -2335,7 +2455,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/EposLibDocs/reference/configuration-fields/" class="md-nav__link">
+      <a href="../../reference/configuration-fields/" class="md-nav__link">
         
   
   
@@ -2363,7 +2483,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/EposLibDocs/reference/enumerations/" class="md-nav__link">
+      <a href="../../reference/enumerations/" class="md-nav__link">
         
   
   
@@ -2391,7 +2511,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/EposLibDocs/reference/object-dictionary/" class="md-nav__link">
+      <a href="../../reference/object-dictionary/" class="md-nav__link">
         
   
   
@@ -2419,7 +2539,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/EposLibDocs/reference/hardware/" class="md-nav__link">
+      <a href="../../reference/hardware/" class="md-nav__link">
         
   
   
@@ -2447,7 +2567,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/EposLibDocs/reference/changelog/" class="md-nav__link">
+      <a href="../../reference/changelog/" class="md-nav__link">
         
   
   
@@ -2492,6 +2612,71 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#cob-ids" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A configuration write was refused
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#identity-mismatch-d-m" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Identity mismatch ('D', 'M')
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1000-general-error" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        "General error" reading 1000 at start
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#no-pdos-no-error" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        No PDOs, no error
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#plausible-but-wrong-values" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Plausible but wrong values
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -2504,8 +2689,122 @@
               
               <article class="md-content__inner md-typeset">
                 
-  <h1>404 - Not found</h1>
+                  
 
+
+
+<h1 id="boot-and-pdos">Boot and PDOs<a class="headerlink" href="#boot-and-pdos" title="Permanent link">#</a></h1>
+<p>When the master starts, it <strong>boots</strong> every node in its DCF: checks the node's identity, then
+downloads its configuration - the concise DCF, <code>node_N.bin</code> - which is where the PDO mapping
+and the heartbeat consumer come from. If a step fails, the node usually still answers SDO,
+so <code>WaitUntilReady()</code> succeeds, but no PDO ever arrives in the layout the master expects.</p>
+<p>Check both after <code>WaitUntilReady()</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="k">auto</span><span class="w"> </span><span class="n">boot</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">motor</span><span class="p">.</span><span class="n">GetBootStatus</span><span class="p">();</span><span class="w">                 </span><span class="c1">// ok, or the letter of the failed step</span>
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">epos4</span><span class="o">::</span><span class="n">signals</span><span class="o">::</span><span class="n">PdoMismatch</span><span class="o">&gt;</span><span class="w"> </span><span class="n">diff</span><span class="p">;</span>
+<span class="n">motor</span><span class="p">.</span><span class="n">CheckPdoMapping</span><span class="p">(</span><span class="n">diff</span><span class="p">);</span><span class="w">                       </span><span class="c1">// empty when both ends agree</span>
+</code></pre></div>
+<p>or run the <a href="../../examples/device-info/">device information</a> example, which prints both.</p>
+<h2 id="cob-ids">A configuration write was refused<a class="headerlink" href="#cob-ids" title="Permanent link">#</a></h2>
+<div class="highlight"><pre><span></span><code>error: SDO abort code 06010000 received while updating the configuration of node 05:
+       Unsupported access to an object
+PDO           : NO (SDO only)
+mapping PDO   : 14 DIFFERENCES
+  RPDO1 COB-ID is 0x00000201, the master expects 0x00000205
+  ...
+</code></pre></div>
+<p>The master's configuration download stopped at a write the drive refused, so the drive
+kept the PDO configuration it had saved. The most common cause - and the one in this output -
+is <strong>COB-IDs saved for another node-ID</strong>: the drive at node 5 has PDO COB-IDs of node 1
+(<code>0x201</code>, <code>0x181</code>).</p>
+<p>The concise DCF first disables each PDO while giving it its new COB-ID
+(<code>0x1400:01 = 0x80000205</code>). CiA 301 forbids changing the CAN-ID of a PDO that is valid, so a
+drive whose RPDO1 is valid at <code>0x201</code> refuses that write - and the download stops there.
+This happens when a drive was configured and saved as one node-ID and later moved to
+another: saved COB-IDs are absolute values.</p>
+<p><strong>Fix it once, without touching the motor data:</strong> for each PDO, first invalidate it keeping
+its old ID, then give it the new one, then save. With <code>can-utils</code>, with no other program
+running, for a drive at node 5 whose PDOs carry node 1's IDs:</p>
+<div class="highlight"><pre><span></span><code>cansend<span class="w"> </span>can0<span class="w"> </span><span class="m">000</span><span class="c1">#8005                    # node 5 to pre-operational</span>
+<span class="c1"># per PDO: 0x8000_0000 | old ID, then 0x8000_0000 | new ID (expedited SDO download, 4 bytes)</span>
+cansend<span class="w"> </span>can0<span class="w"> </span><span class="m">605</span><span class="c1">#2300140101020080   # RPDO1 0x1400:01 = 0x80000201</span>
+cansend<span class="w"> </span>can0<span class="w"> </span><span class="m">605</span><span class="c1">#2300140105020080   #                 = 0x80000205</span>
+cansend<span class="w"> </span>can0<span class="w"> </span><span class="m">605</span><span class="c1">#2301140101030080   # RPDO2 0x1401:01 = 0x80000301</span>
+cansend<span class="w"> </span>can0<span class="w"> </span><span class="m">605</span><span class="c1">#2301140105030080   #                 = 0x80000305</span>
+cansend<span class="w"> </span>can0<span class="w"> </span><span class="m">605</span><span class="c1">#2302140101040080   # RPDO3 0x1402:01 = 0x80000401</span>
+cansend<span class="w"> </span>can0<span class="w"> </span><span class="m">605</span><span class="c1">#2302140105040080   #                 = 0x80000405</span>
+cansend<span class="w"> </span>can0<span class="w"> </span><span class="m">605</span><span class="c1">#2303140101050080   # RPDO4 0x1403:01 = 0x80000501</span>
+cansend<span class="w"> </span>can0<span class="w"> </span><span class="m">605</span><span class="c1">#2303140105050080   #                 = 0x80000505</span>
+cansend<span class="w"> </span>can0<span class="w"> </span><span class="m">605</span><span class="c1">#2300180181010080   # TPDO1 0x1800:01 = 0x80000181</span>
+cansend<span class="w"> </span>can0<span class="w"> </span><span class="m">605</span><span class="c1">#2300180185010080   #                 = 0x80000185</span>
+cansend<span class="w"> </span>can0<span class="w"> </span><span class="m">605</span><span class="c1">#2301180181020080   # TPDO2 0x1801:01 = 0x80000281</span>
+cansend<span class="w"> </span>can0<span class="w"> </span><span class="m">605</span><span class="c1">#2301180185020080   #                 = 0x80000285</span>
+cansend<span class="w"> </span>can0<span class="w"> </span><span class="m">605</span><span class="c1">#2302180181030080   # TPDO3 0x1802:01 = 0x80000381</span>
+cansend<span class="w"> </span>can0<span class="w"> </span><span class="m">605</span><span class="c1">#2302180185030080   #                 = 0x80000385</span>
+cansend<span class="w"> </span>can0<span class="w"> </span><span class="m">605</span><span class="c1">#2303180181040080   # TPDO4 0x1803:01 = 0x80000481</span>
+cansend<span class="w"> </span>can0<span class="w"> </span><span class="m">605</span><span class="c1">#2303180185040080   #                 = 0x80000485</span>
+cansend<span class="w"> </span>can0<span class="w"> </span><span class="m">605</span><span class="c1">#2310100173617665   # 0x1010:01 = "save"</span>
+</code></pre></div>
+<p>Watch <code>candump can0</code> while sending: each request should be answered with <code>585#60...</code>
+(accepted); <code>585#80...</code> is a refusal, with the abort code in the last four bytes. Then
+power-cycle the drive. The next boot downloads the configuration completely, and
+<code>CheckPdoMapping()</code> comes back empty. The same writes can be made in EPOS Studio's object
+dictionary, in the same order.</p>
+<p>The frame layout, for another node-ID: <code>6NN#23 LL HH SS d0 d1 d2 d3</code> - command <code>0x23</code>
+(write 4 bytes), index low/high byte, sub-index, value little-endian.</p>
+<div class="admonition danger">
+<p class="admonition-title">Not RestoreDefaults()</p>
+<p>Restoring factory defaults also fixes the COB-IDs - and erases the motor data and
+every tuned gain with them.</p>
+</div>
+<p>Other writes that can be refused during the download: an object the network description
+writes that does not exist on this hardware or firmware (abort <code>0x06020000</code>), or a value
+out of range (<code>0x06090030</code>). The abort message names the object.</p>
+<h2 id="identity-mismatch-d-m">Identity mismatch ('D', 'M')<a class="headerlink" href="#identity-mismatch-d-m" title="Permanent link">#</a></h2>
+<p>The DCF records the vendor-ID and product code of the EDS it was generated from. A node that
+answers with another identity is not booted: <code>'D'</code> for the vendor (not a maxon drive, or
+another device at that node-ID), <code>'M'</code> for the product code (another EPOS4 variant than the
+EDS describes). Use the EDS of your variant, or fix the node-ID.</p>
+<h2 id="1000-general-error">"General error" reading 1000 at start<a class="headerlink" href="#1000-general-error" title="Permanent link">#</a></h2>
+<div class="highlight"><pre><span></span><code>NMT: entering operational state
+error: SDO abort code 08000000 received on upload request of object 1000 (Device type)
+       to node 05: General error
+listo
+</code></pre></div>
+<p>Once, at start-up, followed by a working node: harmless. The master resets the nodes'
+communication as it starts and immediately begins the boot by reading <code>0x1000</code>; a drive
+still resetting answers that first request with a general error. When the drive announces
+itself a moment later the master boots it again, successfully - the proof is that the PDO
+mapping, downloaded in that same boot, is in place. If it repeats, or PDOs stay inactive,
+it is not this.</p>
+<h2 id="no-pdos-no-error">No PDOs, no error<a class="headerlink" href="#no-pdos-no-error" title="Permanent link">#</a></h2>
+<p><code>IsPdoActive()</code> stays false and nothing was refused:</p>
+<ul>
+<li><strong>SYNC disabled.</strong> <code>sync_period: 0</code> in <code>bus.yml</code>: synchronous TPDOs are never sent.</li>
+<li><strong>The device was constructed after <code>Start()</code>.</strong> The master routes a node's PDOs only to a
+  driver registered when it booted the node. Declare every device before <code>Start()</code>.</li>
+<li><strong>The DCF does not describe the node</strong>, or describes another node-ID.</li>
+<li><strong>The node is in pre-operational.</strong> After a heartbeat loss the drive drops to
+  pre-operational and stops its PDOs; <code>ClearFault()</code> resets its communication and the master
+  boots it again.</li>
+</ul>
+<h2 id="plausible-but-wrong-values">Plausible but wrong values<a class="headerlink" href="#plausible-but-wrong-values" title="Permanent link">#</a></h2>
+<p>A position that is really a velocity, a Statusword that is half of something else: the
+drive and the master decode a PDO with different layouts. Nothing fails - CAN has no idea
+what the bytes mean. <code>CheckPdoMapping()</code> turns it into a list of differences; fix the cause
+(usually a failed configuration download, above), never the symptom.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
               </article>
             </div>
           
@@ -2523,6 +2822,44 @@
       
         <footer class="md-footer">
   
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../can-bus/" class="md-footer__link md-footer__link--prev" aria-label="Previous: CAN bus">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                CAN bus
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../faults/" class="md-footer__link md-footer__link--next" aria-label="Next: Common faults">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Common faults
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
     
   
   <div class="md-footer-meta md-typeset">
@@ -2554,10 +2891,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "/EposLibDocs/", "features": ["navigation.tabs", "navigation.sections", "navigation.indexes", "navigation.top", "navigation.footer", "search.highlight", "search.suggest", "content.code.copy", "content.code.annotate", "toc.follow"], "search": "/EposLibDocs/assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.indexes", "navigation.top", "navigation.footer", "search.highlight", "search.suggest", "content.code.copy", "content.code.annotate", "toc.follow"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="/EposLibDocs/assets/javascripts/bundle.d7400e89.min.js"></script>
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
     
   </body>

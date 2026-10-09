@@ -1,0 +1,6174 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="C++ API for maxon EPOS4 controllers over CANopen">
+      
+      
+      
+        <link rel="canonical" href="https://imcab.github.io/EposLibDocs/reference/error-codes/">
+      
+      
+        <link rel="prev" href="../">
+      
+      
+        <link rel="next" href="../sdo-abort-codes/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Device error codes - EposLib</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Serif+4:300,300i,400,400i,700,700i%7CIBM+Plex+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Source Serif 4";--md-code-font:"IBM Plex Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#device-error-codes" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="EposLib" class="md-header__button md-logo" aria-label="EposLib" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            EposLib
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Device error codes
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Imcab/EposLib" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Imcab/EposLib
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../getting-started/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Getting Started
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../concepts/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Concepts
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../network/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Network
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../api/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  API Usage
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../examples/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Examples
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../troubleshooting/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Troubleshooting
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Reference
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="EposLib" class="md-nav__button md-logo" aria-label="EposLib" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    EposLib
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Imcab/EposLib" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Imcab/EposLib
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../getting-started/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting Started
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Getting Started
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/requirements/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Requirements
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/installation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/can-setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Setting up the CAN bus
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/first-run/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    First run
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/simulation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Simulation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/your-package/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Using EposLib in your package
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../concepts/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Concepts
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Concepts
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Architecture
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/canopen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CANopen primer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/state-machine/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The CiA 402 state machine
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/units/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Units
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/threading/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Threading and timing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../network/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Network
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Network
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../network/bus-yml/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The network description (bus.yml)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../network/pdo-mapping/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PDO mapping
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../network/sync-heartbeat/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SYNC and heartbeat
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../network/multi-drive/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Multiple drives
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../api/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    API Usage
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    API Usage
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/lifecycle/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bus and device lifecycle
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/enabling/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Enabling and stopping
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/control-requests/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Control requests
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/cyclic-control/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cyclic control
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/homing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Homing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/status-signals/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Status signals
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/encoders/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Encoders
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/io/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Digital and analog I/O
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/safety/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Brake, stops and protection
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/diagnostics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Diagnostics and faults
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/raw-access/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Raw object access
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/core/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The core library
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../examples/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Examples
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Examples
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/device-info/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Device information
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/profile-position/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Profile position
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/profile-velocity/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Profile velocity
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/cyclic-velocity/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cyclic velocity
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/cyclic-torque/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cyclic torque
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/cyclic-position/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cyclic position
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/homing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Homing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/multi-drive/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Multiple drives
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/fault-monitor/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fault monitor
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/encoder-setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Encoder setup
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/digital-io/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Digital I/O and touch probe
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../troubleshooting/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Troubleshooting
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_7" id="__nav_7_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Troubleshooting
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../troubleshooting/can-bus/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CAN bus
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../troubleshooting/boot-and-pdo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Boot and PDOs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../troubleshooting/faults/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Common faults
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../troubleshooting/faq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAQ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reference
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_8" id="__nav_8_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Reference
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Device error codes
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Device error codes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Summary
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#details" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Details
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Details">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#0x0000" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0x0000 No Error
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0x1000" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0x1000 Generic error
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0x1080-0x1088" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0x1080-0x1088 Generic initialization error
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0x1090" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0x1090 Firmware incompatibility error
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0x2310" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0x2310 Overcurrent error
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0x2320" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0x2320 Power stage protection error
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0x3210" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0x3210 Overvoltage error
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0x3220" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0x3220 Undervoltage error
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0x4210" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0x4210 Thermal overload error
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0x4380" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0x4380 Thermal motor overload error
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0x5113" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0x5113 Logic supply voltage too low error
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0x5280" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0x5280 Hardware defect error
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0x5281" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0x5281 Hardware incompatibility error
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0x5282" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0x5282 STO card detection error
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0x5480-0x5483" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0x5480-0x5483 Hardware error
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0x6080" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0x6080 Sign of life error
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0x6081" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0x6081 Extension 1 watchdog error
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0x6180-0x61f0" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0x6180-0x61F0 Internal software error
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0x6320" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0x6320 Software parameter error
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0x6380" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0x6380 Persistent parameter corrupt error
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0x7320" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0x7320 Position sensor error
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0x7380" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0x7380 Position sensor breach error
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0x7381" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0x7381 Position sensor resolution error
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0x7382" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0x7382 Position sensor index error
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0x7388" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0x7388 Hall sensor error
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0x7389" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0x7389 Hall sensor not found error
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0x738a" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0x738A Hall angle detection error
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0x738c" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0x738C SSI sensor error
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0x738d" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0x738D SSI sensor frame error
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0x7390" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0x7390 Missing main sensor error
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0x7391" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0x7391 Missing commutation sensor error
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0x7392" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0x7392 Main sensor direction error
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0x8110" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0x8110 CAN overrun error (object lost)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0x8111" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0x8111 CAN overrun error
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0x8120" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0x8120 CAN passive mode error
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0x8130" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0x8130 CAN heartbeat error
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0x8150" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0x8150 CAN PDO COB-ID collision
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0x8180" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0x8180 EtherCAT communication error
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0x8181" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0x8181 EtherCAT initialization error
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0x8182" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0x8182 EtherCAT Rx queue overflow
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0x8183" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0x8183 EtherCAT communication error (internal)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0x8184" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0x8184 EtherCAT communication cycle time error
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0x81fd" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0x81FD CAN bus turned off
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0x81fe" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0x81FE CAN Rx queue overflow
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0x81ff" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0x81FF CAN Tx queue overflow
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0x8210" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0x8210 CAN PDO length error
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0x8250" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0x8250 RPDO timeout
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0x8280" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0x8280 EtherCAT PDO communication error
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0x8281" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0x8281 EtherCAT SDO communication error
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0x8611" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0x8611 Following error
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0x8a80" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0x8A80 Negative limit switch error
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0x8a81" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0x8A81 Positive limit switch error
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0x8a82" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0x8A82 Software position limit error
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0x8a88" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0x8A88 STO error
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0x8a8a" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0x8A8A STO card ready warning
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0x8a8b" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0x8A8B STO card inactive state error
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0xff01" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0xFF01 System overloaded error
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0xff02" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0xFF02 Watchdog error
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0xff0b" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0xFF0B System peak overloaded error
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0xff10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0xFF10 Controller gain error
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0xff11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0xFF11 Auto tuning identification error
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0xff12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0xFF12 Auto tuning current limit error
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0xff13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0xFF13 Auto tuning identification current error
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0xff14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0xFF14 Auto tuning data sampling error
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0xff15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0xFF15 Auto tuning sample mismatch error
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0xff16" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0xFF16 Auto tuning parameter error
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0xff17" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0xFF17 Auto tuning amplitude mismatch error
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0xff19" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0xFF19 Auto tuning timeout error
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0xff20" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0xFF20 Auto tuning standstill error
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0xff21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0xFF21 Auto tuning torque invalid error
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0xff22" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0xFF22 Auto tuning max system speed error
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0xff23" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0xFF23 Auto tuning motor connection error
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0xff24" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0xFF24 Auto tuning sensor signal error
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sdo-abort-codes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SDO abort codes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../configuration-fields/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Configuration fields
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../enumerations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Enumerations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../object-dictionary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Object dictionary
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hardware/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hardware
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../changelog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Changelog
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Summary
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#details" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Details
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Details">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#0x0000" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0x0000 No Error
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0x1000" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0x1000 Generic error
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0x1080-0x1088" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0x1080-0x1088 Generic initialization error
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0x1090" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0x1090 Firmware incompatibility error
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0x2310" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0x2310 Overcurrent error
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0x2320" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0x2320 Power stage protection error
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0x3210" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0x3210 Overvoltage error
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0x3220" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0x3220 Undervoltage error
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0x4210" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0x4210 Thermal overload error
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0x4380" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0x4380 Thermal motor overload error
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0x5113" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0x5113 Logic supply voltage too low error
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0x5280" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0x5280 Hardware defect error
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0x5281" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0x5281 Hardware incompatibility error
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0x5282" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0x5282 STO card detection error
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0x5480-0x5483" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0x5480-0x5483 Hardware error
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0x6080" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0x6080 Sign of life error
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0x6081" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0x6081 Extension 1 watchdog error
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0x6180-0x61f0" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0x6180-0x61F0 Internal software error
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0x6320" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0x6320 Software parameter error
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0x6380" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0x6380 Persistent parameter corrupt error
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0x7320" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0x7320 Position sensor error
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0x7380" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0x7380 Position sensor breach error
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0x7381" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0x7381 Position sensor resolution error
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0x7382" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0x7382 Position sensor index error
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0x7388" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0x7388 Hall sensor error
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0x7389" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0x7389 Hall sensor not found error
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0x738a" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0x738A Hall angle detection error
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0x738c" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0x738C SSI sensor error
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0x738d" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0x738D SSI sensor frame error
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0x7390" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0x7390 Missing main sensor error
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0x7391" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0x7391 Missing commutation sensor error
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0x7392" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0x7392 Main sensor direction error
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0x8110" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0x8110 CAN overrun error (object lost)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0x8111" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0x8111 CAN overrun error
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0x8120" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0x8120 CAN passive mode error
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0x8130" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0x8130 CAN heartbeat error
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0x8150" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0x8150 CAN PDO COB-ID collision
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0x8180" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0x8180 EtherCAT communication error
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0x8181" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0x8181 EtherCAT initialization error
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0x8182" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0x8182 EtherCAT Rx queue overflow
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0x8183" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0x8183 EtherCAT communication error (internal)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0x8184" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0x8184 EtherCAT communication cycle time error
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0x81fd" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0x81FD CAN bus turned off
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0x81fe" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0x81FE CAN Rx queue overflow
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0x81ff" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0x81FF CAN Tx queue overflow
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0x8210" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0x8210 CAN PDO length error
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0x8250" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0x8250 RPDO timeout
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0x8280" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0x8280 EtherCAT PDO communication error
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0x8281" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0x8281 EtherCAT SDO communication error
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0x8611" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0x8611 Following error
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0x8a80" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0x8A80 Negative limit switch error
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0x8a81" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0x8A81 Positive limit switch error
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0x8a82" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0x8A82 Software position limit error
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0x8a88" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0x8A88 STO error
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0x8a8a" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0x8A8A STO card ready warning
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0x8a8b" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0x8A8B STO card inactive state error
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0xff01" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0xFF01 System overloaded error
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0xff02" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0xFF02 Watchdog error
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0xff0b" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0xFF0B System peak overloaded error
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0xff10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0xFF10 Controller gain error
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0xff11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0xFF11 Auto tuning identification error
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0xff12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0xFF12 Auto tuning current limit error
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0xff13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0xFF13 Auto tuning identification current error
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0xff14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0xFF14 Auto tuning data sampling error
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0xff15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0xFF15 Auto tuning sample mismatch error
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0xff16" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0xFF16 Auto tuning parameter error
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0xff17" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0xFF17 Auto tuning amplitude mismatch error
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0xff19" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0xFF19 Auto tuning timeout error
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0xff20" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0xFF20 Auto tuning standstill error
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0xff21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0xFF21 Auto tuning torque invalid error
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0xff22" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0xFF22 Auto tuning max system speed error
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0xff23" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0xFF23 Auto tuning motor connection error
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0xff24" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0xFF24 Auto tuning sensor signal error
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<!-- Generated by scripts/gen_errors.cpp from EposLib's Errors.cpp. Do not edit. -->
+
+<h1 id="device-error-codes">Device error codes<a class="headerlink" href="#device-error-codes" title="Permanent link">#</a></h1>
+<p>All 73 entries of Table 7-186 of the EPOS4 Firmware Specification, with the cause, effect and recovery of sections 7.2.1 to 7.2.72. This is what <code>Epos4::DescribeLastError()</code> and <code>signals::DescribeDeviceError()</code> print.</p>
+<p><strong>Reaction</strong> is the manual's fault reaction code:</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>a</strong></td>
+<td>Abort connection option code (<code>0x6007</code>, <code>StopOptionConfigs::abortConnectionOption</code>)</td>
+</tr>
+<tr>
+<td><strong>f</strong></td>
+<td>Fault reaction option code (<code>0x605E</code>, <code>StopOptionConfigs::faultReaction</code>)</td>
+</tr>
+<tr>
+<td><strong>d</strong></td>
+<td>A secure movement is no longer possible: the drive is disabled regardless</td>
+</tr>
+<tr>
+<td><strong>w</strong></td>
+<td>Warning: no effect on the device state (<code>signals::IsWarning()</code>)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Clears position</strong> means resetting the error loses the homing reference (<code>signals::ClearsPosition()</code>). <strong>NMT reset</strong> means the recovery starts with an NMT reset communication, which <code>Epos4::ClearFault()</code> sends for you (<code>signals::RequiresCommunicationReset()</code>).</p>
+<h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>Code</th>
+<th>Name</th>
+<th>Register</th>
+<th>Reaction</th>
+<th>Clears position</th>
+<th>NMT reset</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#0x0000"><code>0x0000</code></a></td>
+<td>No Error</td>
+<td>no error flags</td>
+<td>-</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#0x1000"><code>0x1000</code></a></td>
+<td>Generic error</td>
+<td>generic</td>
+<td>d</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#0x1080-0x1088"><code>0x1080-0x1088</code></a></td>
+<td>Generic initialization error</td>
+<td>generic</td>
+<td>d</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#0x1090"><code>0x1090</code></a></td>
+<td>Firmware incompatibility error</td>
+<td>generic</td>
+<td>d</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#0x2310"><code>0x2310</code></a></td>
+<td>Overcurrent error</td>
+<td>current</td>
+<td>d</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#0x2320"><code>0x2320</code></a></td>
+<td>Power stage protection error</td>
+<td>current</td>
+<td>d</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#0x3210"><code>0x3210</code></a></td>
+<td>Overvoltage error</td>
+<td>voltage</td>
+<td>d</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#0x3220"><code>0x3220</code></a></td>
+<td>Undervoltage error</td>
+<td>voltage</td>
+<td>d</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#0x4210"><code>0x4210</code></a></td>
+<td>Thermal overload error</td>
+<td>temperature</td>
+<td>d</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#0x4380"><code>0x4380</code></a></td>
+<td>Thermal motor overload error</td>
+<td>temperature</td>
+<td>d</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#0x5113"><code>0x5113</code></a></td>
+<td>Logic supply voltage too low error</td>
+<td>voltage</td>
+<td>d</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#0x5280"><code>0x5280</code></a></td>
+<td>Hardware defect error</td>
+<td>generic</td>
+<td>d</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#0x5281"><code>0x5281</code></a></td>
+<td>Hardware incompatibility error</td>
+<td>generic</td>
+<td>d</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#0x5282"><code>0x5282</code></a></td>
+<td>STO card detection error</td>
+<td>generic</td>
+<td>d</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#0x5480-0x5483"><code>0x5480-0x5483</code></a></td>
+<td>Hardware error</td>
+<td>generic</td>
+<td>d</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#0x6080"><code>0x6080</code></a></td>
+<td>Sign of life error</td>
+<td>generic</td>
+<td>d</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#0x6081"><code>0x6081</code></a></td>
+<td>Extension 1 watchdog error</td>
+<td>generic</td>
+<td>a</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#0x6180-0x61f0"><code>0x6180-0x61F0</code></a></td>
+<td>Internal software error</td>
+<td>generic</td>
+<td>d</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#0x6320"><code>0x6320</code></a></td>
+<td>Software parameter error</td>
+<td>generic</td>
+<td>f</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#0x6380"><code>0x6380</code></a></td>
+<td>Persistent parameter corrupt error</td>
+<td>generic</td>
+<td>d</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#0x7320"><code>0x7320</code></a></td>
+<td>Position sensor error</td>
+<td>device profile</td>
+<td>d</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#0x7380"><code>0x7380</code></a></td>
+<td>Position sensor breach error</td>
+<td>device profile</td>
+<td>d</td>
+<td>yes</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#0x7381"><code>0x7381</code></a></td>
+<td>Position sensor resolution error</td>
+<td>device profile</td>
+<td>d</td>
+<td>yes</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#0x7382"><code>0x7382</code></a></td>
+<td>Position sensor index error</td>
+<td>device profile</td>
+<td>d</td>
+<td>yes</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#0x7388"><code>0x7388</code></a></td>
+<td>Hall sensor error</td>
+<td>device profile</td>
+<td>d</td>
+<td>yes</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#0x7389"><code>0x7389</code></a></td>
+<td>Hall sensor not found error</td>
+<td>device profile</td>
+<td>d</td>
+<td>yes</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#0x738a"><code>0x738A</code></a></td>
+<td>Hall angle detection error</td>
+<td>device profile</td>
+<td>d</td>
+<td>yes</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#0x738c"><code>0x738C</code></a></td>
+<td>SSI sensor error</td>
+<td>device profile</td>
+<td>d</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#0x738d"><code>0x738D</code></a></td>
+<td>SSI sensor frame error</td>
+<td>device profile</td>
+<td>d</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#0x7390"><code>0x7390</code></a></td>
+<td>Missing main sensor error</td>
+<td>device profile</td>
+<td>d</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#0x7391"><code>0x7391</code></a></td>
+<td>Missing commutation sensor error</td>
+<td>device profile</td>
+<td>d</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#0x7392"><code>0x7392</code></a></td>
+<td>Main sensor direction error</td>
+<td>device profile</td>
+<td>d</td>
+<td>yes</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#0x8110"><code>0x8110</code></a></td>
+<td>CAN overrun error (object lost)</td>
+<td>communication</td>
+<td>a</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#0x8111"><code>0x8111</code></a></td>
+<td>CAN overrun error</td>
+<td>communication</td>
+<td>a</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#0x8120"><code>0x8120</code></a></td>
+<td>CAN passive mode error</td>
+<td>communication</td>
+<td>a</td>
+<td></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><a href="#0x8130"><code>0x8130</code></a></td>
+<td>CAN heartbeat error</td>
+<td>communication</td>
+<td>a</td>
+<td></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><a href="#0x8150"><code>0x8150</code></a></td>
+<td>CAN PDO COB-ID collision</td>
+<td>communication</td>
+<td>a</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#0x8180"><code>0x8180</code></a></td>
+<td>EtherCAT communication error</td>
+<td>communication</td>
+<td>a</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#0x8181"><code>0x8181</code></a></td>
+<td>EtherCAT initialization error</td>
+<td>communication</td>
+<td>d</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#0x8182"><code>0x8182</code></a></td>
+<td>EtherCAT Rx queue overflow</td>
+<td>communication</td>
+<td>a</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#0x8183"><code>0x8183</code></a></td>
+<td>EtherCAT communication error (internal)</td>
+<td>communication</td>
+<td>a</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#0x8184"><code>0x8184</code></a></td>
+<td>EtherCAT communication cycle time error</td>
+<td>communication</td>
+<td>a</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#0x81fd"><code>0x81FD</code></a></td>
+<td>CAN bus turned off</td>
+<td>communication</td>
+<td>a</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#0x81fe"><code>0x81FE</code></a></td>
+<td>CAN Rx queue overflow</td>
+<td>communication</td>
+<td>a</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#0x81ff"><code>0x81FF</code></a></td>
+<td>CAN Tx queue overflow</td>
+<td>communication</td>
+<td>a</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#0x8210"><code>0x8210</code></a></td>
+<td>CAN PDO length error</td>
+<td>communication</td>
+<td>a</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#0x8250"><code>0x8250</code></a></td>
+<td>RPDO timeout</td>
+<td>communication</td>
+<td>a</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#0x8280"><code>0x8280</code></a></td>
+<td>EtherCAT PDO communication error</td>
+<td>communication</td>
+<td>a</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#0x8281"><code>0x8281</code></a></td>
+<td>EtherCAT SDO communication error</td>
+<td>communication</td>
+<td>a</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#0x8611"><code>0x8611</code></a></td>
+<td>Following error</td>
+<td>motion</td>
+<td>f</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#0x8a80"><code>0x8A80</code></a></td>
+<td>Negative limit switch error</td>
+<td>motion</td>
+<td>f</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#0x8a81"><code>0x8A81</code></a></td>
+<td>Positive limit switch error</td>
+<td>motion</td>
+<td>f</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#0x8a82"><code>0x8A82</code></a></td>
+<td>Software position limit error</td>
+<td>motion</td>
+<td>f</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#0x8a88"><code>0x8A88</code></a></td>
+<td>STO error</td>
+<td>generic</td>
+<td>d</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#0x8a8a"><code>0x8A8A</code></a></td>
+<td>STO card ready warning</td>
+<td>generic</td>
+<td>d</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#0x8a8b"><code>0x8A8B</code></a></td>
+<td>STO card inactive state error</td>
+<td>generic</td>
+<td>d</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#0xff01"><code>0xFF01</code></a></td>
+<td>System overloaded error</td>
+<td>no error flags</td>
+<td>w</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#0xff02"><code>0xFF02</code></a></td>
+<td>Watchdog error</td>
+<td>generic</td>
+<td>d</td>
+<td>yes</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#0xff0b"><code>0xFF0B</code></a></td>
+<td>System peak overloaded error</td>
+<td>generic</td>
+<td>d</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#0xff10"><code>0xFF10</code></a></td>
+<td>Controller gain error</td>
+<td>device profile</td>
+<td>f</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#0xff11"><code>0xFF11</code></a></td>
+<td>Auto tuning identification error</td>
+<td>device profile</td>
+<td>d</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#0xff12"><code>0xFF12</code></a></td>
+<td>Auto tuning current limit error</td>
+<td>device profile</td>
+<td>d</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#0xff13"><code>0xFF13</code></a></td>
+<td>Auto tuning identification current error</td>
+<td>device profile</td>
+<td>d</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#0xff14"><code>0xFF14</code></a></td>
+<td>Auto tuning data sampling error</td>
+<td>device profile</td>
+<td>d</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#0xff15"><code>0xFF15</code></a></td>
+<td>Auto tuning sample mismatch error</td>
+<td>device profile</td>
+<td>d</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#0xff16"><code>0xFF16</code></a></td>
+<td>Auto tuning parameter error</td>
+<td>device profile</td>
+<td>d</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#0xff17"><code>0xFF17</code></a></td>
+<td>Auto tuning amplitude mismatch error</td>
+<td>device profile</td>
+<td>d</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#0xff19"><code>0xFF19</code></a></td>
+<td>Auto tuning timeout error</td>
+<td>device profile</td>
+<td>d</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#0xff20"><code>0xFF20</code></a></td>
+<td>Auto tuning standstill error</td>
+<td>device profile</td>
+<td>d</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#0xff21"><code>0xFF21</code></a></td>
+<td>Auto tuning torque invalid error</td>
+<td>device profile</td>
+<td>d</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#0xff22"><code>0xFF22</code></a></td>
+<td>Auto tuning max system speed error</td>
+<td>device profile</td>
+<td>d</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#0xff23"><code>0xFF23</code></a></td>
+<td>Auto tuning motor connection error</td>
+<td>device profile</td>
+<td>d</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#0xff24"><code>0xFF24</code></a></td>
+<td>Auto tuning sensor signal error</td>
+<td>device profile</td>
+<td>d</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="details">Details<a class="headerlink" href="#details" title="Permanent link">#</a></h2>
+<h3 id="0x0000">0x0000 No Error<a class="headerlink" href="#0x0000" title="Permanent link">#</a></h3>
+<p>Register: no error flags · Reaction: <strong>-</strong></p>
+<p><strong>Cause</strong></p>
+<p><strong>Effect</strong></p>
+<p><strong>Recovery</strong></p>
+<h3 id="0x1000">0x1000 Generic error<a class="headerlink" href="#0x1000" title="Permanent link">#</a></h3>
+<p>Register: generic · Reaction: <strong>d</strong></p>
+<p><strong>Cause</strong></p>
+<ul>
+<li>Unspecific error occurred</li>
+</ul>
+<p><strong>Effect</strong></p>
+<ul>
+<li>Device disabled</li>
+<li>Red LED "ON"</li>
+<li>Error flag set in Statusword</li>
+</ul>
+<p><strong>Recovery</strong></p>
+<ul>
+<li>Reset fault with Controlword</li>
+</ul>
+<h3 id="0x1080-0x1088">0x1080-0x1088 Generic initialization error<a class="headerlink" href="#0x1080-0x1088" title="Permanent link">#</a></h3>
+<p>Register: generic · Reaction: <strong>d</strong></p>
+<p><strong>Cause</strong></p>
+<ul>
+<li>Critical error occurred during boot-up</li>
+</ul>
+<p><strong>Effect</strong></p>
+<ul>
+<li>Device disabled</li>
+<li>Red LED "ON"</li>
+<li>Error flag set in Statusword</li>
+</ul>
+<p><strong>Recovery</strong></p>
+<ul>
+<li>Reset device. If the problem persists, contact your supplier.</li>
+</ul>
+<h3 id="0x1090">0x1090 Firmware incompatibility error<a class="headerlink" href="#0x1090" title="Permanent link">#</a></h3>
+<p>Register: generic · Reaction: <strong>d</strong></p>
+<p><strong>Cause</strong></p>
+<ul>
+<li>Incompatible extension firmware version detected</li>
+</ul>
+<p><strong>Effect</strong></p>
+<ul>
+<li>Device disabled</li>
+<li>Red LED "ON"</li>
+<li>Error flag set in Statusword</li>
+</ul>
+<p><strong>Recovery</strong></p>
+<ul>
+<li>First, try to resolve by resetting the device.</li>
+<li>If reset fails, update the EPOS4 firmware with the extension attached.</li>
+<li>If the problem persists, contact your supplier.</li>
+</ul>
+<h3 id="0x2310">0x2310 Overcurrent error<a class="headerlink" href="#0x2310" title="Permanent link">#</a></h3>
+<p>Register: current · Reaction: <strong>d</strong></p>
+<p><strong>Cause</strong></p>
+<ul>
+<li>Short circuit in motor winding</li>
+<li>Controller gains too high and/or deceleration too high</li>
+<li>Damaged power stage</li>
+</ul>
+<p><strong>Effect</strong></p>
+<ul>
+<li>Device disabled</li>
+<li>Red LED "ON"</li>
+<li>Error flag set in Statusword</li>
+</ul>
+<p><strong>Recovery</strong></p>
+<ul>
+<li>Reset fault with Controlword</li>
+</ul>
+<h3 id="0x2320">0x2320 Power stage protection error<a class="headerlink" href="#0x2320" title="Permanent link">#</a></h3>
+<p>Register: current · Reaction: <strong>d</strong></p>
+<p><strong>Cause</strong></p>
+<ul>
+<li>Short circuit of motor winding against ground</li>
+<li>Short circuit of motor winding against operating voltage Vcc</li>
+<li>Damaged power stage</li>
+<li>Strong motor ripple (on top of a high peak current draw)</li>
+<li>High deceleration or acceleration demands (which push the control to its limits)</li>
+<li>Max. peak current configured which is close to the power stage current protection level</li>
+<li>Poor current control parameter set</li>
+<li>Sudden STO input interruption or loose contact</li>
+</ul>
+<p><strong>Effect</strong></p>
+<ul>
+<li>Device disabled</li>
+<li>Red LED "ON"</li>
+<li>Error flag set in Statusword</li>
+</ul>
+<p><strong>Recovery</strong></p>
+<ul>
+<li>Reset fault with Controlword</li>
+</ul>
+<h3 id="0x3210">0x3210 Overvoltage error<a class="headerlink" href="#0x3210" title="Permanent link">#</a></h3>
+<p>Register: voltage · Reaction: <strong>d</strong></p>
+<p><strong>Cause</strong></p>
+<ul>
+<li>Power supply voltage too high</li>
+</ul>
+<p><strong>Effect</strong></p>
+<ul>
+<li>Device disabled</li>
+<li>Red LED "ON"</li>
+<li>Error flag set in Statusword</li>
+</ul>
+<p><strong>Recovery</strong></p>
+<ul>
+<li>In most cases this error occurs at deceleration where the motor works as a generator and the energy flows from motor to power supply (resulting in an increased voltage).</li>
+<li>Usually, a capacitor (for example 2200 F) close to the device will solve the problem. If not, a shunt regulator will be necessary to dissipate brake energy.</li>
+<li>Reset fault with Controlword (only possible if supply voltage is in valid range).</li>
+</ul>
+<h3 id="0x3220">0x3220 Undervoltage error<a class="headerlink" href="#0x3220" title="Permanent link">#</a></h3>
+<p>Register: voltage · Reaction: <strong>d</strong></p>
+<p><strong>Cause</strong></p>
+<ul>
+<li>Supply voltage is too low for operation</li>
+<li>Power supply cannot supply required acceleration current</li>
+</ul>
+<p><strong>Effect</strong></p>
+<ul>
+<li>Device disabled</li>
+<li>Red LED "ON"</li>
+<li>Error flag set in Statusword</li>
+</ul>
+<p><strong>Recovery</strong></p>
+<ul>
+<li>Reset fault with Controlword</li>
+</ul>
+<h3 id="0x4210">0x4210 Thermal overload error<a class="headerlink" href="#0x4210" title="Permanent link">#</a></h3>
+<p>Register: temperature · Reaction: <strong>d</strong></p>
+<p><strong>Cause</strong></p>
+<ul>
+<li>Temperature at device's power stage too high</li>
+</ul>
+<p><strong>Effect</strong></p>
+<ul>
+<li>Device disabled</li>
+<li>Red LED "ON"</li>
+<li>Error flag set in Statusword</li>
+</ul>
+<p><strong>Recovery</strong></p>
+<ul>
+<li>Reset fault with Controlword (only possible if temperature is in valid range)</li>
+</ul>
+<h3 id="0x4380">0x4380 Thermal motor overload error<a class="headerlink" href="#0x4380" title="Permanent link">#</a></h3>
+<p>Register: temperature · Reaction: <strong>d</strong></p>
+<p><strong>Cause</strong></p>
+<ul>
+<li>Temperature at motor too high or sensor not connected</li>
+</ul>
+<p><strong>Effect</strong></p>
+<ul>
+<li>Device disabled</li>
+<li>Red LED "ON"</li>
+<li>Error flag set in Statusword</li>
+</ul>
+<p><strong>Recovery</strong></p>
+<ul>
+<li>Reset fault with Controlword (only possible if temperature is in valid range)</li>
+</ul>
+<h3 id="0x5113">0x5113 Logic supply voltage too low error<a class="headerlink" href="#0x5113" title="Permanent link">#</a></h3>
+<p>Register: voltage · Reaction: <strong>d</strong></p>
+<p><strong>Cause</strong></p>
+<ul>
+<li>Logic supply voltage is too low for operation</li>
+</ul>
+<p><strong>Effect</strong></p>
+<ul>
+<li>Device disabled</li>
+<li>Red LED "ON"</li>
+<li>Error flag set in Statusword</li>
+</ul>
+<p><strong>Recovery</strong></p>
+<ul>
+<li>Reset fault with Controlword (only possible if supply voltage is in valid range)</li>
+</ul>
+<h3 id="0x5280">0x5280 Hardware defect error<a class="headerlink" href="#0x5280" title="Permanent link">#</a></h3>
+<p>Register: generic · Reaction: <strong>d</strong></p>
+<p><strong>Cause</strong></p>
+<ul>
+<li>Hardware problem detected</li>
+</ul>
+<p><strong>Effect</strong></p>
+<ul>
+<li>Device disabled</li>
+<li>Red LED "ON"</li>
+<li>Error flag set in Statusword</li>
+</ul>
+<p><strong>Recovery</strong></p>
+<ul>
+<li>Reset device. If the problem persists, contact your supplier.</li>
+</ul>
+<h3 id="0x5281">0x5281 Hardware incompatibility error<a class="headerlink" href="#0x5281" title="Permanent link">#</a></h3>
+<p>Register: generic · Reaction: <strong>d</strong></p>
+<p><strong>Cause</strong></p>
+<ul>
+<li>An incompatible hardware combination was detected</li>
+</ul>
+<p><strong>Effect</strong></p>
+<ul>
+<li>Device disabled</li>
+<li>Red LED "ON"</li>
+<li>Error flag set in Statusword</li>
+</ul>
+<p><strong>Recovery</strong></p>
+<ul>
+<li>Reset device. If the problem persists, contact your supplier.</li>
+</ul>
+<h3 id="0x5282">0x5282 STO card detection error<a class="headerlink" href="#0x5282" title="Permanent link">#</a></h3>
+<p>Register: generic · Reaction: <strong>d</strong></p>
+<p><strong>Cause</strong></p>
+<ul>
+<li>STO card type not detected</li>
+</ul>
+<p><strong>Effect</strong></p>
+<ul>
+<li>Device disabled</li>
+<li>Red LED "ON"</li>
+<li>Error flag set in Statusword</li>
+</ul>
+<p><strong>Recovery</strong></p>
+<ul>
+<li>Make sure that the card is fully inserted. If the problem continues, replace the card.</li>
+</ul>
+<h3 id="0x5480-0x5483">0x5480-0x5483 Hardware error<a class="headerlink" href="#0x5480-0x5483" title="Permanent link">#</a></h3>
+<p>Register: generic · Reaction: <strong>d</strong></p>
+<p><strong>Cause</strong></p>
+<ul>
+<li>A hardware problem was detected</li>
+</ul>
+<p><strong>Effect</strong></p>
+<ul>
+<li>Device disabled</li>
+<li>Red LED "ON"</li>
+<li>Error flag set in Statusword</li>
+</ul>
+<p><strong>Recovery</strong></p>
+<ul>
+<li>Reset device. If the problem persists, contact your supplier.</li>
+</ul>
+<h3 id="0x6080">0x6080 Sign of life error<a class="headerlink" href="#0x6080" title="Permanent link">#</a></h3>
+<p>Register: generic · Reaction: <strong>d</strong></p>
+<p><strong>Cause</strong></p>
+<ul>
+<li>Problem with connection to extension 1:</li>
+<li>Overload situation</li>
+<li>Extension hardware failure</li>
+</ul>
+<p><strong>Effect</strong></p>
+<ul>
+<li>Device disabled</li>
+<li>Red LED "ON"</li>
+<li>Error flag set in Statusword</li>
+</ul>
+<p><strong>Recovery</strong></p>
+<ul>
+<li>Reset fault with Controlword</li>
+<li>Check that extension 1 is firmly connected</li>
+<li>If problem reoccurs frequently:</li>
+<li>Update firmware</li>
+<li>Contact your supplier</li>
+</ul>
+<h3 id="0x6081">0x6081 Extension 1 watchdog error<a class="headerlink" href="#0x6081" title="Permanent link">#</a></h3>
+<p>Register: generic · Reaction: <strong>a</strong></p>
+<p><strong>Cause</strong></p>
+<ul>
+<li>Connection loss to extension 1:</li>
+<li>Overload situation</li>
+<li>Extension hardware failure</li>
+</ul>
+<p><strong>Effect</strong></p>
+<ul>
+<li>Device disabled</li>
+<li>Red LED "ON"</li>
+<li>Error flag set in Statusword</li>
+</ul>
+<p><strong>Recovery</strong></p>
+<ul>
+<li>Reset fault with Controlword</li>
+<li>Check that extension 1 is firmly connected</li>
+<li>If problem reoccurs frequently:</li>
+<li>Update firmware</li>
+<li>Contact your supplier</li>
+</ul>
+<h3 id="0x6180-0x61f0">0x6180-0x61F0 Internal software error<a class="headerlink" href="#0x6180-0x61f0" title="Permanent link">#</a></h3>
+<p>Register: generic · Reaction: <strong>d</strong></p>
+<p><strong>Cause</strong></p>
+<ul>
+<li>An internal software error occurred</li>
+</ul>
+<p><strong>Effect</strong></p>
+<ul>
+<li>Device disabled</li>
+<li>Red LED "ON"</li>
+<li>Error flag set in Statusword</li>
+</ul>
+<p><strong>Recovery</strong></p>
+<ul>
+<li>Reset fault with Controlword</li>
+</ul>
+<h3 id="0x6320">0x6320 Software parameter error<a class="headerlink" href="#0x6320" title="Permanent link">#</a></h3>
+<p>Register: generic · Reaction: <strong>f</strong></p>
+<p><strong>Cause</strong></p>
+<ul>
+<li>Corrupt parameter detected: The constant velocity phase is too long due to high Target position and low Profile velocity</li>
+</ul>
+<p><strong>Effect</strong></p>
+<ul>
+<li>Fault reaction defined in Fault reaction option code</li>
+</ul>
+<p><strong>Recovery</strong></p>
+<ul>
+<li>Reset fault with Controlword</li>
+</ul>
+<h3 id="0x6380">0x6380 Persistent parameter corrupt error<a class="headerlink" href="#0x6380" title="Permanent link">#</a></h3>
+<p>Register: generic · Reaction: <strong>d</strong></p>
+<p><strong>Cause</strong></p>
+<ul>
+<li>Persistent parameters are corrupt or inconsistent (wrong CRC)</li>
+</ul>
+<p><strong>Effect</strong></p>
+<ul>
+<li>Default parameters are set</li>
+<li>Device disabled</li>
+<li>Red LED "ON"</li>
+<li>Error flag set in Statusword</li>
+</ul>
+<p><strong>Recovery</strong></p>
+<ul>
+<li>Reset fault with Controlword</li>
+<li>Set or load device parameters again</li>
+</ul>
+<h3 id="0x7320">0x7320 Position sensor error<a class="headerlink" href="#0x7320" title="Permanent link">#</a></h3>
+<p>Register: device profile · Reaction: <strong>d</strong></p>
+<p><strong>Cause</strong></p>
+<ul>
+<li>Detected position of position sensor is no longer valid due to...</li>
+<li>changed/wrong position sensor parameters</li>
+<li>other errors that influence the absolute position detection (such as Hall Sensor Error,</li>
+<li>Position Sensor Index Error, etc.)</li>
+</ul>
+<p><strong>Effect</strong></p>
+<ul>
+<li>Device disabled</li>
+<li>Red LED "ON"</li>
+<li>Error flag set in Statusword</li>
+</ul>
+<p><strong>Recovery</strong></p>
+<ul>
+<li>Reset fault with Controlword</li>
+</ul>
+<h3 id="0x7380">0x7380 Position sensor breach error<a class="headerlink" href="#0x7380" title="Permanent link">#</a></h3>
+<p>Register: device profile · Reaction: <strong>d</strong> · <strong>Clears position</strong></p>
+<p><strong>Cause</strong></p>
+<ul>
+<li>Position sensor supervision has detected a bad working condition due to...</li>
+<li>wrong/broken wiring of encoder</li>
+<li>defective encoder</li>
+<li>regulation parameter are not well tuned (Current control parameter set)</li>
+</ul>
+<p><strong>Effect</strong></p>
+<ul>
+<li>Device disabled</li>
+<li>Red LED "ON"</li>
+<li>Error flag set in Statusword</li>
+</ul>
+<p><strong>Recovery</strong></p>
+<ul>
+<li>Reset fault with Controlword</li>
+</ul>
+<h3 id="0x7381">0x7381 Position sensor resolution error<a class="headerlink" href="#0x7381" title="Permanent link">#</a></h3>
+<p>Register: device profile · Reaction: <strong>d</strong> · <strong>Clears position</strong></p>
+<p><strong>Cause</strong></p>
+<ul>
+<li>Encoder pulses counted between the first two index pulses do not fit the resolution</li>
+<li>Setting of encoder resolution is wrong</li>
+</ul>
+<p><strong>Effect</strong></p>
+<ul>
+<li>Device disabled</li>
+<li>Red LED "ON"</li>
+<li>Error flag set in Statusword</li>
+</ul>
+<p><strong>Recovery</strong></p>
+<ul>
+<li>Reset fault with Controlword</li>
+</ul>
+<h3 id="0x7382">0x7382 Position sensor index error<a class="headerlink" href="#0x7382" title="Permanent link">#</a></h3>
+<p>Register: device profile · Reaction: <strong>d</strong> · <strong>Clears position</strong></p>
+<p><strong>Cause</strong></p>
+<ul>
+<li>Encoder index signal was not found within two turns at start-up due to...</li>
+<li>incorrect wiring of encoder cables</li>
+<li>encoder without or with defective index channel</li>
+<li>wrong sensor type</li>
+<li>setting for encoder resolution too low</li>
+</ul>
+<p><strong>Effect</strong></p>
+<ul>
+<li>Device disabled</li>
+<li>Red LED "ON"</li>
+<li>Error flag set in Statusword</li>
+</ul>
+<p><strong>Recovery</strong></p>
+<ul>
+<li>Reset fault with Controlword</li>
+</ul>
+<h3 id="0x7388">0x7388 Hall sensor error<a class="headerlink" href="#0x7388" title="Permanent link">#</a></h3>
+<p>Register: device profile · Reaction: <strong>d</strong> · <strong>Clears position</strong></p>
+<p><strong>Cause</strong></p>
+<ul>
+<li>Motor Hall sensors report an impossible signal combination due to...</li>
+<li>incorrect wiring of Hall sensors</li>
+<li>incorrect wiring of Hall sensor supply voltage</li>
+<li>damaged Hall sensors</li>
+<li>big Hall sensor signal noise</li>
+</ul>
+<p><strong>Effect</strong></p>
+<ul>
+<li>Device disabled</li>
+<li>Red LED "ON"</li>
+<li>Error flag set in Statusword</li>
+</ul>
+<p><strong>Recovery</strong></p>
+<ul>
+<li>Reset fault with Controlword</li>
+</ul>
+<h3 id="0x7389">0x7389 Hall sensor not found error<a class="headerlink" href="#0x7389" title="Permanent link">#</a></h3>
+<p>Register: device profile · Reaction: <strong>d</strong> · <strong>Clears position</strong></p>
+<p><strong>Cause</strong></p>
+<ul>
+<li>No Hall sensor 3 edge found within first motor turn due to...</li>
+<li>wrong wiring of Hall sensors</li>
+<li>defective Hall sensors</li>
+<li>setting for encoder resolution too low</li>
+</ul>
+<p><strong>Effect</strong></p>
+<ul>
+<li>Device disabled</li>
+<li>Red LED "ON"</li>
+<li>Error flag set in Statusword</li>
+</ul>
+<p><strong>Recovery</strong></p>
+<ul>
+<li>Reset fault with Controlword</li>
+</ul>
+<h3 id="0x738a">0x738A Hall angle detection error<a class="headerlink" href="#0x738a" title="Permanent link">#</a></h3>
+<p>Register: device profile · Reaction: <strong>d</strong> · <strong>Clears position</strong></p>
+<p><strong>Cause</strong></p>
+<ul>
+<li>Angle difference measured between encoder and Hall sensors is too high due to...</li>
+<li>wrong wiring of Hall sensors</li>
+<li>defective Hall sensors</li>
+<li>wrong wiring of encoder</li>
+<li>defective encoder</li>
+<li>wrong setting of encoder resolution or pole pairs</li>
+</ul>
+<p><strong>Effect</strong></p>
+<ul>
+<li>Device disabled</li>
+<li>Red LED "ON"</li>
+<li>Error flag set in Statusword</li>
+</ul>
+<p><strong>Recovery</strong></p>
+<ul>
+<li>Reset fault with Controlword</li>
+</ul>
+<h3 id="0x738c">0x738C SSI sensor error<a class="headerlink" href="#0x738c" title="Permanent link">#</a></h3>
+<p>Register: device profile · Reaction: <strong>d</strong></p>
+<p><strong>Cause</strong></p>
+<ul>
+<li>SSI sensor driver could not sample position data</li>
+</ul>
+<p><strong>Effect</strong></p>
+<ul>
+<li>Device disabled</li>
+<li>Red LED "ON"</li>
+<li>Error flag set in Statusword</li>
+</ul>
+<p><strong>Recovery</strong></p>
+<ul>
+<li>Reset fault with Controlword</li>
+</ul>
+<h3 id="0x738d">0x738D SSI sensor frame error<a class="headerlink" href="#0x738d" title="Permanent link">#</a></h3>
+<p>Register: device profile · Reaction: <strong>d</strong></p>
+<p><strong>Cause</strong></p>
+<ul>
+<li>Invalid SSI sensor data frame. Start and/or stop bits have invalid state:</li>
+<li>wrong wiring of SSI sensor</li>
+<li>defective SSI sensor</li>
+<li>wrong setting of encoder data bits</li>
+</ul>
+<p><strong>Effect</strong></p>
+<ul>
+<li>Device disabled</li>
+<li>Red LED "ON"</li>
+<li>Error flag set in Statusword</li>
+</ul>
+<p><strong>Recovery</strong></p>
+<ul>
+<li>Reset fault with Controlword</li>
+</ul>
+<h3 id="0x7390">0x7390 Missing main sensor error<a class="headerlink" href="#0x7390" title="Permanent link">#</a></h3>
+<p>Register: device profile · Reaction: <strong>d</strong></p>
+<p><strong>Cause</strong></p>
+<ul>
+<li>No main sensor available. Adapt settings in Axis configuration.</li>
+</ul>
+<p><strong>Effect</strong></p>
+<ul>
+<li>Device disabled</li>
+<li>Red LED "ON"</li>
+<li>Error flag set in Statusword</li>
+</ul>
+<p><strong>Recovery</strong></p>
+<ul>
+<li>Reset fault with Controlword</li>
+</ul>
+<h3 id="0x7391">0x7391 Missing commutation sensor error<a class="headerlink" href="#0x7391" title="Permanent link">#</a></h3>
+<p>Register: device profile · Reaction: <strong>d</strong></p>
+<p><strong>Cause</strong></p>
+<ul>
+<li>No commutation sensor available. Adapt settings in Axis configuration.</li>
+</ul>
+<p><strong>Effect</strong></p>
+<ul>
+<li>Device disabled</li>
+<li>Red LED "ON"</li>
+<li>Error flag set in Statusword</li>
+</ul>
+<p><strong>Recovery</strong></p>
+<ul>
+<li>Reset fault with Controlword</li>
+</ul>
+<h3 id="0x7392">0x7392 Main sensor direction error<a class="headerlink" href="#0x7392" title="Permanent link">#</a></h3>
+<p>Register: device profile · Reaction: <strong>d</strong> · <strong>Clears position</strong></p>
+<p><strong>Cause</strong></p>
+<ul>
+<li>Position sensor supervision has detected a turn-away of the motor in the opposite direction due to...</li>
+<li>wrong setting of sensor polarity</li>
+<li>wrong position sensor wiring</li>
+<li>wrong motor wiring</li>
+</ul>
+<p><strong>Effect</strong></p>
+<ul>
+<li>Device disabled</li>
+<li>Red LED "ON"</li>
+<li>Error flag set in Statusword</li>
+</ul>
+<p><strong>Recovery</strong></p>
+<ul>
+<li>Reset fault with Controlword</li>
+</ul>
+<h3 id="0x8110">0x8110 CAN overrun error (object lost)<a class="headerlink" href="#0x8110" title="Permanent link">#</a></h3>
+<p>Register: communication · Reaction: <strong>a</strong></p>
+<p><strong>Cause</strong></p>
+<ul>
+<li>One of the CAN mail boxes experienced an overflow caused by too high communication rate</li>
+</ul>
+<p><strong>Effect</strong></p>
+<ul>
+<li>Fault reaction defined in Abort connection option code</li>
+</ul>
+<p><strong>Recovery</strong></p>
+<ul>
+<li>Reset fault with Controlword</li>
+</ul>
+<h3 id="0x8111">0x8111 CAN overrun error<a class="headerlink" href="#0x8111" title="Permanent link">#</a></h3>
+<p>Register: communication · Reaction: <strong>a</strong></p>
+<p><strong>Cause</strong></p>
+<ul>
+<li>Execution of CAN communication had an overrun caused by too high communication rate</li>
+</ul>
+<p><strong>Effect</strong></p>
+<ul>
+<li>Fault reaction defined in Abort connection option code</li>
+</ul>
+<p><strong>Recovery</strong></p>
+<ul>
+<li>Reset fault with Controlword</li>
+</ul>
+<h3 id="0x8120">0x8120 CAN passive mode error<a class="headerlink" href="#0x8120" title="Permanent link">#</a></h3>
+<p>Register: communication · Reaction: <strong>a</strong></p>
+<p><strong>Cause</strong></p>
+<ul>
+<li>Device changed to CAN passive mode due to...</li>
+<li>CAN bit rate of one CAN node in network wrong</li>
+<li>CAN network not connected</li>
+<li>hardware wiring of CAN bus not correct</li>
+</ul>
+<p><strong>Effect</strong></p>
+<ul>
+<li>Fault reaction defined in Abort connection option code</li>
+</ul>
+<p><strong>Recovery</strong></p>
+<ul>
+<li>Send NMT command reset communication, then reset fault with Controlword</li>
+</ul>
+<h3 id="0x8130">0x8130 CAN heartbeat error<a class="headerlink" href="#0x8130" title="Permanent link">#</a></h3>
+<p>Register: communication · Reaction: <strong>a</strong></p>
+<p><strong>Cause</strong></p>
+<ul>
+<li>CANopen Heartbeat Consumer Procedure or Life Guarding have detected a timeout.</li>
+<li>Probably, the procedure has failed due to wrong configuration.</li>
+<li>Heartbeat Consumers will be disabled if Consumer heartbeat time = 0.</li>
+</ul>
+<p><strong>Effect</strong></p>
+<ul>
+<li>Fault reaction defined in Abort connection option code</li>
+<li>State transition defined in Communication error</li>
+</ul>
+<p><strong>Recovery</strong></p>
+<ul>
+<li>Send NMT command reset communication, then reset fault with Controlword</li>
+</ul>
+<h3 id="0x8150">0x8150 CAN PDO COB-ID collision<a class="headerlink" href="#0x8150" title="Permanent link">#</a></h3>
+<p>Register: communication · Reaction: <strong>a</strong></p>
+<p><strong>Cause</strong></p>
+<ul>
+<li>Possibly, another CAN node has configured the same transmit PDO COB-ID.</li>
+<li>Device has received a bad transmit PDO request (valid COB-ID without RTR bit set).</li>
+</ul>
+<p><strong>Effect</strong></p>
+<ul>
+<li>Fault reaction defined in Abort connection option code</li>
+</ul>
+<p><strong>Recovery</strong></p>
+<ul>
+<li>Reset fault with Controlword</li>
+</ul>
+<h3 id="0x8180">0x8180 EtherCAT communication error<a class="headerlink" href="#0x8180" title="Permanent link">#</a></h3>
+<p>Register: communication · Reaction: <strong>a</strong></p>
+<p><strong>Cause</strong></p>
+<ul>
+<li>EtherCAT communication error during operation enable (link lost)</li>
+</ul>
+<p><strong>Effect</strong></p>
+<ul>
+<li>Fault reaction defined in Abort connection option code</li>
+</ul>
+<p><strong>Recovery</strong></p>
+<ul>
+<li>Reset fault with Controlword</li>
+</ul>
+<h3 id="0x8181">0x8181 EtherCAT initialization error<a class="headerlink" href="#0x8181" title="Permanent link">#</a></h3>
+<p>Register: communication · Reaction: <strong>d</strong></p>
+<p><strong>Cause</strong></p>
+<ul>
+<li>Initialization of the Ethernet module has failed</li>
+</ul>
+<p><strong>Effect</strong></p>
+<ul>
+<li>Device disabled</li>
+<li>Red LED "ON"</li>
+<li>Error flag set in Statusword</li>
+</ul>
+<p><strong>Recovery</strong></p>
+<ul>
+<li>Reset device.</li>
+<li>If the problem persists, perform firmware update or contact your supplier.</li>
+</ul>
+<h3 id="0x8182">0x8182 EtherCAT Rx queue overflow<a class="headerlink" href="#0x8182" title="Permanent link">#</a></h3>
+<p>Register: communication · Reaction: <strong>a</strong></p>
+<p><strong>Cause</strong></p>
+<ul>
+<li>The EtherCAT receive queue had an overrun caused by ...</li>
+<li>Too high communication rate</li>
+<li>Timing violation (eg. non-Real-time system)</li>
+</ul>
+<p><strong>Effect</strong></p>
+<ul>
+<li>Fault reaction defined in Abort connection option code</li>
+</ul>
+<p><strong>Recovery</strong></p>
+<ul>
+<li>Reset fault with Controlword</li>
+</ul>
+<h3 id="0x8183">0x8183 EtherCAT communication error (internal)<a class="headerlink" href="#0x8183" title="Permanent link">#</a></h3>
+<p>Register: communication · Reaction: <strong>a</strong></p>
+<p><strong>Cause</strong></p>
+<ul>
+<li>Internal communication of the EtherCAT module has failed</li>
+</ul>
+<p><strong>Effect</strong></p>
+<ul>
+<li>Fault reaction defined in Abort connection option code</li>
+</ul>
+<p><strong>Recovery</strong></p>
+<ul>
+<li>Reset fault with Controlword</li>
+</ul>
+<h3 id="0x8184">0x8184 EtherCAT communication cycle time error<a class="headerlink" href="#0x8184" title="Permanent link">#</a></h3>
+<p>Register: communication · Reaction: <strong>a</strong></p>
+<p><strong>Cause</strong></p>
+<ul>
+<li>EtherCAT communication error because of invalid cycle time</li>
+</ul>
+<p><strong>Effect</strong></p>
+<ul>
+<li>Fault reaction defined in Abort connection option code</li>
+</ul>
+<p><strong>Recovery</strong></p>
+<ul>
+<li>Reset fault with Controlword</li>
+</ul>
+<h3 id="0x81fd">0x81FD CAN bus turned off<a class="headerlink" href="#0x81fd" title="Permanent link">#</a></h3>
+<p>Register: communication · Reaction: <strong>a</strong></p>
+<p><strong>Cause</strong></p>
+<ul>
+<li>CAN controller has entered CAN bus off state</li>
+</ul>
+<p><strong>Effect</strong></p>
+<ul>
+<li>Fault reaction defined in Abort connection option code</li>
+</ul>
+<p><strong>Recovery</strong></p>
+<ul>
+<li>Reset fault with Controlword</li>
+</ul>
+<h3 id="0x81fe">0x81FE CAN Rx queue overflow<a class="headerlink" href="#0x81fe" title="Permanent link">#</a></h3>
+<p>Register: communication · Reaction: <strong>a</strong></p>
+<p><strong>Cause</strong></p>
+<ul>
+<li>One of the CAN receive queues had an overrun caused by too high communication rate</li>
+</ul>
+<p><strong>Effect</strong></p>
+<ul>
+<li>Fault reaction defined in Abort connection option code</li>
+</ul>
+<p><strong>Recovery</strong></p>
+<ul>
+<li>Reset fault with Controlword</li>
+</ul>
+<h3 id="0x81ff">0x81FF CAN Tx queue overflow<a class="headerlink" href="#0x81ff" title="Permanent link">#</a></h3>
+<p>Register: communication · Reaction: <strong>a</strong></p>
+<p><strong>Cause</strong></p>
+<ul>
+<li>One of the CAN transmit queues had an overrun caused by too high communication rate due to...</li>
+<li>load on CAN bus too high</li>
+<li>event-triggered PDOs defined with too small inhibit time</li>
+<li>PDO communication configured too high (synchronous) for actual cycle time</li>
+<li>CAN bus inactive but heartbeat producer enabled (Producer heartbeat time)</li>
+</ul>
+<p><strong>Effect</strong></p>
+<ul>
+<li>Fault reaction defined in Abort connection option code</li>
+</ul>
+<p><strong>Recovery</strong></p>
+<ul>
+<li>Reset fault with Controlword</li>
+</ul>
+<h3 id="0x8210">0x8210 CAN PDO length error<a class="headerlink" href="#0x8210" title="Permanent link">#</a></h3>
+<p>Register: communication · Reaction: <strong>a</strong></p>
+<p><strong>Cause</strong></p>
+<ul>
+<li>Received PDO was not processed due to length error (too short)</li>
+</ul>
+<p><strong>Effect</strong></p>
+<ul>
+<li>Fault reaction defined in Abort connection option code</li>
+</ul>
+<p><strong>Recovery</strong></p>
+<ul>
+<li>Reset fault with Controlword</li>
+</ul>
+<h3 id="0x8250">0x8250 RPDO timeout<a class="headerlink" href="#0x8250" title="Permanent link">#</a></h3>
+<p>Register: communication · Reaction: <strong>a</strong></p>
+<p><strong>Cause</strong></p>
+<ul>
+<li>Interpolation aborted in cyclic mode due to no PDO received after elapsed interpolation time period</li>
+<li>The error also occurs if the master aborts communication, e.g. due to timing violations of the synchronous PDO transfer</li>
+</ul>
+<p><strong>Effect</strong></p>
+<ul>
+<li>Fault reaction defined in Abort connection option code</li>
+</ul>
+<p><strong>Recovery</strong></p>
+<ul>
+<li>Reset fault with Controlword</li>
+</ul>
+<h3 id="0x8280">0x8280 EtherCAT PDO communication error<a class="headerlink" href="#0x8280" title="Permanent link">#</a></h3>
+<p>Register: communication · Reaction: <strong>a</strong></p>
+<p><strong>Cause</strong></p>
+<ul>
+<li>EtherCAT module detected an error at Process Data (PDO) communication</li>
+</ul>
+<p><strong>Effect</strong></p>
+<ul>
+<li>Fault reaction defined in Abort connection option code</li>
+</ul>
+<p><strong>Recovery</strong></p>
+<ul>
+<li>Reset fault with Controlword</li>
+</ul>
+<h3 id="0x8281">0x8281 EtherCAT SDO communication error<a class="headerlink" href="#0x8281" title="Permanent link">#</a></h3>
+<p>Register: communication · Reaction: <strong>a</strong></p>
+<p><strong>Cause</strong></p>
+<ul>
+<li>EtherCAT module detected an error at Service Data (SDO) communication</li>
+</ul>
+<p><strong>Effect</strong></p>
+<ul>
+<li>Fault reaction defined in Abort connection option code</li>
+</ul>
+<p><strong>Recovery</strong></p>
+<ul>
+<li>Reset fault with Controlword</li>
+</ul>
+<h3 id="0x8611">0x8611 Following error<a class="headerlink" href="#0x8611" title="Permanent link">#</a></h3>
+<p>Register: motion · Reaction: <strong>f</strong></p>
+<p><strong>Cause</strong></p>
+<ul>
+<li>Difference between Position demand value and Position actual value higher than Following error window</li>
+</ul>
+<p><strong>Effect</strong></p>
+<ul>
+<li>Fault reaction defined in Fault reaction option code</li>
+</ul>
+<p><strong>Recovery</strong></p>
+<ul>
+<li>Reset fault with Controlword</li>
+</ul>
+<h3 id="0x8a80">0x8A80 Negative limit switch error<a class="headerlink" href="#0x8a80" title="Permanent link">#</a></h3>
+<p>Register: motion · Reaction: <strong>f</strong></p>
+<p><strong>Cause</strong></p>
+<ul>
+<li>Negative limit switch was/is active</li>
+<li>Wrong configuration of limit switch function in Digital inputs</li>
+</ul>
+<p><strong>Effect</strong></p>
+<ul>
+<li>Fault reaction defined in Fault reaction option code</li>
+</ul>
+<p><strong>Recovery</strong></p>
+<ul>
+<li>Reset fault with Controlword</li>
+</ul>
+<h3 id="0x8a81">0x8A81 Positive limit switch error<a class="headerlink" href="#0x8a81" title="Permanent link">#</a></h3>
+<p>Register: motion · Reaction: <strong>f</strong></p>
+<p><strong>Cause</strong></p>
+<ul>
+<li>Positive limit switch was/is active</li>
+<li>Wrong configuration of limit switch function in Digital inputs</li>
+</ul>
+<p><strong>Effect</strong></p>
+<ul>
+<li>Fault reaction defined in Fault reaction option code</li>
+</ul>
+<p><strong>Recovery</strong></p>
+<ul>
+<li>Reset fault with Controlword</li>
+</ul>
+<h3 id="0x8a82">0x8A82 Software position limit error<a class="headerlink" href="#0x8a82" title="Permanent link">#</a></h3>
+<p>Register: motion · Reaction: <strong>f</strong></p>
+<p><strong>Cause</strong></p>
+<ul>
+<li>Movement commanded or actual position runs out of software position limit</li>
+</ul>
+<p><strong>Effect</strong></p>
+<ul>
+<li>Fault reaction defined in Fault reaction option code</li>
+</ul>
+<p><strong>Recovery</strong></p>
+<ul>
+<li>Reset fault with Controlword</li>
+</ul>
+<h3 id="0x8a88">0x8A88 STO error<a class="headerlink" href="#0x8a88" title="Permanent link">#</a></h3>
+<p>Register: generic · Reaction: <strong>d</strong></p>
+<p><strong>Cause</strong></p>
+<ul>
+<li>Error when STO is not active. STO functionality was triggered while power stage was enabled</li>
+</ul>
+<p><strong>Effect</strong></p>
+<ul>
+<li>Device disabled</li>
+<li>Red LED "ON"</li>
+<li>Error flag set in Statusword</li>
+</ul>
+<p><strong>Recovery</strong></p>
+<ul>
+<li>Reset fault with Controlword</li>
+</ul>
+<h3 id="0x8a8a">0x8A8A STO card ready warning<a class="headerlink" href="#0x8a8a" title="Permanent link">#</a></h3>
+<p>Register: generic · Reaction: <strong>d</strong></p>
+<p><strong>Cause</strong></p>
+<ul>
+<li>The STO card is in or has changed to ready to release state</li>
+</ul>
+<p><strong>Effect</strong></p>
+<ul>
+<li>Device disabled</li>
+<li>Warning flag set in Statusword</li>
+</ul>
+<p><strong>Recovery</strong></p>
+<ul>
+<li>Check the card and the system connections. Reset fault by clearing Diagnosis History /</li>
+<li>Error history</li>
+</ul>
+<h3 id="0x8a8b">0x8A8B STO card inactive state error<a class="headerlink" href="#0x8a8b" title="Permanent link">#</a></h3>
+<p>Register: generic · Reaction: <strong>d</strong></p>
+<p><strong>Cause</strong></p>
+<ul>
+<li>The STO card is in error or power down state</li>
+</ul>
+<p><strong>Effect</strong></p>
+<ul>
+<li>Device disabled</li>
+<li>RED LED on</li>
+<li>Error flag set in Statusword</li>
+</ul>
+<p><strong>Recovery</strong></p>
+<ul>
+<li>Check the STO signals. Reset fault with Controlword</li>
+</ul>
+<h3 id="0xff01">0xFF01 System overloaded error<a class="headerlink" href="#0xff01" title="Permanent link">#</a></h3>
+<p>Register: no error flags · Reaction: <strong>w</strong></p>
+<p><strong>Cause</strong></p>
+<ul>
+<li>Device has not enough free resources to process new commands</li>
+</ul>
+<p><strong>Effect</strong></p>
+<ul>
+<li>Warning bit set in Statusword</li>
+</ul>
+<p><strong>Recovery</strong></p>
+<ul>
+<li>Reset fault by clearing Diagnosis History / Error history</li>
+</ul>
+<h3 id="0xff02">0xFF02 Watchdog error<a class="headerlink" href="#0xff02" title="Permanent link">#</a></h3>
+<p>Register: generic · Reaction: <strong>d</strong> · <strong>Clears position</strong></p>
+<p><strong>Cause</strong></p>
+<ul>
+<li>Device reset by watchdog occurred due to fatal system overload or system fault</li>
+</ul>
+<p><strong>Effect</strong></p>
+<ul>
+<li>Device disabled</li>
+<li>Red LED "ON"</li>
+<li>Error flag set in Statusword</li>
+</ul>
+<p><strong>Recovery</strong></p>
+<ul>
+<li>Reset fault with Controlword</li>
+</ul>
+<h3 id="0xff0b">0xFF0B System peak overloaded error<a class="headerlink" href="#0xff0b" title="Permanent link">#</a></h3>
+<p>Register: generic · Reaction: <strong>d</strong></p>
+<p><strong>Cause</strong></p>
+<ul>
+<li>The device has not enough free resources to provide proper regulation</li>
+</ul>
+<p><strong>Effect</strong></p>
+<ul>
+<li>Device disabled</li>
+<li>Red LED "ON"</li>
+<li>Error flag set in Statusword</li>
+</ul>
+<p><strong>Recovery</strong></p>
+<ul>
+<li>Reset fault with Controlword</li>
+</ul>
+<h3 id="0xff10">0xFF10 Controller gain error<a class="headerlink" href="#0xff10" title="Permanent link">#</a></h3>
+<p>Register: device profile · Reaction: <strong>f</strong></p>
+<p><strong>Cause</strong></p>
+<ul>
+<li>Control function not possible due to bad controller gains</li>
+</ul>
+<p><strong>Effect</strong></p>
+<ul>
+<li>Device disabled</li>
+<li>Red LED "ON"</li>
+<li>Error flag set in Statusword</li>
+<li>Fault reaction defined in Fault reaction option code</li>
+</ul>
+<p><strong>Recovery</strong></p>
+<ul>
+<li>Reset fault with Controlword</li>
+</ul>
+<h3 id="0xff11">0xFF11 Auto tuning identification error<a class="headerlink" href="#0xff11" title="Permanent link">#</a></h3>
+<p>Register: device profile · Reaction: <strong>d</strong></p>
+<p><strong>Cause</strong></p>
+<ul>
+<li>An error occurred during auto tuning identification</li>
+</ul>
+<p><strong>Effect</strong></p>
+<ul>
+<li>Device disabled</li>
+<li>Red LED "ON"</li>
+<li>Error flag set in Statusword</li>
+</ul>
+<p><strong>Recovery</strong></p>
+<ul>
+<li>Reset fault with Controlword</li>
+</ul>
+<h3 id="0xff12">0xFF12 Auto tuning current limit error<a class="headerlink" href="#0xff12" title="Permanent link">#</a></h3>
+<p>Register: device profile · Reaction: <strong>d</strong></p>
+<p><strong>Cause</strong></p>
+<ul>
+<li>Current limit occurred during auto tuning identification</li>
+</ul>
+<p><strong>Effect</strong></p>
+<ul>
+<li>Device disabled</li>
+<li>Red LED "ON"</li>
+<li>Error flag set in Statusword</li>
+</ul>
+<p><strong>Recovery</strong></p>
+<ul>
+<li>Reset fault with Controlword</li>
+</ul>
+<h3 id="0xff13">0xFF13 Auto tuning identification current error<a class="headerlink" href="#0xff13" title="Permanent link">#</a></h3>
+<p>Register: device profile · Reaction: <strong>d</strong></p>
+<p><strong>Cause</strong></p>
+<ul>
+<li>Identification current could not be reached during auto tuning identification</li>
+</ul>
+<p><strong>Effect</strong></p>
+<ul>
+<li>Device disabled</li>
+<li>Red LED "ON"</li>
+<li>Error flag set in Statusword</li>
+</ul>
+<p><strong>Recovery</strong></p>
+<ul>
+<li>Reset fault with Controlword</li>
+</ul>
+<h3 id="0xff14">0xFF14 Auto tuning data sampling error<a class="headerlink" href="#0xff14" title="Permanent link">#</a></h3>
+<p>Register: device profile · Reaction: <strong>d</strong></p>
+<p><strong>Cause</strong></p>
+<ul>
+<li>Data sampling initialization has failed</li>
+</ul>
+<p><strong>Effect</strong></p>
+<ul>
+<li>Device disabled</li>
+<li>Red LED "ON"</li>
+<li>Error flag set in Statusword</li>
+</ul>
+<p><strong>Recovery</strong></p>
+<ul>
+<li>Reset fault with Controlword</li>
+</ul>
+<h3 id="0xff15">0xFF15 Auto tuning sample mismatch error<a class="headerlink" href="#0xff15" title="Permanent link">#</a></h3>
+<p>Register: device profile · Reaction: <strong>d</strong></p>
+<p><strong>Cause</strong></p>
+<ul>
+<li>Sample data mismatched during auto tuning identification</li>
+</ul>
+<p><strong>Effect</strong></p>
+<ul>
+<li>Device disabled</li>
+<li>Red LED "ON"</li>
+<li>Error flag set in Statusword</li>
+</ul>
+<p><strong>Recovery</strong></p>
+<ul>
+<li>Reset fault with Controlword</li>
+</ul>
+<h3 id="0xff16">0xFF16 Auto tuning parameter error<a class="headerlink" href="#0xff16" title="Permanent link">#</a></h3>
+<p>Register: device profile · Reaction: <strong>d</strong></p>
+<p><strong>Cause</strong></p>
+<ul>
+<li>Wrong parameter for auto tuning identification. Error during identification auto tuning process</li>
+</ul>
+<p><strong>Effect</strong></p>
+<ul>
+<li>Device disabled</li>
+<li>Red LED "ON"</li>
+<li>Error flag set in Statusword</li>
+</ul>
+<p><strong>Recovery</strong></p>
+<ul>
+<li>Reset fault with Controlword</li>
+</ul>
+<h3 id="0xff17">0xFF17 Auto tuning amplitude mismatch error<a class="headerlink" href="#0xff17" title="Permanent link">#</a></h3>
+<p>Register: device profile · Reaction: <strong>d</strong></p>
+<p><strong>Cause</strong></p>
+<ul>
+<li>Nominal actual amplitude mismatch during auto tuning identification</li>
+</ul>
+<p><strong>Effect</strong></p>
+<ul>
+<li>Device disabled</li>
+<li>Red LED "ON"</li>
+<li>Error flag set in Statusword</li>
+</ul>
+<p><strong>Recovery</strong></p>
+<ul>
+<li>Reset fault with Controlword</li>
+</ul>
+<h3 id="0xff19">0xFF19 Auto tuning timeout error<a class="headerlink" href="#0xff19" title="Permanent link">#</a></h3>
+<p>Register: device profile · Reaction: <strong>d</strong></p>
+<p><strong>Cause</strong></p>
+<ul>
+<li>Auto tuning identification timeout. Termination requirements not met</li>
+</ul>
+<p><strong>Effect</strong></p>
+<ul>
+<li>Device disabled</li>
+<li>Red LED "ON"</li>
+<li>Error flag set in Statusword</li>
+</ul>
+<p><strong>Recovery</strong></p>
+<ul>
+<li>Reset fault with Controlword</li>
+</ul>
+<h3 id="0xff20">0xFF20 Auto tuning standstill error<a class="headerlink" href="#0xff20" title="Permanent link">#</a></h3>
+<p>Register: device profile · Reaction: <strong>d</strong></p>
+<p><strong>Cause</strong></p>
+<ul>
+<li>Motor did not reach standstill during auto tuning. Make sure that the motor is not moving when starting the tuning process.</li>
+</ul>
+<p><strong>Effect</strong></p>
+<ul>
+<li>Device disabled</li>
+<li>Red LED "ON"</li>
+<li>Error flag set in Statusword</li>
+</ul>
+<p><strong>Recovery</strong></p>
+<ul>
+<li>Reset fault with Controlword</li>
+</ul>
+<h3 id="0xff21">0xFF21 Auto tuning torque invalid error<a class="headerlink" href="#0xff21" title="Permanent link">#</a></h3>
+<p>Register: device profile · Reaction: <strong>d</strong></p>
+<p><strong>Cause</strong></p>
+<ul>
+<li>Motor movement has been obstructed during tuning process. This might be caused e.g. by the motor being connected to a rigid gear. Ensure that the motor movement is not obstructed.</li>
+</ul>
+<p><strong>Effect</strong></p>
+<ul>
+<li>Device disabled</li>
+<li>Red LED "ON"</li>
+<li>Error flag set in Statusword</li>
+</ul>
+<p><strong>Recovery</strong></p>
+<ul>
+<li>Reset fault with Controlword</li>
+</ul>
+<h3 id="0xff22">0xFF22 Auto tuning max system speed error<a class="headerlink" href="#0xff22" title="Permanent link">#</a></h3>
+<p>Register: device profile · Reaction: <strong>d</strong></p>
+<p><strong>Cause</strong></p>
+<ul>
+<li>Max system speed exceeded during auto tuning identification. Reduce step amplitude to reduce max speed.</li>
+</ul>
+<p><strong>Effect</strong></p>
+<ul>
+<li>Device disabled</li>
+<li>Red LED "ON"</li>
+<li>Error flag set in Statusword</li>
+</ul>
+<p><strong>Recovery</strong></p>
+<ul>
+<li>Reset fault with Controlword</li>
+</ul>
+<h3 id="0xff23">0xFF23 Auto tuning motor connection error<a class="headerlink" href="#0xff23" title="Permanent link">#</a></h3>
+<p>Register: device profile · Reaction: <strong>d</strong></p>
+<p><strong>Cause</strong></p>
+<ul>
+<li>Identification current is very small. Check the motor connection.</li>
+</ul>
+<p><strong>Effect</strong></p>
+<ul>
+<li>Device disabled</li>
+<li>Red LED "ON"</li>
+<li>Error flag set in Statusword</li>
+</ul>
+<p><strong>Recovery</strong></p>
+<ul>
+<li>Reset fault with Controlword</li>
+</ul>
+<h3 id="0xff24">0xFF24 Auto tuning sensor signal error<a class="headerlink" href="#0xff24" title="Permanent link">#</a></h3>
+<p>Register: device profile · Reaction: <strong>d</strong></p>
+<p><strong>Cause</strong></p>
+<ul>
+<li>Sensor signal was not found during tuning identification. Check the sensor and motor connections.</li>
+</ul>
+<p><strong>Effect</strong></p>
+<ul>
+<li>Device disabled</li>
+<li>Red LED "ON"</li>
+<li>Error flag set in Statusword</li>
+</ul>
+<p><strong>Recovery</strong></p>
+<ul>
+<li>Reset fault with Controlword</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../" class="md-footer__link md-footer__link--prev" aria-label="Previous: Reference">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Reference
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../sdo-abort-codes/" class="md-footer__link md-footer__link--next" aria-label="Next: SDO abort codes">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                SDO abort codes
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      EposLib is licensed under Apache-2.0.
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.indexes", "navigation.top", "navigation.footer", "search.highlight", "search.suggest", "content.code.copy", "content.code.annotate", "toc.follow"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>

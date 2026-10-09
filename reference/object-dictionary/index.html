@@ -1,0 +1,5835 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="C++ API for maxon EPOS4 controllers over CANopen">
+      
+      
+      
+        <link rel="canonical" href="https://imcab.github.io/EposLibDocs/reference/object-dictionary/">
+      
+      
+        <link rel="prev" href="../enumerations/">
+      
+      
+        <link rel="next" href="../hardware/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Object dictionary - EposLib</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Serif+4:300,300i,400,400i,700,700i%7CIBM+Plex+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Source Serif 4";--md-code-font:"IBM Plex Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#object-dictionary" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="EposLib" class="md-header__button md-logo" aria-label="EposLib" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            EposLib
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Object dictionary
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Imcab/EposLib" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Imcab/EposLib
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../getting-started/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Getting Started
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../concepts/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Concepts
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../network/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Network
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../api/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  API Usage
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../examples/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Examples
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../troubleshooting/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Troubleshooting
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Reference
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="EposLib" class="md-nav__button md-logo" aria-label="EposLib" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    EposLib
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Imcab/EposLib" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Imcab/EposLib
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../getting-started/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting Started
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Getting Started
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/requirements/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Requirements
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/installation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/can-setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Setting up the CAN bus
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/first-run/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    First run
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/simulation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Simulation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/your-package/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Using EposLib in your package
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../concepts/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Concepts
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Concepts
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Architecture
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/canopen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CANopen primer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/state-machine/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The CiA 402 state machine
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/units/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Units
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/threading/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Threading and timing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../network/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Network
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Network
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../network/bus-yml/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The network description (bus.yml)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../network/pdo-mapping/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PDO mapping
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../network/sync-heartbeat/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SYNC and heartbeat
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../network/multi-drive/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Multiple drives
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../api/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    API Usage
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    API Usage
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/lifecycle/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bus and device lifecycle
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/enabling/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Enabling and stopping
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/control-requests/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Control requests
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/cyclic-control/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cyclic control
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/homing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Homing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/status-signals/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Status signals
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/encoders/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Encoders
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/io/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Digital and analog I/O
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/safety/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Brake, stops and protection
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/diagnostics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Diagnostics and faults
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/raw-access/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Raw object access
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/core/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The core library
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../examples/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Examples
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Examples
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/device-info/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Device information
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/profile-position/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Profile position
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/profile-velocity/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Profile velocity
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/cyclic-velocity/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cyclic velocity
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/cyclic-torque/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cyclic torque
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/cyclic-position/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cyclic position
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/homing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Homing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/multi-drive/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Multiple drives
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/fault-monitor/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fault monitor
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/encoder-setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Encoder setup
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/digital-io/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Digital I/O and touch probe
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../troubleshooting/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Troubleshooting
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_7" id="__nav_7_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Troubleshooting
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../troubleshooting/can-bus/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CAN bus
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../troubleshooting/boot-and-pdo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Boot and PDOs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../troubleshooting/faults/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Common faults
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../troubleshooting/faq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAQ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reference
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_8" id="__nav_8_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Reference
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../error-codes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Device error codes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sdo-abort-codes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SDO abort codes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../configuration-fields/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Configuration fields
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../enumerations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Enumerations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Object dictionary
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Object dictionary
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#communication-profile-cia-301-odcomm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Communication profile (CiA 301) - od::comm
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#maxon-communication-objects-odmaxon_comm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        maxon communication objects - od::maxon_comm
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#maxon-manufacturer-specific-objects-odmaxon" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        maxon manufacturer-specific objects - od::maxon
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#device-profile-cia-402-odcia402" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Device profile (CiA 402) - od::cia402
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hardware/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hardware
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../changelog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Changelog
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#communication-profile-cia-301-odcomm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Communication profile (CiA 301) - od::comm
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#maxon-communication-objects-odmaxon_comm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        maxon communication objects - od::maxon_comm
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#maxon-manufacturer-specific-objects-odmaxon" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        maxon manufacturer-specific objects - od::maxon
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#device-profile-cia-402-odcia402" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Device profile (CiA 402) - od::cia402
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<!-- Generated by scripts/gen_reference.py from EposLib. Do not edit. -->
+
+<h1 id="object-dictionary">Object dictionary<a class="headerlink" href="#object-dictionary" title="Permanent link">#</a></h1>
+<p>Every object of the EPOS4 that EposLib names, generated from the device EDS (EPOS4 Module 50/15). Use the constants with <code>Epos4::ReadObject()</code> / <code>WriteObject()</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="n">std</span><span class="o">::</span><span class="kt">int16_t</span><span class="w"> </span><span class="n">raw</span><span class="p">{};</span>
+<span class="n">motor</span><span class="p">.</span><span class="n">ReadObject</span><span class="p">(</span><span class="n">epos4</span><span class="o">::</span><span class="n">od</span><span class="o">::</span><span class="n">At</span><span class="p">(</span><span class="n">epos4</span><span class="o">::</span><span class="n">od</span><span class="o">::</span><span class="n">cia402</span><span class="o">::</span><span class="n">kTorqueActualValue</span><span class="p">),</span><span class="w"> </span><span class="n">raw</span><span class="p">);</span>
+<span class="n">motor</span><span class="p">.</span><span class="n">ReadObject</span><span class="p">(</span><span class="n">epos4</span><span class="o">::</span><span class="n">od</span><span class="o">::</span><span class="n">maxon</span><span class="o">::</span><span class="n">kMotorData_NominalCurrent</span><span class="p">,</span><span class="w"> </span><span class="n">nominal</span><span class="p">);</span><span class="w">  </span><span class="c1">// an Entry</span>
+</code></pre></div>
+<p>An index constant (<code>std::uint16_t</code>) needs <code>od::At(index, subindex)</code>; a sub-index constant is already an <code>od::Entry</code>. Code written against <code>od::cia402</code> works with any CiA 402 drive; the <code>maxon</code> namespaces do not.</p>
+<h2 id="communication-profile-cia-301-odcomm">Communication profile (CiA 301) - <code>od::comm</code><a class="headerlink" href="#communication-profile-cia-301-odcomm" title="Permanent link">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>Index</th>
+<th>Sub</th>
+<th>Constant</th>
+<th>Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>0x1000</code></td>
+<td></td>
+<td><code>kDeviceType</code></td>
+<td>Device Type</td>
+</tr>
+<tr>
+<td><code>0x1001</code></td>
+<td></td>
+<td><code>kErrorRegister</code></td>
+<td>Error Register</td>
+</tr>
+<tr>
+<td><code>0x1003</code></td>
+<td></td>
+<td><code>kErrorHistory</code></td>
+<td>Error History</td>
+</tr>
+<tr>
+<td><code>0x1003</code></td>
+<td><code>0x01</code></td>
+<td><code>kErrorHistory_ErrorHistory1</code></td>
+<td>Error history 1</td>
+</tr>
+<tr>
+<td><code>0x1003</code></td>
+<td><code>0x02</code></td>
+<td><code>kErrorHistory_ErrorHistory2</code></td>
+<td>Error history 2</td>
+</tr>
+<tr>
+<td><code>0x1003</code></td>
+<td><code>0x03</code></td>
+<td><code>kErrorHistory_ErrorHistory3</code></td>
+<td>Error history 3</td>
+</tr>
+<tr>
+<td><code>0x1003</code></td>
+<td><code>0x04</code></td>
+<td><code>kErrorHistory_ErrorHistory4</code></td>
+<td>Error history 4</td>
+</tr>
+<tr>
+<td><code>0x1003</code></td>
+<td><code>0x05</code></td>
+<td><code>kErrorHistory_ErrorHistory5</code></td>
+<td>Error history 5</td>
+</tr>
+<tr>
+<td><code>0x1005</code></td>
+<td></td>
+<td><code>kCOBIDSYNC</code></td>
+<td>C O B I D S Y N C</td>
+</tr>
+<tr>
+<td><code>0x1008</code></td>
+<td></td>
+<td><code>kManufacturerDeviceName</code></td>
+<td>Manufacturer Device Name</td>
+</tr>
+<tr>
+<td><code>0x1010</code></td>
+<td></td>
+<td><code>kStoreParameters</code></td>
+<td>Store Parameters</td>
+</tr>
+<tr>
+<td><code>0x1010</code></td>
+<td><code>0x01</code></td>
+<td><code>kStoreParameters_SaveAllParameters</code></td>
+<td>Save all parameters</td>
+</tr>
+<tr>
+<td><code>0x1011</code></td>
+<td></td>
+<td><code>kRestoreDefaultParameters</code></td>
+<td>Restore Default Parameters</td>
+</tr>
+<tr>
+<td><code>0x1011</code></td>
+<td><code>0x01</code></td>
+<td><code>kRestoreDefaultParameters_RestoreAllDefaultParameters</code></td>
+<td>Restore all default parameters</td>
+</tr>
+<tr>
+<td><code>0x1011</code></td>
+<td><code>0x04</code></td>
+<td><code>kRestoreDefaultParameters_InternalRestoreFactoryDefaultParameters</code></td>
+<td>Internal restore factory default parameters</td>
+</tr>
+<tr>
+<td><code>0x1014</code></td>
+<td></td>
+<td><code>kCOBIDEMCY</code></td>
+<td>C O B I D E M C Y</td>
+</tr>
+<tr>
+<td><code>0x1016</code></td>
+<td></td>
+<td><code>kConsumerHeartbeatTime</code></td>
+<td>Consumer Heartbeat Time</td>
+</tr>
+<tr>
+<td><code>0x1016</code></td>
+<td><code>0x01</code></td>
+<td><code>kConsumerHeartbeatTime_Consumer1HeartbeatTime</code></td>
+<td>Consumer 1 heartbeat time</td>
+</tr>
+<tr>
+<td><code>0x1016</code></td>
+<td><code>0x02</code></td>
+<td><code>kConsumerHeartbeatTime_Consumer2HeartbeatTime</code></td>
+<td>Consumer 2 heartbeat time</td>
+</tr>
+<tr>
+<td><code>0x1017</code></td>
+<td></td>
+<td><code>kProducerHeartbeatTime</code></td>
+<td>Producer Heartbeat Time</td>
+</tr>
+<tr>
+<td><code>0x1018</code></td>
+<td></td>
+<td><code>kIdentityObject</code></td>
+<td>Identity Object</td>
+</tr>
+<tr>
+<td><code>0x1018</code></td>
+<td><code>0x01</code></td>
+<td><code>kIdentityObject_VendorID</code></td>
+<td>Vendor ID</td>
+</tr>
+<tr>
+<td><code>0x1018</code></td>
+<td><code>0x02</code></td>
+<td><code>kIdentityObject_ProductCode</code></td>
+<td>Product code</td>
+</tr>
+<tr>
+<td><code>0x1018</code></td>
+<td><code>0x03</code></td>
+<td><code>kIdentityObject_RevisionNumber</code></td>
+<td>Revision number</td>
+</tr>
+<tr>
+<td><code>0x1018</code></td>
+<td><code>0x04</code></td>
+<td><code>kIdentityObject_SerialNumber</code></td>
+<td>Serial number</td>
+</tr>
+<tr>
+<td><code>0x1029</code></td>
+<td></td>
+<td><code>kErrorBehavior</code></td>
+<td>Error Behavior</td>
+</tr>
+<tr>
+<td><code>0x1029</code></td>
+<td><code>0x01</code></td>
+<td><code>kErrorBehavior_CommunicationError</code></td>
+<td>Communication error</td>
+</tr>
+<tr>
+<td><code>0x1200</code></td>
+<td></td>
+<td><code>kSDOServerParameter</code></td>
+<td>S D O Server Parameter</td>
+</tr>
+<tr>
+<td><code>0x1200</code></td>
+<td><code>0x01</code></td>
+<td><code>kSDOServerParameter_COBIDSDOClientToServer</code></td>
+<td>COB-ID SDO client to server</td>
+</tr>
+<tr>
+<td><code>0x1200</code></td>
+<td><code>0x02</code></td>
+<td><code>kSDOServerParameter_COBIDSDOServerToClient</code></td>
+<td>COB-ID SDO server to client</td>
+</tr>
+<tr>
+<td><code>0x1400</code></td>
+<td></td>
+<td><code>kReceivePDO1Parameter</code></td>
+<td>Receive P D O1 Parameter</td>
+</tr>
+<tr>
+<td><code>0x1400</code></td>
+<td><code>0x01</code></td>
+<td><code>kReceivePDO1Parameter_COBIDUsedByRxpdo1</code></td>
+<td>COB-ID used by RxPDO 1</td>
+</tr>
+<tr>
+<td><code>0x1400</code></td>
+<td><code>0x02</code></td>
+<td><code>kReceivePDO1Parameter_TransmissionTypeRxpdo1</code></td>
+<td>Transmission type RxPDO 1</td>
+</tr>
+<tr>
+<td><code>0x1401</code></td>
+<td></td>
+<td><code>kReceivePDO2Parameter</code></td>
+<td>Receive P D O2 Parameter</td>
+</tr>
+<tr>
+<td><code>0x1401</code></td>
+<td><code>0x01</code></td>
+<td><code>kReceivePDO2Parameter_COBIDUsedByRxpdo2</code></td>
+<td>COB-ID used by RxPDO 2</td>
+</tr>
+<tr>
+<td><code>0x1401</code></td>
+<td><code>0x02</code></td>
+<td><code>kReceivePDO2Parameter_TransmissionTypeRxpdo2</code></td>
+<td>Transmission type RxPDO 2</td>
+</tr>
+<tr>
+<td><code>0x1402</code></td>
+<td></td>
+<td><code>kReceivePDO3Parameter</code></td>
+<td>Receive P D O3 Parameter</td>
+</tr>
+<tr>
+<td><code>0x1402</code></td>
+<td><code>0x01</code></td>
+<td><code>kReceivePDO3Parameter_COBIDUsedByRxpdo3</code></td>
+<td>COB-ID used by RxPDO 3</td>
+</tr>
+<tr>
+<td><code>0x1402</code></td>
+<td><code>0x02</code></td>
+<td><code>kReceivePDO3Parameter_TransmissionTypeRxpdo3</code></td>
+<td>Transmission type RxPDO 3</td>
+</tr>
+<tr>
+<td><code>0x1403</code></td>
+<td></td>
+<td><code>kReceivePDO4Parameter</code></td>
+<td>Receive P D O4 Parameter</td>
+</tr>
+<tr>
+<td><code>0x1403</code></td>
+<td><code>0x01</code></td>
+<td><code>kReceivePDO4Parameter_COBIDUsedByRxpdo4</code></td>
+<td>COB-ID used by RxPDO 4</td>
+</tr>
+<tr>
+<td><code>0x1403</code></td>
+<td><code>0x02</code></td>
+<td><code>kReceivePDO4Parameter_TransmissionTypeRxpdo4</code></td>
+<td>Transmission type RxPDO 4</td>
+</tr>
+<tr>
+<td><code>0x1600</code></td>
+<td></td>
+<td><code>kReceivePDO1Mapping</code></td>
+<td>Receive P D O1 Mapping</td>
+</tr>
+<tr>
+<td><code>0x1600</code></td>
+<td><code>0x01</code></td>
+<td><code>kReceivePDO1Mapping_N1stMappedObjectInRxpdo1</code></td>
+<td>1st mapped object in RxPDO 1</td>
+</tr>
+<tr>
+<td><code>0x1600</code></td>
+<td><code>0x02</code></td>
+<td><code>kReceivePDO1Mapping_N2ndMappedObjectInRxpdo1</code></td>
+<td>2nd mapped object in RxPDO 1</td>
+</tr>
+<tr>
+<td><code>0x1600</code></td>
+<td><code>0x03</code></td>
+<td><code>kReceivePDO1Mapping_N3rdMappedObjectInRxpdo1</code></td>
+<td>3rd mapped object in RxPDO 1</td>
+</tr>
+<tr>
+<td><code>0x1600</code></td>
+<td><code>0x04</code></td>
+<td><code>kReceivePDO1Mapping_N4thMappedObjectInRxpdo1</code></td>
+<td>4th mapped object in RxPDO 1</td>
+</tr>
+<tr>
+<td><code>0x1600</code></td>
+<td><code>0x05</code></td>
+<td><code>kReceivePDO1Mapping_N5thMappedObjectInRxpdo1</code></td>
+<td>5th mapped object in RxPDO 1</td>
+</tr>
+<tr>
+<td><code>0x1600</code></td>
+<td><code>0x06</code></td>
+<td><code>kReceivePDO1Mapping_N6thMappedObjectInRxpdo1</code></td>
+<td>6th mapped object in RxPDO 1</td>
+</tr>
+<tr>
+<td><code>0x1600</code></td>
+<td><code>0x07</code></td>
+<td><code>kReceivePDO1Mapping_N7thMappedObjectInRxpdo1</code></td>
+<td>7th mapped object in RxPDO 1</td>
+</tr>
+<tr>
+<td><code>0x1600</code></td>
+<td><code>0x08</code></td>
+<td><code>kReceivePDO1Mapping_N8thMappedObjectInRxpdo1</code></td>
+<td>8th mapped object in RxPDO 1</td>
+</tr>
+<tr>
+<td><code>0x1600</code></td>
+<td><code>0x09</code></td>
+<td><code>kReceivePDO1Mapping_N9thMappedObjectInRxpdo1</code></td>
+<td>9th mapped object in RxPDO 1</td>
+</tr>
+<tr>
+<td><code>0x1600</code></td>
+<td><code>0x0A</code></td>
+<td><code>kReceivePDO1Mapping_N10thMappedObjectInRxpdo1</code></td>
+<td>10th mapped object in RxPDO 1</td>
+</tr>
+<tr>
+<td><code>0x1600</code></td>
+<td><code>0x0B</code></td>
+<td><code>kReceivePDO1Mapping_N11thMappedObjectInRxpdo1</code></td>
+<td>11th mapped object in RxPDO 1</td>
+</tr>
+<tr>
+<td><code>0x1600</code></td>
+<td><code>0x0C</code></td>
+<td><code>kReceivePDO1Mapping_N12thMappedObjectInRxpdo1</code></td>
+<td>12th mapped object in RxPDO 1</td>
+</tr>
+<tr>
+<td><code>0x1601</code></td>
+<td></td>
+<td><code>kReceivePDO2Mapping</code></td>
+<td>Receive P D O2 Mapping</td>
+</tr>
+<tr>
+<td><code>0x1601</code></td>
+<td><code>0x01</code></td>
+<td><code>kReceivePDO2Mapping_N1stMappedObjectInRxpdo2</code></td>
+<td>1st mapped object in RxPDO 2</td>
+</tr>
+<tr>
+<td><code>0x1601</code></td>
+<td><code>0x02</code></td>
+<td><code>kReceivePDO2Mapping_N2ndMappedObjectInRxpdo2</code></td>
+<td>2nd mapped object in RxPDO 2</td>
+</tr>
+<tr>
+<td><code>0x1601</code></td>
+<td><code>0x03</code></td>
+<td><code>kReceivePDO2Mapping_N3rdMappedObjectInRxpdo2</code></td>
+<td>3rd mapped object in RxPDO 2</td>
+</tr>
+<tr>
+<td><code>0x1601</code></td>
+<td><code>0x04</code></td>
+<td><code>kReceivePDO2Mapping_N4thMappedObjectInRxpdo2</code></td>
+<td>4th mapped object in RxPDO 2</td>
+</tr>
+<tr>
+<td><code>0x1601</code></td>
+<td><code>0x05</code></td>
+<td><code>kReceivePDO2Mapping_N5thMappedObjectInRxpdo2</code></td>
+<td>5th mapped object in RxPDO 2</td>
+</tr>
+<tr>
+<td><code>0x1601</code></td>
+<td><code>0x06</code></td>
+<td><code>kReceivePDO2Mapping_N6thMappedObjectInRxpdo2</code></td>
+<td>6th mapped object in RxPDO 2</td>
+</tr>
+<tr>
+<td><code>0x1601</code></td>
+<td><code>0x07</code></td>
+<td><code>kReceivePDO2Mapping_N7thMappedObjectInRxpdo2</code></td>
+<td>7th mapped object in RxPDO 2</td>
+</tr>
+<tr>
+<td><code>0x1601</code></td>
+<td><code>0x08</code></td>
+<td><code>kReceivePDO2Mapping_N8thMappedObjectInRxpdo2</code></td>
+<td>8th mapped object in RxPDO 2</td>
+</tr>
+<tr>
+<td><code>0x1601</code></td>
+<td><code>0x09</code></td>
+<td><code>kReceivePDO2Mapping_N9thMappedObjectInRxpdo2</code></td>
+<td>9th mapped object in RxPDO 2</td>
+</tr>
+<tr>
+<td><code>0x1601</code></td>
+<td><code>0x0A</code></td>
+<td><code>kReceivePDO2Mapping_N10thMappedObjectInRxpdo2</code></td>
+<td>10th mapped object in RxPDO 2</td>
+</tr>
+<tr>
+<td><code>0x1601</code></td>
+<td><code>0x0B</code></td>
+<td><code>kReceivePDO2Mapping_N11thMappedObjectInRxpdo2</code></td>
+<td>11th mapped object in RxPDO 2</td>
+</tr>
+<tr>
+<td><code>0x1601</code></td>
+<td><code>0x0C</code></td>
+<td><code>kReceivePDO2Mapping_N12thMappedObjectInRxpdo2</code></td>
+<td>12th mapped object in RxPDO 2</td>
+</tr>
+<tr>
+<td><code>0x1602</code></td>
+<td></td>
+<td><code>kReceivePDO3Mapping</code></td>
+<td>Receive P D O3 Mapping</td>
+</tr>
+<tr>
+<td><code>0x1602</code></td>
+<td><code>0x01</code></td>
+<td><code>kReceivePDO3Mapping_N1stMappedObjectInRxpdo3</code></td>
+<td>1st mapped object in RxPDO 3</td>
+</tr>
+<tr>
+<td><code>0x1602</code></td>
+<td><code>0x02</code></td>
+<td><code>kReceivePDO3Mapping_N2ndMappedObjectInRxpdo3</code></td>
+<td>2nd mapped object in RxPDO 3</td>
+</tr>
+<tr>
+<td><code>0x1602</code></td>
+<td><code>0x03</code></td>
+<td><code>kReceivePDO3Mapping_N3rdMappedObjectInRxpdo3</code></td>
+<td>3rd mapped object in RxPDO 3</td>
+</tr>
+<tr>
+<td><code>0x1602</code></td>
+<td><code>0x04</code></td>
+<td><code>kReceivePDO3Mapping_N4thMappedObjectInRxpdo3</code></td>
+<td>4th mapped object in RxPDO 3</td>
+</tr>
+<tr>
+<td><code>0x1602</code></td>
+<td><code>0x05</code></td>
+<td><code>kReceivePDO3Mapping_N5thMappedObjectInRxpdo3</code></td>
+<td>5th mapped object in RxPDO 3</td>
+</tr>
+<tr>
+<td><code>0x1602</code></td>
+<td><code>0x06</code></td>
+<td><code>kReceivePDO3Mapping_N6thMappedObjectInRxpdo3</code></td>
+<td>6th mapped object in RxPDO 3</td>
+</tr>
+<tr>
+<td><code>0x1602</code></td>
+<td><code>0x07</code></td>
+<td><code>kReceivePDO3Mapping_N7thMappedObjectInRxpdo3</code></td>
+<td>7th mapped object in RxPDO 3</td>
+</tr>
+<tr>
+<td><code>0x1602</code></td>
+<td><code>0x08</code></td>
+<td><code>kReceivePDO3Mapping_N8thMappedObjectInRxpdo3</code></td>
+<td>8th mapped object in RxPDO 3</td>
+</tr>
+<tr>
+<td><code>0x1602</code></td>
+<td><code>0x09</code></td>
+<td><code>kReceivePDO3Mapping_N9thMappedObjectInRxpdo3</code></td>
+<td>9th mapped object in RxPDO 3</td>
+</tr>
+<tr>
+<td><code>0x1602</code></td>
+<td><code>0x0A</code></td>
+<td><code>kReceivePDO3Mapping_N10thMappedObjectInRxpdo3</code></td>
+<td>10th mapped object in RxPDO 3</td>
+</tr>
+<tr>
+<td><code>0x1602</code></td>
+<td><code>0x0B</code></td>
+<td><code>kReceivePDO3Mapping_N11thMappedObjectInRxpdo3</code></td>
+<td>11th mapped object in RxPDO 3</td>
+</tr>
+<tr>
+<td><code>0x1602</code></td>
+<td><code>0x0C</code></td>
+<td><code>kReceivePDO3Mapping_N12thMappedObjectInRxpdo3</code></td>
+<td>12th mapped object in RxPDO 3</td>
+</tr>
+<tr>
+<td><code>0x1603</code></td>
+<td></td>
+<td><code>kReceivePDO4Mapping</code></td>
+<td>Receive P D O4 Mapping</td>
+</tr>
+<tr>
+<td><code>0x1603</code></td>
+<td><code>0x01</code></td>
+<td><code>kReceivePDO4Mapping_N1stMappedObjectInRxpdo4</code></td>
+<td>1st mapped object in RxPDO 4</td>
+</tr>
+<tr>
+<td><code>0x1603</code></td>
+<td><code>0x02</code></td>
+<td><code>kReceivePDO4Mapping_N2ndMappedObjectInRxpdo4</code></td>
+<td>2nd mapped object in RxPDO 4</td>
+</tr>
+<tr>
+<td><code>0x1603</code></td>
+<td><code>0x03</code></td>
+<td><code>kReceivePDO4Mapping_N3rdMappedObjectInRxpdo4</code></td>
+<td>3rd mapped object in RxPDO 4</td>
+</tr>
+<tr>
+<td><code>0x1603</code></td>
+<td><code>0x04</code></td>
+<td><code>kReceivePDO4Mapping_N4thMappedObjectInRxpdo4</code></td>
+<td>4th mapped object in RxPDO 4</td>
+</tr>
+<tr>
+<td><code>0x1603</code></td>
+<td><code>0x05</code></td>
+<td><code>kReceivePDO4Mapping_N5thMappedObjectInRxpdo4</code></td>
+<td>5th mapped object in RxPDO 4</td>
+</tr>
+<tr>
+<td><code>0x1603</code></td>
+<td><code>0x06</code></td>
+<td><code>kReceivePDO4Mapping_N6thMappedObjectInRxpdo4</code></td>
+<td>6th mapped object in RxPDO 4</td>
+</tr>
+<tr>
+<td><code>0x1603</code></td>
+<td><code>0x07</code></td>
+<td><code>kReceivePDO4Mapping_N7thMappedObjectInRxpdo4</code></td>
+<td>7th mapped object in RxPDO 4</td>
+</tr>
+<tr>
+<td><code>0x1603</code></td>
+<td><code>0x08</code></td>
+<td><code>kReceivePDO4Mapping_N8thMappedObjectInRxpdo4</code></td>
+<td>8th mapped object in RxPDO 4</td>
+</tr>
+<tr>
+<td><code>0x1603</code></td>
+<td><code>0x09</code></td>
+<td><code>kReceivePDO4Mapping_N9thMappedObjectInRxpdo4</code></td>
+<td>9th mapped object in RxPDO 4</td>
+</tr>
+<tr>
+<td><code>0x1603</code></td>
+<td><code>0x0A</code></td>
+<td><code>kReceivePDO4Mapping_N10thMappedObjectInRxpdo4</code></td>
+<td>10th mapped object in RxPDO 4</td>
+</tr>
+<tr>
+<td><code>0x1603</code></td>
+<td><code>0x0B</code></td>
+<td><code>kReceivePDO4Mapping_N11thMappedObjectInRxpdo4</code></td>
+<td>11th mapped object in RxPDO 4</td>
+</tr>
+<tr>
+<td><code>0x1603</code></td>
+<td><code>0x0C</code></td>
+<td><code>kReceivePDO4Mapping_N12thMappedObjectInRxpdo4</code></td>
+<td>12th mapped object in RxPDO 4</td>
+</tr>
+<tr>
+<td><code>0x1800</code></td>
+<td></td>
+<td><code>kTransmitPDO1Parameter</code></td>
+<td>Transmit P D O1 Parameter</td>
+</tr>
+<tr>
+<td><code>0x1800</code></td>
+<td><code>0x01</code></td>
+<td><code>kTransmitPDO1Parameter_COBIDUsedByTxpdo1</code></td>
+<td>COB-ID used by TxPDO 1</td>
+</tr>
+<tr>
+<td><code>0x1800</code></td>
+<td><code>0x02</code></td>
+<td><code>kTransmitPDO1Parameter_TransmissionTypeTxpdo1</code></td>
+<td>Transmission type TxPDO 1</td>
+</tr>
+<tr>
+<td><code>0x1800</code></td>
+<td><code>0x03</code></td>
+<td><code>kTransmitPDO1Parameter_InhibitTimeTxpdo1</code></td>
+<td>Inhibit time TxPDO 1</td>
+</tr>
+<tr>
+<td><code>0x1801</code></td>
+<td></td>
+<td><code>kTransmitPDO2Parameter</code></td>
+<td>Transmit P D O2 Parameter</td>
+</tr>
+<tr>
+<td><code>0x1801</code></td>
+<td><code>0x01</code></td>
+<td><code>kTransmitPDO2Parameter_COBIDUsedByTxpdo2</code></td>
+<td>COB-ID used by TxPDO 2</td>
+</tr>
+<tr>
+<td><code>0x1801</code></td>
+<td><code>0x02</code></td>
+<td><code>kTransmitPDO2Parameter_TransmissionTypeTxpdo2</code></td>
+<td>Transmission type TxPDO 2</td>
+</tr>
+<tr>
+<td><code>0x1801</code></td>
+<td><code>0x03</code></td>
+<td><code>kTransmitPDO2Parameter_InhibitTimeTxpdo2</code></td>
+<td>Inhibit time TxPDO 2</td>
+</tr>
+<tr>
+<td><code>0x1802</code></td>
+<td></td>
+<td><code>kTransmitPDO3Parameter</code></td>
+<td>Transmit P D O3 Parameter</td>
+</tr>
+<tr>
+<td><code>0x1802</code></td>
+<td><code>0x01</code></td>
+<td><code>kTransmitPDO3Parameter_COBIDUsedByTxpdo3</code></td>
+<td>COB-ID used by TxPDO 3</td>
+</tr>
+<tr>
+<td><code>0x1802</code></td>
+<td><code>0x02</code></td>
+<td><code>kTransmitPDO3Parameter_TransmissionTypeTxpdo3</code></td>
+<td>Transmission type TxPDO 3</td>
+</tr>
+<tr>
+<td><code>0x1802</code></td>
+<td><code>0x03</code></td>
+<td><code>kTransmitPDO3Parameter_InhibitTimeTxpdo3</code></td>
+<td>Inhibit time TxPDO 3</td>
+</tr>
+<tr>
+<td><code>0x1803</code></td>
+<td></td>
+<td><code>kTransmitPDO4Parameter</code></td>
+<td>Transmit P D O4 Parameter</td>
+</tr>
+<tr>
+<td><code>0x1803</code></td>
+<td><code>0x01</code></td>
+<td><code>kTransmitPDO4Parameter_COBIDUsedByTxpdo4</code></td>
+<td>COB-ID used by TxPDO 4</td>
+</tr>
+<tr>
+<td><code>0x1803</code></td>
+<td><code>0x02</code></td>
+<td><code>kTransmitPDO4Parameter_TransmissionTypeTxpdo4</code></td>
+<td>Transmission type TxPDO 4</td>
+</tr>
+<tr>
+<td><code>0x1803</code></td>
+<td><code>0x03</code></td>
+<td><code>kTransmitPDO4Parameter_InhibitTimeTxpdo4</code></td>
+<td>Inhibit time TxPDO 4</td>
+</tr>
+<tr>
+<td><code>0x1A00</code></td>
+<td></td>
+<td><code>kTransmitPDO1Mapping</code></td>
+<td>Transmit P D O1 Mapping</td>
+</tr>
+<tr>
+<td><code>0x1A00</code></td>
+<td><code>0x01</code></td>
+<td><code>kTransmitPDO1Mapping_N1stMappedObjectInTxpdo1</code></td>
+<td>1st mapped object in TxPDO 1</td>
+</tr>
+<tr>
+<td><code>0x1A00</code></td>
+<td><code>0x02</code></td>
+<td><code>kTransmitPDO1Mapping_N2ndMappedObjectInTxpdo1</code></td>
+<td>2nd mapped object in TxPDO 1</td>
+</tr>
+<tr>
+<td><code>0x1A00</code></td>
+<td><code>0x03</code></td>
+<td><code>kTransmitPDO1Mapping_N3rdMappedObjectInTxpdo1</code></td>
+<td>3rd mapped object in TxPDO 1</td>
+</tr>
+<tr>
+<td><code>0x1A00</code></td>
+<td><code>0x04</code></td>
+<td><code>kTransmitPDO1Mapping_N4thMappedObjectInTxpdo1</code></td>
+<td>4th mapped object in TxPDO 1</td>
+</tr>
+<tr>
+<td><code>0x1A00</code></td>
+<td><code>0x05</code></td>
+<td><code>kTransmitPDO1Mapping_N5thMappedObjectInTxpdo1</code></td>
+<td>5th mapped object in TxPDO 1</td>
+</tr>
+<tr>
+<td><code>0x1A00</code></td>
+<td><code>0x06</code></td>
+<td><code>kTransmitPDO1Mapping_N6thMappedObjectInTxpdo1</code></td>
+<td>6th mapped object in TxPDO 1</td>
+</tr>
+<tr>
+<td><code>0x1A00</code></td>
+<td><code>0x07</code></td>
+<td><code>kTransmitPDO1Mapping_N7thMappedObjectInTxpdo1</code></td>
+<td>7th mapped object in TxPDO 1</td>
+</tr>
+<tr>
+<td><code>0x1A00</code></td>
+<td><code>0x08</code></td>
+<td><code>kTransmitPDO1Mapping_N8thMappedObjectInTxpdo1</code></td>
+<td>8th mapped object in TxPDO 1</td>
+</tr>
+<tr>
+<td><code>0x1A00</code></td>
+<td><code>0x09</code></td>
+<td><code>kTransmitPDO1Mapping_N9thMappedObjectInTxpdo1</code></td>
+<td>9th mapped object in TxPDO 1</td>
+</tr>
+<tr>
+<td><code>0x1A00</code></td>
+<td><code>0x0A</code></td>
+<td><code>kTransmitPDO1Mapping_N10thMappedObjectInTxpdo1</code></td>
+<td>10th mapped object in TxPDO 1</td>
+</tr>
+<tr>
+<td><code>0x1A00</code></td>
+<td><code>0x0B</code></td>
+<td><code>kTransmitPDO1Mapping_N11thMappedObjectInTxpdo1</code></td>
+<td>11th mapped object in TxPDO 1</td>
+</tr>
+<tr>
+<td><code>0x1A00</code></td>
+<td><code>0x0C</code></td>
+<td><code>kTransmitPDO1Mapping_N12thMappedObjectInTxpdo1</code></td>
+<td>12th mapped object in TxPDO 1</td>
+</tr>
+<tr>
+<td><code>0x1A01</code></td>
+<td></td>
+<td><code>kTransmitPDO2Mapping</code></td>
+<td>Transmit P D O2 Mapping</td>
+</tr>
+<tr>
+<td><code>0x1A01</code></td>
+<td><code>0x01</code></td>
+<td><code>kTransmitPDO2Mapping_N1stMappedObjectInTxpdo2</code></td>
+<td>1st mapped object in TxPDO 2</td>
+</tr>
+<tr>
+<td><code>0x1A01</code></td>
+<td><code>0x02</code></td>
+<td><code>kTransmitPDO2Mapping_N2ndMappedObjectInTxpdo2</code></td>
+<td>2nd mapped object in TxPDO 2</td>
+</tr>
+<tr>
+<td><code>0x1A01</code></td>
+<td><code>0x03</code></td>
+<td><code>kTransmitPDO2Mapping_N3rdMappedObjectInTxpdo2</code></td>
+<td>3rd mapped object in TxPDO 2</td>
+</tr>
+<tr>
+<td><code>0x1A01</code></td>
+<td><code>0x04</code></td>
+<td><code>kTransmitPDO2Mapping_N4thMappedObjectInTxpdo2</code></td>
+<td>4th mapped object in TxPDO 2</td>
+</tr>
+<tr>
+<td><code>0x1A01</code></td>
+<td><code>0x05</code></td>
+<td><code>kTransmitPDO2Mapping_N5thMappedObjectInTxpdo2</code></td>
+<td>5th mapped object in TxPDO 2</td>
+</tr>
+<tr>
+<td><code>0x1A01</code></td>
+<td><code>0x06</code></td>
+<td><code>kTransmitPDO2Mapping_N6thMappedObjectInTxpdo2</code></td>
+<td>6th mapped object in TxPDO 2</td>
+</tr>
+<tr>
+<td><code>0x1A01</code></td>
+<td><code>0x07</code></td>
+<td><code>kTransmitPDO2Mapping_N7thMappedObjectInTxpdo2</code></td>
+<td>7th mapped object in TxPDO 2</td>
+</tr>
+<tr>
+<td><code>0x1A01</code></td>
+<td><code>0x08</code></td>
+<td><code>kTransmitPDO2Mapping_N8thMappedObjectInTxpdo2</code></td>
+<td>8th mapped object in TxPDO 2</td>
+</tr>
+<tr>
+<td><code>0x1A01</code></td>
+<td><code>0x09</code></td>
+<td><code>kTransmitPDO2Mapping_N9thMappedObjectInTxpdo2</code></td>
+<td>9th mapped object in TxPDO 2</td>
+</tr>
+<tr>
+<td><code>0x1A01</code></td>
+<td><code>0x0A</code></td>
+<td><code>kTransmitPDO2Mapping_N10thMappedObjectInTxpdo2</code></td>
+<td>10th mapped object in TxPDO 2</td>
+</tr>
+<tr>
+<td><code>0x1A01</code></td>
+<td><code>0x0B</code></td>
+<td><code>kTransmitPDO2Mapping_N11thMappedObjectInTxpdo2</code></td>
+<td>11th mapped object in TxPDO 2</td>
+</tr>
+<tr>
+<td><code>0x1A01</code></td>
+<td><code>0x0C</code></td>
+<td><code>kTransmitPDO2Mapping_N12thMappedObjectInTxpdo2</code></td>
+<td>12th mapped object in TxPDO 2</td>
+</tr>
+<tr>
+<td><code>0x1A02</code></td>
+<td></td>
+<td><code>kTransmitPDO3Mapping</code></td>
+<td>Transmit P D O3 Mapping</td>
+</tr>
+<tr>
+<td><code>0x1A02</code></td>
+<td><code>0x01</code></td>
+<td><code>kTransmitPDO3Mapping_N1stMappedObjectInTxpdo3</code></td>
+<td>1st mapped object in TxPDO 3</td>
+</tr>
+<tr>
+<td><code>0x1A02</code></td>
+<td><code>0x02</code></td>
+<td><code>kTransmitPDO3Mapping_N2ndMappedObjectInTxpdo3</code></td>
+<td>2nd mapped object in TxPDO 3</td>
+</tr>
+<tr>
+<td><code>0x1A02</code></td>
+<td><code>0x03</code></td>
+<td><code>kTransmitPDO3Mapping_N3rdMappedObjectInTxpdo3</code></td>
+<td>3rd mapped object in TxPDO 3</td>
+</tr>
+<tr>
+<td><code>0x1A02</code></td>
+<td><code>0x04</code></td>
+<td><code>kTransmitPDO3Mapping_N4thMappedObjectInTxpdo3</code></td>
+<td>4th mapped object in TxPDO 3</td>
+</tr>
+<tr>
+<td><code>0x1A02</code></td>
+<td><code>0x05</code></td>
+<td><code>kTransmitPDO3Mapping_N5thMappedObjectInTxpdo3</code></td>
+<td>5th mapped object in TxPDO 3</td>
+</tr>
+<tr>
+<td><code>0x1A02</code></td>
+<td><code>0x06</code></td>
+<td><code>kTransmitPDO3Mapping_N6thMappedObjectInTxpdo3</code></td>
+<td>6th mapped object in TxPDO 3</td>
+</tr>
+<tr>
+<td><code>0x1A02</code></td>
+<td><code>0x07</code></td>
+<td><code>kTransmitPDO3Mapping_N7thMappedObjectInTxpdo3</code></td>
+<td>7th mapped object in TxPDO 3</td>
+</tr>
+<tr>
+<td><code>0x1A02</code></td>
+<td><code>0x08</code></td>
+<td><code>kTransmitPDO3Mapping_N8thMappedObjectInTxpdo3</code></td>
+<td>8th mapped object in TxPDO 3</td>
+</tr>
+<tr>
+<td><code>0x1A02</code></td>
+<td><code>0x09</code></td>
+<td><code>kTransmitPDO3Mapping_N9thMappedObjectInTxpdo3</code></td>
+<td>9th mapped object in TxPDO 3</td>
+</tr>
+<tr>
+<td><code>0x1A02</code></td>
+<td><code>0x0A</code></td>
+<td><code>kTransmitPDO3Mapping_N10thMappedObjectInTxpdo3</code></td>
+<td>10th mapped object in TxPDO 3</td>
+</tr>
+<tr>
+<td><code>0x1A02</code></td>
+<td><code>0x0B</code></td>
+<td><code>kTransmitPDO3Mapping_N11thMappedObjectInTxpdo3</code></td>
+<td>11th mapped object in TxPDO 3</td>
+</tr>
+<tr>
+<td><code>0x1A02</code></td>
+<td><code>0x0C</code></td>
+<td><code>kTransmitPDO3Mapping_N12thMappedObjectInTxpdo3</code></td>
+<td>12th mapped object in TxPDO 3</td>
+</tr>
+<tr>
+<td><code>0x1A03</code></td>
+<td></td>
+<td><code>kTransmitPDO4Mapping</code></td>
+<td>Transmit P D O4 Mapping</td>
+</tr>
+<tr>
+<td><code>0x1A03</code></td>
+<td><code>0x01</code></td>
+<td><code>kTransmitPDO4Mapping_N1stMappedObjectInTxpdo4</code></td>
+<td>1st mapped object in TxPDO 4</td>
+</tr>
+<tr>
+<td><code>0x1A03</code></td>
+<td><code>0x02</code></td>
+<td><code>kTransmitPDO4Mapping_N2ndMappedObjectInTxpdo4</code></td>
+<td>2nd mapped object in TxPDO 4</td>
+</tr>
+<tr>
+<td><code>0x1A03</code></td>
+<td><code>0x03</code></td>
+<td><code>kTransmitPDO4Mapping_N3rdMappedObjectInTxpdo4</code></td>
+<td>3rd mapped object in TxPDO 4</td>
+</tr>
+<tr>
+<td><code>0x1A03</code></td>
+<td><code>0x04</code></td>
+<td><code>kTransmitPDO4Mapping_N4thMappedObjectInTxpdo4</code></td>
+<td>4th mapped object in TxPDO 4</td>
+</tr>
+<tr>
+<td><code>0x1A03</code></td>
+<td><code>0x05</code></td>
+<td><code>kTransmitPDO4Mapping_N5thMappedObjectInTxpdo4</code></td>
+<td>5th mapped object in TxPDO 4</td>
+</tr>
+<tr>
+<td><code>0x1A03</code></td>
+<td><code>0x06</code></td>
+<td><code>kTransmitPDO4Mapping_N6thMappedObjectInTxpdo4</code></td>
+<td>6th mapped object in TxPDO 4</td>
+</tr>
+<tr>
+<td><code>0x1A03</code></td>
+<td><code>0x07</code></td>
+<td><code>kTransmitPDO4Mapping_N7thMappedObjectInTxpdo4</code></td>
+<td>7th mapped object in TxPDO 4</td>
+</tr>
+<tr>
+<td><code>0x1A03</code></td>
+<td><code>0x08</code></td>
+<td><code>kTransmitPDO4Mapping_N8thMappedObjectInTxpdo4</code></td>
+<td>8th mapped object in TxPDO 4</td>
+</tr>
+<tr>
+<td><code>0x1A03</code></td>
+<td><code>0x09</code></td>
+<td><code>kTransmitPDO4Mapping_N9thMappedObjectInTxpdo4</code></td>
+<td>9th mapped object in TxPDO 4</td>
+</tr>
+<tr>
+<td><code>0x1A03</code></td>
+<td><code>0x0A</code></td>
+<td><code>kTransmitPDO4Mapping_N10thMappedObjectInTxpdo4</code></td>
+<td>10th mapped object in TxPDO 4</td>
+</tr>
+<tr>
+<td><code>0x1A03</code></td>
+<td><code>0x0B</code></td>
+<td><code>kTransmitPDO4Mapping_N11thMappedObjectInTxpdo4</code></td>
+<td>11th mapped object in TxPDO 4</td>
+</tr>
+<tr>
+<td><code>0x1A03</code></td>
+<td><code>0x0C</code></td>
+<td><code>kTransmitPDO4Mapping_N12thMappedObjectInTxpdo4</code></td>
+<td>12th mapped object in TxPDO 4</td>
+</tr>
+<tr>
+<td><code>0x1F50</code></td>
+<td></td>
+<td><code>kProgramData</code></td>
+<td>Program Data</td>
+</tr>
+<tr>
+<td><code>0x1F50</code></td>
+<td><code>0x01</code></td>
+<td><code>kProgramData_ProgramNumber1</code></td>
+<td>Program number 1</td>
+</tr>
+<tr>
+<td><code>0x1F51</code></td>
+<td></td>
+<td><code>kProgramControl</code></td>
+<td>Program Control</td>
+</tr>
+<tr>
+<td><code>0x1F51</code></td>
+<td><code>0x01</code></td>
+<td><code>kProgramControl_ProgramNumber1</code></td>
+<td>Program number 1</td>
+</tr>
+<tr>
+<td><code>0x1F56</code></td>
+<td></td>
+<td><code>kProgramSoftwareIdentification</code></td>
+<td>Program Software Identification</td>
+</tr>
+<tr>
+<td><code>0x1F56</code></td>
+<td><code>0x01</code></td>
+<td><code>kProgramSoftwareIdentification_ProgramNumber1</code></td>
+<td>Program number 1</td>
+</tr>
+<tr>
+<td><code>0x1F57</code></td>
+<td></td>
+<td><code>kFlashStatusIdentification</code></td>
+<td>Flash Status Identification</td>
+</tr>
+<tr>
+<td><code>0x1F57</code></td>
+<td><code>0x01</code></td>
+<td><code>kFlashStatusIdentification_ProgramNumber1</code></td>
+<td>Program number 1</td>
+</tr>
+<tr>
+<td><code>0x1F22</code></td>
+<td></td>
+<td><code>kConciseDcf</code></td>
+<td>Concise Dcf</td>
+</tr>
+</tbody>
+</table>
+<h2 id="maxon-communication-objects-odmaxon_comm">maxon communication objects - <code>od::maxon_comm</code><a class="headerlink" href="#maxon-communication-objects-odmaxon_comm" title="Permanent link">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>Index</th>
+<th>Sub</th>
+<th>Constant</th>
+<th>Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>0x2000</code></td>
+<td></td>
+<td><code>kNodeID</code></td>
+<td>Node I D</td>
+</tr>
+<tr>
+<td><code>0x2001</code></td>
+<td></td>
+<td><code>kCANBitRate</code></td>
+<td>C A N Bit Rate</td>
+</tr>
+<tr>
+<td><code>0x2002</code></td>
+<td></td>
+<td><code>kRS232BitRate</code></td>
+<td>R S232 Bit Rate</td>
+</tr>
+<tr>
+<td><code>0x2005</code></td>
+<td></td>
+<td><code>kRS232FrameTimeout</code></td>
+<td>R S232 Frame Timeout</td>
+</tr>
+<tr>
+<td><code>0x2006</code></td>
+<td></td>
+<td><code>kUSBFrameTimeout</code></td>
+<td>U S B Frame Timeout</td>
+</tr>
+<tr>
+<td><code>0x200A</code></td>
+<td></td>
+<td><code>kCANBitRateDisplay</code></td>
+<td>C A N Bit Rate Display</td>
+</tr>
+<tr>
+<td><code>0x2010</code></td>
+<td></td>
+<td><code>kActiveFieldbus</code></td>
+<td>Active Fieldbus</td>
+</tr>
+<tr>
+<td><code>0x2100</code></td>
+<td></td>
+<td><code>kAdditionalIdentity</code></td>
+<td>Additional Identity</td>
+</tr>
+<tr>
+<td><code>0x2100</code></td>
+<td><code>0x01</code></td>
+<td><code>kAdditionalIdentity_SerialNumberComplete</code></td>
+<td>Serial number complete</td>
+</tr>
+<tr>
+<td><code>0x210C</code></td>
+<td></td>
+<td><code>kCustomPersistentMemory</code></td>
+<td>Custom Persistent Memory</td>
+</tr>
+<tr>
+<td><code>0x210C</code></td>
+<td><code>0x01</code></td>
+<td><code>kCustomPersistentMemory_CustomPersistentMemory1</code></td>
+<td>Custom persistent memory 1</td>
+</tr>
+<tr>
+<td><code>0x210C</code></td>
+<td><code>0x02</code></td>
+<td><code>kCustomPersistentMemory_CustomPersistentMemory2</code></td>
+<td>Custom persistent memory 2</td>
+</tr>
+<tr>
+<td><code>0x210C</code></td>
+<td><code>0x03</code></td>
+<td><code>kCustomPersistentMemory_CustomPersistentMemory3</code></td>
+<td>Custom persistent memory 3</td>
+</tr>
+<tr>
+<td><code>0x210C</code></td>
+<td><code>0x04</code></td>
+<td><code>kCustomPersistentMemory_CustomPersistentMemory4</code></td>
+<td>Custom persistent memory 4</td>
+</tr>
+<tr>
+<td><code>0x2200</code></td>
+<td></td>
+<td><code>kPowerSupply</code></td>
+<td>Power Supply</td>
+</tr>
+<tr>
+<td><code>0x2200</code></td>
+<td><code>0x01</code></td>
+<td><code>kPowerSupply_PowerSupplyVoltage</code></td>
+<td>Power supply voltage</td>
+</tr>
+<tr>
+<td><code>0x2200</code></td>
+<td><code>0x02</code></td>
+<td><code>kPowerSupply_InternalValidLogicSupply</code></td>
+<td>Internal valid logic supply</td>
+</tr>
+<tr>
+<td><code>0x2201</code></td>
+<td></td>
+<td><code>kPowerSupplySupervision</code></td>
+<td>Power Supply Supervision</td>
+</tr>
+<tr>
+<td><code>0x2201</code></td>
+<td><code>0x01</code></td>
+<td><code>kPowerSupplySupervision_PowerSupplyUndervoltageLimit</code></td>
+<td>Power supply undervoltage limit</td>
+</tr>
+<tr>
+<td><code>0x2201</code></td>
+<td><code>0x02</code></td>
+<td><code>kPowerSupplySupervision_PowerSupplyOvervoltageLimit</code></td>
+<td>Power supply overvoltage limit</td>
+</tr>
+<tr>
+<td><code>0x2EC0</code></td>
+<td></td>
+<td><code>kInternalDeviceControl</code></td>
+<td>Internal Device Control</td>
+</tr>
+<tr>
+<td><code>0x2EC0</code></td>
+<td><code>0x01</code></td>
+<td><code>kInternalDeviceControl_InternalErrorControl</code></td>
+<td>Internal error control</td>
+</tr>
+<tr>
+<td><code>0x2EC0</code></td>
+<td><code>0x02</code></td>
+<td><code>kInternalDeviceControl_InternalCANNMTState</code></td>
+<td>Internal CAN NMT state</td>
+</tr>
+<tr>
+<td><code>0x2EC0</code></td>
+<td><code>0x03</code></td>
+<td><code>kInternalDeviceControl_InternalBootloaderRevisionNumber</code></td>
+<td>Internal bootloader revision number</td>
+</tr>
+<tr>
+<td><code>0x2EC0</code></td>
+<td><code>0x04</code></td>
+<td><code>kInternalDeviceControl_InternalBootloaderProductCode</code></td>
+<td>Internal bootloader product code</td>
+</tr>
+<tr>
+<td><code>0x2EC0</code></td>
+<td><code>0x05</code></td>
+<td><code>kInternalDeviceControl_InternalExtensionCommunicationErrorCode</code></td>
+<td>Internal Extension communication error code</td>
+</tr>
+<tr>
+<td><code>0x2EC0</code></td>
+<td><code>0x06</code></td>
+<td><code>kInternalDeviceControl_InternalESMState</code></td>
+<td>Internal ESM state</td>
+</tr>
+<tr>
+<td><code>0x2EC0</code></td>
+<td><code>0x08</code></td>
+<td><code>kInternalDeviceControl_InternalLEDIdentification</code></td>
+<td>Internal LED Identification</td>
+</tr>
+<tr>
+<td><code>0x2EC0</code></td>
+<td><code>0x09</code></td>
+<td><code>kInternalDeviceControl_InternalDebugState</code></td>
+<td>Internal debug state</td>
+</tr>
+</tbody>
+</table>
+<h2 id="maxon-manufacturer-specific-objects-odmaxon">maxon manufacturer-specific objects - <code>od::maxon</code><a class="headerlink" href="#maxon-manufacturer-specific-objects-odmaxon" title="Permanent link">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>Index</th>
+<th>Sub</th>
+<th>Constant</th>
+<th>Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>0x3000</code></td>
+<td></td>
+<td><code>kAxisConfiguration</code></td>
+<td>Axis Configuration</td>
+</tr>
+<tr>
+<td><code>0x3000</code></td>
+<td><code>0x01</code></td>
+<td><code>kAxisConfiguration_SensorsConfiguration</code></td>
+<td>Sensors configuration</td>
+</tr>
+<tr>
+<td><code>0x3000</code></td>
+<td><code>0x02</code></td>
+<td><code>kAxisConfiguration_ControlStructure</code></td>
+<td>Control structure</td>
+</tr>
+<tr>
+<td><code>0x3000</code></td>
+<td><code>0x03</code></td>
+<td><code>kAxisConfiguration_CommutationSensors</code></td>
+<td>Commutation sensors</td>
+</tr>
+<tr>
+<td><code>0x3000</code></td>
+<td><code>0x04</code></td>
+<td><code>kAxisConfiguration_AxisConfigurationMiscellaneous</code></td>
+<td>Axis configuration miscellaneous</td>
+</tr>
+<tr>
+<td><code>0x3000</code></td>
+<td><code>0x05</code></td>
+<td><code>kAxisConfiguration_MainSensorResolution</code></td>
+<td>Main sensor resolution</td>
+</tr>
+<tr>
+<td><code>0x3000</code></td>
+<td><code>0x06</code></td>
+<td><code>kAxisConfiguration_MaxSystemSpeed</code></td>
+<td>Max system speed</td>
+</tr>
+<tr>
+<td><code>0x3001</code></td>
+<td></td>
+<td><code>kMotorData</code></td>
+<td>Motor Data</td>
+</tr>
+<tr>
+<td><code>0x3001</code></td>
+<td><code>0x01</code></td>
+<td><code>kMotorData_NominalCurrent</code></td>
+<td>Nominal current</td>
+</tr>
+<tr>
+<td><code>0x3001</code></td>
+<td><code>0x02</code></td>
+<td><code>kMotorData_OutputCurrentLimit</code></td>
+<td>Output current limit</td>
+</tr>
+<tr>
+<td><code>0x3001</code></td>
+<td><code>0x03</code></td>
+<td><code>kMotorData_NumberOfPolePairs</code></td>
+<td>Number of pole pairs</td>
+</tr>
+<tr>
+<td><code>0x3001</code></td>
+<td><code>0x04</code></td>
+<td><code>kMotorData_ThermalTimeConstantWinding</code></td>
+<td>Thermal time constant winding</td>
+</tr>
+<tr>
+<td><code>0x3001</code></td>
+<td><code>0x05</code></td>
+<td><code>kMotorData_TorqueConstant</code></td>
+<td>Torque constant</td>
+</tr>
+<tr>
+<td><code>0x3002</code></td>
+<td></td>
+<td><code>kElectricalSystemParameters</code></td>
+<td>Electrical System Parameters</td>
+</tr>
+<tr>
+<td><code>0x3002</code></td>
+<td><code>0x01</code></td>
+<td><code>kElectricalSystemParameters_ElectricalResistance</code></td>
+<td>Electrical resistance</td>
+</tr>
+<tr>
+<td><code>0x3002</code></td>
+<td><code>0x02</code></td>
+<td><code>kElectricalSystemParameters_ElectricalInductance</code></td>
+<td>Electrical inductance</td>
+</tr>
+<tr>
+<td><code>0x3003</code></td>
+<td></td>
+<td><code>kGearConfiguration</code></td>
+<td>Gear Configuration</td>
+</tr>
+<tr>
+<td><code>0x3003</code></td>
+<td><code>0x01</code></td>
+<td><code>kGearConfiguration_GearReductionNumerator</code></td>
+<td>Gear reduction numerator</td>
+</tr>
+<tr>
+<td><code>0x3003</code></td>
+<td><code>0x02</code></td>
+<td><code>kGearConfiguration_GearReductionDenominator</code></td>
+<td>Gear reduction denominator</td>
+</tr>
+<tr>
+<td><code>0x3003</code></td>
+<td><code>0x03</code></td>
+<td><code>kGearConfiguration_MaxGearInputSpeed</code></td>
+<td>Max gear input speed</td>
+</tr>
+<tr>
+<td><code>0x3003</code></td>
+<td><code>0x04</code></td>
+<td><code>kGearConfiguration_GearMiscellaneousConfiguration</code></td>
+<td>Gear miscellaneous configuration</td>
+</tr>
+<tr>
+<td><code>0x3010</code></td>
+<td></td>
+<td><code>kDigitalIncrementalEncoder1</code></td>
+<td>Digital Incremental Encoder1</td>
+</tr>
+<tr>
+<td><code>0x3010</code></td>
+<td><code>0x02</code></td>
+<td><code>kDigitalIncrementalEncoder1_DigitalIncrementalEncoder1Type</code></td>
+<td>Digital incremental encoder 1 type</td>
+</tr>
+<tr>
+<td><code>0x3010</code></td>
+<td><code>0x04</code></td>
+<td><code>kDigitalIncrementalEncoder1_DigitalIncrementalEncoder1IndexPosition</code></td>
+<td>Digital incremental encoder 1 index position</td>
+</tr>
+<tr>
+<td><code>0x3011</code></td>
+<td></td>
+<td><code>kAnalogIncrementalEncoder</code></td>
+<td>Analog Incremental Encoder</td>
+</tr>
+<tr>
+<td><code>0x3011</code></td>
+<td><code>0x01</code></td>
+<td><code>kAnalogIncrementalEncoder_AnalogIncrementalEncoderType</code></td>
+<td>Analog incremental encoder type</td>
+</tr>
+<tr>
+<td><code>0x3011</code></td>
+<td><code>0x02</code></td>
+<td><code>kAnalogIncrementalEncoder_AnalogIncrementalEncoderResolution</code></td>
+<td>Analog incremental encoder resolution</td>
+</tr>
+<tr>
+<td><code>0x3011</code></td>
+<td><code>0x03</code></td>
+<td><code>kAnalogIncrementalEncoder_AnalogIncrementalEncoderIndexPosition</code></td>
+<td>Analog incremental encoder index position</td>
+</tr>
+<tr>
+<td><code>0x3012</code></td>
+<td></td>
+<td><code>kSSIAbsoluteEncoder</code></td>
+<td>S S I Absolute Encoder</td>
+</tr>
+<tr>
+<td><code>0x3012</code></td>
+<td><code>0x01</code></td>
+<td><code>kSSIAbsoluteEncoder_SSIDataRate</code></td>
+<td>SSI data rate</td>
+</tr>
+<tr>
+<td><code>0x3012</code></td>
+<td><code>0x02</code></td>
+<td><code>kSSIAbsoluteEncoder_SSINumberOfDataBits</code></td>
+<td>SSI number of data bits</td>
+</tr>
+<tr>
+<td><code>0x3012</code></td>
+<td><code>0x03</code></td>
+<td><code>kSSIAbsoluteEncoder_SSIEncodingType</code></td>
+<td>SSI encoding type</td>
+</tr>
+<tr>
+<td><code>0x3012</code></td>
+<td><code>0x05</code></td>
+<td><code>kSSIAbsoluteEncoder_SSITimeoutTime</code></td>
+<td>SSI timeout time</td>
+</tr>
+<tr>
+<td><code>0x3012</code></td>
+<td><code>0x06</code></td>
+<td><code>kSSIAbsoluteEncoder_SSISpecialBitsTrailingData</code></td>
+<td>SSI special bits trailing data</td>
+</tr>
+<tr>
+<td><code>0x3012</code></td>
+<td><code>0x07</code></td>
+<td><code>kSSIAbsoluteEncoder_SSIRefreshFrequency</code></td>
+<td>SSI refresh frequency</td>
+</tr>
+<tr>
+<td><code>0x3012</code></td>
+<td><code>0x08</code></td>
+<td><code>kSSIAbsoluteEncoder_SSIPowerUpTime</code></td>
+<td>SSI power up time</td>
+</tr>
+<tr>
+<td><code>0x3012</code></td>
+<td><code>0x09</code></td>
+<td><code>kSSIAbsoluteEncoder_SSIPositionRawValue</code></td>
+<td>SSI position raw value</td>
+</tr>
+<tr>
+<td><code>0x3012</code></td>
+<td><code>0x0A</code></td>
+<td><code>kSSIAbsoluteEncoder_SSICommutationOffsetValue</code></td>
+<td>SSI commutation offset value</td>
+</tr>
+<tr>
+<td><code>0x3012</code></td>
+<td><code>0x0B</code></td>
+<td><code>kSSIAbsoluteEncoder_SSIPositionBits</code></td>
+<td>SSI position bits</td>
+</tr>
+<tr>
+<td><code>0x3012</code></td>
+<td><code>0x0C</code></td>
+<td><code>kSSIAbsoluteEncoder_SSISpecialBitsLeadingData</code></td>
+<td>SSI special bits leading data</td>
+</tr>
+<tr>
+<td><code>0x3012</code></td>
+<td><code>0x0D</code></td>
+<td><code>kSSIAbsoluteEncoder_SSIPositionRawValueComplete</code></td>
+<td>SSI position raw value complete</td>
+</tr>
+<tr>
+<td><code>0x301A</code></td>
+<td></td>
+<td><code>kDigitalHallSensor</code></td>
+<td>Digital Hall Sensor</td>
+</tr>
+<tr>
+<td><code>0x301A</code></td>
+<td><code>0x01</code></td>
+<td><code>kDigitalHallSensor_DigitalHallSensorType</code></td>
+<td>Digital Hall sensor type</td>
+</tr>
+<tr>
+<td><code>0x301A</code></td>
+<td><code>0x02</code></td>
+<td><code>kDigitalHallSensor_DigitalHallSensorPattern</code></td>
+<td>Digital Hall sensor pattern</td>
+</tr>
+<tr>
+<td><code>0x3020</code></td>
+<td></td>
+<td><code>kDigitalIncrementalEncoder2</code></td>
+<td>Digital Incremental Encoder2</td>
+</tr>
+<tr>
+<td><code>0x3020</code></td>
+<td><code>0x02</code></td>
+<td><code>kDigitalIncrementalEncoder2_DigitalIncrementalEncoder2Type</code></td>
+<td>Digital incremental encoder 2 type</td>
+</tr>
+<tr>
+<td><code>0x3020</code></td>
+<td><code>0x04</code></td>
+<td><code>kDigitalIncrementalEncoder2_DigitalIncrementalEncoder2IndexPosition</code></td>
+<td>Digital incremental encoder 2 index position</td>
+</tr>
+<tr>
+<td><code>0x30A0</code></td>
+<td></td>
+<td><code>kCurrentControlParameterSet</code></td>
+<td>Current Control Parameter Set</td>
+</tr>
+<tr>
+<td><code>0x30A0</code></td>
+<td><code>0x01</code></td>
+<td><code>kCurrentControlParameterSet_CurrentControllerPGain</code></td>
+<td>Current controller P gain</td>
+</tr>
+<tr>
+<td><code>0x30A0</code></td>
+<td><code>0x02</code></td>
+<td><code>kCurrentControlParameterSet_CurrentControllerIGain</code></td>
+<td>Current controller I gain</td>
+</tr>
+<tr>
+<td><code>0x30A1</code></td>
+<td></td>
+<td><code>kPositionControlParameterSet</code></td>
+<td>Position Control Parameter Set</td>
+</tr>
+<tr>
+<td><code>0x30A1</code></td>
+<td><code>0x01</code></td>
+<td><code>kPositionControlParameterSet_PositionControllerPGain</code></td>
+<td>Position controller P gain</td>
+</tr>
+<tr>
+<td><code>0x30A1</code></td>
+<td><code>0x02</code></td>
+<td><code>kPositionControlParameterSet_PositionControllerIGain</code></td>
+<td>Position controller I gain</td>
+</tr>
+<tr>
+<td><code>0x30A1</code></td>
+<td><code>0x03</code></td>
+<td><code>kPositionControlParameterSet_PositionControllerDGain</code></td>
+<td>Position controller D gain</td>
+</tr>
+<tr>
+<td><code>0x30A1</code></td>
+<td><code>0x04</code></td>
+<td><code>kPositionControlParameterSet_PositionControllerFFVelocityGain</code></td>
+<td>Position controller FF velocity gain</td>
+</tr>
+<tr>
+<td><code>0x30A1</code></td>
+<td><code>0x05</code></td>
+<td><code>kPositionControlParameterSet_PositionControllerFFAccelerationGain</code></td>
+<td>Position controller FF acceleration gain</td>
+</tr>
+<tr>
+<td><code>0x30A1</code></td>
+<td><code>0x09</code></td>
+<td><code>kPositionControlParameterSet_SIUnitPositionControllerIGain</code></td>
+<td>SI unit position controller I gain</td>
+</tr>
+<tr>
+<td><code>0x30A2</code></td>
+<td></td>
+<td><code>kVelocityControlParameterSet</code></td>
+<td>Velocity Control Parameter Set</td>
+</tr>
+<tr>
+<td><code>0x30A2</code></td>
+<td><code>0x01</code></td>
+<td><code>kVelocityControlParameterSet_VelocityControllerPGain</code></td>
+<td>Velocity controller P gain</td>
+</tr>
+<tr>
+<td><code>0x30A2</code></td>
+<td><code>0x02</code></td>
+<td><code>kVelocityControlParameterSet_VelocityControllerIGain</code></td>
+<td>Velocity controller I gain</td>
+</tr>
+<tr>
+<td><code>0x30A2</code></td>
+<td><code>0x03</code></td>
+<td><code>kVelocityControlParameterSet_VelocityControllerFFVelocityGain</code></td>
+<td>Velocity controller FF velocity gain</td>
+</tr>
+<tr>
+<td><code>0x30A2</code></td>
+<td><code>0x04</code></td>
+<td><code>kVelocityControlParameterSet_VelocityControllerFFAccelerationGain</code></td>
+<td>Velocity controller FF acceleration gain</td>
+</tr>
+<tr>
+<td><code>0x30A3</code></td>
+<td></td>
+<td><code>kVelocityObserverParameterSet</code></td>
+<td>Velocity Observer Parameter Set</td>
+</tr>
+<tr>
+<td><code>0x30A3</code></td>
+<td><code>0x03</code></td>
+<td><code>kVelocityObserverParameterSet_VelocityObserverLoadCorrectionGain</code></td>
+<td>Velocity observer load correction gain</td>
+</tr>
+<tr>
+<td><code>0x30A3</code></td>
+<td><code>0x04</code></td>
+<td><code>kVelocityObserverParameterSet_VelocityObserverFriction</code></td>
+<td>Velocity observer friction</td>
+</tr>
+<tr>
+<td><code>0x30A3</code></td>
+<td><code>0x05</code></td>
+<td><code>kVelocityObserverParameterSet_VelocityObserverInertia</code></td>
+<td>Velocity observer inertia</td>
+</tr>
+<tr>
+<td><code>0x30A4</code></td>
+<td></td>
+<td><code>kInternalVelocityFilterParameterSet</code></td>
+<td>Internal Velocity Filter Parameter Set</td>
+</tr>
+<tr>
+<td><code>0x30AE</code></td>
+<td></td>
+<td><code>kDualLoopPositionControlParameterSet</code></td>
+<td>Dual Loop Position Control Parameter Set</td>
+</tr>
+<tr>
+<td><code>0x30AE</code></td>
+<td><code>0x01</code></td>
+<td><code>kDualLoopPositionControlParameterSet_MainLoopPGainLowBandwidth</code></td>
+<td>Main loop P gain low bandwidth</td>
+</tr>
+<tr>
+<td><code>0x30AE</code></td>
+<td><code>0x02</code></td>
+<td><code>kDualLoopPositionControlParameterSet_MainLoopPGainHighBandwidth</code></td>
+<td>Main loop P gain high bandwidth</td>
+</tr>
+<tr>
+<td><code>0x30AE</code></td>
+<td><code>0x03</code></td>
+<td><code>kDualLoopPositionControlParameterSet_MainLoopGainSchedulingWeight</code></td>
+<td>Main loop gain scheduling weight</td>
+</tr>
+<tr>
+<td><code>0x30AE</code></td>
+<td><code>0x10</code></td>
+<td><code>kDualLoopPositionControlParameterSet_MainLoopFilterCoefficientA</code></td>
+<td>Main loop filter coefficient a</td>
+</tr>
+<tr>
+<td><code>0x30AE</code></td>
+<td><code>0x11</code></td>
+<td><code>kDualLoopPositionControlParameterSet_MainLoopFilterCoefficientB</code></td>
+<td>Main loop filter coefficient b</td>
+</tr>
+<tr>
+<td><code>0x30AE</code></td>
+<td><code>0x12</code></td>
+<td><code>kDualLoopPositionControlParameterSet_MainLoopFilterCoefficientC</code></td>
+<td>Main loop filter coefficient c</td>
+</tr>
+<tr>
+<td><code>0x30AE</code></td>
+<td><code>0x13</code></td>
+<td><code>kDualLoopPositionControlParameterSet_MainLoopFilterCoefficientD</code></td>
+<td>Main loop filter coefficient d</td>
+</tr>
+<tr>
+<td><code>0x30AE</code></td>
+<td><code>0x14</code></td>
+<td><code>kDualLoopPositionControlParameterSet_MainLoopFilterCoefficientE</code></td>
+<td>Main loop filter coefficient e</td>
+</tr>
+<tr>
+<td><code>0x30AE</code></td>
+<td><code>0x20</code></td>
+<td><code>kDualLoopPositionControlParameterSet_AuxiliaryLoopPGain</code></td>
+<td>Auxiliary loop P gain</td>
+</tr>
+<tr>
+<td><code>0x30AE</code></td>
+<td><code>0x21</code></td>
+<td><code>kDualLoopPositionControlParameterSet_AuxiliaryLoopIGain</code></td>
+<td>Auxiliary loop I gain</td>
+</tr>
+<tr>
+<td><code>0x30AE</code></td>
+<td><code>0x22</code></td>
+<td><code>kDualLoopPositionControlParameterSet_AuxiliaryLoopFFVelocityGain</code></td>
+<td>Auxiliary loop FF velocity gain</td>
+</tr>
+<tr>
+<td><code>0x30AE</code></td>
+<td><code>0x33</code></td>
+<td><code>kDualLoopPositionControlParameterSet_AuxiliaryLoopObserverFriction</code></td>
+<td>Auxiliary loop observer friction</td>
+</tr>
+<tr>
+<td><code>0x30AE</code></td>
+<td><code>0x34</code></td>
+<td><code>kDualLoopPositionControlParameterSet_AuxiliaryLoopObserverInertia</code></td>
+<td>Auxiliary loop observer inertia</td>
+</tr>
+<tr>
+<td><code>0x30B0</code></td>
+<td></td>
+<td><code>kHomePosition</code></td>
+<td>Home Position</td>
+</tr>
+<tr>
+<td><code>0x30B1</code></td>
+<td></td>
+<td><code>kHomeOffsetMoveDistance</code></td>
+<td>Home Offset Move Distance</td>
+</tr>
+<tr>
+<td><code>0x30B2</code></td>
+<td></td>
+<td><code>kCurrentThresholdForHomingMode</code></td>
+<td>Current Threshold For Homing Mode</td>
+</tr>
+<tr>
+<td><code>0x30B5</code></td>
+<td></td>
+<td><code>kInternalHomingData</code></td>
+<td>Internal Homing Data</td>
+</tr>
+<tr>
+<td><code>0x30B5</code></td>
+<td><code>0x01</code></td>
+<td><code>kInternalHomingData_InternalAbsoluteHomeReference</code></td>
+<td>Internal absolute home reference</td>
+</tr>
+<tr>
+<td><code>0x30B5</code></td>
+<td><code>0x02</code></td>
+<td><code>kInternalHomingData_InternalAbsoluteHomeReferenceState</code></td>
+<td>Internal absolute home reference state</td>
+</tr>
+<tr>
+<td><code>0x30D0</code></td>
+<td></td>
+<td><code>kCurrentDemandValue</code></td>
+<td>Current Demand Value</td>
+</tr>
+<tr>
+<td><code>0x30D1</code></td>
+<td></td>
+<td><code>kCurrentActualValues</code></td>
+<td>Current Actual Values</td>
+</tr>
+<tr>
+<td><code>0x30D1</code></td>
+<td><code>0x01</code></td>
+<td><code>kCurrentActualValues_CurrentActualValueAveraged</code></td>
+<td>Current actual value averaged</td>
+</tr>
+<tr>
+<td><code>0x30D1</code></td>
+<td><code>0x02</code></td>
+<td><code>kCurrentActualValues_CurrentActualValue</code></td>
+<td>Current actual value</td>
+</tr>
+<tr>
+<td><code>0x30D2</code></td>
+<td></td>
+<td><code>kTorqueActualValues</code></td>
+<td>Torque Actual Values</td>
+</tr>
+<tr>
+<td><code>0x30D2</code></td>
+<td><code>0x01</code></td>
+<td><code>kTorqueActualValues_TorqueActualValueAveraged</code></td>
+<td>Torque actual value averaged</td>
+</tr>
+<tr>
+<td><code>0x30D3</code></td>
+<td></td>
+<td><code>kVelocityActualValues</code></td>
+<td>Velocity Actual Values</td>
+</tr>
+<tr>
+<td><code>0x30D3</code></td>
+<td><code>0x01</code></td>
+<td><code>kVelocityActualValues_VelocityActualValueAveraged</code></td>
+<td>Velocity actual value averaged</td>
+</tr>
+<tr>
+<td><code>0x30E0</code></td>
+<td></td>
+<td><code>kStandstillWindowConfiguration</code></td>
+<td>Standstill Window Configuration</td>
+</tr>
+<tr>
+<td><code>0x30E0</code></td>
+<td><code>0x01</code></td>
+<td><code>kStandstillWindowConfiguration_StandstillWindow</code></td>
+<td>Standstill window</td>
+</tr>
+<tr>
+<td><code>0x30E0</code></td>
+<td><code>0x02</code></td>
+<td><code>kStandstillWindowConfiguration_StandstillWindowTime</code></td>
+<td>Standstill window time</td>
+</tr>
+<tr>
+<td><code>0x30E0</code></td>
+<td><code>0x03</code></td>
+<td><code>kStandstillWindowConfiguration_StandstillWindowTimeout</code></td>
+<td>Standstill window timeout</td>
+</tr>
+<tr>
+<td><code>0x3141</code></td>
+<td></td>
+<td><code>kDigitalInputProperties</code></td>
+<td>Digital Input Properties</td>
+</tr>
+<tr>
+<td><code>0x3141</code></td>
+<td><code>0x01</code></td>
+<td><code>kDigitalInputProperties_DigitalInputsLogicState</code></td>
+<td>Digital inputs logic state</td>
+</tr>
+<tr>
+<td><code>0x3141</code></td>
+<td><code>0x02</code></td>
+<td><code>kDigitalInputProperties_DigitalInputsPolarity</code></td>
+<td>Digital inputs polarity</td>
+</tr>
+<tr>
+<td><code>0x3142</code></td>
+<td></td>
+<td><code>kConfigurationOfDigitalInputs</code></td>
+<td>Configuration Of Digital Inputs</td>
+</tr>
+<tr>
+<td><code>0x3142</code></td>
+<td><code>0x01</code></td>
+<td><code>kConfigurationOfDigitalInputs_DigitalInput1Configuration</code></td>
+<td>Digital input 1 configuration</td>
+</tr>
+<tr>
+<td><code>0x3142</code></td>
+<td><code>0x02</code></td>
+<td><code>kConfigurationOfDigitalInputs_DigitalInput2Configuration</code></td>
+<td>Digital input 2 configuration</td>
+</tr>
+<tr>
+<td><code>0x3142</code></td>
+<td><code>0x03</code></td>
+<td><code>kConfigurationOfDigitalInputs_DigitalInput3Configuration</code></td>
+<td>Digital input 3 configuration</td>
+</tr>
+<tr>
+<td><code>0x3142</code></td>
+<td><code>0x04</code></td>
+<td><code>kConfigurationOfDigitalInputs_DigitalInput4Configuration</code></td>
+<td>Digital input 4 configuration</td>
+</tr>
+<tr>
+<td><code>0x3142</code></td>
+<td><code>0x05</code></td>
+<td><code>kConfigurationOfDigitalInputs_HighSpeedDigitalInput1Configuration</code></td>
+<td>High-speed digital input 1 configuration</td>
+</tr>
+<tr>
+<td><code>0x3142</code></td>
+<td><code>0x06</code></td>
+<td><code>kConfigurationOfDigitalInputs_HighSpeedDigitalInput2Configuration</code></td>
+<td>High-speed digital input 2 configuration</td>
+</tr>
+<tr>
+<td><code>0x3142</code></td>
+<td><code>0x07</code></td>
+<td><code>kConfigurationOfDigitalInputs_HighSpeedDigitalInput3Configuration</code></td>
+<td>High-speed digital input 3 configuration</td>
+</tr>
+<tr>
+<td><code>0x3142</code></td>
+<td><code>0x08</code></td>
+<td><code>kConfigurationOfDigitalInputs_HighSpeedDigitalInput4Configuration</code></td>
+<td>High-speed digital input 4 configuration</td>
+</tr>
+<tr>
+<td><code>0x3150</code></td>
+<td></td>
+<td><code>kDigitalOutputProperties</code></td>
+<td>Digital Output Properties</td>
+</tr>
+<tr>
+<td><code>0x3150</code></td>
+<td><code>0x01</code></td>
+<td><code>kDigitalOutputProperties_DigitalOutputsLogicState</code></td>
+<td>Digital outputs logic state</td>
+</tr>
+<tr>
+<td><code>0x3150</code></td>
+<td><code>0x02</code></td>
+<td><code>kDigitalOutputProperties_DigitalOutputsPolarity</code></td>
+<td>Digital outputs polarity</td>
+</tr>
+<tr>
+<td><code>0x3151</code></td>
+<td></td>
+<td><code>kConfigurationOfDigitalOutputs</code></td>
+<td>Configuration Of Digital Outputs</td>
+</tr>
+<tr>
+<td><code>0x3151</code></td>
+<td><code>0x01</code></td>
+<td><code>kConfigurationOfDigitalOutputs_DigitalOutput1Configuration</code></td>
+<td>Digital output 1 configuration</td>
+</tr>
+<tr>
+<td><code>0x3151</code></td>
+<td><code>0x02</code></td>
+<td><code>kConfigurationOfDigitalOutputs_DigitalOutput2Configuration</code></td>
+<td>Digital output 2 configuration</td>
+</tr>
+<tr>
+<td><code>0x3151</code></td>
+<td><code>0x03</code></td>
+<td><code>kConfigurationOfDigitalOutputs_HighSpeedDigitalOutput1Configuration</code></td>
+<td>High-speed digital output 1 configuration</td>
+</tr>
+<tr>
+<td><code>0x3158</code></td>
+<td></td>
+<td><code>kHoldingBrakeParameters</code></td>
+<td>Holding Brake Parameters</td>
+</tr>
+<tr>
+<td><code>0x3158</code></td>
+<td><code>0x01</code></td>
+<td><code>kHoldingBrakeParameters_HoldingBrakeRiseTime</code></td>
+<td>Holding brake rise time</td>
+</tr>
+<tr>
+<td><code>0x3158</code></td>
+<td><code>0x02</code></td>
+<td><code>kHoldingBrakeParameters_HoldingBrakeFallTime</code></td>
+<td>Holding brake fall time</td>
+</tr>
+<tr>
+<td><code>0x3158</code></td>
+<td><code>0x03</code></td>
+<td><code>kHoldingBrakeParameters_HoldingBrakeState</code></td>
+<td>Holding brake state</td>
+</tr>
+<tr>
+<td><code>0x3160</code></td>
+<td></td>
+<td><code>kAnalogInputProperties</code></td>
+<td>Analog Input Properties</td>
+</tr>
+<tr>
+<td><code>0x3160</code></td>
+<td><code>0x01</code></td>
+<td><code>kAnalogInputProperties_AnalogInput1Voltage</code></td>
+<td>Analog input 1 voltage</td>
+</tr>
+<tr>
+<td><code>0x3160</code></td>
+<td><code>0x02</code></td>
+<td><code>kAnalogInputProperties_AnalogInput2Voltage</code></td>
+<td>Analog input 2 voltage</td>
+</tr>
+<tr>
+<td><code>0x3161</code></td>
+<td></td>
+<td><code>kConfigurationOfAnalogInputs</code></td>
+<td>Configuration Of Analog Inputs</td>
+</tr>
+<tr>
+<td><code>0x3161</code></td>
+<td><code>0x01</code></td>
+<td><code>kConfigurationOfAnalogInputs_AnalogInput1Configuration</code></td>
+<td>Analog input 1 configuration</td>
+</tr>
+<tr>
+<td><code>0x3161</code></td>
+<td><code>0x02</code></td>
+<td><code>kConfigurationOfAnalogInputs_AnalogInput2Configuration</code></td>
+<td>Analog input 2 configuration</td>
+</tr>
+<tr>
+<td><code>0x3162</code></td>
+<td></td>
+<td><code>kAnalogInputGeneralPurpose</code></td>
+<td>Analog Input General Purpose</td>
+</tr>
+<tr>
+<td><code>0x3162</code></td>
+<td><code>0x01</code></td>
+<td><code>kAnalogInputGeneralPurpose_AnalogInputGeneralPurposeA</code></td>
+<td>Analog input general purpose A</td>
+</tr>
+<tr>
+<td><code>0x3162</code></td>
+<td><code>0x02</code></td>
+<td><code>kAnalogInputGeneralPurpose_AnalogInputGeneralPurposeB</code></td>
+<td>Analog input general purpose B</td>
+</tr>
+<tr>
+<td><code>0x3163</code></td>
+<td></td>
+<td><code>kAnalogInputAdjustment</code></td>
+<td>Analog Input Adjustment</td>
+</tr>
+<tr>
+<td><code>0x3163</code></td>
+<td><code>0x01</code></td>
+<td><code>kAnalogInputAdjustment_AnalogInput1AdjustmentOffset</code></td>
+<td>Analog input 1 adjustment offset</td>
+</tr>
+<tr>
+<td><code>0x3163</code></td>
+<td><code>0x02</code></td>
+<td><code>kAnalogInputAdjustment_AnalogInput1AdjustmentGainFactor</code></td>
+<td>Analog input 1 adjustment gain factor</td>
+</tr>
+<tr>
+<td><code>0x3163</code></td>
+<td><code>0x03</code></td>
+<td><code>kAnalogInputAdjustment_AnalogInput2AdjustmentOffset</code></td>
+<td>Analog input 2 adjustment offset</td>
+</tr>
+<tr>
+<td><code>0x3163</code></td>
+<td><code>0x04</code></td>
+<td><code>kAnalogInputAdjustment_AnalogInput2AdjustmentGainFactor</code></td>
+<td>Analog input 2 adjustment gain factor</td>
+</tr>
+<tr>
+<td><code>0x3170</code></td>
+<td></td>
+<td><code>kAnalogInputCurrentSetValueProperties</code></td>
+<td>Analog Input Current Set Value Properties</td>
+</tr>
+<tr>
+<td><code>0x3170</code></td>
+<td><code>0x01</code></td>
+<td><code>kAnalogInputCurrentSetValueProperties_CurrentSetValueFirstVoltage</code></td>
+<td>Current set value first voltage</td>
+</tr>
+<tr>
+<td><code>0x3170</code></td>
+<td><code>0x02</code></td>
+<td><code>kAnalogInputCurrentSetValueProperties_CurrentSetValueFirstCurrent</code></td>
+<td>Current set value first current</td>
+</tr>
+<tr>
+<td><code>0x3170</code></td>
+<td><code>0x03</code></td>
+<td><code>kAnalogInputCurrentSetValueProperties_CurrentSetValueSecondVoltage</code></td>
+<td>Current set value second voltage</td>
+</tr>
+<tr>
+<td><code>0x3170</code></td>
+<td><code>0x04</code></td>
+<td><code>kAnalogInputCurrentSetValueProperties_CurrentSetValueSecondCurrent</code></td>
+<td>Current set value second current</td>
+</tr>
+<tr>
+<td><code>0x3171</code></td>
+<td></td>
+<td><code>kAnalogInputVelocitySetValueProperties</code></td>
+<td>Analog Input Velocity Set Value Properties</td>
+</tr>
+<tr>
+<td><code>0x3171</code></td>
+<td><code>0x01</code></td>
+<td><code>kAnalogInputVelocitySetValueProperties_VelocitySetValueFirstVoltage</code></td>
+<td>Velocity set value first voltage</td>
+</tr>
+<tr>
+<td><code>0x3180</code></td>
+<td></td>
+<td><code>kAnalogOutputProperties</code></td>
+<td>Analog Output Properties</td>
+</tr>
+<tr>
+<td><code>0x3180</code></td>
+<td><code>0x01</code></td>
+<td><code>kAnalogOutputProperties_AnalogOutput1Voltage</code></td>
+<td>Analog output 1 voltage</td>
+</tr>
+<tr>
+<td><code>0x3180</code></td>
+<td><code>0x02</code></td>
+<td><code>kAnalogOutputProperties_AnalogOutput2Voltage</code></td>
+<td>Analog output 2 voltage</td>
+</tr>
+<tr>
+<td><code>0x3181</code></td>
+<td></td>
+<td><code>kConfigurationOfAnalogOutputs</code></td>
+<td>Configuration Of Analog Outputs</td>
+</tr>
+<tr>
+<td><code>0x3181</code></td>
+<td><code>0x01</code></td>
+<td><code>kConfigurationOfAnalogOutputs_AnalogOutput1Configuration</code></td>
+<td>Analog output 1 configuration</td>
+</tr>
+<tr>
+<td><code>0x3181</code></td>
+<td><code>0x02</code></td>
+<td><code>kConfigurationOfAnalogOutputs_AnalogOutput2Configuration</code></td>
+<td>Analog output 2 configuration</td>
+</tr>
+<tr>
+<td><code>0x3182</code></td>
+<td></td>
+<td><code>kAnalogOutputGeneralPurpose</code></td>
+<td>Analog Output General Purpose</td>
+</tr>
+<tr>
+<td><code>0x3182</code></td>
+<td><code>0x01</code></td>
+<td><code>kAnalogOutputGeneralPurpose_AnalogOutputGeneralPurposeA</code></td>
+<td>Analog output general purpose A</td>
+</tr>
+<tr>
+<td><code>0x3182</code></td>
+<td><code>0x02</code></td>
+<td><code>kAnalogOutputGeneralPurpose_AnalogOutputGeneralPurposeB</code></td>
+<td>Analog output general purpose B</td>
+</tr>
+<tr>
+<td><code>0x31E0</code></td>
+<td></td>
+<td><code>kInternalDataRecorderVariableIndex</code></td>
+<td>Internal Data Recorder Variable Index</td>
+</tr>
+<tr>
+<td><code>0x31E1</code></td>
+<td></td>
+<td><code>kInternalDataRecorderConfiguration</code></td>
+<td>Internal Data Recorder Configuration</td>
+</tr>
+<tr>
+<td><code>0x31E2</code></td>
+<td></td>
+<td><code>kInternalDataRecorderTrigger</code></td>
+<td>Internal Data Recorder Trigger</td>
+</tr>
+<tr>
+<td><code>0x31E2</code></td>
+<td><code>0x02</code></td>
+<td><code>kInternalDataRecorderTrigger_InternalDataRecorderTriggerMode</code></td>
+<td>Internal data recorder trigger mode</td>
+</tr>
+<tr>
+<td><code>0x31E2</code></td>
+<td><code>0x03</code></td>
+<td><code>kInternalDataRecorderTrigger_InternalDataRecorderTriggerHighValue</code></td>
+<td>Internal data recorder trigger high value</td>
+</tr>
+<tr>
+<td><code>0x31E2</code></td>
+<td><code>0x04</code></td>
+<td><code>kInternalDataRecorderTrigger_InternalDataRecorderTriggerLowValue</code></td>
+<td>Internal data recorder trigger low value</td>
+</tr>
+<tr>
+<td><code>0x31E2</code></td>
+<td><code>0x05</code></td>
+<td><code>kInternalDataRecorderTrigger_InternalDataRecorderTriggerMask</code></td>
+<td>Internal data recorder trigger mask</td>
+</tr>
+<tr>
+<td><code>0x31E4</code></td>
+<td></td>
+<td><code>kInternalDataRecorderControl</code></td>
+<td>Internal Data Recorder Control</td>
+</tr>
+<tr>
+<td><code>0x31E4</code></td>
+<td><code>0x01</code></td>
+<td><code>kInternalDataRecorderControl_InternalDataRecorderControlword</code></td>
+<td>Internal data recorder controlword</td>
+</tr>
+<tr>
+<td><code>0x31E4</code></td>
+<td><code>0x02</code></td>
+<td><code>kInternalDataRecorderControl_InternalDataRecorderStatusword</code></td>
+<td>Internal data recorder statusword</td>
+</tr>
+<tr>
+<td><code>0x31E5</code></td>
+<td></td>
+<td><code>kInternalDataRecorderData</code></td>
+<td>Internal Data Recorder Data</td>
+</tr>
+<tr>
+<td><code>0x31E5</code></td>
+<td><code>0x02</code></td>
+<td><code>kInternalDataRecorderData_InternalRecorderBufferTimestamp</code></td>
+<td>Internal recorder buffer timestamp</td>
+</tr>
+<tr>
+<td><code>0x31E5</code></td>
+<td><code>0x03</code></td>
+<td><code>kInternalDataRecorderData_InternalDataRecorderSnapshot</code></td>
+<td>Internal data recorder snapshot</td>
+</tr>
+<tr>
+<td><code>0x31E6</code></td>
+<td></td>
+<td><code>kInternalDataRecorderBufferVariable1</code></td>
+<td>Internal Data Recorder Buffer Variable1</td>
+</tr>
+<tr>
+<td><code>0x31E7</code></td>
+<td></td>
+<td><code>kInternalDataRecorderBufferVariable2</code></td>
+<td>Internal Data Recorder Buffer Variable2</td>
+</tr>
+<tr>
+<td><code>0x31E8</code></td>
+<td></td>
+<td><code>kInternalDataRecorderBufferVariable3</code></td>
+<td>Internal Data Recorder Buffer Variable3</td>
+</tr>
+<tr>
+<td><code>0x31E9</code></td>
+<td></td>
+<td><code>kInternalDataRecorderBufferVariable4</code></td>
+<td>Internal Data Recorder Buffer Variable4</td>
+</tr>
+<tr>
+<td><code>0x3200</code></td>
+<td></td>
+<td><code>kPowerLimitation</code></td>
+<td>Power Limitation</td>
+</tr>
+<tr>
+<td><code>0x3200</code></td>
+<td><code>0x01</code></td>
+<td><code>kPowerLimitation_I2tLevelMotor</code></td>
+<td>I2t level motor</td>
+</tr>
+<tr>
+<td><code>0x3200</code></td>
+<td><code>0x02</code></td>
+<td><code>kPowerLimitation_I2tLevelPowerStage</code></td>
+<td>I2t level power stage</td>
+</tr>
+<tr>
+<td><code>0x3201</code></td>
+<td></td>
+<td><code>kThermalOverloadProtection</code></td>
+<td>Thermal Overload Protection</td>
+</tr>
+<tr>
+<td><code>0x3201</code></td>
+<td><code>0x01</code></td>
+<td><code>kThermalOverloadProtection_TemperaturePowerStage</code></td>
+<td>Temperature power stage</td>
+</tr>
+<tr>
+<td><code>0x3201</code></td>
+<td><code>0x04</code></td>
+<td><code>kThermalOverloadProtection_MaximalTemperaturePowerStage</code></td>
+<td>Maximal temperature power stage</td>
+</tr>
+<tr>
+<td><code>0x3202</code></td>
+<td></td>
+<td><code>kFunctionalSafety</code></td>
+<td>Functional Safety</td>
+</tr>
+<tr>
+<td><code>0x3202</code></td>
+<td><code>0x01</code></td>
+<td><code>kFunctionalSafety_STOInputStates</code></td>
+<td>STO input states</td>
+</tr>
+<tr>
+<td><code>0x3203</code></td>
+<td></td>
+<td><code>kMotorControl</code></td>
+<td>Motor Control</td>
+</tr>
+<tr>
+<td><code>0x3203</code></td>
+<td><code>0x01</code></td>
+<td><code>kMotorControl_PWMDutyCycleActualValue</code></td>
+<td>PWM duty cycle actual value</td>
+</tr>
+<tr>
+<td><code>0x3240</code></td>
+<td></td>
+<td><code>kInternalTestObject</code></td>
+<td>Internal Test Object</td>
+</tr>
+<tr>
+<td><code>0x3240</code></td>
+<td><code>0x01</code></td>
+<td><code>kInternalTestObject_InternalSpiExtensionTest</code></td>
+<td>Internal spi extension test</td>
+</tr>
+<tr>
+<td><code>0x3240</code></td>
+<td><code>0x02</code></td>
+<td><code>kInternalTestObject_InternalADCEncoder2ChannelAAnalogValue</code></td>
+<td>Internal ADC encoder 2 channel A analog value</td>
+</tr>
+<tr>
+<td><code>0x3240</code></td>
+<td><code>0x03</code></td>
+<td><code>kInternalTestObject_InternalADCEncoder2ChannelBAnalogValue</code></td>
+<td>Internal ADC encoder 2 channel B analog value</td>
+</tr>
+<tr>
+<td><code>0x3241</code></td>
+<td></td>
+<td><code>kInternalMotorControl</code></td>
+<td>Internal Motor Control</td>
+</tr>
+<tr>
+<td><code>0x3241</code></td>
+<td><code>0x01</code></td>
+<td><code>kInternalMotorControl_InternalADCCurrentOffsetSimultaneousPhaseU</code></td>
+<td>Internal ADC current offset simultaneous phase U</td>
+</tr>
+<tr>
+<td><code>0x3241</code></td>
+<td><code>0x02</code></td>
+<td><code>kInternalMotorControl_InternalADCCurrentOffsetSimultaneousPhaseV</code></td>
+<td>Internal ADC current offset simultaneous phase V</td>
+</tr>
+<tr>
+<td><code>0x3241</code></td>
+<td><code>0x03</code></td>
+<td><code>kInternalMotorControl_InternalADCCurrentOffsetSequentialPhaseU</code></td>
+<td>Internal ADC current offset sequential phase U</td>
+</tr>
+<tr>
+<td><code>0x3241</code></td>
+<td><code>0x04</code></td>
+<td><code>kInternalMotorControl_InternalADCCurrentOffsetSequentialPhaseV</code></td>
+<td>Internal ADC current offset sequential phase V</td>
+</tr>
+<tr>
+<td><code>0x3241</code></td>
+<td><code>0x05</code></td>
+<td><code>kInternalMotorControl_InternalADCCurrentOffsetSequentialPhaseW</code></td>
+<td>Internal ADC current offset sequential phase W</td>
+</tr>
+<tr>
+<td><code>0x3241</code></td>
+<td><code>0x06</code></td>
+<td><code>kInternalMotorControl_InternalElectricalRotorAngle</code></td>
+<td>Internal electrical rotor angle</td>
+</tr>
+<tr>
+<td><code>0x3248</code></td>
+<td></td>
+<td><code>kInternalConfigurationElectricalSystemTuning</code></td>
+<td>Internal Configuration Electrical System Tuning</td>
+</tr>
+<tr>
+<td><code>0x3249</code></td>
+<td></td>
+<td><code>kInternalParametersElectricalSystemTuning</code></td>
+<td>Internal Parameters Electrical System Tuning</td>
+</tr>
+<tr>
+<td><code>0x3249</code></td>
+<td><code>0x01</code></td>
+<td><code>kInternalParametersElectricalSystemTuning_InternalResistance</code></td>
+<td>Internal resistance</td>
+</tr>
+<tr>
+<td><code>0x3249</code></td>
+<td><code>0x02</code></td>
+<td><code>kInternalParametersElectricalSystemTuning_InternalInductance</code></td>
+<td>Internal inductance</td>
+</tr>
+<tr>
+<td><code>0x3249</code></td>
+<td><code>0x03</code></td>
+<td><code>kInternalParametersElectricalSystemTuning_InternalFrequency</code></td>
+<td>Internal frequency</td>
+</tr>
+<tr>
+<td><code>0x324B</code></td>
+<td></td>
+<td><code>kInternalConfigurationMechanicalSystemTuning</code></td>
+<td>Internal Configuration Mechanical System Tuning</td>
+</tr>
+<tr>
+<td><code>0x324B</code></td>
+<td><code>0x03</code></td>
+<td><code>kInternalConfigurationMechanicalSystemTuning_InternalIdentifyKm</code></td>
+<td>Internal identify Km</td>
+</tr>
+<tr>
+<td><code>0x324C</code></td>
+<td></td>
+<td><code>kInternalParametersMechanicalSystemTuning</code></td>
+<td>Internal Parameters Mechanical System Tuning</td>
+</tr>
+<tr>
+<td><code>0x324C</code></td>
+<td><code>0x01</code></td>
+<td><code>kInternalParametersMechanicalSystemTuning_InternalCycleDuration</code></td>
+<td>Internal cycle duration</td>
+</tr>
+<tr>
+<td><code>0x324C</code></td>
+<td><code>0x02</code></td>
+<td><code>kInternalParametersMechanicalSystemTuning_InternalSetValueOfCurrent</code></td>
+<td>Internal set value of current</td>
+</tr>
+<tr>
+<td><code>0x324C</code></td>
+<td><code>0x06</code></td>
+<td><code>kInternalParametersMechanicalSystemTuning_InternalExtraDelay</code></td>
+<td>Internal extra delay</td>
+</tr>
+<tr>
+<td><code>0x324D</code></td>
+<td></td>
+<td><code>kInternalPRBSVelocityTuningConfiguration</code></td>
+<td>Internal P R B S Velocity Tuning Configuration</td>
+</tr>
+<tr>
+<td><code>0x324E</code></td>
+<td></td>
+<td><code>kInternalPRBSVelocityTuningParameter</code></td>
+<td>Internal P R B S Velocity Tuning Parameter</td>
+</tr>
+<tr>
+<td><code>0x324F</code></td>
+<td></td>
+<td><code>kInternalPRBSVelocityTuningPositionValues</code></td>
+<td>Internal P R B S Velocity Tuning Position Values</td>
+</tr>
+<tr>
+<td><code>0x3250</code></td>
+<td></td>
+<td><code>kInternalPRBSVelocityTuningExcitationOffset</code></td>
+<td>Internal P R B S Velocity Tuning Excitation Offset</td>
+</tr>
+</tbody>
+</table>
+<h2 id="device-profile-cia-402-odcia402">Device profile (CiA 402) - <code>od::cia402</code><a class="headerlink" href="#device-profile-cia-402-odcia402" title="Permanent link">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>Index</th>
+<th>Sub</th>
+<th>Constant</th>
+<th>Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>0x6007</code></td>
+<td></td>
+<td><code>kAbortConnectionOptionCode</code></td>
+<td>Abort Connection Option Code</td>
+</tr>
+<tr>
+<td><code>0x603F</code></td>
+<td></td>
+<td><code>kErrorCode</code></td>
+<td>Error Code</td>
+</tr>
+<tr>
+<td><code>0x6040</code></td>
+<td></td>
+<td><code>kControlword</code></td>
+<td>Controlword</td>
+</tr>
+<tr>
+<td><code>0x6041</code></td>
+<td></td>
+<td><code>kStatusword</code></td>
+<td>Statusword</td>
+</tr>
+<tr>
+<td><code>0x605A</code></td>
+<td></td>
+<td><code>kQuickStopOptionCode</code></td>
+<td>Quick Stop Option Code</td>
+</tr>
+<tr>
+<td><code>0x605B</code></td>
+<td></td>
+<td><code>kShutdownOptionCode</code></td>
+<td>Shutdown Option Code</td>
+</tr>
+<tr>
+<td><code>0x605C</code></td>
+<td></td>
+<td><code>kDisableOperationOptionCode</code></td>
+<td>Disable Operation Option Code</td>
+</tr>
+<tr>
+<td><code>0x605E</code></td>
+<td></td>
+<td><code>kFaultReactionOptionCode</code></td>
+<td>Fault Reaction Option Code</td>
+</tr>
+<tr>
+<td><code>0x605D</code></td>
+<td></td>
+<td><code>kHaltOptionCode</code></td>
+<td>Halt Option Code</td>
+</tr>
+<tr>
+<td><code>0x607C</code></td>
+<td></td>
+<td><code>kHomeOffset</code></td>
+<td>Home Offset</td>
+</tr>
+<tr>
+<td><code>0x6060</code></td>
+<td></td>
+<td><code>kModesOfOperation</code></td>
+<td>Modes Of Operation</td>
+</tr>
+<tr>
+<td><code>0x6061</code></td>
+<td></td>
+<td><code>kModesOfOperationDisplay</code></td>
+<td>Modes Of Operation Display</td>
+</tr>
+<tr>
+<td><code>0x6062</code></td>
+<td></td>
+<td><code>kPositionDemandValue</code></td>
+<td>Position Demand Value</td>
+</tr>
+<tr>
+<td><code>0x6064</code></td>
+<td></td>
+<td><code>kPositionActualValue</code></td>
+<td>Position Actual Value</td>
+</tr>
+<tr>
+<td><code>0x6065</code></td>
+<td></td>
+<td><code>kFollowingErrorWindow</code></td>
+<td>Following Error Window</td>
+</tr>
+<tr>
+<td><code>0x6066</code></td>
+<td></td>
+<td><code>kFollowingErrorTimeOut</code></td>
+<td>Following Error Time Out</td>
+</tr>
+<tr>
+<td><code>0x6067</code></td>
+<td></td>
+<td><code>kPositionWindow</code></td>
+<td>Position Window</td>
+</tr>
+<tr>
+<td><code>0x6068</code></td>
+<td></td>
+<td><code>kPositionWindowTime</code></td>
+<td>Position Window Time</td>
+</tr>
+<tr>
+<td><code>0x606B</code></td>
+<td></td>
+<td><code>kVelocityDemandValue</code></td>
+<td>Velocity Demand Value</td>
+</tr>
+<tr>
+<td><code>0x606C</code></td>
+<td></td>
+<td><code>kVelocityActualValue</code></td>
+<td>Velocity Actual Value</td>
+</tr>
+<tr>
+<td><code>0x6071</code></td>
+<td></td>
+<td><code>kTargetTorque</code></td>
+<td>Target Torque</td>
+</tr>
+<tr>
+<td><code>0x6076</code></td>
+<td></td>
+<td><code>kMotorRatedTorque</code></td>
+<td>Motor Rated Torque</td>
+</tr>
+<tr>
+<td><code>0x6077</code></td>
+<td></td>
+<td><code>kTorqueActualValue</code></td>
+<td>Torque Actual Value</td>
+</tr>
+<tr>
+<td><code>0x607A</code></td>
+<td></td>
+<td><code>kTargetPosition</code></td>
+<td>Target Position</td>
+</tr>
+<tr>
+<td><code>0x607B</code></td>
+<td></td>
+<td><code>kPositionRangeLimit</code></td>
+<td>Position Range Limit</td>
+</tr>
+<tr>
+<td><code>0x607B</code></td>
+<td><code>0x01</code></td>
+<td><code>kPositionRangeLimit_MinPositionRangeLimit</code></td>
+<td>Min position range limit</td>
+</tr>
+<tr>
+<td><code>0x607B</code></td>
+<td><code>0x02</code></td>
+<td><code>kPositionRangeLimit_MaxPositionRangeLimit</code></td>
+<td>Max position range limit</td>
+</tr>
+<tr>
+<td><code>0x607D</code></td>
+<td></td>
+<td><code>kSoftwarePositionLimit</code></td>
+<td>Software Position Limit</td>
+</tr>
+<tr>
+<td><code>0x607D</code></td>
+<td><code>0x01</code></td>
+<td><code>kSoftwarePositionLimit_MinPositionLimit</code></td>
+<td>Min position limit</td>
+</tr>
+<tr>
+<td><code>0x607D</code></td>
+<td><code>0x02</code></td>
+<td><code>kSoftwarePositionLimit_MaxPositionLimit</code></td>
+<td>Max position limit</td>
+</tr>
+<tr>
+<td><code>0x607F</code></td>
+<td></td>
+<td><code>kMaxProfileVelocity</code></td>
+<td>Max Profile Velocity</td>
+</tr>
+<tr>
+<td><code>0x6080</code></td>
+<td></td>
+<td><code>kMaxMotorSpeed</code></td>
+<td>Max Motor Speed</td>
+</tr>
+<tr>
+<td><code>0x6081</code></td>
+<td></td>
+<td><code>kProfileVelocity</code></td>
+<td>Profile Velocity</td>
+</tr>
+<tr>
+<td><code>0x6083</code></td>
+<td></td>
+<td><code>kProfileAcceleration</code></td>
+<td>Profile Acceleration</td>
+</tr>
+<tr>
+<td><code>0x6084</code></td>
+<td></td>
+<td><code>kProfileDeceleration</code></td>
+<td>Profile Deceleration</td>
+</tr>
+<tr>
+<td><code>0x6085</code></td>
+<td></td>
+<td><code>kQuickStopDeceleration</code></td>
+<td>Quick Stop Deceleration</td>
+</tr>
+<tr>
+<td><code>0x6086</code></td>
+<td></td>
+<td><code>kMotionProfileType</code></td>
+<td>Motion Profile Type</td>
+</tr>
+<tr>
+<td><code>0x6098</code></td>
+<td></td>
+<td><code>kHomingMethod</code></td>
+<td>Homing Method</td>
+</tr>
+<tr>
+<td><code>0x6099</code></td>
+<td></td>
+<td><code>kHomingSpeeds</code></td>
+<td>Homing Speeds</td>
+</tr>
+<tr>
+<td><code>0x6099</code></td>
+<td><code>0x01</code></td>
+<td><code>kHomingSpeeds_SpeedForSwitchSearch</code></td>
+<td>Speed for switch search</td>
+</tr>
+<tr>
+<td><code>0x6099</code></td>
+<td><code>0x02</code></td>
+<td><code>kHomingSpeeds_SpeedForZeroSearch</code></td>
+<td>Speed for zero search</td>
+</tr>
+<tr>
+<td><code>0x609A</code></td>
+<td></td>
+<td><code>kHomingAcceleration</code></td>
+<td>Homing Acceleration</td>
+</tr>
+<tr>
+<td><code>0x60A8</code></td>
+<td></td>
+<td><code>kSIUnitPosition</code></td>
+<td>S I Unit Position</td>
+</tr>
+<tr>
+<td><code>0x60A9</code></td>
+<td></td>
+<td><code>kSIUnitVelocity</code></td>
+<td>S I Unit Velocity</td>
+</tr>
+<tr>
+<td><code>0x60AA</code></td>
+<td></td>
+<td><code>kSIUnitAcceleration</code></td>
+<td>S I Unit Acceleration</td>
+</tr>
+<tr>
+<td><code>0x60B0</code></td>
+<td></td>
+<td><code>kPositionOffset</code></td>
+<td>Position Offset</td>
+</tr>
+<tr>
+<td><code>0x60B1</code></td>
+<td></td>
+<td><code>kVelocityOffset</code></td>
+<td>Velocity Offset</td>
+</tr>
+<tr>
+<td><code>0x60B2</code></td>
+<td></td>
+<td><code>kTorqueOffset</code></td>
+<td>Torque Offset</td>
+</tr>
+<tr>
+<td><code>0x60B8</code></td>
+<td></td>
+<td><code>kTouchProbeFunction</code></td>
+<td>Touch Probe Function</td>
+</tr>
+<tr>
+<td><code>0x60B9</code></td>
+<td></td>
+<td><code>kTouchProbeStatus</code></td>
+<td>Touch Probe Status</td>
+</tr>
+<tr>
+<td><code>0x60BA</code></td>
+<td></td>
+<td><code>kTouchProbe1PositiveEdge</code></td>
+<td>Touch Probe1 Positive Edge</td>
+</tr>
+<tr>
+<td><code>0x60BB</code></td>
+<td></td>
+<td><code>kTouchProbe1NegativeEdge</code></td>
+<td>Touch Probe1 Negative Edge</td>
+</tr>
+<tr>
+<td><code>0x60C2</code></td>
+<td></td>
+<td><code>kInterpolationTimePeriod</code></td>
+<td>Interpolation Time Period</td>
+</tr>
+<tr>
+<td><code>0x60C2</code></td>
+<td><code>0x01</code></td>
+<td><code>kInterpolationTimePeriod_InterpolationTimePeriodValue</code></td>
+<td>Interpolation time period value</td>
+</tr>
+<tr>
+<td><code>0x60C2</code></td>
+<td><code>0x02</code></td>
+<td><code>kInterpolationTimePeriod_InterpolationTimeIndex</code></td>
+<td>Interpolation time index</td>
+</tr>
+<tr>
+<td><code>0x60C5</code></td>
+<td></td>
+<td><code>kMaxAcceleration</code></td>
+<td>Max Acceleration</td>
+</tr>
+<tr>
+<td><code>0x60D0</code></td>
+<td></td>
+<td><code>kTouchProbeSource</code></td>
+<td>Touch Probe Source</td>
+</tr>
+<tr>
+<td><code>0x60D0</code></td>
+<td><code>0x01</code></td>
+<td><code>kTouchProbeSource_TouchProbe1Source</code></td>
+<td>Touch probe 1 source</td>
+</tr>
+<tr>
+<td><code>0x60D5</code></td>
+<td></td>
+<td><code>kTouchProbe1PositiveEdgeCounter</code></td>
+<td>Touch Probe1 Positive Edge Counter</td>
+</tr>
+<tr>
+<td><code>0x60D6</code></td>
+<td></td>
+<td><code>kTouchProbe1NegativeEdgeCounter</code></td>
+<td>Touch Probe1 Negative Edge Counter</td>
+</tr>
+<tr>
+<td><code>0x60E3</code></td>
+<td></td>
+<td><code>kSupportedHomingMethods</code></td>
+<td>Supported Homing Methods</td>
+</tr>
+<tr>
+<td><code>0x60E3</code></td>
+<td><code>0x01</code></td>
+<td><code>kSupportedHomingMethods_N1stSupportedHomingMethod</code></td>
+<td>1st supported homing method</td>
+</tr>
+<tr>
+<td><code>0x60E3</code></td>
+<td><code>0x02</code></td>
+<td><code>kSupportedHomingMethods_N2ndSupportedHomingMethod</code></td>
+<td>2nd supported homing method</td>
+</tr>
+<tr>
+<td><code>0x60E3</code></td>
+<td><code>0x03</code></td>
+<td><code>kSupportedHomingMethods_N3rdSupportedHomingMethod</code></td>
+<td>3rd supported homing method</td>
+</tr>
+<tr>
+<td><code>0x60E3</code></td>
+<td><code>0x04</code></td>
+<td><code>kSupportedHomingMethods_N4thSupportedHomingMethod</code></td>
+<td>4th supported homing method</td>
+</tr>
+<tr>
+<td><code>0x60E3</code></td>
+<td><code>0x05</code></td>
+<td><code>kSupportedHomingMethods_N5thSupportedHomingMethod</code></td>
+<td>5th supported homing method</td>
+</tr>
+<tr>
+<td><code>0x60E3</code></td>
+<td><code>0x06</code></td>
+<td><code>kSupportedHomingMethods_N6thSupportedHomingMethod</code></td>
+<td>6th supported homing method</td>
+</tr>
+<tr>
+<td><code>0x60E3</code></td>
+<td><code>0x07</code></td>
+<td><code>kSupportedHomingMethods_N7thSupportedHomingMethod</code></td>
+<td>7th supported homing method</td>
+</tr>
+<tr>
+<td><code>0x60E3</code></td>
+<td><code>0x08</code></td>
+<td><code>kSupportedHomingMethods_N8thSupportedHomingMethod</code></td>
+<td>8th supported homing method</td>
+</tr>
+<tr>
+<td><code>0x60E3</code></td>
+<td><code>0x09</code></td>
+<td><code>kSupportedHomingMethods_N9thSupportedHomingMethod</code></td>
+<td>9th supported homing method</td>
+</tr>
+<tr>
+<td><code>0x60E3</code></td>
+<td><code>0x0A</code></td>
+<td><code>kSupportedHomingMethods_N10thSupportedHomingMethod</code></td>
+<td>10th supported homing method</td>
+</tr>
+<tr>
+<td><code>0x60E3</code></td>
+<td><code>0x0B</code></td>
+<td><code>kSupportedHomingMethods_N11thSupportedHomingMethod</code></td>
+<td>11th supported homing method</td>
+</tr>
+<tr>
+<td><code>0x60E3</code></td>
+<td><code>0x0C</code></td>
+<td><code>kSupportedHomingMethods_N12thSupportedHomingMethod</code></td>
+<td>12th supported homing method</td>
+</tr>
+<tr>
+<td><code>0x60E3</code></td>
+<td><code>0x0D</code></td>
+<td><code>kSupportedHomingMethods_N13thSupportedHomingMethod</code></td>
+<td>13th supported homing method</td>
+</tr>
+<tr>
+<td><code>0x60E3</code></td>
+<td><code>0x0E</code></td>
+<td><code>kSupportedHomingMethods_N14thSupportedHomingMethod</code></td>
+<td>14th supported homing method</td>
+</tr>
+<tr>
+<td><code>0x60E3</code></td>
+<td><code>0x0F</code></td>
+<td><code>kSupportedHomingMethods_N15thSupportedHomingMethod</code></td>
+<td>15th supported homing method</td>
+</tr>
+<tr>
+<td><code>0x60E4</code></td>
+<td></td>
+<td><code>kAdditionalPositionActualValues</code></td>
+<td>Additional Position Actual Values</td>
+</tr>
+<tr>
+<td><code>0x60E4</code></td>
+<td><code>0x01</code></td>
+<td><code>kAdditionalPositionActualValues_PositionActualValueSensor1</code></td>
+<td>Position actual value sensor 1</td>
+</tr>
+<tr>
+<td><code>0x60E4</code></td>
+<td><code>0x02</code></td>
+<td><code>kAdditionalPositionActualValues_PositionActualValueSensor2</code></td>
+<td>Position actual value sensor 2</td>
+</tr>
+<tr>
+<td><code>0x60E4</code></td>
+<td><code>0x03</code></td>
+<td><code>kAdditionalPositionActualValues_PositionActualValueSensor3</code></td>
+<td>Position actual value sensor 3</td>
+</tr>
+<tr>
+<td><code>0x60E5</code></td>
+<td></td>
+<td><code>kAdditionalVelocityActualValues</code></td>
+<td>Additional Velocity Actual Values</td>
+</tr>
+<tr>
+<td><code>0x60E5</code></td>
+<td><code>0x01</code></td>
+<td><code>kAdditionalVelocityActualValues_VelocityActualValueSensor1</code></td>
+<td>Velocity actual value sensor 1</td>
+</tr>
+<tr>
+<td><code>0x60E5</code></td>
+<td><code>0x02</code></td>
+<td><code>kAdditionalVelocityActualValues_VelocityActualValueSensor2</code></td>
+<td>Velocity actual value sensor 2</td>
+</tr>
+<tr>
+<td><code>0x60E5</code></td>
+<td><code>0x03</code></td>
+<td><code>kAdditionalVelocityActualValues_VelocityActualValueSensor3</code></td>
+<td>Velocity actual value sensor 3</td>
+</tr>
+<tr>
+<td><code>0x60E5</code></td>
+<td><code>0x09</code></td>
+<td><code>kAdditionalVelocityActualValues_VelocityActualValueAveragedSensor1</code></td>
+<td>Velocity actual value averaged sensor 1</td>
+</tr>
+<tr>
+<td><code>0x60E5</code></td>
+<td><code>0x0A</code></td>
+<td><code>kAdditionalVelocityActualValues_VelocityActualValueAveragedSensor2</code></td>
+<td>Velocity actual value averaged sensor 2</td>
+</tr>
+<tr>
+<td><code>0x60E5</code></td>
+<td><code>0x0B</code></td>
+<td><code>kAdditionalVelocityActualValues_VelocityActualValueAveragedSensor3</code></td>
+<td>Velocity actual value averaged sensor 3</td>
+</tr>
+<tr>
+<td><code>0x60F4</code></td>
+<td></td>
+<td><code>kFollowingErrorActualValue</code></td>
+<td>Following Error Actual Value</td>
+</tr>
+<tr>
+<td><code>0x60FD</code></td>
+<td></td>
+<td><code>kDigitalInputs</code></td>
+<td>Digital Inputs</td>
+</tr>
+<tr>
+<td><code>0x60FE</code></td>
+<td></td>
+<td><code>kDigitalOutputs</code></td>
+<td>Digital Outputs</td>
+</tr>
+<tr>
+<td><code>0x60FE</code></td>
+<td><code>0x01</code></td>
+<td><code>kDigitalOutputs_PhysicalOutputs</code></td>
+<td>Physical outputs</td>
+</tr>
+<tr>
+<td><code>0x60FF</code></td>
+<td></td>
+<td><code>kTargetVelocity</code></td>
+<td>Target Velocity</td>
+</tr>
+<tr>
+<td><code>0x6402</code></td>
+<td></td>
+<td><code>kMotorType</code></td>
+<td>Motor Type</td>
+</tr>
+<tr>
+<td><code>0x6502</code></td>
+<td></td>
+<td><code>kSupportedDriveModes</code></td>
+<td>Supported Drive Modes</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../enumerations/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Enumerations">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Enumerations
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../hardware/" class="md-footer__link md-footer__link--next" aria-label="Next: Hardware">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Hardware
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      EposLib is licensed under Apache-2.0.
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.indexes", "navigation.top", "navigation.footer", "search.highlight", "search.suggest", "content.code.copy", "content.code.annotate", "toc.follow"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>

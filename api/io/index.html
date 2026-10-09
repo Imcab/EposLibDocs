@@ -10,25 +10,31 @@
       
       
       
+        <link rel="canonical" href="https://imcab.github.io/EposLibDocs/api/io/">
       
+      
+        <link rel="prev" href="../encoders/">
+      
+      
+        <link rel="next" href="../safety/">
       
       
         
       
       
-      <link rel="icon" href="/EposLibDocs/assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
-        <title>EposLib</title>
+        <title>Digital and analog I/O - EposLib</title>
       
     
     
-      <link rel="stylesheet" href="/EposLibDocs/assets/stylesheets/main.ec1eaa64.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
-        <link rel="stylesheet" href="/EposLibDocs/assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -47,9 +53,9 @@
       
     
     
-      <link rel="stylesheet" href="/EposLibDocs/stylesheets/extra.css">
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
     
-    <script>__md_scope=new URL("/EposLibDocs/",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -71,6 +77,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#digital-and-analog-io" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -81,7 +92,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="/EposLibDocs/." title="EposLib" class="md-header__button md-logo" aria-label="EposLib" data-md-component="logo">
+    <a href="../.." title="EposLib" class="md-header__button md-logo" aria-label="EposLib" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -101,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              
+              Digital and analog I/O
             
           </span>
         </div>
@@ -188,7 +199,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="/EposLibDocs/." class="md-tabs__link">
+      <a href="../.." class="md-tabs__link">
         
   
   
@@ -209,7 +220,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="/EposLibDocs/getting-started/" class="md-tabs__link">
+        <a href="../../getting-started/" class="md-tabs__link">
           
   
   
@@ -231,7 +242,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="/EposLibDocs/concepts/" class="md-tabs__link">
+        <a href="../../concepts/" class="md-tabs__link">
           
   
   
@@ -253,7 +264,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="/EposLibDocs/network/" class="md-tabs__link">
+        <a href="../../network/" class="md-tabs__link">
           
   
   
@@ -271,11 +282,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="/EposLibDocs/api/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
           
   
   
@@ -297,7 +310,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="/EposLibDocs/examples/" class="md-tabs__link">
+        <a href="../../examples/" class="md-tabs__link">
           
   
   
@@ -319,7 +332,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="/EposLibDocs/troubleshooting/" class="md-tabs__link">
+        <a href="../../troubleshooting/" class="md-tabs__link">
           
   
   
@@ -341,7 +354,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="/EposLibDocs/reference/" class="md-tabs__link">
+        <a href="../../reference/" class="md-tabs__link">
           
   
   
@@ -377,7 +390,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="/EposLibDocs/." title="EposLib" class="md-nav__button md-logo" aria-label="EposLib" data-md-component="logo">
+    <a href="../.." title="EposLib" class="md-nav__button md-logo" aria-label="EposLib" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -407,7 +420,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/EposLibDocs/." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   
@@ -469,7 +482,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="/EposLibDocs/getting-started/" class="md-nav__link ">
+            <a href="../../getting-started/" class="md-nav__link ">
               
   
   
@@ -513,7 +526,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/EposLibDocs/getting-started/requirements/" class="md-nav__link">
+      <a href="../../getting-started/requirements/" class="md-nav__link">
         
   
   
@@ -541,7 +554,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/EposLibDocs/getting-started/installation/" class="md-nav__link">
+      <a href="../../getting-started/installation/" class="md-nav__link">
         
   
   
@@ -569,7 +582,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/EposLibDocs/getting-started/can-setup/" class="md-nav__link">
+      <a href="../../getting-started/can-setup/" class="md-nav__link">
         
   
   
@@ -597,7 +610,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/EposLibDocs/getting-started/first-run/" class="md-nav__link">
+      <a href="../../getting-started/first-run/" class="md-nav__link">
         
   
   
@@ -625,7 +638,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/EposLibDocs/getting-started/simulation/" class="md-nav__link">
+      <a href="../../getting-started/simulation/" class="md-nav__link">
         
   
   
@@ -653,7 +666,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/EposLibDocs/getting-started/your-package/" class="md-nav__link">
+      <a href="../../getting-started/your-package/" class="md-nav__link">
         
   
   
@@ -721,7 +734,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="/EposLibDocs/concepts/" class="md-nav__link ">
+            <a href="../../concepts/" class="md-nav__link ">
               
   
   
@@ -765,7 +778,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/EposLibDocs/concepts/architecture/" class="md-nav__link">
+      <a href="../../concepts/architecture/" class="md-nav__link">
         
   
   
@@ -793,7 +806,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/EposLibDocs/concepts/canopen/" class="md-nav__link">
+      <a href="../../concepts/canopen/" class="md-nav__link">
         
   
   
@@ -821,7 +834,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/EposLibDocs/concepts/state-machine/" class="md-nav__link">
+      <a href="../../concepts/state-machine/" class="md-nav__link">
         
   
   
@@ -849,7 +862,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/EposLibDocs/concepts/units/" class="md-nav__link">
+      <a href="../../concepts/units/" class="md-nav__link">
         
   
   
@@ -877,7 +890,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/EposLibDocs/concepts/threading/" class="md-nav__link">
+      <a href="../../concepts/threading/" class="md-nav__link">
         
   
   
@@ -943,7 +956,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="/EposLibDocs/network/" class="md-nav__link ">
+            <a href="../../network/" class="md-nav__link ">
               
   
   
@@ -987,7 +1000,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/EposLibDocs/network/bus-yml/" class="md-nav__link">
+      <a href="../../network/bus-yml/" class="md-nav__link">
         
   
   
@@ -1015,7 +1028,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/EposLibDocs/network/pdo-mapping/" class="md-nav__link">
+      <a href="../../network/pdo-mapping/" class="md-nav__link">
         
   
   
@@ -1043,7 +1056,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/EposLibDocs/network/sync-heartbeat/" class="md-nav__link">
+      <a href="../../network/sync-heartbeat/" class="md-nav__link">
         
   
   
@@ -1071,7 +1084,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/EposLibDocs/network/multi-drive/" class="md-nav__link">
+      <a href="../../network/multi-drive/" class="md-nav__link">
         
   
   
@@ -1103,6 +1116,8 @@
       
   
   
+    
+  
   
   
     
@@ -1142,20 +1157,23 @@
     
     
       
+        
+        
+      
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="/EposLibDocs/api/" class="md-nav__link ">
+            <a href="../" class="md-nav__link ">
               
   
   
@@ -1173,13 +1191,13 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1199,7 +1217,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/EposLibDocs/api/lifecycle/" class="md-nav__link">
+      <a href="../lifecycle/" class="md-nav__link">
         
   
   
@@ -1227,7 +1245,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/EposLibDocs/api/enabling/" class="md-nav__link">
+      <a href="../enabling/" class="md-nav__link">
         
   
   
@@ -1255,7 +1273,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/EposLibDocs/api/control-requests/" class="md-nav__link">
+      <a href="../control-requests/" class="md-nav__link">
         
   
   
@@ -1283,7 +1301,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/EposLibDocs/api/cyclic-control/" class="md-nav__link">
+      <a href="../cyclic-control/" class="md-nav__link">
         
   
   
@@ -1311,7 +1329,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/EposLibDocs/api/homing/" class="md-nav__link">
+      <a href="../homing/" class="md-nav__link">
         
   
   
@@ -1339,7 +1357,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/EposLibDocs/api/status-signals/" class="md-nav__link">
+      <a href="../status-signals/" class="md-nav__link">
         
   
   
@@ -1367,7 +1385,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/EposLibDocs/api/configuration/" class="md-nav__link">
+      <a href="../configuration/" class="md-nav__link">
         
   
   
@@ -1395,7 +1413,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/EposLibDocs/api/encoders/" class="md-nav__link">
+      <a href="../encoders/" class="md-nav__link">
         
   
   
@@ -1420,10 +1438,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="/EposLibDocs/api/io/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Digital and analog I/O
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1439,6 +1484,98 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#digital-inputs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Digital inputs
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Digital inputs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#reading-them" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reading them
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#digital-outputs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Digital outputs
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#analog-inputs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Analog inputs
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#analog-outputs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Analog outputs
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#touch-probe" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Touch probe
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1451,7 +1588,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/EposLibDocs/api/safety/" class="md-nav__link">
+      <a href="../safety/" class="md-nav__link">
         
   
   
@@ -1479,7 +1616,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/EposLibDocs/api/diagnostics/" class="md-nav__link">
+      <a href="../diagnostics/" class="md-nav__link">
         
   
   
@@ -1507,7 +1644,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/EposLibDocs/api/raw-access/" class="md-nav__link">
+      <a href="../raw-access/" class="md-nav__link">
         
   
   
@@ -1535,7 +1672,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/EposLibDocs/api/core/" class="md-nav__link">
+      <a href="../core/" class="md-nav__link">
         
   
   
@@ -1617,7 +1754,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="/EposLibDocs/examples/" class="md-nav__link ">
+            <a href="../../examples/" class="md-nav__link ">
               
   
   
@@ -1661,7 +1798,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/EposLibDocs/examples/device-info/" class="md-nav__link">
+      <a href="../../examples/device-info/" class="md-nav__link">
         
   
   
@@ -1689,7 +1826,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/EposLibDocs/examples/profile-position/" class="md-nav__link">
+      <a href="../../examples/profile-position/" class="md-nav__link">
         
   
   
@@ -1717,7 +1854,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/EposLibDocs/examples/profile-velocity/" class="md-nav__link">
+      <a href="../../examples/profile-velocity/" class="md-nav__link">
         
   
   
@@ -1745,7 +1882,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/EposLibDocs/examples/cyclic-velocity/" class="md-nav__link">
+      <a href="../../examples/cyclic-velocity/" class="md-nav__link">
         
   
   
@@ -1773,7 +1910,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/EposLibDocs/examples/cyclic-torque/" class="md-nav__link">
+      <a href="../../examples/cyclic-torque/" class="md-nav__link">
         
   
   
@@ -1801,7 +1938,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/EposLibDocs/examples/cyclic-position/" class="md-nav__link">
+      <a href="../../examples/cyclic-position/" class="md-nav__link">
         
   
   
@@ -1829,7 +1966,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/EposLibDocs/examples/homing/" class="md-nav__link">
+      <a href="../../examples/homing/" class="md-nav__link">
         
   
   
@@ -1857,7 +1994,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/EposLibDocs/examples/multi-drive/" class="md-nav__link">
+      <a href="../../examples/multi-drive/" class="md-nav__link">
         
   
   
@@ -1885,7 +2022,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/EposLibDocs/examples/fault-monitor/" class="md-nav__link">
+      <a href="../../examples/fault-monitor/" class="md-nav__link">
         
   
   
@@ -1913,7 +2050,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/EposLibDocs/examples/configuration/" class="md-nav__link">
+      <a href="../../examples/configuration/" class="md-nav__link">
         
   
   
@@ -1941,7 +2078,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/EposLibDocs/examples/encoder-setup/" class="md-nav__link">
+      <a href="../../examples/encoder-setup/" class="md-nav__link">
         
   
   
@@ -1969,7 +2106,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/EposLibDocs/examples/digital-io/" class="md-nav__link">
+      <a href="../../examples/digital-io/" class="md-nav__link">
         
   
   
@@ -2035,7 +2172,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="/EposLibDocs/troubleshooting/" class="md-nav__link ">
+            <a href="../../troubleshooting/" class="md-nav__link ">
               
   
   
@@ -2079,7 +2216,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/EposLibDocs/troubleshooting/can-bus/" class="md-nav__link">
+      <a href="../../troubleshooting/can-bus/" class="md-nav__link">
         
   
   
@@ -2107,7 +2244,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/EposLibDocs/troubleshooting/boot-and-pdo/" class="md-nav__link">
+      <a href="../../troubleshooting/boot-and-pdo/" class="md-nav__link">
         
   
   
@@ -2135,7 +2272,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/EposLibDocs/troubleshooting/faults/" class="md-nav__link">
+      <a href="../../troubleshooting/faults/" class="md-nav__link">
         
   
   
@@ -2163,7 +2300,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/EposLibDocs/troubleshooting/faq/" class="md-nav__link">
+      <a href="../../troubleshooting/faq/" class="md-nav__link">
         
   
   
@@ -2235,7 +2372,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="/EposLibDocs/reference/" class="md-nav__link ">
+            <a href="../../reference/" class="md-nav__link ">
               
   
   
@@ -2279,7 +2416,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/EposLibDocs/reference/error-codes/" class="md-nav__link">
+      <a href="../../reference/error-codes/" class="md-nav__link">
         
   
   
@@ -2307,7 +2444,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/EposLibDocs/reference/sdo-abort-codes/" class="md-nav__link">
+      <a href="../../reference/sdo-abort-codes/" class="md-nav__link">
         
   
   
@@ -2335,7 +2472,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/EposLibDocs/reference/configuration-fields/" class="md-nav__link">
+      <a href="../../reference/configuration-fields/" class="md-nav__link">
         
   
   
@@ -2363,7 +2500,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/EposLibDocs/reference/enumerations/" class="md-nav__link">
+      <a href="../../reference/enumerations/" class="md-nav__link">
         
   
   
@@ -2391,7 +2528,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/EposLibDocs/reference/object-dictionary/" class="md-nav__link">
+      <a href="../../reference/object-dictionary/" class="md-nav__link">
         
   
   
@@ -2419,7 +2556,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/EposLibDocs/reference/hardware/" class="md-nav__link">
+      <a href="../../reference/hardware/" class="md-nav__link">
         
   
   
@@ -2447,7 +2584,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/EposLibDocs/reference/changelog/" class="md-nav__link">
+      <a href="../../reference/changelog/" class="md-nav__link">
         
   
   
@@ -2492,6 +2629,88 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#digital-inputs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Digital inputs
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Digital inputs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#reading-them" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reading them
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#digital-outputs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Digital outputs
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#analog-inputs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Analog inputs
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#analog-outputs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Analog outputs
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#touch-probe" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Touch probe
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -2504,8 +2723,251 @@
               
               <article class="md-content__inner md-typeset">
                 
-  <h1>404 - Not found</h1>
+                  
 
+
+
+<h1 id="digital-and-analog-io">Digital and analog I/O<a class="headerlink" href="#digital-and-analog-io" title="Permanent link">#</a></h1>
+<h2 id="digital-inputs">Digital inputs<a class="headerlink" href="#digital-inputs" title="Permanent link">#</a></h2>
+<p>Each physical input carries one <strong>function</strong>, mapped in <code>0x3142</code>:</p>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th>Value</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>kNegativeLimitSwitch</code>, <code>kPositiveLimitSwitch</code></td>
+<td>0, 1</td>
+<td>raises a limit error when hit outside homing</td>
+</tr>
+<tr>
+<td><code>kHomeSwitch</code></td>
+<td>2</td>
+<td>for homing</td>
+</tr>
+<tr>
+<td><code>kGeneralPurposeA</code> ... <code>kGeneralPurposeH</code></td>
+<td>16-23</td>
+<td>read by the application</td>
+</tr>
+<tr>
+<td><code>kNegativeLimitSwitchNoError</code>, <code>kPositiveLimitSwitchNoError</code></td>
+<td>24, 25</td>
+<td>limit switches for homing that do not raise a limit error</td>
+</tr>
+<tr>
+<td><code>kTouchProbe</code></td>
+<td>26</td>
+<td>latches the position on an edge</td>
+</tr>
+<tr>
+<td><code>kDriveEnable</code></td>
+<td>27</td>
+<td>enables the drive, or clears a fault</td>
+</tr>
+<tr>
+<td><code>kQuickStop</code></td>
+<td>28</td>
+<td>quick stop</td>
+</tr>
+<tr>
+<td><code>kNone</code></td>
+<td>255</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Device defaults: input 1 negative limit, input 2 positive limit, input 3 home switch,
+input 4 general purpose D, high-speed inputs none.</p>
+<div class="highlight"><pre><span></span><code><span class="k">using</span><span class="w"> </span><span class="n">epos4</span><span class="o">::</span><span class="n">signals</span><span class="o">::</span><span class="n">DigitalInputFunction</span><span class="p">;</span>
+
+<span class="n">epos4</span><span class="o">::</span><span class="n">configs</span><span class="o">::</span><span class="n">DigitalInputConfigs</span><span class="w"> </span><span class="n">inputs</span><span class="p">;</span>
+<span class="n">inputs</span><span class="p">.</span><span class="n">input1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DigitalInputFunction</span><span class="o">::</span><span class="n">kNegativeLimitSwitch</span><span class="p">;</span>
+<span class="n">inputs</span><span class="p">.</span><span class="n">input2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DigitalInputFunction</span><span class="o">::</span><span class="n">kPositiveLimitSwitch</span><span class="p">;</span>
+<span class="n">inputs</span><span class="p">.</span><span class="n">input4</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DigitalInputFunction</span><span class="o">::</span><span class="n">kGeneralPurposeA</span><span class="p">;</span>
+<span class="n">inputs</span><span class="p">.</span><span class="n">polarity</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">0x0000</span><span class="p">;</span><span class="w">          </span><span class="c1">// bit = 0: pin is high active (bit order = pin order)</span>
+<span class="n">motor</span><span class="p">.</span><span class="n">GetConfigurator</span><span class="p">().</span><span class="n">Apply</span><span class="p">(</span><span class="n">inputs</span><span class="p">);</span>
+</code></pre></div>
+<p><code>Apply()</code> validates first: the manual forbids the same function on two inputs, and touch
+probe on high-speed inputs 1 and 3. A clash writes nothing.</p>
+<h3 id="reading-them">Reading them<a class="headerlink" href="#reading-them" title="Permanent link">#</a></h3>
+<p>Two views of the same pins:</p>
+<div class="highlight"><pre><span></span><code><span class="n">motor</span><span class="p">.</span><span class="n">IsNegativeLimitActive</span><span class="p">();</span><span class="w">                      </span><span class="c1">// by name</span>
+<span class="n">motor</span><span class="p">.</span><span class="n">IsInputActive</span><span class="p">(</span><span class="n">DigitalInputFunction</span><span class="o">::</span><span class="n">kGeneralPurposeA</span><span class="p">);</span>
+<span class="n">motor</span><span class="p">.</span><span class="n">GetDigitalInputs</span><span class="p">().</span><span class="n">Refresh</span><span class="p">().</span><span class="n">GetValue</span><span class="p">();</span><span class="w">      </span><span class="c1">// 0x60FD: by FUNCTION, after polarity</span>
+<span class="n">motor</span><span class="p">.</span><span class="n">GetDigitalInputPins</span><span class="p">().</span><span class="n">Refresh</span><span class="p">().</span><span class="n">GetValue</span><span class="p">();</span><span class="w">   </span><span class="c1">// 0x3141:01: by PIN, before polarity</span>
+</code></pre></div>
+<p><code>0x60FD</code> puts each function at its own bit - the negative limit switch is bit 0 whichever
+terminal it is wired to - so code does not change when a switch moves to another pin. The
+pin view is the one for checking wiring: it shows what the terminal actually sees.</p>
+<div class="admonition warning">
+<p class="admonition-title">Polarity and broken wires</p>
+<p>A normally-closed limit switch with the wrong polarity reads "not triggered" exactly
+when its wire breaks - the failure a limit switch exists to catch. Check each switch by
+hand, with <code>GetDigitalInputPins()</code>, before trusting it.</p>
+</div>
+<p>The high-speed inputs do not exist on the Disk 60/8, Disk 60/12 and Micro variants, and are
+disabled whenever sensor 2 is configured: they share its pins.</p>
+<h2 id="digital-outputs">Digital outputs<a class="headerlink" href="#digital-outputs" title="Permanent link">#</a></h2>
+<p>Assign a function to a pin once:</p>
+<div class="highlight"><pre><span></span><code><span class="k">using</span><span class="w"> </span><span class="n">epos4</span><span class="o">::</span><span class="n">signals</span><span class="o">::</span><span class="n">DigitalOutputFunction</span><span class="p">;</span>
+
+<span class="n">epos4</span><span class="o">::</span><span class="n">configs</span><span class="o">::</span><span class="n">DigitalOutputConfigs</span><span class="w"> </span><span class="n">outputs</span><span class="p">;</span>
+<span class="n">outputs</span><span class="p">.</span><span class="n">output1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DigitalOutputFunction</span><span class="o">::</span><span class="n">kGeneralPurposeA</span><span class="p">;</span>
+<span class="n">outputs</span><span class="p">.</span><span class="n">output2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DigitalOutputFunction</span><span class="o">::</span><span class="n">kHoldingBrake</span><span class="p">;</span><span class="w">   </span><span class="c1">// driven by the drive, see below</span>
+<span class="n">outputs</span><span class="p">.</span><span class="n">polarity</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">0x0000</span><span class="p">;</span><span class="w">                                </span><span class="c1">// bit = 1: inverted</span>
+<span class="n">motor</span><span class="p">.</span><span class="n">GetConfigurator</span><span class="p">().</span><span class="n">Apply</span><span class="p">(</span><span class="n">outputs</span><span class="p">);</span>
+</code></pre></div>
+<p>Then switch it by function:</p>
+<div class="highlight"><pre><span></span><code><span class="n">motor</span><span class="p">.</span><span class="n">SetDigitalOutput</span><span class="p">(</span><span class="n">DigitalOutputFunction</span><span class="o">::</span><span class="n">kGeneralPurposeA</span><span class="p">,</span><span class="w"> </span><span class="nb">true</span><span class="p">);</span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">on</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">motor</span><span class="p">.</span><span class="n">IsOutputActive</span><span class="p">(</span><span class="n">DigitalOutputFunction</span><span class="o">::</span><span class="n">kGeneralPurposeA</span><span class="p">);</span>
+<span class="n">motor</span><span class="p">.</span><span class="n">GetDigitalOutputs</span><span class="p">().</span><span class="n">Refresh</span><span class="p">();</span><span class="w">       </span><span class="c1">// 0x60FE:01, by function</span>
+<span class="n">motor</span><span class="p">.</span><span class="n">GetDigitalOutputPins</span><span class="p">().</span><span class="n">Refresh</span><span class="p">();</span><span class="w">    </span><span class="c1">// 0x3150:01, by pin, after polarity</span>
+</code></pre></div>
+<p><code>SetDigitalOutput()</code> changes one function and leaves the others. The holding brake and
+Ready/Fault outputs belong to the drive and are refused with <code>std::errc::invalid_argument</code>.
+<code>kSetBrakeGpio</code> hands the brake pin over raw - no timing, no standstill interlock - and is an
+explicit choice to opt into.</p>
+<table>
+<thead>
+<tr>
+<th>Output</th>
+<th>Function values</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>output1</code>, <code>output2</code>, <code>highSpeedOutput1</code></td>
+<td><code>kGeneralPurposeA/B/C</code>, <code>kHoldingBrake</code>, <code>kReadyFault</code>, <code>kSetBrakeGpio</code>, <code>kNone</code></td>
+</tr>
+<tr>
+<td><code>highSpeedOutput2</code></td>
+<td>Disk 60/8 and 60/12 only; <code>kHoldingBrake</code> or <code>kNone</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="analog-inputs">Analog inputs<a class="headerlink" href="#analog-inputs" title="Permanent link">#</a></h2>
+<div class="highlight"><pre><span></span><code><span class="k">auto</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">voltage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">motor</span><span class="p">.</span><span class="n">GetAnalogInputVoltage</span><span class="p">(</span><span class="n">epos4</span><span class="o">::</span><span class="n">signals</span><span class="o">::</span><span class="n">AnalogInput</span><span class="o">::</span><span class="n">k1</span><span class="p">).</span><span class="n">Refresh</span><span class="p">();</span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">voltage</span><span class="p">.</span><span class="n">GetStatus</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kt">double</span><span class="w"> </span><span class="n">volts</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">voltage</span><span class="p">.</span><span class="n">GetValue</span><span class="p">().</span><span class="n">value</span><span class="p">();</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Each analog input carries a function (<code>AnalogInputConfigs::input1</code>, <code>input2</code>):</p>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>kGeneralPurposeA</code>, <code>kGeneralPurposeB</code></td>
+<td>read through <code>GetAnalogInputGeneralPurpose(AnalogGeneralPurpose::kA)</code></td>
+</tr>
+<tr>
+<td><code>kCurrentSetValue</code></td>
+<td>the input commands current, scaled by the current set-value line</td>
+</tr>
+<tr>
+<td><code>kVelocitySetValue</code></td>
+<td>the input commands velocity, scaled by the velocity set-value line</td>
+</tr>
+<tr>
+<td><code>kNone</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>An input used as a set value takes over from the bus: in CSV with a velocity input the
+velocity offset is forced to 0, and likewise the torque offset in CST. <code>AnalogInputConfigs</code>
+also holds the calibration (offset in mV, gain) and the two points of each set-value line;
+<code>Apply()</code> writes the scaling <strong>before</strong> the functions, so an input never commands through a
+stale slope.</p>
+<h2 id="analog-outputs">Analog outputs<a class="headerlink" href="#analog-outputs" title="Permanent link">#</a></h2>
+<div class="highlight"><pre><span></span><code><span class="n">epos4</span><span class="o">::</span><span class="n">configs</span><span class="o">::</span><span class="n">AnalogOutputConfigs</span><span class="w"> </span><span class="n">aout</span><span class="p">;</span>
+<span class="n">aout</span><span class="p">.</span><span class="n">output1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">epos4</span><span class="o">::</span><span class="n">signals</span><span class="o">::</span><span class="n">AnalogOutputFunction</span><span class="o">::</span><span class="n">kGeneralPurposeA</span><span class="p">;</span>
+<span class="n">motor</span><span class="p">.</span><span class="n">GetConfigurator</span><span class="p">().</span><span class="n">Apply</span><span class="p">(</span><span class="n">aout</span><span class="p">);</span>
+
+<span class="n">motor</span><span class="p">.</span><span class="n">SetAnalogOutput</span><span class="p">(</span><span class="n">epos4</span><span class="o">::</span><span class="n">signals</span><span class="o">::</span><span class="n">AnalogGeneralPurpose</span><span class="o">::</span><span class="n">kA</span><span class="p">,</span><span class="w"> </span><span class="mf">1.5</span><span class="n">_V</span><span class="p">);</span><span class="w">   </span><span class="c1">// ±4 V</span>
+<span class="n">motor</span><span class="p">.</span><span class="n">GetAnalogOutputVoltage</span><span class="p">(</span><span class="n">epos4</span><span class="o">::</span><span class="n">signals</span><span class="o">::</span><span class="n">AnalogOutput</span><span class="o">::</span><span class="n">k1</span><span class="p">).</span><span class="n">Refresh</span><span class="p">();</span>
+</code></pre></div>
+<p>Beyond ±4 V, <code>SetAnalogOutput()</code> returns <code>std::errc::argument_out_of_domain</code> rather than
+clamping. Output 2 does not exist on the Disk and Micro variants.</p>
+<h2 id="touch-probe">Touch probe<a class="headerlink" href="#touch-probe" title="Permanent link">#</a></h2>
+<p>Touch probe 1 latches the <strong>actual position at an edge</strong>, inside the drive, to the
+resolution of the encoder - far finer than anything sampled over the bus. For measuring
+where a sensor switches, or catching the index pulse.</p>
+<div class="highlight"><pre><span></span><code><span class="k">struct</span><span class="w"> </span><span class="nc">TouchProbe</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="n">Trigger</span><span class="w"> </span><span class="n">trigger</span><span class="p">{</span><span class="n">Trigger</span><span class="o">::</span><span class="n">kInput</span><span class="p">};</span><span class="w">   </span><span class="c1">// kInput, kIndexPulse, kSourceObject</span>
+<span class="w">  </span><span class="kt">bool</span><span class="w"> </span><span class="n">continuous</span><span class="p">{</span><span class="nb">false</span><span class="p">};</span><span class="w">             </span><span class="c1">// every edge, not only the first</span>
+<span class="w">  </span><span class="kt">bool</span><span class="w"> </span><span class="n">positiveEdge</span><span class="p">{</span><span class="nb">true</span><span class="p">};</span>
+<span class="w">  </span><span class="kt">bool</span><span class="w"> </span><span class="n">negativeEdge</span><span class="p">{</span><span class="nb">false</span><span class="p">};</span>
+<span class="p">};</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="k">auto</span><span class="w"> </span><span class="n">probe</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">epos4</span><span class="o">::</span><span class="n">controls</span><span class="o">::</span><span class="n">TouchProbe</span><span class="p">{}</span>
+<span class="w">  </span><span class="p">.</span><span class="n">WithTrigger</span><span class="p">(</span><span class="n">epos4</span><span class="o">::</span><span class="n">controls</span><span class="o">::</span><span class="n">TouchProbe</span><span class="o">::</span><span class="n">Trigger</span><span class="o">::</span><span class="n">kInput</span><span class="p">)</span><span class="w">   </span><span class="c1">// the input mapped to kTouchProbe</span>
+<span class="w">  </span><span class="p">.</span><span class="n">WithPositiveEdge</span><span class="p">(</span><span class="nb">true</span><span class="p">);</span>
+<span class="n">motor</span><span class="p">.</span><span class="n">ArmTouchProbe</span><span class="p">(</span><span class="n">probe</span><span class="p">);</span>
+
+<span class="c1">// ... move past the sensor ...</span>
+
+<span class="n">epos4</span><span class="o">::</span><span class="n">signals</span><span class="o">::</span><span class="n">TouchProbeState</span><span class="w"> </span><span class="n">state</span><span class="p">;</span>
+<span class="n">motor</span><span class="p">.</span><span class="n">GetTouchProbe</span><span class="p">(</span><span class="n">state</span><span class="p">);</span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">state</span><span class="p">.</span><span class="n">positiveEdgeStored</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="kt">int32_t</span><span class="w"> </span><span class="n">where</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">state</span><span class="p">.</span><span class="n">positiveEdgePosition</span><span class="p">;</span><span class="w">   </span><span class="c1">// quadcounts</span>
+<span class="p">}</span>
+<span class="n">motor</span><span class="p">.</span><span class="n">DisarmTouchProbe</span><span class="p">();</span><span class="w">   </span><span class="c1">// also clears the edge counters</span>
+</code></pre></div>
+<p><code>ArmTouchProbe()</code> refuses, with <code>invalid_argument</code>, a combination the manual rules out (no
+edge at all; both edges on the index pulse) and - for <code>kInput</code> - a probe with no input mapped
+to <code>kTouchProbe</code>, which would wait for an edge that can never come. Touch probe runs
+alongside any mode except Homing, which clears every latched value when it completes.</p>
+<table>
+<thead>
+<tr>
+<th><code>TouchProbeState</code> field</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>enabled</code></td>
+<td>the probe is armed</td>
+</tr>
+<tr>
+<td><code>positiveEdgeStored</code>, <code>negativeEdgeStored</code></td>
+<td>a position was latched - check before reading it</td>
+</tr>
+<tr>
+<td><code>positiveEdgePosition</code>, <code>negativeEdgePosition</code></td>
+<td>the latched positions, quadcounts</td>
+</tr>
+<tr>
+<td><code>positiveEdgeCount</code>, <code>negativeEdgeCount</code></td>
+<td>edges since arming</td>
+</tr>
+</tbody>
+</table>
+<p>The complete program: <a href="../../examples/digital-io/">digital I/O and touch probe</a>.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
               </article>
             </div>
           
@@ -2523,6 +2985,44 @@
       
         <footer class="md-footer">
   
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../encoders/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Encoders">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Encoders
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../safety/" class="md-footer__link md-footer__link--next" aria-label="Next: Brake, stops and protection">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Brake, stops and protection
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
     
   
   <div class="md-footer-meta md-typeset">
@@ -2554,10 +3054,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "/EposLibDocs/", "features": ["navigation.tabs", "navigation.sections", "navigation.indexes", "navigation.top", "navigation.footer", "search.highlight", "search.suggest", "content.code.copy", "content.code.annotate", "toc.follow"], "search": "/EposLibDocs/assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.indexes", "navigation.top", "navigation.footer", "search.highlight", "search.suggest", "content.code.copy", "content.code.annotate", "toc.follow"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="/EposLibDocs/assets/javascripts/bundle.d7400e89.min.js"></script>
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
     
   </body>

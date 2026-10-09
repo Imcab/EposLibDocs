@@ -10,25 +10,31 @@
       
       
       
+        <link rel="canonical" href="https://imcab.github.io/EposLibDocs/api/homing/">
       
+      
+        <link rel="prev" href="../cyclic-control/">
+      
+      
+        <link rel="next" href="../status-signals/">
       
       
         
       
       
-      <link rel="icon" href="/EposLibDocs/assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
-        <title>EposLib</title>
+        <title>Homing - EposLib</title>
       
     
     
-      <link rel="stylesheet" href="/EposLibDocs/assets/stylesheets/main.ec1eaa64.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
-        <link rel="stylesheet" href="/EposLibDocs/assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -47,9 +53,9 @@
       
     
     
-      <link rel="stylesheet" href="/EposLibDocs/stylesheets/extra.css">
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
     
-    <script>__md_scope=new URL("/EposLibDocs/",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -71,6 +77,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#homing" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -81,7 +92,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="/EposLibDocs/." title="EposLib" class="md-header__button md-logo" aria-label="EposLib" data-md-component="logo">
+    <a href="../.." title="EposLib" class="md-header__button md-logo" aria-label="EposLib" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -101,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              
+              Homing
             
           </span>
         </div>
@@ -188,7 +199,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="/EposLibDocs/." class="md-tabs__link">
+      <a href="../.." class="md-tabs__link">
         
   
   
@@ -209,7 +220,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="/EposLibDocs/getting-started/" class="md-tabs__link">
+        <a href="../../getting-started/" class="md-tabs__link">
           
   
   
@@ -231,7 +242,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="/EposLibDocs/concepts/" class="md-tabs__link">
+        <a href="../../concepts/" class="md-tabs__link">
           
   
   
@@ -253,7 +264,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="/EposLibDocs/network/" class="md-tabs__link">
+        <a href="../../network/" class="md-tabs__link">
           
   
   
@@ -271,11 +282,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="/EposLibDocs/api/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
           
   
   
@@ -297,7 +310,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="/EposLibDocs/examples/" class="md-tabs__link">
+        <a href="../../examples/" class="md-tabs__link">
           
   
   
@@ -319,7 +332,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="/EposLibDocs/troubleshooting/" class="md-tabs__link">
+        <a href="../../troubleshooting/" class="md-tabs__link">
           
   
   
@@ -341,7 +354,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="/EposLibDocs/reference/" class="md-tabs__link">
+        <a href="../../reference/" class="md-tabs__link">
           
   
   
@@ -377,7 +390,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="/EposLibDocs/." title="EposLib" class="md-nav__button md-logo" aria-label="EposLib" data-md-component="logo">
+    <a href="../.." title="EposLib" class="md-nav__button md-logo" aria-label="EposLib" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -407,7 +420,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/EposLibDocs/." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   
@@ -469,7 +482,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="/EposLibDocs/getting-started/" class="md-nav__link ">
+            <a href="../../getting-started/" class="md-nav__link ">
               
   
   
@@ -513,7 +526,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/EposLibDocs/getting-started/requirements/" class="md-nav__link">
+      <a href="../../getting-started/requirements/" class="md-nav__link">
         
   
   
@@ -541,7 +554,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/EposLibDocs/getting-started/installation/" class="md-nav__link">
+      <a href="../../getting-started/installation/" class="md-nav__link">
         
   
   
@@ -569,7 +582,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/EposLibDocs/getting-started/can-setup/" class="md-nav__link">
+      <a href="../../getting-started/can-setup/" class="md-nav__link">
         
   
   
@@ -597,7 +610,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/EposLibDocs/getting-started/first-run/" class="md-nav__link">
+      <a href="../../getting-started/first-run/" class="md-nav__link">
         
   
   
@@ -625,7 +638,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/EposLibDocs/getting-started/simulation/" class="md-nav__link">
+      <a href="../../getting-started/simulation/" class="md-nav__link">
         
   
   
@@ -653,7 +666,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/EposLibDocs/getting-started/your-package/" class="md-nav__link">
+      <a href="../../getting-started/your-package/" class="md-nav__link">
         
   
   
@@ -721,7 +734,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="/EposLibDocs/concepts/" class="md-nav__link ">
+            <a href="../../concepts/" class="md-nav__link ">
               
   
   
@@ -765,7 +778,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/EposLibDocs/concepts/architecture/" class="md-nav__link">
+      <a href="../../concepts/architecture/" class="md-nav__link">
         
   
   
@@ -793,7 +806,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/EposLibDocs/concepts/canopen/" class="md-nav__link">
+      <a href="../../concepts/canopen/" class="md-nav__link">
         
   
   
@@ -821,7 +834,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/EposLibDocs/concepts/state-machine/" class="md-nav__link">
+      <a href="../../concepts/state-machine/" class="md-nav__link">
         
   
   
@@ -849,7 +862,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/EposLibDocs/concepts/units/" class="md-nav__link">
+      <a href="../../concepts/units/" class="md-nav__link">
         
   
   
@@ -877,7 +890,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/EposLibDocs/concepts/threading/" class="md-nav__link">
+      <a href="../../concepts/threading/" class="md-nav__link">
         
   
   
@@ -943,7 +956,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="/EposLibDocs/network/" class="md-nav__link ">
+            <a href="../../network/" class="md-nav__link ">
               
   
   
@@ -987,7 +1000,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/EposLibDocs/network/bus-yml/" class="md-nav__link">
+      <a href="../../network/bus-yml/" class="md-nav__link">
         
   
   
@@ -1015,7 +1028,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/EposLibDocs/network/pdo-mapping/" class="md-nav__link">
+      <a href="../../network/pdo-mapping/" class="md-nav__link">
         
   
   
@@ -1043,7 +1056,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/EposLibDocs/network/sync-heartbeat/" class="md-nav__link">
+      <a href="../../network/sync-heartbeat/" class="md-nav__link">
         
   
   
@@ -1071,7 +1084,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/EposLibDocs/network/multi-drive/" class="md-nav__link">
+      <a href="../../network/multi-drive/" class="md-nav__link">
         
   
   
@@ -1103,6 +1116,8 @@
       
   
   
+    
+  
   
   
     
@@ -1142,20 +1157,23 @@
     
     
       
+        
+        
+      
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="/EposLibDocs/api/" class="md-nav__link ">
+            <a href="../" class="md-nav__link ">
               
   
   
@@ -1173,13 +1191,13 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1199,7 +1217,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/EposLibDocs/api/lifecycle/" class="md-nav__link">
+      <a href="../lifecycle/" class="md-nav__link">
         
   
   
@@ -1227,7 +1245,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/EposLibDocs/api/enabling/" class="md-nav__link">
+      <a href="../enabling/" class="md-nav__link">
         
   
   
@@ -1255,7 +1273,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/EposLibDocs/api/control-requests/" class="md-nav__link">
+      <a href="../control-requests/" class="md-nav__link">
         
   
   
@@ -1283,7 +1301,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/EposLibDocs/api/cyclic-control/" class="md-nav__link">
+      <a href="../cyclic-control/" class="md-nav__link">
         
   
   
@@ -1308,10 +1326,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="/EposLibDocs/api/homing/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Homing
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1327,6 +1372,81 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#running-a-homing-method" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Running a homing method
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The methods
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuration
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setting-the-position-without-moving" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Setting the position without moving
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#status-bits-during-homing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Status bits during homing
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1339,7 +1459,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/EposLibDocs/api/status-signals/" class="md-nav__link">
+      <a href="../status-signals/" class="md-nav__link">
         
   
   
@@ -1367,7 +1487,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/EposLibDocs/api/configuration/" class="md-nav__link">
+      <a href="../configuration/" class="md-nav__link">
         
   
   
@@ -1395,7 +1515,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/EposLibDocs/api/encoders/" class="md-nav__link">
+      <a href="../encoders/" class="md-nav__link">
         
   
   
@@ -1423,7 +1543,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/EposLibDocs/api/io/" class="md-nav__link">
+      <a href="../io/" class="md-nav__link">
         
   
   
@@ -1451,7 +1571,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/EposLibDocs/api/safety/" class="md-nav__link">
+      <a href="../safety/" class="md-nav__link">
         
   
   
@@ -1479,7 +1599,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/EposLibDocs/api/diagnostics/" class="md-nav__link">
+      <a href="../diagnostics/" class="md-nav__link">
         
   
   
@@ -1507,7 +1627,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/EposLibDocs/api/raw-access/" class="md-nav__link">
+      <a href="../raw-access/" class="md-nav__link">
         
   
   
@@ -1535,7 +1655,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/EposLibDocs/api/core/" class="md-nav__link">
+      <a href="../core/" class="md-nav__link">
         
   
   
@@ -1617,7 +1737,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="/EposLibDocs/examples/" class="md-nav__link ">
+            <a href="../../examples/" class="md-nav__link ">
               
   
   
@@ -1661,7 +1781,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/EposLibDocs/examples/device-info/" class="md-nav__link">
+      <a href="../../examples/device-info/" class="md-nav__link">
         
   
   
@@ -1689,7 +1809,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/EposLibDocs/examples/profile-position/" class="md-nav__link">
+      <a href="../../examples/profile-position/" class="md-nav__link">
         
   
   
@@ -1717,7 +1837,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/EposLibDocs/examples/profile-velocity/" class="md-nav__link">
+      <a href="../../examples/profile-velocity/" class="md-nav__link">
         
   
   
@@ -1745,7 +1865,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/EposLibDocs/examples/cyclic-velocity/" class="md-nav__link">
+      <a href="../../examples/cyclic-velocity/" class="md-nav__link">
         
   
   
@@ -1773,7 +1893,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/EposLibDocs/examples/cyclic-torque/" class="md-nav__link">
+      <a href="../../examples/cyclic-torque/" class="md-nav__link">
         
   
   
@@ -1801,7 +1921,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/EposLibDocs/examples/cyclic-position/" class="md-nav__link">
+      <a href="../../examples/cyclic-position/" class="md-nav__link">
         
   
   
@@ -1829,7 +1949,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/EposLibDocs/examples/homing/" class="md-nav__link">
+      <a href="../../examples/homing/" class="md-nav__link">
         
   
   
@@ -1857,7 +1977,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/EposLibDocs/examples/multi-drive/" class="md-nav__link">
+      <a href="../../examples/multi-drive/" class="md-nav__link">
         
   
   
@@ -1885,7 +2005,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/EposLibDocs/examples/fault-monitor/" class="md-nav__link">
+      <a href="../../examples/fault-monitor/" class="md-nav__link">
         
   
   
@@ -1913,7 +2033,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/EposLibDocs/examples/configuration/" class="md-nav__link">
+      <a href="../../examples/configuration/" class="md-nav__link">
         
   
   
@@ -1941,7 +2061,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/EposLibDocs/examples/encoder-setup/" class="md-nav__link">
+      <a href="../../examples/encoder-setup/" class="md-nav__link">
         
   
   
@@ -1969,7 +2089,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/EposLibDocs/examples/digital-io/" class="md-nav__link">
+      <a href="../../examples/digital-io/" class="md-nav__link">
         
   
   
@@ -2035,7 +2155,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="/EposLibDocs/troubleshooting/" class="md-nav__link ">
+            <a href="../../troubleshooting/" class="md-nav__link ">
               
   
   
@@ -2079,7 +2199,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/EposLibDocs/troubleshooting/can-bus/" class="md-nav__link">
+      <a href="../../troubleshooting/can-bus/" class="md-nav__link">
         
   
   
@@ -2107,7 +2227,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/EposLibDocs/troubleshooting/boot-and-pdo/" class="md-nav__link">
+      <a href="../../troubleshooting/boot-and-pdo/" class="md-nav__link">
         
   
   
@@ -2135,7 +2255,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/EposLibDocs/troubleshooting/faults/" class="md-nav__link">
+      <a href="../../troubleshooting/faults/" class="md-nav__link">
         
   
   
@@ -2163,7 +2283,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/EposLibDocs/troubleshooting/faq/" class="md-nav__link">
+      <a href="../../troubleshooting/faq/" class="md-nav__link">
         
   
   
@@ -2235,7 +2355,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="/EposLibDocs/reference/" class="md-nav__link ">
+            <a href="../../reference/" class="md-nav__link ">
               
   
   
@@ -2279,7 +2399,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/EposLibDocs/reference/error-codes/" class="md-nav__link">
+      <a href="../../reference/error-codes/" class="md-nav__link">
         
   
   
@@ -2307,7 +2427,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/EposLibDocs/reference/sdo-abort-codes/" class="md-nav__link">
+      <a href="../../reference/sdo-abort-codes/" class="md-nav__link">
         
   
   
@@ -2335,7 +2455,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/EposLibDocs/reference/configuration-fields/" class="md-nav__link">
+      <a href="../../reference/configuration-fields/" class="md-nav__link">
         
   
   
@@ -2363,7 +2483,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/EposLibDocs/reference/enumerations/" class="md-nav__link">
+      <a href="../../reference/enumerations/" class="md-nav__link">
         
   
   
@@ -2391,7 +2511,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/EposLibDocs/reference/object-dictionary/" class="md-nav__link">
+      <a href="../../reference/object-dictionary/" class="md-nav__link">
         
   
   
@@ -2419,7 +2539,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/EposLibDocs/reference/hardware/" class="md-nav__link">
+      <a href="../../reference/hardware/" class="md-nav__link">
         
   
   
@@ -2447,7 +2567,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/EposLibDocs/reference/changelog/" class="md-nav__link">
+      <a href="../../reference/changelog/" class="md-nav__link">
         
   
   
@@ -2492,6 +2612,71 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#running-a-homing-method" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Running a homing method
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The methods
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuration
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setting-the-position-without-moving" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Setting the position without moving
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#status-bits-during-homing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Status bits during homing
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -2504,8 +2689,278 @@
               
               <article class="md-content__inner md-typeset">
                 
-  <h1>404 - Not found</h1>
+                  
 
+
+
+<h1 id="homing">Homing<a class="headerlink" href="#homing" title="Permanent link">#</a></h1>
+<p>An incremental encoder only counts <strong>relative</strong> motion: at power-on the position is
+whatever it was, or zero. <strong>Homing</strong> finds a physical reference - a switch, the encoder
+index, a hard stop - and declares it to be a known position. Until then, a stored pose
+means nothing.</p>
+<h2 id="running-a-homing-method">Running a homing method<a class="headerlink" href="#running-a-homing-method" title="Permanent link">#</a></h2>
+<div class="highlight"><pre><span></span><code><span class="kt">bool</span><span class="w"> </span><span class="nf">Home</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">controls</span><span class="o">::</span><span class="n">Homing</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">request</span><span class="p">,</span>
+<span class="w">          </span><span class="n">std</span><span class="o">::</span><span class="n">chrono</span><span class="o">::</span><span class="n">milliseconds</span><span class="w"> </span><span class="n">timeout</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">chrono</span><span class="o">::</span><span class="n">milliseconds</span><span class="p">{</span><span class="mi">30000</span><span class="p">});</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="n">motor</span><span class="p">.</span><span class="n">Enable</span><span class="p">();</span>
+<span class="k">const</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">homed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">motor</span><span class="p">.</span><span class="n">Home</span><span class="p">(</span>
+<span class="w">  </span><span class="n">epos4</span><span class="o">::</span><span class="n">controls</span><span class="o">::</span><span class="n">Homing</span><span class="p">{}.</span><span class="n">WithMethod</span><span class="p">(</span><span class="n">epos4</span><span class="o">::</span><span class="n">signals</span><span class="o">::</span><span class="n">HomingMethod</span><span class="o">::</span><span class="n">kNegativeLimitSwitch</span><span class="p">),</span>
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">chrono</span><span class="o">::</span><span class="n">seconds</span><span class="p">{</span><span class="mi">30</span><span class="p">});</span>
+</code></pre></div>
+<p><code>Home()</code> switches to Homing Mode, starts the run and <strong>blocks until it ends</strong>. It returns
+<code>true</code> when the drive reports <em>homing attained</em> and <em>target reached</em> together, and <code>false</code>
+on a homing error, on timeout, or when it refuses to start:</p>
+<ul>
+<li><strong>The method is not supported.</strong> The drive's list (<code>0x60E3</code>, <code>GetSupportedHomingMethods()</code>)
+  does not contain it.</li>
+<li><strong>Its switch is not mapped.</strong> A method that needs a limit or home switch is refused if no
+  digital input carries that function (<code>0x3142</code>) - instead of driving the axis until it hits
+  something mechanical.</li>
+</ul>
+<p>Without <code>WithMethod()</code>, the method configured in <code>HomingConfigs::method</code> is used.</p>
+<p>After a successful run, <code>IsPositionReferenced()</code> is true (Statusword bit 15). It turns false
+again on a position counter overflow, a sensor error, a sensor reconfiguration, or a fault
+whose reset clears the position - check it before any move to an absolute position.</p>
+<h2 id="the-methods">The methods<a class="headerlink" href="#the-methods" title="Permanent link">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Value</th>
+<th>Needs</th>
+<th>How it ends</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>kNegativeLimitSwitchAndIndex</code></td>
+<td>1</td>
+<td>negative limit switch, index</td>
+<td>first index after leaving the switch</td>
+</tr>
+<tr>
+<td><code>kPositiveLimitSwitchAndIndex</code></td>
+<td>2</td>
+<td>positive limit switch, index</td>
+<td>first index after leaving the switch</td>
+</tr>
+<tr>
+<td><code>kHomeSwitchPositiveSpeedAndIndex</code></td>
+<td>7</td>
+<td>home switch, index</td>
+<td>index next to the home switch edge</td>
+</tr>
+<tr>
+<td><code>kHomeSwitchNegativeSpeedAndIndex</code></td>
+<td>11</td>
+<td>home switch, index</td>
+<td>index next to the home switch edge</td>
+</tr>
+<tr>
+<td><code>kNegativeLimitSwitch</code></td>
+<td>17</td>
+<td>negative limit switch</td>
+<td>the switch edge</td>
+</tr>
+<tr>
+<td><code>kPositiveLimitSwitch</code></td>
+<td>18</td>
+<td>positive limit switch</td>
+<td>the switch edge</td>
+</tr>
+<tr>
+<td><code>kHomeSwitchPositiveSpeed</code></td>
+<td>23</td>
+<td>home switch</td>
+<td>the switch edge</td>
+</tr>
+<tr>
+<td><code>kHomeSwitchNegativeSpeed</code></td>
+<td>27</td>
+<td>home switch</td>
+<td>the switch edge</td>
+</tr>
+<tr>
+<td><code>kIndexNegativeSpeed</code></td>
+<td>33</td>
+<td>index</td>
+<td>the next index pulse</td>
+</tr>
+<tr>
+<td><code>kIndexPositiveSpeed</code></td>
+<td>34</td>
+<td>index</td>
+<td>the next index pulse</td>
+</tr>
+<tr>
+<td><code>kActualPosition</code></td>
+<td>37</td>
+<td>nothing</td>
+<td>no motion: the current position becomes home</td>
+</tr>
+<tr>
+<td><code>kCurrentThresholdPositiveSpeedAndIndex</code></td>
+<td>-1</td>
+<td>a hard stop, index</td>
+<td>index after the current threshold</td>
+</tr>
+<tr>
+<td><code>kCurrentThresholdNegativeSpeedAndIndex</code></td>
+<td>-2</td>
+<td>a hard stop, index</td>
+<td>index after the current threshold</td>
+</tr>
+<tr>
+<td><code>kCurrentThresholdPositiveSpeed</code></td>
+<td>-3</td>
+<td>a hard stop</td>
+<td>the current threshold</td>
+</tr>
+<tr>
+<td><code>kCurrentThresholdNegativeSpeed</code></td>
+<td>-4</td>
+<td>a hard stop</td>
+<td>the current threshold</td>
+</tr>
+</tbody>
+</table>
+<p>Negative values are maxon-specific. Helpers:</p>
+<ul>
+<li><code>signals::RequiredInput(method)</code> - the input function a method needs, or <code>nullopt</code>.</li>
+<li><code>signals::RequiresEncoderIndex(method)</code> - true when it ends on the index, which needs a
+  3-channel encoder configured <code>IndexType::kWithIndex</code>.</li>
+</ul>
+<p><strong>Current threshold</strong> methods drive into a mechanical end stop and detect it by the motor
+current: they need <code>HomingConfigs::currentThreshold</code> and an end stop that tolerates being
+pushed against.</p>
+<h2 id="configuration">Configuration<a class="headerlink" href="#configuration" title="Permanent link">#</a></h2>
+<div class="highlight"><pre><span></span><code><span class="k">using</span><span class="w"> </span><span class="n">epos4</span><span class="o">::</span><span class="n">signals</span><span class="o">::</span><span class="n">DigitalInputFunction</span><span class="p">;</span>
+
+<span class="n">epos4</span><span class="o">::</span><span class="n">configs</span><span class="o">::</span><span class="n">DigitalInputConfigs</span><span class="w"> </span><span class="n">inputs</span><span class="p">;</span><span class="w">          </span><span class="c1">// which pin carries which switch</span>
+<span class="n">inputs</span><span class="p">.</span><span class="n">input1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DigitalInputFunction</span><span class="o">::</span><span class="n">kNegativeLimitSwitch</span><span class="p">;</span>
+<span class="n">inputs</span><span class="p">.</span><span class="n">input2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DigitalInputFunction</span><span class="o">::</span><span class="n">kPositiveLimitSwitch</span><span class="p">;</span>
+<span class="n">inputs</span><span class="p">.</span><span class="n">input3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DigitalInputFunction</span><span class="o">::</span><span class="n">kHomeSwitch</span><span class="p">;</span>
+
+<span class="n">epos4</span><span class="o">::</span><span class="n">configs</span><span class="o">::</span><span class="n">HomingConfigs</span><span class="w"> </span><span class="n">homing</span><span class="p">;</span>
+<span class="n">homing</span><span class="p">.</span><span class="n">method</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">epos4</span><span class="o">::</span><span class="n">signals</span><span class="o">::</span><span class="n">HomingMethod</span><span class="o">::</span><span class="n">kNegativeLimitSwitch</span><span class="p">;</span>
+<span class="n">homing</span><span class="p">.</span><span class="n">speedForSwitchSearch</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">500</span><span class="p">;</span><span class="w">     </span><span class="c1">// rpm, fast approach</span>
+<span class="n">homing</span><span class="p">.</span><span class="n">speedForZeroSearch</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">100</span><span class="p">;</span><span class="w">       </span><span class="c1">// rpm, slow final approach</span>
+<span class="n">homing</span><span class="p">.</span><span class="n">acceleration</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2000</span><span class="p">;</span><span class="w">            </span><span class="c1">// rpm/s</span>
+<span class="n">homing</span><span class="p">.</span><span class="n">homeOffsetMoveDistance</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1000</span><span class="p">;</span><span class="w">  </span><span class="c1">// qc to move away from the switch afterwards</span>
+<span class="n">homing</span><span class="p">.</span><span class="n">homePosition</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w">               </span><span class="c1">// the position assigned to the home point</span>
+<span class="n">homing</span><span class="p">.</span><span class="n">currentThreshold</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1500</span><span class="p">;</span><span class="w">        </span><span class="c1">// mA, current threshold methods only</span>
+
+<span class="n">motor</span><span class="p">.</span><span class="n">GetConfigurator</span><span class="p">().</span><span class="n">Apply</span><span class="p">(</span><span class="n">inputs</span><span class="p">);</span>
+<span class="n">motor</span><span class="p">.</span><span class="n">GetConfigurator</span><span class="p">().</span><span class="n">Apply</span><span class="p">(</span><span class="n">homing</span><span class="p">);</span>
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Object</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>method</code></td>
+<td><code>0x6098</code></td>
+<td>default method for <code>Home()</code> without <code>WithMethod()</code></td>
+</tr>
+<tr>
+<td><code>speedForSwitchSearch</code></td>
+<td><code>0x6099:01</code></td>
+<td>rpm, searching for the switch</td>
+</tr>
+<tr>
+<td><code>speedForZeroSearch</code></td>
+<td><code>0x6099:02</code></td>
+<td>rpm, searching for the edge / index</td>
+</tr>
+<tr>
+<td><code>acceleration</code></td>
+<td><code>0x609A</code></td>
+<td>rpm/s</td>
+</tr>
+<tr>
+<td><code>homePosition</code></td>
+<td><code>0x30B0</code></td>
+<td>position assigned at the home point</td>
+</tr>
+<tr>
+<td><code>homeOffsetMoveDistance</code></td>
+<td><code>0x30B1</code></td>
+<td>quadcounts to travel after the home point</td>
+</tr>
+<tr>
+<td><code>currentThreshold</code></td>
+<td><code>0x30B2</code></td>
+<td>mA, for the current threshold methods</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Limit switches that must not fault.</strong> A plain limit switch (<code>kNegativeLimitSwitch</code>) raises
+a limit error when hit outside homing - the safe default for a real end stop. If a switch is
+used for homing but the axis may legitimately touch it otherwise, map it as
+<code>kNegativeLimitSwitchNoError</code> / <code>kPositiveLimitSwitchNoError</code>; homing accepts both forms.</p>
+<p><strong>Check the polarity first.</strong> A limit switch that reads active before a homing run started
+usually means an inverted polarity, not an axis at the end stop:</p>
+<div class="highlight"><pre><span></span><code><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">motor</span><span class="p">.</span><span class="n">IsNegativeLimitActive</span><span class="p">())</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="cm">/* DigitalInputConfigs::polarity */</span><span class="w"> </span><span class="p">}</span>
+</code></pre></div>
+<h2 id="setting-the-position-without-moving">Setting the position without moving<a class="headerlink" href="#setting-the-position-without-moving" title="Permanent link">#</a></h2>
+<div class="highlight"><pre><span></span><code><span class="n">std</span><span class="o">::</span><span class="n">error_code</span><span class="w"> </span><span class="nf">SetPosition</span><span class="p">(</span><span class="n">PositionSetpoint</span><span class="w"> </span><span class="n">position</span><span class="p">,</span>
+<span class="w">                            </span><span class="n">std</span><span class="o">::</span><span class="n">chrono</span><span class="o">::</span><span class="n">milliseconds</span><span class="w"> </span><span class="n">timeout</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3000</span><span class="n">ms</span><span class="p">);</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="n">motor</span><span class="p">.</span><span class="n">SetPosition</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span><span class="w">         </span><span class="c1">// "here is zero"</span>
+<span class="n">motor</span><span class="p">.</span><span class="n">SetPosition</span><span class="p">(</span><span class="mi">90</span><span class="n">_deg</span><span class="p">);</span><span class="w">    </span><span class="c1">// "here is 90 degrees at the output" (needs SetMechanism)</span>
+</code></pre></div>
+<p>The <code>setPosition()</code> of other APIs. It runs homing method 37 (<em>actual position</em>) with the home
+offset move distance set to zero, so the axis does not move, and then <strong>restores</strong> the homing
+method, <code>0x30B0</code>, <code>0x30B1</code> and the operating mode: it changes the reference, not the
+configuration. The drive must be in Operation enabled (<code>operation_not_permitted</code> otherwise).</p>
+<p>Use it when the reference comes from somewhere else - a mechanical jig, an absolute sensor
+read by your program - or for axes with no reference at all (wheels).</p>
+<h2 id="status-bits-during-homing">Status bits during homing<a class="headerlink" href="#status-bits-during-homing" title="Permanent link">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>Accessor</th>
+<th>Statusword bit under HMM</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>IsHomingAttained()</code></td>
+<td>12 - homing attained</td>
+</tr>
+<tr>
+<td><code>HasHomingError()</code></td>
+<td>13 - homing error</td>
+</tr>
+<tr>
+<td><code>IsTargetReached()</code></td>
+<td>10 - target reached / halted</td>
+</tr>
+<tr>
+<td><code>IsPositionReferenced()</code></td>
+<td>15 - referenced to home (any mode)</td>
+</tr>
+</tbody>
+</table>
+<p>The complete program is the <a href="../../examples/homing/">homing example</a>.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
               </article>
             </div>
           
@@ -2523,6 +2978,44 @@
       
         <footer class="md-footer">
   
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../cyclic-control/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Cyclic control">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Cyclic control
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../status-signals/" class="md-footer__link md-footer__link--next" aria-label="Next: Status signals">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Status signals
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
     
   
   <div class="md-footer-meta md-typeset">
@@ -2554,10 +3047,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "/EposLibDocs/", "features": ["navigation.tabs", "navigation.sections", "navigation.indexes", "navigation.top", "navigation.footer", "search.highlight", "search.suggest", "content.code.copy", "content.code.annotate", "toc.follow"], "search": "/EposLibDocs/assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.indexes", "navigation.top", "navigation.footer", "search.highlight", "search.suggest", "content.code.copy", "content.code.annotate", "toc.follow"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="/EposLibDocs/assets/javascripts/bundle.d7400e89.min.js"></script>
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
     
   </body>

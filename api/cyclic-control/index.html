@@ -10,29 +10,31 @@
       
       
       
-        <link rel="canonical" href="https://imcab.github.io/EposLibDocs/">
+        <link rel="canonical" href="https://imcab.github.io/EposLibDocs/api/cyclic-control/">
       
       
+        <link rel="prev" href="../control-requests/">
       
-        <link rel="next" href="getting-started/">
+      
+        <link rel="next" href="../homing/">
       
       
         
       
       
-      <link rel="icon" href="assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
-        <title>EposLib</title>
+        <title>Cyclic control - EposLib</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.ec1eaa64.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -51,9 +53,9 @@
       
     
     
-      <link rel="stylesheet" href="stylesheets/extra.css">
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -76,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#eposlib" class="md-skip">
+        <a href="#cyclic-control" class="md-skip">
           Skip to content
         </a>
       
@@ -90,7 +92,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="EposLib" class="md-header__button md-logo" aria-label="EposLib" data-md-component="logo">
+    <a href="../.." title="EposLib" class="md-header__button md-logo" aria-label="EposLib" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -110,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Home
+              Cyclic control
             
           </span>
         </div>
@@ -195,11 +197,9 @@
   
   
   
-    
   
-  
-    <li class="md-tabs__item md-tabs__item--active">
-      <a href="." class="md-tabs__link">
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
         
   
   
@@ -220,7 +220,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="getting-started/" class="md-tabs__link">
+        <a href="../../getting-started/" class="md-tabs__link">
           
   
   
@@ -242,7 +242,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="concepts/" class="md-tabs__link">
+        <a href="../../concepts/" class="md-tabs__link">
           
   
   
@@ -264,7 +264,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="network/" class="md-tabs__link">
+        <a href="../../network/" class="md-tabs__link">
           
   
   
@@ -282,11 +282,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="api/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
           
   
   
@@ -308,7 +310,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="examples/" class="md-tabs__link">
+        <a href="../../examples/" class="md-tabs__link">
           
   
   
@@ -330,7 +332,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="troubleshooting/" class="md-tabs__link">
+        <a href="../../troubleshooting/" class="md-tabs__link">
           
   
   
@@ -352,7 +354,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="reference/" class="md-tabs__link">
+        <a href="../../reference/" class="md-tabs__link">
           
   
   
@@ -377,9 +379,7 @@
           
             
               
-                
-              
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -390,7 +390,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="EposLib" class="md-nav__button md-logo" aria-label="EposLib" data-md-component="logo">
+    <a href="../.." title="EposLib" class="md-nav__button md-logo" aria-label="EposLib" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -417,37 +417,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Home
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="." class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
         
   
   
@@ -463,203 +436,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#what-it-does" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        What it does
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="What it does">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#control-modes" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Control modes
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#real-units" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Real units
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#configuration" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Configuration
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#telemetry" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Telemetry
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#diagnostics" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Diagnostics
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#io" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        I/O
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#simulator" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Simulator
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#minimal-example" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Minimal example
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#getting-started" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Getting started
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Getting started">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#install" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Install
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#bring-up-the-can-interface" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Bring up the CAN interface
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#try-it-without-hardware" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Try it without hardware
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#status" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Status
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#where-to-go-next" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Where to go next
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -706,7 +482,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="getting-started/" class="md-nav__link ">
+            <a href="../../getting-started/" class="md-nav__link ">
               
   
   
@@ -750,7 +526,7 @@
   
   
     <li class="md-nav__item">
-      <a href="getting-started/requirements/" class="md-nav__link">
+      <a href="../../getting-started/requirements/" class="md-nav__link">
         
   
   
@@ -778,7 +554,7 @@
   
   
     <li class="md-nav__item">
-      <a href="getting-started/installation/" class="md-nav__link">
+      <a href="../../getting-started/installation/" class="md-nav__link">
         
   
   
@@ -806,7 +582,7 @@
   
   
     <li class="md-nav__item">
-      <a href="getting-started/can-setup/" class="md-nav__link">
+      <a href="../../getting-started/can-setup/" class="md-nav__link">
         
   
   
@@ -834,7 +610,7 @@
   
   
     <li class="md-nav__item">
-      <a href="getting-started/first-run/" class="md-nav__link">
+      <a href="../../getting-started/first-run/" class="md-nav__link">
         
   
   
@@ -862,7 +638,7 @@
   
   
     <li class="md-nav__item">
-      <a href="getting-started/simulation/" class="md-nav__link">
+      <a href="../../getting-started/simulation/" class="md-nav__link">
         
   
   
@@ -890,7 +666,7 @@
   
   
     <li class="md-nav__item">
-      <a href="getting-started/your-package/" class="md-nav__link">
+      <a href="../../getting-started/your-package/" class="md-nav__link">
         
   
   
@@ -958,7 +734,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="concepts/" class="md-nav__link ">
+            <a href="../../concepts/" class="md-nav__link ">
               
   
   
@@ -1002,7 +778,7 @@
   
   
     <li class="md-nav__item">
-      <a href="concepts/architecture/" class="md-nav__link">
+      <a href="../../concepts/architecture/" class="md-nav__link">
         
   
   
@@ -1030,7 +806,7 @@
   
   
     <li class="md-nav__item">
-      <a href="concepts/canopen/" class="md-nav__link">
+      <a href="../../concepts/canopen/" class="md-nav__link">
         
   
   
@@ -1058,7 +834,7 @@
   
   
     <li class="md-nav__item">
-      <a href="concepts/state-machine/" class="md-nav__link">
+      <a href="../../concepts/state-machine/" class="md-nav__link">
         
   
   
@@ -1086,7 +862,7 @@
   
   
     <li class="md-nav__item">
-      <a href="concepts/units/" class="md-nav__link">
+      <a href="../../concepts/units/" class="md-nav__link">
         
   
   
@@ -1114,7 +890,7 @@
   
   
     <li class="md-nav__item">
-      <a href="concepts/threading/" class="md-nav__link">
+      <a href="../../concepts/threading/" class="md-nav__link">
         
   
   
@@ -1180,7 +956,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="network/" class="md-nav__link ">
+            <a href="../../network/" class="md-nav__link ">
               
   
   
@@ -1224,7 +1000,7 @@
   
   
     <li class="md-nav__item">
-      <a href="network/bus-yml/" class="md-nav__link">
+      <a href="../../network/bus-yml/" class="md-nav__link">
         
   
   
@@ -1252,7 +1028,7 @@
   
   
     <li class="md-nav__item">
-      <a href="network/pdo-mapping/" class="md-nav__link">
+      <a href="../../network/pdo-mapping/" class="md-nav__link">
         
   
   
@@ -1280,7 +1056,7 @@
   
   
     <li class="md-nav__item">
-      <a href="network/sync-heartbeat/" class="md-nav__link">
+      <a href="../../network/sync-heartbeat/" class="md-nav__link">
         
   
   
@@ -1308,7 +1084,7 @@
   
   
     <li class="md-nav__item">
-      <a href="network/multi-drive/" class="md-nav__link">
+      <a href="../../network/multi-drive/" class="md-nav__link">
         
   
   
@@ -1340,6 +1116,8 @@
       
   
   
+    
+  
   
   
     
@@ -1379,20 +1157,23 @@
     
     
       
+        
+        
+      
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="api/" class="md-nav__link ">
+            <a href="../" class="md-nav__link ">
               
   
   
@@ -1410,13 +1191,13 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1436,7 +1217,7 @@
   
   
     <li class="md-nav__item">
-      <a href="api/lifecycle/" class="md-nav__link">
+      <a href="../lifecycle/" class="md-nav__link">
         
   
   
@@ -1464,7 +1245,7 @@
   
   
     <li class="md-nav__item">
-      <a href="api/enabling/" class="md-nav__link">
+      <a href="../enabling/" class="md-nav__link">
         
   
   
@@ -1492,7 +1273,7 @@
   
   
     <li class="md-nav__item">
-      <a href="api/control-requests/" class="md-nav__link">
+      <a href="../control-requests/" class="md-nav__link">
         
   
   
@@ -1517,10 +1298,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="api/cyclic-control/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cyclic control
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1536,6 +1344,136 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-lock-free-path" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The lock-free path
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#entering-and-leaving" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Entering and leaving
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#staging-setpoints" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Staging setpoints
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reading-feedback" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reading feedback
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#health-check-it-every-cycle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Health: check it every cycle
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#a-complete-loop" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A complete loop
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#position-csp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Position (CSP)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#velocity-csv" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Velocity (CSV)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#torque" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Torque (CST)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#offsets-and-feed-forward" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Offsets and feed-forward
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1548,7 +1486,7 @@
   
   
     <li class="md-nav__item">
-      <a href="api/homing/" class="md-nav__link">
+      <a href="../homing/" class="md-nav__link">
         
   
   
@@ -1576,7 +1514,7 @@
   
   
     <li class="md-nav__item">
-      <a href="api/status-signals/" class="md-nav__link">
+      <a href="../status-signals/" class="md-nav__link">
         
   
   
@@ -1604,7 +1542,7 @@
   
   
     <li class="md-nav__item">
-      <a href="api/configuration/" class="md-nav__link">
+      <a href="../configuration/" class="md-nav__link">
         
   
   
@@ -1632,7 +1570,7 @@
   
   
     <li class="md-nav__item">
-      <a href="api/encoders/" class="md-nav__link">
+      <a href="../encoders/" class="md-nav__link">
         
   
   
@@ -1660,7 +1598,7 @@
   
   
     <li class="md-nav__item">
-      <a href="api/io/" class="md-nav__link">
+      <a href="../io/" class="md-nav__link">
         
   
   
@@ -1688,7 +1626,7 @@
   
   
     <li class="md-nav__item">
-      <a href="api/safety/" class="md-nav__link">
+      <a href="../safety/" class="md-nav__link">
         
   
   
@@ -1716,7 +1654,7 @@
   
   
     <li class="md-nav__item">
-      <a href="api/diagnostics/" class="md-nav__link">
+      <a href="../diagnostics/" class="md-nav__link">
         
   
   
@@ -1744,7 +1682,7 @@
   
   
     <li class="md-nav__item">
-      <a href="api/raw-access/" class="md-nav__link">
+      <a href="../raw-access/" class="md-nav__link">
         
   
   
@@ -1772,7 +1710,7 @@
   
   
     <li class="md-nav__item">
-      <a href="api/core/" class="md-nav__link">
+      <a href="../core/" class="md-nav__link">
         
   
   
@@ -1854,7 +1792,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="examples/" class="md-nav__link ">
+            <a href="../../examples/" class="md-nav__link ">
               
   
   
@@ -1898,7 +1836,7 @@
   
   
     <li class="md-nav__item">
-      <a href="examples/device-info/" class="md-nav__link">
+      <a href="../../examples/device-info/" class="md-nav__link">
         
   
   
@@ -1926,7 +1864,7 @@
   
   
     <li class="md-nav__item">
-      <a href="examples/profile-position/" class="md-nav__link">
+      <a href="../../examples/profile-position/" class="md-nav__link">
         
   
   
@@ -1954,7 +1892,7 @@
   
   
     <li class="md-nav__item">
-      <a href="examples/profile-velocity/" class="md-nav__link">
+      <a href="../../examples/profile-velocity/" class="md-nav__link">
         
   
   
@@ -1982,7 +1920,7 @@
   
   
     <li class="md-nav__item">
-      <a href="examples/cyclic-velocity/" class="md-nav__link">
+      <a href="../../examples/cyclic-velocity/" class="md-nav__link">
         
   
   
@@ -2010,7 +1948,7 @@
   
   
     <li class="md-nav__item">
-      <a href="examples/cyclic-torque/" class="md-nav__link">
+      <a href="../../examples/cyclic-torque/" class="md-nav__link">
         
   
   
@@ -2038,7 +1976,7 @@
   
   
     <li class="md-nav__item">
-      <a href="examples/cyclic-position/" class="md-nav__link">
+      <a href="../../examples/cyclic-position/" class="md-nav__link">
         
   
   
@@ -2066,7 +2004,7 @@
   
   
     <li class="md-nav__item">
-      <a href="examples/homing/" class="md-nav__link">
+      <a href="../../examples/homing/" class="md-nav__link">
         
   
   
@@ -2094,7 +2032,7 @@
   
   
     <li class="md-nav__item">
-      <a href="examples/multi-drive/" class="md-nav__link">
+      <a href="../../examples/multi-drive/" class="md-nav__link">
         
   
   
@@ -2122,7 +2060,7 @@
   
   
     <li class="md-nav__item">
-      <a href="examples/fault-monitor/" class="md-nav__link">
+      <a href="../../examples/fault-monitor/" class="md-nav__link">
         
   
   
@@ -2150,7 +2088,7 @@
   
   
     <li class="md-nav__item">
-      <a href="examples/configuration/" class="md-nav__link">
+      <a href="../../examples/configuration/" class="md-nav__link">
         
   
   
@@ -2178,7 +2116,7 @@
   
   
     <li class="md-nav__item">
-      <a href="examples/encoder-setup/" class="md-nav__link">
+      <a href="../../examples/encoder-setup/" class="md-nav__link">
         
   
   
@@ -2206,7 +2144,7 @@
   
   
     <li class="md-nav__item">
-      <a href="examples/digital-io/" class="md-nav__link">
+      <a href="../../examples/digital-io/" class="md-nav__link">
         
   
   
@@ -2272,7 +2210,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="troubleshooting/" class="md-nav__link ">
+            <a href="../../troubleshooting/" class="md-nav__link ">
               
   
   
@@ -2316,7 +2254,7 @@
   
   
     <li class="md-nav__item">
-      <a href="troubleshooting/can-bus/" class="md-nav__link">
+      <a href="../../troubleshooting/can-bus/" class="md-nav__link">
         
   
   
@@ -2344,7 +2282,7 @@
   
   
     <li class="md-nav__item">
-      <a href="troubleshooting/boot-and-pdo/" class="md-nav__link">
+      <a href="../../troubleshooting/boot-and-pdo/" class="md-nav__link">
         
   
   
@@ -2372,7 +2310,7 @@
   
   
     <li class="md-nav__item">
-      <a href="troubleshooting/faults/" class="md-nav__link">
+      <a href="../../troubleshooting/faults/" class="md-nav__link">
         
   
   
@@ -2400,7 +2338,7 @@
   
   
     <li class="md-nav__item">
-      <a href="troubleshooting/faq/" class="md-nav__link">
+      <a href="../../troubleshooting/faq/" class="md-nav__link">
         
   
   
@@ -2472,7 +2410,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="reference/" class="md-nav__link ">
+            <a href="../../reference/" class="md-nav__link ">
               
   
   
@@ -2516,7 +2454,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/error-codes/" class="md-nav__link">
+      <a href="../../reference/error-codes/" class="md-nav__link">
         
   
   
@@ -2544,7 +2482,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/sdo-abort-codes/" class="md-nav__link">
+      <a href="../../reference/sdo-abort-codes/" class="md-nav__link">
         
   
   
@@ -2572,7 +2510,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/configuration-fields/" class="md-nav__link">
+      <a href="../../reference/configuration-fields/" class="md-nav__link">
         
   
   
@@ -2600,7 +2538,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/enumerations/" class="md-nav__link">
+      <a href="../../reference/enumerations/" class="md-nav__link">
         
   
   
@@ -2628,7 +2566,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/object-dictionary/" class="md-nav__link">
+      <a href="../../reference/object-dictionary/" class="md-nav__link">
         
   
   
@@ -2656,7 +2594,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/hardware/" class="md-nav__link">
+      <a href="../../reference/hardware/" class="md-nav__link">
         
   
   
@@ -2684,7 +2622,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/changelog/" class="md-nav__link">
+      <a href="../../reference/changelog/" class="md-nav__link">
         
   
   
@@ -2720,8 +2658,6 @@
             
             
               
-                
-              
               <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
@@ -2741,104 +2677,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#what-it-does" class="md-nav__link">
+  <a href="#the-lock-free-path" class="md-nav__link">
     <span class="md-ellipsis">
       
-        What it does
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="What it does">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#control-modes" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Control modes
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#real-units" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Real units
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#configuration" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Configuration
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#telemetry" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Telemetry
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#diagnostics" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Diagnostics
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#io" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        I/O
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#simulator" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Simulator
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#minimal-example" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Minimal example
+        The lock-free path
       
     </span>
   </a>
@@ -2846,60 +2688,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#getting-started" class="md-nav__link">
+  <a href="#entering-and-leaving" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Getting started
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Getting started">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#install" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Install
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#bring-up-the-can-interface" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Bring up the CAN interface
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#try-it-without-hardware" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Try it without hardware
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#status" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Status
+        Entering and leaving
       
     </span>
   </a>
@@ -2907,10 +2699,87 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#where-to-go-next" class="md-nav__link">
+  <a href="#staging-setpoints" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Where to go next
+        Staging setpoints
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reading-feedback" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reading feedback
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#health-check-it-every-cycle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Health: check it every cycle
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#a-complete-loop" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A complete loop
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#position-csp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Position (CSP)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#velocity-csv" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Velocity (CSV)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#torque" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Torque (CST)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#offsets-and-feed-forward" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Offsets and feed-forward
       
     </span>
   </a>
@@ -2931,268 +2800,185 @@
               <article class="md-content__inner md-typeset">
                 
                   
-  
 
 
 
-
-<h1 id="eposlib">EposLib<a class="headerlink" href="#eposlib" title="Permanent link">#</a></h1>
-<p class="epos-tagline">A C++ API for maxon EPOS4 positioning controllers over CANopen.</p>
-
-<p>EposLib drives maxon EPOS4 controllers over CANopen (CiA 301 / CiA 402), built
-on <a href="https://opensource.lely.com/canopen/">Lely CANopen</a>. It is plain CMake with
-no ROS dependency, yet it builds under <code>colcon</code> like any other package, so it
-fits a ROS 2 workspace without tying the library to one.</p>
-<p>The API is device-oriented: a <code>CanBus</code> owns the CANopen master, and each drive
-is an <code>Epos4</code> constructed against it with its node-ID.</p>
-<p><a href="https://github.com/Imcab/EposLib">Source on GitHub</a> ·
-<a href="https://github.com/Imcab/EposLib/blob/main/CHANGELOG.md">Changelog</a> ·
-License: Apache-2.0</p>
-<hr />
-<h2 id="what-it-does">What it does<a class="headerlink" href="#what-it-does" title="Permanent link">#</a></h2>
-<h3 id="control-modes">Control modes<a class="headerlink" href="#control-modes" title="Permanent link">#</a></h3>
+<h1 id="cyclic-control">Cyclic control<a class="headerlink" href="#cyclic-control" title="Permanent link">#</a></h1>
+<p>In the cyclic synchronous modes the trajectory is generated <strong>by your program</strong>: a new
+setpoint every SYNC period, applied by every drive on the same SYNC. This is the path for
+control loops - trajectory followers, wheel velocity control, torque control.</p>
+<h2 id="the-lock-free-path">The lock-free path<a class="headerlink" href="#the-lock-free-path" title="Permanent link">#</a></h2>
+<p>Everything else on <code>Epos4</code> posts work to the driver thread and waits. The cyclic path does
+not:</p>
+<div class="highlight"><pre><span></span><code> control thread                    bus thread
+ ──────────────                    ──────────
+ StageTargetVelocity(v) ─ store ─▶ OnSync: staged target → RPDO → bus
+ GetCachedVelocity()    ◀─ load ── OnRpdoWrite: TPDO → cached feedback
+</code></pre></div>
+<p>Staging a setpoint is an atomic store; the bus thread publishes it on the next SYNC.
+Reading feedback is an atomic load of what the last TPDO carried. No system call, no lock,
+no waiting - safe in a real-time loop, and from a different thread than the bus.</p>
+<h2 id="entering-and-leaving">Entering and leaving<a class="headerlink" href="#entering-and-leaving" title="Permanent link">#</a></h2>
+<div class="highlight"><pre><span></span><code><span class="n">motor</span><span class="p">.</span><span class="n">Enable</span><span class="p">();</span><span class="w">                                </span><span class="c1">// the drive must be enabled first</span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="k">auto</span><span class="w"> </span><span class="n">ec</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">motor</span><span class="p">.</span><span class="n">EnterCyclicVelocityMode</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="c1">// not_connected, not_supported, or the drive refused the mode</span>
+<span class="p">}</span>
+<span class="c1">// ... loop: StageTargetVelocity() every period ...</span>
+<span class="n">motor</span><span class="p">.</span><span class="n">ExitCyclicMode</span><span class="p">();</span>
+<span class="n">motor</span><span class="p">.</span><span class="n">Disable</span><span class="p">();</span>
+</code></pre></div>
 <table>
 <thead>
 <tr>
+<th></th>
 <th>Mode</th>
-<th>How</th>
-<th>Trajectory generated by</th>
+<th>Publishes on every SYNC</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Profile Position (PPM)</td>
-<td><code>SetControl(controls::ProfilePosition{...})</code></td>
-<td>the drive</td>
+<td><code>EnterCyclicPositionMode()</code></td>
+<td>CSP</td>
+<td>Controlword + Target position <code>0x607A</code></td>
 </tr>
 <tr>
-<td>Profile Velocity (PVM)</td>
-<td><code>SetControl(controls::ProfileVelocity{...})</code></td>
-<td>the drive</td>
+<td><code>EnterCyclicVelocityMode()</code></td>
+<td>CSV</td>
+<td>Controlword + Target velocity <code>0x60FF</code></td>
 </tr>
 <tr>
-<td>Cyclic Synchronous Position (CSP)</td>
-<td><code>EnterCyclicPositionMode()</code> + <code>StageTargetPosition()</code></td>
-<td>your loop</td>
-</tr>
-<tr>
-<td>Cyclic Synchronous Velocity (CSV)</td>
-<td><code>EnterCyclicVelocityMode()</code> + <code>StageTargetVelocity()</code></td>
-<td>your loop</td>
-</tr>
-<tr>
-<td>Cyclic Synchronous Torque (CST)</td>
-<td><code>EnterCyclicTorqueMode()</code> + <code>StageTargetTorque()</code></td>
-<td>your loop</td>
-</tr>
-<tr>
-<td>Homing</td>
-<td><code>Home(controls::Homing{...})</code>, <code>SetPosition(...)</code></td>
-<td>the drive</td>
+<td><code>EnterCyclicTorqueMode()</code></td>
+<td>CST</td>
+<td>Controlword + Target torque <code>0x6071</code></td>
 </tr>
 </tbody>
 </table>
-<p>The PPM setpoint handshake is done for you. The cyclic modes are lock-free:
-setpoints are staged into atomics and published by the bus thread on the next
-SYNC, so a control loop never blocks on the bus. Each cyclic mode starts from
-where the axis is - torque mode starts at the torque the axis is producing, so
-a loaded joint is not dropped.</p>
-<h3 id="real-units">Real units<a class="headerlink" href="#real-units" title="Permanent link">#</a></h3>
-<p>Tell the device about the encoder and the gearbox once, then command and read
-in physical units instead of encoder counts:</p>
-<div class="highlight"><pre><span></span><code><span class="n">motor</span><span class="p">.</span><span class="n">SetMechanism</span><span class="p">(</span><span class="mi">4096</span><span class="p">,</span><span class="w"> </span><span class="mf">1.0</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">100.0</span><span class="p">);</span><span class="w">   </span><span class="c1">// 4096 quadcounts per turn, 1:100 gearbox</span>
-<span class="n">motor</span><span class="p">.</span><span class="n">SetControl</span><span class="p">(</span><span class="n">epos4</span><span class="o">::</span><span class="n">controls</span><span class="o">::</span><span class="n">ProfilePosition</span><span class="p">{}.</span><span class="n">WithPosition</span><span class="p">(</span><span class="mi">90</span><span class="n">_deg</span><span class="p">));</span>
-<span class="n">motor</span><span class="p">.</span><span class="n">StageTargetVelocity</span><span class="p">(</span><span class="mi">15</span><span class="n">_rpm</span><span class="p">);</span><span class="w">       </span><span class="c1">// at the output</span>
-<span class="n">motor</span><span class="p">.</span><span class="n">StageTargetTorque</span><span class="p">(</span><span class="mf">0.5</span><span class="n">_Nm</span><span class="p">);</span><span class="w">         </span><span class="c1">// at the motor shaft</span>
-</code></pre></div>
-<p>Raw drive units (quadcounts, rpm, thousandths of rated torque) work everywhere
-too.</p>
-<h3 id="configuration">Configuration<a class="headerlink" href="#configuration" title="Permanent link">#</a></h3>
-<p>Every configuration field is optional, and only the fields you set are
-written - a partly filled configuration cannot wipe tuned gains. Each group
-can also be read back from the drive.</p>
-<div class="highlight"><pre><span></span><code><span class="n">epos4</span><span class="o">::</span><span class="n">configs</span><span class="o">::</span><span class="n">Epos4Configuration</span><span class="w"> </span><span class="n">cfg</span><span class="p">;</span>
-<span class="n">cfg</span><span class="p">.</span><span class="n">limits</span><span class="p">.</span><span class="n">maxMotorSpeed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3000</span><span class="p">;</span>
-<span class="n">cfg</span><span class="p">.</span><span class="n">motionProfile</span><span class="p">.</span><span class="n">profileAcceleration</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2000</span><span class="p">;</span>
-<span class="n">cfg</span><span class="p">.</span><span class="n">velocityControl</span><span class="p">.</span><span class="n">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">150000</span><span class="p">;</span>
-
-<span class="n">motor</span><span class="p">.</span><span class="n">GetConfigurator</span><span class="p">().</span><span class="n">Apply</span><span class="p">(</span><span class="n">cfg</span><span class="p">);</span>
-<span class="n">motor</span><span class="p">.</span><span class="n">GetConfigurator</span><span class="p">().</span><span class="n">Save</span><span class="p">();</span><span class="w">          </span><span class="c1">// persist across power cycles</span>
-</code></pre></div>
-<p>Groups cover the motor, gearbox, encoders, current / velocity / position
-controllers, motion profile, limits, homing, stop options, holding brake,
-digital and analog I/O, supply and thermal protection, and communication.
-Objects the manual only allows in «Power Disable» are refused while the motor
-is powered, before anything is written.</p>
-<h3 id="telemetry">Telemetry<a class="headerlink" href="#telemetry" title="Permanent link">#</a></h3>
-<p>Status signals are cached and refreshed explicitly, so a getter never hides
-bus traffic. When PDOs are mapped, a refresh costs nothing.</p>
-<div class="highlight"><pre><span></span><code><span class="n">motor</span><span class="p">.</span><span class="n">GetPosition</span><span class="p">().</span><span class="n">Refresh</span><span class="p">().</span><span class="n">GetValue</span><span class="p">();</span><span class="w">       </span><span class="c1">// quadcounts</span>
-<span class="n">motor</span><span class="p">.</span><span class="n">GetSupplyVoltage</span><span class="p">().</span><span class="n">Refresh</span><span class="p">().</span><span class="n">GetValue</span><span class="p">();</span><span class="w">  </span><span class="c1">// volts</span>
-<span class="n">motor</span><span class="p">.</span><span class="n">GetMotorI2tPercent</span><span class="p">().</span><span class="n">Refresh</span><span class="p">();</span><span class="w">           </span><span class="c1">// above 100: the drive is limiting current</span>
-</code></pre></div>
-<p><code>signals::RefreshAll(...)</code> refreshes signals from several drives concurrently.</p>
-<h3 id="diagnostics">Diagnostics<a class="headerlink" href="#diagnostics" title="Permanent link">#</a></h3>
+<p><code>Enter*Mode()</code> switches the mode <strong>once</strong> - checking and writing <code>0x6060</code> is an SDO round
+trip, which inside a loop would be the whole budget - and seeds the setpoint so the first
+SYNC holds the axis where it is:</p>
 <ul>
-<li><code>DescribeLastError()</code> renders the fault with the cause, effect and recovery
-  from chapter 7 of the firmware specification - all 73 device error codes.</li>
-<li><code>SetEmergencyCallback()</code> delivers EMCY frames as they arrive, without polling.</li>
-<li><code>ClearFault()</code> performs the recovery each fault needs, including the NMT
-  reset communication that a lost heartbeat requires.</li>
-<li><code>CheckPdoMapping()</code> compares the drive's PDO mapping with what the master
-  expects and lists every difference.</li>
-<li><code>GetBootStatus()</code> reports how the master's boot of the node went.</li>
-<li><code>GetIdentity()</code> and <code>GetErrorHistory()</code> for the log.</li>
+<li><strong>CSP</strong> starts at the actual position;</li>
+<li><strong>CSV</strong> starts at 0 rpm;</li>
+<li><strong>CST</strong> starts at the torque the axis is producing now - zero would let go of a loaded
+  joint - and reads the motor's rated torque once, so torques in N m can be staged without
+  bus access.</li>
 </ul>
-<h3 id="io">I/O<a class="headerlink" href="#io" title="Permanent link">#</a></h3>
-<p>Digital inputs and outputs (limit and home switches, general purpose
-outputs), analog inputs and outputs in volts, and touch probe 1 to latch the
-exact position at an input edge.</p>
-<h3 id="simulator">Simulator<a class="headerlink" href="#simulator" title="Permanent link">#</a></h3>
-<p><code>epos4_sim</code> is a CANopen slave that loads the real maxon EDS and implements the
-CiA 402 state machine, PPM, CSP, CSV, CST and homing, so the whole stack can be
-developed on a virtual CAN bus without hardware.</p>
-<hr />
-<h2 id="minimal-example">Minimal example<a class="headerlink" href="#minimal-example" title="Permanent link">#</a></h2>
-<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;chrono&gt;</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;cstdio&gt;</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;thread&gt;</span>
-
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">"epos4/hardware/Epos4.hpp"</span>
-
-<span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">std</span><span class="o">::</span><span class="nn">chrono_literals</span><span class="p">;</span>
-
-<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span>
-<span class="p">{</span>
-<span class="w">  </span><span class="c1">// One bus per CAN network: interface, master DCF, master node-ID.</span>
-<span class="w">  </span><span class="n">epos4</span><span class="o">::</span><span class="n">CanBus</span><span class="w"> </span><span class="n">bus</span><span class="p">{{</span><span class="s">"can0"</span><span class="p">,</span><span class="w"> </span><span class="s">"config/epos4_network/master.dcf"</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">}};</span>
-
-<span class="w">  </span><span class="c1">// Declare every device BEFORE Start(): the master only routes PDOs</span>
-<span class="w">  </span><span class="c1">// to drivers registered when it boots the node.</span>
-<span class="w">  </span><span class="n">epos4</span><span class="o">::</span><span class="n">Epos4</span><span class="w"> </span><span class="n">motor</span><span class="p">{</span><span class="n">bus</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">};</span>
-<span class="w">  </span><span class="n">bus</span><span class="p">.</span><span class="n">Start</span><span class="p">();</span>
-
-<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">motor</span><span class="p">.</span><span class="n">WaitUntilReady</span><span class="p">()</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="o">!</span><span class="n">motor</span><span class="p">.</span><span class="n">Enable</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">printf</span><span class="p">(</span><span class="s">"%s</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span><span class="w"> </span><span class="n">motor</span><span class="p">.</span><span class="n">DescribeLastError</span><span class="p">().</span><span class="n">c_str</span><span class="p">());</span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
-<span class="w">  </span><span class="p">}</span>
-
-<span class="w">  </span><span class="n">motor</span><span class="p">.</span><span class="n">SetControl</span><span class="p">(</span><span class="n">epos4</span><span class="o">::</span><span class="n">controls</span><span class="o">::</span><span class="n">ProfilePosition</span><span class="p">{}</span>
-<span class="w">                     </span><span class="p">.</span><span class="n">WithPosition</span><span class="p">(</span><span class="mi">50000</span><span class="p">)</span><span class="w">       </span><span class="c1">// quadcounts</span>
-<span class="w">                     </span><span class="p">.</span><span class="n">WithVelocity</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span><span class="w">        </span><span class="c1">// rpm</span>
-<span class="w">                     </span><span class="p">.</span><span class="n">WithAcceleration</span><span class="p">(</span><span class="mi">5000</span><span class="p">)</span><span class="w">    </span><span class="c1">// rpm/s</span>
-<span class="w">                     </span><span class="p">.</span><span class="n">WithDeceleration</span><span class="p">(</span><span class="mi">5000</span><span class="p">));</span>
-
-<span class="w">  </span><span class="c1">// Target reached may still be set from before the move: wait for it to</span>
-<span class="w">  </span><span class="c1">// drop, then for it to come back.</span>
-<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">20</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">motor</span><span class="p">.</span><span class="n">IsTargetReached</span><span class="p">().</span><span class="n">GetValueRefreshed</span><span class="p">();</span><span class="w"> </span><span class="o">++</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">this_thread</span><span class="o">::</span><span class="n">sleep_for</span><span class="p">(</span><span class="mi">20</span><span class="n">ms</span><span class="p">);</span>
-<span class="w">  </span><span class="p">}</span>
-<span class="w">  </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">motor</span><span class="p">.</span><span class="n">IsTargetReached</span><span class="p">().</span><span class="n">GetValueRefreshed</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">this_thread</span><span class="o">::</span><span class="n">sleep_for</span><span class="p">(</span><span class="mi">10</span><span class="n">ms</span><span class="p">);</span>
-<span class="w">  </span><span class="p">}</span>
-<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">printf</span><span class="p">(</span><span class="s">"reached %d qc</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span><span class="w"> </span><span class="n">motor</span><span class="p">.</span><span class="n">GetPosition</span><span class="p">().</span><span class="n">Refresh</span><span class="p">().</span><span class="n">GetValue</span><span class="p">());</span>
-
-<span class="w">  </span><span class="n">motor</span><span class="p">.</span><span class="n">Disable</span><span class="p">();</span>
+<p>It does <strong>not</strong> walk the state machine: call <code>Enable()</code> first. <code>ExitCyclicMode()</code> stops
+publishing; the drive stays in its mode and state - use <code>Disable()</code> to remove power.
+<code>IsCyclicModeActive()</code> says whether the path is publishing.</p>
+<h2 id="staging-setpoints">Staging setpoints<a class="headerlink" href="#staging-setpoints" title="Permanent link">#</a></h2>
+<div class="highlight"><pre><span></span><code><span class="kt">bool</span><span class="w"> </span><span class="nf">StageTargetPosition</span><span class="p">(</span><span class="n">PositionSetpoint</span><span class="w"> </span><span class="n">position</span><span class="p">);</span><span class="w">   </span><span class="c1">// quadcounts, or an angle at the output</span>
+<span class="kt">bool</span><span class="w"> </span><span class="nf">StageTargetVelocity</span><span class="p">(</span><span class="n">VelocitySetpoint</span><span class="w"> </span><span class="n">velocity</span><span class="p">);</span><span class="w">   </span><span class="c1">// rpm at the motor, or at the output</span>
+<span class="kt">bool</span><span class="w"> </span><span class="nf">StageTargetTorque</span><span class="p">(</span><span class="n">TorqueSetpoint</span><span class="w"> </span><span class="n">torque</span><span class="p">);</span><span class="w">         </span><span class="c1">// thousandths of rated torque, or N m</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="n">motor</span><span class="p">.</span><span class="n">StageTargetPosition</span><span class="p">(</span><span class="mi">50000</span><span class="p">);</span><span class="w">         </span><span class="c1">// quadcounts</span>
+<span class="n">motor</span><span class="p">.</span><span class="n">StageTargetPosition</span><span class="p">(</span><span class="mi">90</span><span class="n">_deg</span><span class="p">);</span><span class="w">        </span><span class="c1">// needs SetMechanism()</span>
+<span class="n">motor</span><span class="p">.</span><span class="n">StageTargetVelocity</span><span class="p">(</span><span class="mi">1500</span><span class="p">);</span><span class="w">          </span><span class="c1">// rpm at the motor</span>
+<span class="n">motor</span><span class="p">.</span><span class="n">StageTargetVelocity</span><span class="p">(</span><span class="mi">15</span><span class="n">_rpm</span><span class="p">);</span><span class="w">        </span><span class="c1">// at the output, needs SetMechanism()</span>
+<span class="n">motor</span><span class="p">.</span><span class="n">StageTargetTorque</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="kt">int16_t</span><span class="p">{</span><span class="mi">250</span><span class="p">});</span><span class="w">   </span><span class="c1">// 25 % of rated torque</span>
+<span class="n">motor</span><span class="p">.</span><span class="n">StageTargetTorque</span><span class="p">(</span><span class="mf">0.5</span><span class="n">_Nm</span><span class="p">);</span><span class="w">          </span><span class="c1">// at the motor shaft</span>
+</code></pre></div>
+<p>Each returns <strong>false</strong>, and stages nothing, when a quantity cannot be converted: no
+mechanism set, or for torque, no rated torque (motor data not configured, or not in torque
+mode). Conversion is arithmetic only - no bus access. Staging a setpoint the active mode
+does not publish is harmless; it has no effect until that mode is entered.</p>
+<div class="admonition note">
+<p class="admonition-title">Plain numbers are raw</p>
+<p><code>StageTargetTorque(250)</code> stages 250 thousandths of the rated torque - 25 % - not 250 N m.
+A torque in newton metres is always a quantity: <code>0.25_Nm</code>.</p>
+</div>
+<h2 id="reading-feedback">Reading feedback<a class="headerlink" href="#reading-feedback" title="Permanent link">#</a></h2>
+<div class="highlight"><pre><span></span><code><span class="n">std</span><span class="o">::</span><span class="kt">int32_t</span><span class="w">  </span><span class="nf">GetCachedPosition</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="p">;</span><span class="w">     </span><span class="c1">// 0x6064 [quadcounts]</span>
+<span class="n">std</span><span class="o">::</span><span class="kt">int32_t</span><span class="w">  </span><span class="nf">GetCachedVelocity</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="p">;</span><span class="w">     </span><span class="c1">// 0x606C [rpm]</span>
+<span class="n">std</span><span class="o">::</span><span class="kt">int16_t</span><span class="w">  </span><span class="nf">GetCachedTorque</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="p">;</span><span class="w">       </span><span class="c1">// 0x6077 [thousandths of rated torque]</span>
+<span class="n">std</span><span class="o">::</span><span class="kt">uint16_t</span><span class="w"> </span><span class="nf">GetCachedStatusword</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="p">;</span><span class="w">   </span><span class="c1">// 0x6041</span>
+<span class="n">std</span><span class="o">::</span><span class="kt">uint16_t</span><span class="w"> </span><span class="nf">GetCachedErrorCode</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="p">;</span><span class="w">    </span><span class="c1">// last EMCY, 0 if none or reset</span>
+</code></pre></div>
+<p>These are the values from the last TPDO - at most one SYNC period old - and they work with
+or without the cyclic mode active, as long as PDOs flow.</p>
+<h2 id="health-check-it-every-cycle">Health: check it every cycle<a class="headerlink" href="#health-check-it-every-cycle" title="Permanent link">#</a></h2>
+<div class="highlight"><pre><span></span><code><span class="kt">bool</span><span class="w"> </span><span class="nf">IsCyclicHealthy</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">chrono</span><span class="o">::</span><span class="n">steady_clock</span><span class="o">::</span><span class="n">duration</span><span class="w"> </span><span class="n">maxAge</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">50</span><span class="n">ms</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="p">;</span>
+</code></pre></div>
+<p>True while PDOs keep arriving (the last one within <code>maxAge</code>) <strong>and</strong> the drive reports
+Operation enabled. When the bus goes quiet the cached values stop changing but keep reading
+back happily, so a controller that does not check would go on believing a dead axis is
+tracking. At a 10 ms SYNC, 50 ms is five missed periods.</p>
+<div class="highlight"><pre><span></span><code><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">motor</span><span class="p">.</span><span class="n">IsCyclicHealthy</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="c1">// the drive faulted, lost power, or stopped talking</span>
 <span class="p">}</span>
 </code></pre></div>
-<p>Link against <code>eposlib::eposlib</code> after <code>find_package(eposlib)</code>. The master DCF
-is generated from the network description (<code>bus.yml</code>) at build time; the
-example network installs to <code>share/eposlib/config/epos4_network/</code>.</p>
-<div class="admonition note">
-<p class="admonition-title">Declare devices before <code>CanBus::Start()</code></p>
-<p>A CANopen master boots each node once, at start-up, and only routes a
-node's PDOs to a driver that was registered at that moment. A device
-constructed after <code>Start()</code> answers SDO but never receives a PDO.</p>
-</div>
-<hr />
-<h2 id="getting-started">Getting started<a class="headerlink" href="#getting-started" title="Permanent link">#</a></h2>
-<h3 id="install">Install<a class="headerlink" href="#install" title="Permanent link">#</a></h3>
-<p>Requires ROS 2 Humble (Ubuntu 22.04) or any Linux with Lely CANopen installed.</p>
-<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>ros-humble-lely-core-libraries<span class="w"> </span>python3-vcstool
+<h2 id="a-complete-loop">A complete loop<a class="headerlink" href="#a-complete-loop" title="Permanent link">#</a></h2>
+<div class="highlight"><pre><span></span><code><span class="n">motor</span><span class="p">.</span><span class="n">Enable</span><span class="p">();</span>
+<span class="n">motor</span><span class="p">.</span><span class="n">EnterCyclicVelocityMode</span><span class="p">();</span>
 
-mkdir<span class="w"> </span>-p<span class="w"> </span>~/ros2_ws/src<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">cd</span><span class="w"> </span>~/ros2_ws/src
-git<span class="w"> </span>clone<span class="w"> </span>https://github.com/Imcab/EposLib.git
-vcs<span class="w"> </span>import<span class="w"> </span>.<span class="w"> </span>&lt;<span class="w"> </span>EposLib/epos.repos<span class="w">        </span><span class="c1"># pulls ros2units</span>
+<span class="k">constexpr</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="n">kPeriod</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="n">ms</span><span class="p">;</span><span class="w">                 </span><span class="c1">// = sync_period</span>
+<span class="k">auto</span><span class="w"> </span><span class="n">next</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">chrono</span><span class="o">::</span><span class="n">steady_clock</span><span class="o">::</span><span class="n">now</span><span class="p">();</span>
+<span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">running</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">motor</span><span class="p">.</span><span class="n">StageTargetVelocity</span><span class="p">(</span><span class="n">ComputeTarget</span><span class="p">(</span><span class="n">motor</span><span class="p">.</span><span class="n">GetCachedVelocity</span><span class="p">()));</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">motor</span><span class="p">.</span><span class="n">IsCyclicHealthy</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">break</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w">  </span><span class="n">next</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">kPeriod</span><span class="p">;</span>
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">this_thread</span><span class="o">::</span><span class="n">sleep_until</span><span class="p">(</span><span class="n">next</span><span class="p">);</span>
+<span class="p">}</span>
 
-<span class="nb">cd</span><span class="w"> </span>~/ros2_ws
-<span class="nb">source</span><span class="w"> </span>/opt/ros/humble/setup.bash
-colcon<span class="w"> </span>build
-<span class="nb">source</span><span class="w"> </span>install/setup.bash
+<span class="n">motor</span><span class="p">.</span><span class="n">StageTargetVelocity</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span><span class="w">                  </span><span class="c1">// brake with the velocity loop</span>
+<span class="c1">// ... wait for |velocity| to drop ...</span>
+<span class="n">motor</span><span class="p">.</span><span class="n">ExitCyclicMode</span><span class="p">();</span>
+<span class="n">motor</span><span class="p">.</span><span class="n">Disable</span><span class="p">();</span>
 </code></pre></div>
-<h3 id="bring-up-the-can-interface">Bring up the CAN interface<a class="headerlink" href="#bring-up-the-can-interface" title="Permanent link">#</a></h3>
-<p>The example network runs at 1 Mbit/s:</p>
-<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>ip<span class="w"> </span>link<span class="w"> </span><span class="nb">set</span><span class="w"> </span>can0<span class="w"> </span><span class="nb">type</span><span class="w"> </span>can<span class="w"> </span>bitrate<span class="w"> </span><span class="m">1000000</span>
-sudo<span class="w"> </span>ip<span class="w"> </span>link<span class="w"> </span><span class="nb">set</span><span class="w"> </span>can0<span class="w"> </span>up
+<p>Complete, tested programs: <a href="../../examples/cyclic-velocity/">cyclic velocity</a>,
+<a href="../../examples/cyclic-torque/">cyclic torque</a>, <a href="../../examples/cyclic-position/">cyclic position</a>.</p>
+<h2 id="position-csp">Position (CSP)<a class="headerlink" href="#position-csp" title="Permanent link">#</a></h2>
+<p>The drive's position loop follows your trajectory, interpolating between setpoints over the
+<strong>interpolation time period</strong> - set it to the SYNC period:</p>
+<div class="highlight"><pre><span></span><code><span class="n">epos4</span><span class="o">::</span><span class="n">configs</span><span class="o">::</span><span class="n">CyclicConfigs</span><span class="w"> </span><span class="n">cyclic</span><span class="p">;</span>
+<span class="n">cyclic</span><span class="p">.</span><span class="n">interpolationTimePeriodMs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
+<span class="n">motor</span><span class="p">.</span><span class="n">GetConfigurator</span><span class="p">().</span><span class="n">Apply</span><span class="p">(</span><span class="n">cyclic</span><span class="p">);</span>
 </code></pre></div>
-<h3 id="try-it-without-hardware">Try it without hardware<a class="headerlink" href="#try-it-without-hardware" title="Permanent link">#</a></h3>
-<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>modprobe<span class="w"> </span>vcan
-sudo<span class="w"> </span>ip<span class="w"> </span>link<span class="w"> </span>add<span class="w"> </span>dev<span class="w"> </span>vcan0<span class="w"> </span><span class="nb">type</span><span class="w"> </span>vcan<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>sudo<span class="w"> </span>ip<span class="w"> </span>link<span class="w"> </span><span class="nb">set</span><span class="w"> </span>up<span class="w"> </span>vcan0
-
-<span class="nv">CFG</span><span class="o">=</span>install/eposlib/share/eposlib/config/epos4_network
-install/eposlib/lib/eposlib/epos4_sim<span class="w"> </span><span class="nv">$CFG</span>/epos4.eds<span class="w"> </span><span class="m">2</span><span class="w"> </span>vcan0<span class="w"> </span><span class="p">&amp;</span>
-install/eposlib/lib/eposlib/api_demo<span class="w"> </span><span class="nv">$CFG</span>/master.dcf<span class="w"> </span>vcan0<span class="w"> </span><span class="m">2</span>
-</code></pre></div>
-<p><code>api_demo</code> walks through the whole API: boot, PDO mapping check,
-configuration, telemetry, enabling and a profile position move.</p>
-<hr />
-<h2 id="status">Status<a class="headerlink" href="#status" title="Permanent link">#</a></h2>
-<p>EposLib is <strong>pre-1.0</strong>: the API may still change between minor versions.</p>
+<p>Steps in the setpoint larger than the drive can follow raise a following error
+(<code>HasFollowingError()</code>, fault <code>0x8611</code>) - generate a smooth trajectory, and size
+<code>LimitConfigs::followingErrorWindow</code> for it.</p>
+<h2 id="velocity-csv">Velocity (CSV)<a class="headerlink" href="#velocity-csv" title="Permanent link">#</a></h2>
+<p>The drive's velocity loop follows your velocity profile, and <strong>brakes actively</strong> toward a
+zero target - unlike CST, where zero torque lets the axis coast. The usual choice for wheels.</p>
+<h2 id="torque">Torque (CST)<a class="headerlink" href="#torque" title="Permanent link">#</a></h2>
+<p>The drive's current loop produces the torque you stage; the velocity is whatever physics
+makes of it.</p>
 <ul>
-<li>Covered by 193 tests that need no bus and no hardware.</li>
-<li>Every example of this documentation is compiled and run against <code>epos4_sim</code> before it is published (<code>scripts/check_examples.sh</code>).</li>
-<li>Verified end to end on a virtual CAN bus against <code>epos4_sim</code>.</li>
-<li>Cyclic Synchronous Torque has been run on a physical EPOS4 Module/Compact
-  50/15.</li>
-<li>1.0 will follow once the cyclic path and a homing run have been exercised on
-  a real axis.</li>
+<li><strong>Everything is relative to «Motor rated torque»</strong> (<code>0x6076</code> = nominal current × torque
+  constant), at the <strong>motor shaft</strong>. If the motor data was never configured it is 0, and
+  N m conversions fail. Check it first:
+  <div class="highlight"><pre><span></span><code><span class="k">auto</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">rated</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">motor</span><span class="p">.</span><span class="n">GetMotorRatedTorque</span><span class="p">().</span><span class="n">Refresh</span><span class="p">();</span><span class="w">   </span><span class="c1">// µN m</span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">rated</span><span class="p">.</span><span class="n">GetStatus</span><span class="p">()</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">rated</span><span class="p">.</span><span class="n">GetValue</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="cm">/* configure MotorConfigs */</span><span class="w"> </span><span class="p">}</span>
+</code></pre></div></li>
+<li><strong>Converters</strong>, which refresh the rated torque if it has not been read:
+  <div class="highlight"><pre><span></span><code><span class="n">std</span><span class="o">::</span><span class="n">optional</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="kt">int16_t</span><span class="o">&gt;</span><span class="w"> </span><span class="n">pm</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">motor</span><span class="p">.</span><span class="n">TorqueToPerThousand</span><span class="p">(</span><span class="mf">0.1</span><span class="n">_Nm</span><span class="p">);</span>
+<span class="n">std</span><span class="o">::</span><span class="n">optional</span><span class="o">&lt;</span><span class="n">units</span><span class="o">::</span><span class="n">torque</span><span class="o">::</span><span class="n">newton_meter_t</span><span class="o">&gt;</span><span class="w"> </span><span class="n">t</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">motor</span><span class="p">.</span><span class="n">PerThousandToTorque</span><span class="p">(</span><span class="mi">150</span><span class="p">);</span>
+</code></pre></div></li>
+<li><strong>A free shaft accelerates.</strong> A constant torque on an unloaded motor produces constant
+  acceleration, until the motor reaches its no-load speed (about the speed constant × the
+  supply voltage) and the torque collapses. Guard the loop with a velocity limit, or test
+  against a blocked shaft.</li>
+<li><strong>Zero torque is not a brake.</strong> The axis coasts. To stop a moving axis, switch to CSV with
+  a zero target, or <code>QuickStop()</code>.</li>
 </ul>
-<div class="admonition info">
-<p class="admonition-title">Unreleased fixes</p>
-<p><code>GetBootStatus()</code>, restarting a bus with <code>Stop()</code> / <code>Start()</code>, and device
-calls that fail with <code>not_connected</code> instead of crashing before
-<code>Start()</code> arrive with
-<a href="https://github.com/Imcab/EposLib/pull/1">pull request #1</a>.</p>
-</div>
-<h2 id="where-to-go-next">Where to go next<a class="headerlink" href="#where-to-go-next" title="Permanent link">#</a></h2>
-<table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>New to EposLib</td>
-<td><a href="getting-started/">Getting Started</a>, then <a href="getting-started/first-run/">First run</a></td>
-</tr>
-<tr>
-<td>New to CANopen or CiA 402</td>
-<td><a href="concepts/">Concepts</a></td>
-</tr>
-<tr>
-<td>Setting up a robot's network</td>
-<td><a href="network/bus-yml/">The network description</a>, <a href="network/multi-drive/">Multiple drives</a></td>
-</tr>
-<tr>
-<td>Writing the control code</td>
-<td><a href="api/">API Usage</a>, <a href="api/cyclic-control/">Cyclic control</a></td>
-</tr>
-<tr>
-<td>Something does not work</td>
-<td><a href="troubleshooting/">Troubleshooting</a></td>
-</tr>
-<tr>
-<td>Looking up a code or a field</td>
-<td><a href="reference/">Reference</a></td>
-</tr>
-<tr>
-<td>Copying a working program</td>
-<td><a href="examples/">Examples</a></td>
-</tr>
-</tbody>
-</table>
+<h2 id="offsets-and-feed-forward">Offsets and feed-forward<a class="headerlink" href="#offsets-and-feed-forward" title="Permanent link">#</a></h2>
+<p>The cyclic requests carry optional offsets, added by the drive to the target:</p>
+<div class="highlight"><pre><span></span><code><span class="n">motor</span><span class="p">.</span><span class="n">SetControl</span><span class="p">(</span><span class="n">epos4</span><span class="o">::</span><span class="n">controls</span><span class="o">::</span><span class="n">CyclicPosition</span><span class="p">{}</span>
+<span class="w">                   </span><span class="p">.</span><span class="n">WithPosition</span><span class="p">(</span><span class="n">target</span><span class="p">)</span>
+<span class="w">                   </span><span class="p">.</span><span class="n">WithTorqueOffset</span><span class="p">(</span><span class="mf">0.12</span><span class="n">_Nm</span><span class="p">));</span><span class="w">     </span><span class="c1">// 0x60B2: gravity compensation</span>
+<span class="n">motor</span><span class="p">.</span><span class="n">SetControl</span><span class="p">(</span><span class="n">epos4</span><span class="o">::</span><span class="n">controls</span><span class="o">::</span><span class="n">CyclicVelocity</span><span class="p">{}</span>
+<span class="w">                   </span><span class="p">.</span><span class="n">WithVelocity</span><span class="p">(</span><span class="mi">800</span><span class="p">)</span>
+<span class="w">                   </span><span class="p">.</span><span class="n">WithVelocityOffset</span><span class="p">(</span><span class="mi">50</span><span class="p">));</span><span class="w">        </span><span class="c1">// 0x60B1</span>
+<span class="n">motor</span><span class="p">.</span><span class="n">SetControl</span><span class="p">(</span><span class="n">epos4</span><span class="o">::</span><span class="n">controls</span><span class="o">::</span><span class="n">CyclicTorque</span><span class="p">{}</span>
+<span class="w">                   </span><span class="p">.</span><span class="n">WithTorque</span><span class="p">(</span><span class="mf">0.2</span><span class="n">_Nm</span><span class="p">)</span>
+<span class="w">                   </span><span class="p">.</span><span class="n">WithTorqueOffset</span><span class="p">(</span><span class="mf">0.05</span><span class="n">_Nm</span><span class="p">));</span>
+</code></pre></div>
+<p><code>SetControl()</code> with a cyclic request resolves everything first, switches the mode if needed,
+writes the offsets over SDO and puts the target in the RPDO. It costs SDO round trips, so
+use it to set offsets occasionally - a torque offset that changes with the arm's pose, a few
+times a second - and <code>StageTarget*()</code> for the per-cycle target.</p>
 
 
 
@@ -3200,13 +2986,8 @@ calls that fail with <code>not_connected</code> instead of crashing before
 
 
 
-  
-  
 
 
-
-
-  
 
 
 
@@ -3230,19 +3011,33 @@ calls that fail with <code>not_connected</code> instead of crashing before
   
     
       
-        
-      
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../control-requests/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Control requests">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Control requests
+              </div>
+            </div>
+          </a>
         
         
           
-          <a href="getting-started/" class="md-footer__link md-footer__link--next" aria-label="Next: Getting Started">
+          <a href="../homing/" class="md-footer__link md-footer__link--next" aria-label="Next: Homing">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Getting Started
+                Homing
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -3283,10 +3078,10 @@ calls that fail with <code>not_connected</code> instead of crashing before
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.tabs", "navigation.sections", "navigation.indexes", "navigation.top", "navigation.footer", "search.highlight", "search.suggest", "content.code.copy", "content.code.annotate", "toc.follow"], "search": "assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.indexes", "navigation.top", "navigation.footer", "search.highlight", "search.suggest", "content.code.copy", "content.code.annotate", "toc.follow"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="assets/javascripts/bundle.d7400e89.min.js"></script>
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
     
   </body>
