@@ -222,6 +222,7 @@ configuration, telemetry, enabling and a profile position move.
 EposLib is **pre-1.0**: the API may still change between minor versions.
 
 - Covered by 193 tests that need no bus and no hardware.
+- Every example of this documentation is compiled and run against `epos4_sim` before it is published (`scripts/check_examples.sh`).
 - Verified end to end on a virtual CAN bus against `epos4_sim`.
 - Cyclic Synchronous Torque has been run on a physical EPOS4 Module/Compact
   50/15.
@@ -234,5 +235,14 @@ EposLib is **pre-1.0**: the API may still change between minor versions.
     `Start()` arrive with
     [pull request #1](https://github.com/Imcab/EposLib/pull/1).
 
-More guides - control modes, configuration, multi-drive networks and
-troubleshooting - are on the way.
+## Where to go next
+
+| | |
+|---|---|
+| New to EposLib | [Getting Started](getting-started/index.md), then [First run](getting-started/first-run.md) |
+| New to CANopen or CiA 402 | [Concepts](concepts/index.md) |
+| Setting up a robot's network | [The network description](network/bus-yml.md), [Multiple drives](network/multi-drive.md) |
+| Writing the control code | [API Usage](api/index.md), [Cyclic control](api/cyclic-control.md) |
+| Something does not work | [Troubleshooting](troubleshooting/index.md) |
+| Looking up a code or a field | [Reference](reference/index.md) |
+| Copying a working program | [Examples](examples/index.md) |

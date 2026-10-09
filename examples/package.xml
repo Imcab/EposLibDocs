@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>eposlib_examples</name>
+  <version>0.1.0</version>
+  <description>Complete example programs from the EposLib documentation.</description>
+  <maintainer email="cabreratrejoimadjared@gmail.com">Imad Jared Cabrera Trejo</maintainer>
+  <license>Apache-2.0</license>
+
+  <buildtool_depend>cmake</buildtool_depend>
+  <depend>eposlib</depend>
+  <depend>ros2units</depend>
+
+  <export>
+    <build_type>cmake</build_type>
+  </export>
+</package>

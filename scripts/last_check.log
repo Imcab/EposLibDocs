@@ -1,0 +1,170 @@
+build: all examples compiled without warnings
+PASS  device_info
+      boot     : ok ('L' NMT slave was initially operational.)
+      identity : EPOS4 Module/Compact 50/15, firmware EPOS4_0170h_6552h_0000h_0000h, serial 12345678
+      pdo      : active
+      mapping  : drive and master agree
+      state    : Switch on disabled
+      mode     : None
+      history  : 0x8220 0x8220 0x8220 0x8220 0x8220
+      supply   : 48.0 V
+      stage    : 35.0 degC
+      current  : 0.050 A
+      nominal  : 15.000 A
+      Kt       : 0.00 mNm/A
+      rated    : 0.0000 Nm
+      position : 0 qc
+      velocity : 0 rpm
+PASS  configuration
+      before:
+        limits.maxMotorSpeed         50000 rpm
+        motionProfile.profileAcceleration 10000 rpm/s
+        velocityControl.p            20000 
+        velocityControl.i            500000 
+        motor.nominalCurrent         15000 mA
+      after:
+        limits.maxMotorSpeed         4000 rpm
+        motionProfile.profileAcceleration 3000 rpm/s
+      save: ok
+PASS  encoder_setup
+      sensor 1: 0x01  sensor 2: 0x00  sensor 3: 0x10
+      main sensor resolution: 0 qc/rev
+      encoder 1: 500 pulses/rev = 2000 qc/rev
+      resolution from the encoder pulses: 2000 qc/rev
+      output angle: 0.000 deg
+      output velocity: 0.000 rpm
+PASS  profile_position
+      move 1 done at 10000 qc
+      move 2 done at 60000 qc
+      back at 0 qc
+PASS  cyclic_velocity
+        t=0.00s  target=     0  actual=     0 rpm
+        t=0.20s  target=   400  actual=   218 rpm
+        t=0.40s  target=   800  actual=   619 rpm
+        t=0.60s  target=  1000  actual=   978 rpm
+        t=0.80s  target=  1000  actual=   999 rpm
+        t=1.00s  target=  1000  actual=   999 rpm
+        t=1.20s  target=  1000  actual=   999 rpm
+        t=1.40s  target=  1000  actual=   999 rpm
+        t=1.60s  target=  1000  actual=   999 rpm
+        t=1.80s  target=  1000  actual=   999 rpm
+        t=2.00s  target=  1000  actual=   999 rpm
+        t=2.20s  target=  1000  actual=   999 rpm
+        t=2.40s  target=  1000  actual=   999 rpm
+        t=2.60s  target=   800  actual=   957 rpm
+        t=2.80s  target=   400  actual=   578 rpm
+        t=3.00s  target=     0  actual=   163 rpm
+PASS  cyclic_torque
+      rated torque 0.4500 Nm, commanding 0.0500 Nm
+        t=0.00s  torque=    0 per mille  velocity=     0 rpm
+        t=0.20s  torque=  111 per mille  velocity=   184 rpm
+        t=0.40s  torque=  111 per mille  velocity=   218 rpm
+        t=0.60s  torque=  111 per mille  velocity=   221 rpm
+        t=0.80s  torque=  111 per mille  velocity=   221 rpm
+        t=1.00s  torque=  111 per mille  velocity=   221 rpm
+        t=1.20s  torque=  111 per mille  velocity=   221 rpm
+        t=1.40s  torque=  111 per mille  velocity=   221 rpm
+        t=1.60s  torque=  111 per mille  velocity=   221 rpm
+        t=1.80s  torque=  111 per mille  velocity=   221 rpm
+PASS  cyclic_position
+        t=0.00s  target=   0.00 deg  actual=   0.00 deg
+        t=0.25s  target=  14.15 deg  actual=  11.77 deg
+        t=0.50s  target=  20.00 deg  actual=  19.52 deg
+        t=0.75s  target=  14.13 deg  actual=  16.88 deg
+        t=1.00s  target=  -0.01 deg  actual=   3.11 deg
+        t=1.25s  target= -14.16 deg  actual= -10.73 deg
+        t=1.50s  target= -20.00 deg  actual= -19.76 deg
+        t=1.75s  target= -14.13 deg  actual= -16.88 deg
+        t=2.00s  target=   0.01 deg  actual=  -4.35 deg
+        t=2.25s  target=  14.15 deg  actual=  10.73 deg
+        t=2.50s  target=  20.00 deg  actual=  19.75 deg
+        t=2.75s  target=  14.13 deg  actual=  16.17 deg
+        t=3.00s  target=  -0.02 deg  actual=   3.73 deg
+        t=3.25s  target= -14.15 deg  actual= -10.72 deg
+        t=3.50s  target= -20.00 deg  actual= -19.52 deg
+        t=3.75s  target= -14.13 deg  actual= -16.54 deg
+PASS  homing
+      supported: 37 34 33 27 23 18 17 11 7 2 1 -1 -2 -3 -4
+      negative limit active: no
+      homing attained, position 0 qc, referenced: yes
+      position is now 1000 qc
+PASS  fault_monitor
+        emcy reg : generic, communication
+      EMCY: 0x8220 unknown error (not in the chapter 7 table; newer firmware?)
+        emcy reg : generic, communication
+      EMCY: 0x8220 unknown error (not in the chapter 7 table; newer firmware?)
+        emcy reg : generic, communication
+      EMCY: 0x8220 unknown error (not in the chapter 7 table; newer firmware?)
+        emcy reg : generic, communication
+      EMCY: 0x8220 unknown error (not in the chapter 7 table; newer firmware?)
+        emcy reg : generic, communication
+      EMCY: 0x8220 unknown error (not in the chapter 7 table; newer firmware?)
+        emcy reg : generic, communication
+      EMCY: 0x8220 unknown error (not in the chapter 7 table; newer firmware?)
+        emcy reg : generic, communication
+      EMCY: 0x8220 unknown error (not in the chapter 7 table; newer firmware?)
+        emcy reg : generic, communication
+      EMCY: 0x8220 unknown error (not in the chapter 7 table; newer firmware?)
+        emcy reg : generic, communication
+      EMCY: 0x8220 unknown error (not in the chapter 7 table; newer firmware?)
+        emcy reg : generic, communication
+      EMCY: 0x8220 unknown error (not in the chapter 7 table; newer firmware?)
+        emcy reg : generic, communication
+      EMCY: 0x8220 unknown error (not in the chapter 7 table; newer firmware?)
+        emcy reg : generic, communication
+      EMCY: 0x8220 unknown error (not in the chapter 7 table; newer firmware?)
+        emcy reg : generic, communication
+      EMCY: 0x8220 unknown error (not in the chapter 7 table; newer firmware?)
+        emcy reg : generic, communication
+      EMCY: 0x8220 unknown error (not in the chapter 7 table; newer firmware?)
+        emcy reg : generic, communication
+      EMCY: 0x8220 unknown error (not in the chapter 7 table; newer firmware?)
+        emcy reg : generic, communication
+      EMCY: 0x8220 unknown error (not in the chapter 7 table; newer firmware?)
+        emcy reg : generic, communication
+      EMCY: 0x8220 unknown error (not in the chapter 7 table; newer firmware?)
+        emcy reg : generic, communication
+      EMCY: 0x8220 unknown error (not in the chapter 7 table; newer firmware?)
+        emcy reg : generic, communication
+      EMCY: 0x8220 unknown error (not in the chapter 7 table; newer firmware?)
+        emcy reg : generic, communication
+      EMCY: 0x8220 unknown error (not in the chapter 7 table; newer firmware?)
+        emcy reg : generic, communication
+      EMCY: 0x8220 unknown error (not in the chapter 7 table; newer firmware?)
+        emcy reg : generic, communication
+      EMCY: 0x8220 unknown error (not in the chapter 7 table; newer firmware?)
+        emcy reg : generic, communication
+      EMCY: 0x8220 unknown error (not in the chapter 7 table; newer firmware?)
+        emcy reg : generic, communication
+      EMCY: 0x8220 unknown error (not in the chapter 7 table; newer firmware?)
+        emcy reg : generic, communication
+      48.0 V  35.0 degC  I2t 0 %  last EMCY 0x8220
+      0x0000 No Error
+        register : no error flags
+        reaction : none
+        live reg : generic, communication
+      clearing... ok
+      48.0 V  35.0 degC  I2t 0 %  last EMCY 0x8220
+      48.0 V  35.0 degC  I2t 0 %  last EMCY 0x8220
+      48.0 V  35.0 degC  I2t 0 %  last EMCY 0x8220
+      48.0 V  35.0 degC  I2t 0 %  last EMCY 0x8220
+      48.0 V  35.0 degC  I2t 0 %  last EMCY 0x8220
+PASS  digital_io
+      negative limit 0, positive limit 0, home 0
+      functions 0x00000000, pins 0x0000
+      general purpose A: 0
+      output A: 1, pins 0x0001
+      analog input 1: 1.234 V
+      index latched at 2000 qc (1 edges)
+PASS  multi_drive
+      supply: left 48.0 V, right 48.0 V
+        t=0.00s  left     0 rpm  right     0 rpm
+        t=0.50s  left   799 rpm  right   799 rpm
+        t=1.00s  left   799 rpm  right   799 rpm
+        t=1.50s  left   799 rpm  right   799 rpm
+        t=2.00s  left   799 rpm  right   799 rpm
+        t=2.50s  left   600 rpm  right  -599 rpm
+        t=3.00s  left   600 rpm  right  -599 rpm
+        t=3.50s  left   600 rpm  right  -599 rpm
+not run (epos4_sim does not model Profile Velocity): profile_velocity - compiled only
+failures: 0

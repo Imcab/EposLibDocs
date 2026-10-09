@@ -1,0 +1,40 @@
+# Two EPOS4 on one CAN bus: node 2 (left wheel) and node 3 (right wheel).
+# The same per-node block as EposLib's config/epos4_network, repeated.
+
+master:
+  node_id: 1
+  baudrate: 1000
+  heartbeat_producer: 100   # ms; each drive faults after 3 x 100 ms without it
+  sync_period: 10000        # us = 100 Hz; match CyclicConfigs::interpolationTimePeriodMs = 10
+
+node_2:
+  node_id: 2
+  dcf: "epos4.eds"
+  heartbeat_producer: 500
+  heartbeat_consumer: true
+  rpdo:
+    1: {cob_id: "auto", transmission: 1, mapping: [{index: 0x6040}, {index: 0x607A}]}
+    2: {cob_id: "auto", transmission: 1, mapping: [{index: 0x60FF}, {index: 0x6071}]}
+    3: {enabled: false}
+    4: {enabled: false}
+  tpdo:
+    1: {cob_id: "auto", transmission: 1, mapping: [{index: 0x6041}, {index: 0x6064}]}
+    2: {cob_id: "auto", transmission: 1, mapping: [{index: 0x606C}, {index: 0x6077}]}
+    3: {enabled: false}
+    4: {enabled: false}
+
+node_3:
+  node_id: 3
+  dcf: "epos4.eds"
+  heartbeat_producer: 500
+  heartbeat_consumer: true
+  rpdo:
+    1: {cob_id: "auto", transmission: 1, mapping: [{index: 0x6040}, {index: 0x607A}]}
+    2: {cob_id: "auto", transmission: 1, mapping: [{index: 0x60FF}, {index: 0x6071}]}
+    3: {enabled: false}
+    4: {enabled: false}
+  tpdo:
+    1: {cob_id: "auto", transmission: 1, mapping: [{index: 0x6041}, {index: 0x6064}]}
+    2: {cob_id: "auto", transmission: 1, mapping: [{index: 0x606C}, {index: 0x6077}]}
+    3: {enabled: false}
+    4: {enabled: false}

@@ -19,20 +19,112 @@ theme:
   icon:
     repo: fontawesome/brands/github
   features:
-    - content.code.copy
+    - navigation.tabs
+    - navigation.sections
+    - navigation.indexes
+    - navigation.top
     - navigation.footer
+    - search.highlight
+    - search.suggest
+    - content.code.copy
+    - content.code.annotate
+    - toc.follow
+
+plugins:
+  - search
 
 markdown_extensions:
   - admonition
   - attr_list
+  - md_in_html
   - tables
+  - def_list
+  - footnotes
   - toc:
       permalink: "#"
+  - pymdownx.details
   - pymdownx.highlight
+  - pymdownx.inlinehilite
   - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.snippets:
+      base_path: [examples, includes]
+      check_paths: true
 
 extra_css:
   - stylesheets/extra.css
 
 nav:
   - Home: index.md
+  - Getting Started:
+      - getting-started/index.md
+      - Requirements: getting-started/requirements.md
+      - Installation: getting-started/installation.md
+      - Setting up the CAN bus: getting-started/can-setup.md
+      - First run: getting-started/first-run.md
+      - Simulation: getting-started/simulation.md
+      - Using EposLib in your package: getting-started/your-package.md
+  - Concepts:
+      - concepts/index.md
+      - Architecture: concepts/architecture.md
+      - CANopen primer: concepts/canopen.md
+      - The CiA 402 state machine: concepts/state-machine.md
+      - Units: concepts/units.md
+      - Threading and timing: concepts/threading.md
+  - Network:
+      - network/index.md
+      - The network description (bus.yml): network/bus-yml.md
+      - PDO mapping: network/pdo-mapping.md
+      - SYNC and heartbeat: network/sync-heartbeat.md
+      - Multiple drives: network/multi-drive.md
+  - API Usage:
+      - api/index.md
+      - Bus and device lifecycle: api/lifecycle.md
+      - Enabling and stopping: api/enabling.md
+      - Control requests: api/control-requests.md
+      - Cyclic control: api/cyclic-control.md
+      - Homing: api/homing.md
+      - Status signals: api/status-signals.md
+      - Configuration: api/configuration.md
+      - Encoders: api/encoders.md
+      - Digital and analog I/O: api/io.md
+      - Brake, stops and protection: api/safety.md
+      - Diagnostics and faults: api/diagnostics.md
+      - Raw object access: api/raw-access.md
+      - The core library: api/core.md
+  - Examples:
+      - examples/index.md
+      - Device information: examples/device-info.md
+      - Profile position: examples/profile-position.md
+      - Profile velocity: examples/profile-velocity.md
+      - Cyclic velocity: examples/cyclic-velocity.md
+      - Cyclic torque: examples/cyclic-torque.md
+      - Cyclic position: examples/cyclic-position.md
+      - Homing: examples/homing.md
+      - Multiple drives: examples/multi-drive.md
+      - Fault monitor: examples/fault-monitor.md
+      - Configuration: examples/configuration.md
+      - Encoder setup: examples/encoder-setup.md
+      - Digital I/O and touch probe: examples/digital-io.md
+  - Troubleshooting:
+      - troubleshooting/index.md
+      - CAN bus: troubleshooting/can-bus.md
+      - Boot and PDOs: troubleshooting/boot-and-pdo.md
+      - Common faults: troubleshooting/faults.md
+      - FAQ: troubleshooting/faq.md
+  - Reference:
+      - reference/index.md
+      - Device error codes: reference/error-codes.md
+      - SDO abort codes: reference/sdo-abort-codes.md
+      - Configuration fields: reference/configuration-fields.md
+      - Enumerations: reference/enumerations.md
+      - Object dictionary: reference/object-dictionary.md
+      - Hardware: reference/hardware.md
+      - Changelog: reference/changelog.md
+
+validation:
+  links:
+    anchors: warn
+    absolute_links: warn
+    unrecognized_links: warn
