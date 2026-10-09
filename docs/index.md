@@ -34,6 +34,15 @@ The API is device-oriented: a `CanBus` owns the CANopen master, and each drive i
     one. For maxon's own documentation and software, see
     [maxongroup.com](https://www.maxongroup.com/en/drives-and-systems/controls/positioning-controllers).
 
+## See it move
+
+A motor simulated in your browser with the same laws the EPOS4 runs - an inertia, friction, a
+current limit, the back-EMF voltage limit, and the PI / PID controllers of
+[Control loops](epos4/control-loops.md). Pick a mode: in the profile mode the drive plans the
+motion, in the cyclic ones your program sends a point every 10 ms.
+
+<div class="epos-anim" data-anim="control-sim"></div>
+
 [Source on GitHub](https://github.com/Imcab/EposLib) ·
 [Changelog](https://github.com/Imcab/EposLib/blob/main/CHANGELOG.md) ·
 License: Apache-2.0

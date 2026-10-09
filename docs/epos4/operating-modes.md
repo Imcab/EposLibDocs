@@ -6,6 +6,8 @@ mode their request needs - but each mode has its own inputs, outputs, limits and
 and this page goes through them one by one. Section and figure numbers refer to the *EPOS4
 Firmware Specification*.
 
+<div class="epos-anim" data-anim="control-sim"></div>
+
 | Value | Mode | EposLib | Trajectory |
 |---|---|---|---|
 | 1 | Profile Position (PPM) | `SetControl(controls::ProfilePosition)` | drive |

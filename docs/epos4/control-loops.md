@@ -13,6 +13,8 @@ flowchart LR
   M -->|"i (shunts)"| CC
 ```
 
+<div class="epos-anim" data-anim="cascade"></div>
+
 The inner loop runs ten times faster than the outer ones. That separation is what lets each
 loop treat the one inside it as ideal: to the velocity controller, "command a current" is as
 good as "get that torque".

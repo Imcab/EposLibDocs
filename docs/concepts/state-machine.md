@@ -63,6 +63,8 @@ stateDiagram-v2
   OE --> FRA: 13 error
 ```
 
+<div class="epos-anim" data-anim="state-machine"></div>
+
 `Enable()` follows 2, 3, 4; `Disable()` sends *Disable voltage* (7, 9, 10 or 12, from wherever
 the drive is); `ClearFault()` performs 15; `QuickStop()` is 11 and `Enable()` from there is 16.
 

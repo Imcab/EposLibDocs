@@ -75,6 +75,8 @@ The position controller drives the current loop directly - its output is a curre
 with velocity and acceleration **feed-forward**; the velocity controller is a separate
 function used by the velocity modes. See [Control loops](control-loops.md).
 
+<div class="epos-anim" data-anim="cascade"></div>
+
 ## Timing
 
 | Function | Rate | Period |

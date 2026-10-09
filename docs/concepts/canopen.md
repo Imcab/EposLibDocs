@@ -43,6 +43,10 @@ base plus the node-ID, which is how the receiver knows what a frame is and who s
 PDOs are named from the **node's** point of view: the drive *transmits* TPDOs (its feedback)
 and *receives* RPDOs (your setpoints).
 
+### One SYNC period on the bus
+
+<div class="epos-anim" data-anim="bus"></div>
+
 ### NMT: network management
 
 Each node has a network state:
