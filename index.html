@@ -509,6 +509,17 @@ endorsed or supported by maxon. "maxon" and "EPOS4" are trademarks of maxon inte
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#see-it-move" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        See it move
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#what-it-does" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -3369,6 +3380,17 @@ endorsed or supported by maxon. "maxon" and "EPOS4" are trademarks of maxon inte
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#see-it-move" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        See it move
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#what-it-does" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -3591,6 +3613,13 @@ reproduced only to identify and explain the hardware, with their source given un
 one. For maxon's own documentation and software, see
 <a href="https://www.maxongroup.com/en/drives-and-systems/controls/positioning-controllers">maxongroup.com</a>.</p>
 </div>
+<h2 id="see-it-move">See it move<a class="headerlink" href="#see-it-move" title="Permanent link">#</a></h2>
+<p>A motor simulated in your browser with the same laws the EPOS4 runs - an inertia, friction, a
+current limit, the back-EMF voltage limit, and the PI / PID controllers of
+<a href="epos4/control-loops/">Control loops</a>. Pick a mode: in the profile mode the drive plans the
+motion, in the cyclic ones your program sends a point every 10 ms.</p>
+<div class="epos-anim" data-anim="control-sim"></div>
+
 <p><a href="https://github.com/Imcab/EposLib">Source on GitHub</a> ·
 <a href="https://github.com/Imcab/EposLib/blob/main/CHANGELOG.md">Changelog</a> ·
 License: Apache-2.0</p>
@@ -3932,6 +3961,8 @@ calls that fail with <code>not_connected</code> instead of crashing before
       <script src="assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="javascripts/mathjax.js"></script>
+      
+        <script src="javascripts/epos-anim.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js"></script>
       

@@ -4,8 +4,8 @@
    thin rules, square corners, no shadows. Light scheme only. */
 
 :root {
-  --epos-red: #8b1a1a;
-  --epos-red-dark: #6b1010;
+  --epos-red: #df1b25;
+  --epos-red-dark: #b8141d;
   --epos-ink: #1c1c1c;
   --epos-muted: #5a5a5a;
   --epos-rule: #c9c2b8;
@@ -133,25 +133,6 @@ body {
   border-bottom: 1px solid var(--epos-rule);
 }
 
-.md-typeset .admonition,
-.md-typeset details {
-  border-radius: 0;
-  box-shadow: none;
-  border: 1px solid var(--epos-rule);
-  border-left: 4px solid var(--epos-red);
-  font-size: 0.78rem;
-}
-.md-typeset .admonition > .admonition-title,
-.md-typeset details > summary {
-  background: var(--epos-code-bg);
-  color: var(--epos-red);
-  font-weight: 700;
-}
-.md-typeset .admonition > .admonition-title::before,
-.md-typeset details > summary::before {
-  background-color: var(--epos-red);
-}
-
 /* Footer: a thin rule, no dark band. */
 .md-footer {
   border-top: 1px solid var(--epos-rule);
@@ -167,12 +148,12 @@ body {
 
 /* The "unofficial" banner. */
 .md-banner {
-  background: #1c1c1c;
-  color: #f2f2f2;
+  background: #ffd400;
+  color: #1c1c1c;
   font-size: 0.68rem;
 }
 .md-banner strong {
-  color: #ffb3b3;
+  color: #1c1c1c;
   letter-spacing: 0.04em;
   text-transform: uppercase;
   margin-right: 0.4em;
@@ -216,23 +197,66 @@ body {
   padding: 0.4em 0.8em;
 }
 
-/* Every admonition type in the site's red, not Material's per-type colors. */
-.md-typeset .admonition,
-.md-typeset details {
-  border-color: var(--epos-rule) !important;
-  border-left-color: var(--epos-red) !important;
-}
-.md-typeset .admonition > .admonition-title,
-.md-typeset details > summary {
-  background-color: var(--epos-code-bg) !important;
-}
-.md-typeset .admonition > .admonition-title::before,
-.md-typeset details > summary::before,
-.md-typeset details > summary::after {
-  background-color: var(--epos-red) !important;
-}
-
 /* Logos sit on the page, without the figure frame. */
 .md-typeset img[alt="maxon"] {
   border: none !important;
+}
+
+/* The EPOSLIB wordmark in the header. */
+.md-header__button.md-logo img,
+.md-header__button.md-logo svg {
+  height: 0.85rem;
+  width: auto;
+}
+.md-header__button.md-logo {
+  margin-right: 0.6rem;
+}
+
+/* Animated figures (javascripts/epos-anim.js). */
+.epos-anim {
+  border: 1px solid var(--epos-rule);
+  background: #ffffff;
+  padding: 0.6rem 0.8rem 0.4rem;
+  margin: 1.2em 0;
+}
+.epos-anim__bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin-bottom: 0.5rem;
+}
+.epos-anim__btn {
+  font-family: var(--epos-heading-font);
+  font-size: 0.68rem;
+  font-weight: 600;
+  padding: 0.25rem 0.7rem;
+  border: 1.5px solid var(--epos-ink);
+  background: #ffffff;
+  color: var(--epos-ink);
+  cursor: pointer;
+}
+.epos-anim__btn:hover {
+  border-color: var(--epos-red);
+  color: var(--epos-red);
+}
+.epos-anim__btn.is-active {
+  background: var(--epos-red);
+  border-color: var(--epos-red);
+  color: #ffffff;
+}
+.epos-anim__info {
+  font-size: 0.72rem;
+  color: var(--epos-muted);
+  margin: 0.4rem 0 0.2rem;
+}
+.epos-anim__readout {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.66rem;
+  color: var(--epos-ink);
+  white-space: pre-wrap;
+}
+
+/* The wordmark replaces the site name in the header. */
+.md-header__title .md-header__topic:first-child {
+  visibility: hidden;
 }
