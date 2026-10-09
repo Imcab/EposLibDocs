@@ -1,0 +1,38 @@
+site_name: EposLib
+site_description: C++ API for maxon EPOS4 controllers over CANopen
+site_url: https://imcab.github.io/EposLibDocs/
+repo_url: https://github.com/Imcab/EposLib
+repo_name: Imcab/EposLib
+edit_uri: ""
+copyright: EposLib is licensed under Apache-2.0.
+
+theme:
+  name: material
+  language: en
+  font:
+    text: Source Serif 4
+    code: IBM Plex Mono
+  palette:
+    scheme: default
+    primary: custom
+    accent: custom
+  icon:
+    repo: fontawesome/brands/github
+  features:
+    - content.code.copy
+    - navigation.footer
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - tables
+  - toc:
+      permalink: "#"
+  - pymdownx.highlight
+  - pymdownx.superfences
+
+extra_css:
+  - stylesheets/extra.css
+
+nav:
+  - Home: index.md
