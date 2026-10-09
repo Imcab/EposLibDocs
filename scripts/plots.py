@@ -22,7 +22,7 @@ DATA = ROOT / "scripts" / "data"
 OUT = ROOT / "docs" / "assets" / "plots"
 OUT.mkdir(parents=True, exist_ok=True)
 
-RED = "#8b1a1a"
+RED = "#c4161f"
 INK = "#1c1c1c"
 GREY = "#8a8a8a"
 LIGHT = "#d9d4cc"

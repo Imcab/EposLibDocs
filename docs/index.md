@@ -26,6 +26,36 @@ The API is device-oriented: a `CanBus` owns the CANopen master, and each drive i
 
 </div>
 
+[:material-download: Download ZIP](https://github.com/Imcab/EposLib/archive/refs/heads/main.zip){ .md-button .md-button--primary }
+[:fontawesome-brands-github: GitHub](https://github.com/Imcab/EposLib){ .md-button }
+[:material-rocket-launch: Get started](getting-started/index.md){ .md-button }
+[:material-robot-industrial: ROS 2](ros2/index.md){ .md-button }
+
+=== "colcon (ROS 2)"
+
+    ```bash
+    cd ~/ros2_ws/src
+    git clone https://github.com/Imcab/EposLib.git
+    vcs import . < EposLib/epos.repos
+    cd .. && colcon build --packages-up-to eposlib
+    ```
+
+=== "CMake"
+
+    ```bash
+    git clone https://github.com/Imcab/ros2units.git
+    git clone https://github.com/Imcab/EposLib.git
+    cmake -S EposLib -B build -DCMAKE_PREFIX_PATH=$PWD/ros2units
+    cmake --build build -j
+    ```
+
+=== "Docker"
+
+    ```bash
+    docker run -it --rm --network host -v ~/ros2_ws:/root/ros2_ws osrf/ros:humble-desktop bash
+    apt update && apt install -y ros-humble-lely-core-libraries python3-vcstool
+    ```
+
 !!! warning "Unofficial"
     EposLib is an independent open-source project. It is **not** made, endorsed or supported
     by maxon. "maxon", "EPOS4" and "EPOS Studio" are trademarks of maxon international ltd.;
@@ -275,3 +305,5 @@ EposLib is **pre-1.0**: the API may still change between minor versions.
 | Something does not work | [Troubleshooting](troubleshooting/index.md) |
 | Looking up a code or a field | [Reference](reference/index.md) |
 | Copying a working program | [Examples](examples/index.md) |
+| Using it from ROS 2 - a node, or ros2_control | [ROS 2](ros2/index.md) |
+| Who made it | [Authors](about/authors.md) |

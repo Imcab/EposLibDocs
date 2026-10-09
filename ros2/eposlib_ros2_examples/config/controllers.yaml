@@ -1,0 +1,14 @@
+controller_manager:
+  ros__parameters:
+    update_rate: 100          # Hz - match the SYNC period of the network
+
+    joint_state_broadcaster:
+      type: joint_state_broadcaster/JointStateBroadcaster
+
+    position_controller:
+      type: forward_command_controller/ForwardCommandController
+
+position_controller:
+  ros__parameters:
+    joints: [shoulder]
+    interface_name: position

@@ -24,6 +24,7 @@ theme:
   icon:
     repo: fontawesome/brands/github
   features:
+    - announce.dismiss
     - navigation.tabs
     - navigation.sections
     - navigation.indexes
@@ -58,11 +59,14 @@ markdown_extensions:
   - pymdownx.arithmatex:
       generic: true
   - pymdownx.caret
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
   - pymdownx.keys
   - pymdownx.tabbed:
       alternate_style: true
   - pymdownx.snippets:
-      base_path: [examples, includes]
+      base_path: [examples, includes, ros2]
       check_paths: true
 
 extra_css:
@@ -119,6 +123,11 @@ nav:
       - Diagnostics and faults: api/diagnostics.md
       - Raw object access: api/raw-access.md
       - The core library: api/core.md
+  - ROS 2:
+      - ros2/index.md
+      - Differential drive node: ros2/diff-drive.md
+      - ros2_control hardware interface: ros2/ros2-control.md
+      - Patterns for ROS 2 nodes: ros2/patterns.md
   - Examples:
       - examples/index.md
       - Device information: examples/device-info.md
@@ -158,6 +167,8 @@ nav:
       - Object dictionary: reference/object-dictionary.md
       - Hardware: reference/hardware.md
       - Changelog: reference/changelog.md
+  - About:
+      - Authors: about/authors.md
       - Credits and sources: reference/credits.md
 
 validation:

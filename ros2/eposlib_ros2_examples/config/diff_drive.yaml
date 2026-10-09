@@ -1,0 +1,13 @@
+diff_drive:
+  ros__parameters:
+    interface: can0
+    dcf: ""                   # path to the master.dcf of your network
+    left_node_id: 2
+    right_node_id: 3
+    wheel_radius: 0.12        # m
+    wheel_separation: 0.55    # m, between the wheels' contact points
+    encoder_counts: 2000      # quadcounts per motor turn (4 x encoder pulses)
+    gear_ratio: 0.01          # output turns per motor turn (1:100)
+    right_inverted: true      # the right motor is mounted mirrored
+    max_wheel_rpm: 60.0
+    cmd_timeout_ms: 500

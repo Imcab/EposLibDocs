@@ -1,0 +1,51 @@
+build: eposlib_ros2_examples compiled without warnings
+[21:21:47] ===== diff_drive_node
+[INFO] [1791580909.506602314] [diff_drive]: wheels on nodes 2 and 3 ready
+[21:21:53] reading joint_states
+name:
+- left_wheel_joint
+- right_wheel_joint
+position:
+- 13.87961917541278
+- 21.704823820680378
+velocity:
+- 3.2494540013630426
+- 5.082049715957089
+effort: []
+PASS  wheels turn on cmd_vel
+  name: epos4/node_2
+  message: ok
+  - key: supply_V
+    value: '48.000000'
+  - key: power_stage_degC
+    value: '35.000000'
+  - key: i2t_motor_pct
+    value: '0'
+  - key: last_emcy
+    value: '0x8220'
+  name: epos4/node_3
+  message: ok
+bash: line 29:   877 Killed                  timeout -s KILL 6 ros2 topic pub -r 20 /cmd_vel geometry_msgs/msg/Twist "{linear: {x: 0.5}, angular: {z: 0.4}}" > /dev/null 2>&1
+
+after the cmd_vel timeout:
+velocity:
+- 0.0
+- -0.0
+[21:22:01] stopping diff_drive_node
+PASS  diff_drive_node exits on SIGINT
+[INFO] [1791580909.506602314] [diff_drive]: wheels on nodes 2 and 3 ready
+[INFO] [1791580921.595777543] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[21:22:01] ===== ros2_control EposSystem
+command interfaces
+	[94mshoulder/position [available] [claimed][0m
+state interfaces
+	shoulder/effort
+	shoulder/position
+	shoulder/velocity
+[92mjoint_state_broadcaster[0m joint_state_broadcaster/JointStateBroadcaster        [92mactive[0m
+[92mposition_controller    [0m forward_command_controller/ForwardCommandController  [92mactive[0m
+bash: line 49:  1158 Killed                  timeout -s KILL 4 ros2 topic pub -r 10 /position_controller/commands std_msgs/msg/Float64MultiArray "{data: [1.0]}" > /dev/null 2>&1
+shoulder position after a 1.0 rad command: 1.000000357564167
+PASS  ros2_control position
+failures: 0
+exit=0

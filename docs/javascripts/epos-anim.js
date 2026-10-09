@@ -13,7 +13,7 @@
 (function () {
   "use strict";
 
-  const RED = "#df1b25";
+  const RED = "#c4161f";
   const INK = "#1c1c1c";
   const GREY = "#9a948c";
   const RULE = "#d9d4cc";
@@ -440,7 +440,7 @@
       ctx.fillStyle = GREY; ctx.font = "11px " + FONT; ctx.textAlign = "left";
       ctx.fillText("CAN_H / CAN_L - 1 Mbit/s", mx + mw / 2 + 6, busY + 16);
 
-      box(ctx, mx, 30, mw, 54, "Master", "EposLib (node 1)", "#fff6f6", RED);
+      box(ctx, mx, 30, mw, 54, "Master", "EposLib (node 1)", "#fdf3f3", RED);
       ctx.strokeStyle = INK; ctx.lineWidth = 2;
       ctx.beginPath(); ctx.moveTo(mx + mw / 2, 84); ctx.lineTo(mx + mw / 2, busY); ctx.stroke();
       nodes.forEach((id, k) => {
@@ -534,7 +534,7 @@
       const X = [10, 10 + bw + gap, 10 + 2 * (bw + gap), 10 + 3 * (bw + gap)];
       const yMid = 95, yTop = 30, yBot = 160;
 
-      box(ctx, X[0], yMid - bh / 2, bw, bh, "Master", "setpoints, 100 Hz", "#fff6f6", RED);
+      box(ctx, X[0], yMid - bh / 2, bw, bh, "Master", "setpoints, 100 Hz", "#fdf3f3", RED);
       box(ctx, X[1], yTop, bw, bh, "Position PID", "2.5 kHz");
       box(ctx, X[1], yBot - bh, bw, bh, "Velocity PI", "2.5 kHz");
       box(ctx, X[2], yMid - bh / 2, bw, bh, "Current PI", "25 kHz");
@@ -638,7 +638,7 @@
       const bw = Math.min(150, W * 0.2), bh = 46;
       const pos = (key) => [S[key][0] * W - bw / 2, S[key][1] * H - bh / 2];
       // power region
-      ctx.fillStyle = "#fdeced";
+      ctx.fillStyle = "#fbe9ea";
       roundRect(ctx, W * 0.76, 12, W * 0.235, H - 24, 6); ctx.fill();
       ctx.fillStyle = RED; ctx.font = "600 11px " + FONT; ctx.textAlign = "center"; ctx.textBaseline = "top";
       ctx.fillText("power to the motor", W * 0.877, 16);

@@ -13,7 +13,7 @@ library they came from. Regenerate them with `scripts/generate.sh` after updatin
 | [Object dictionary](object-dictionary.md) | every object EposLib names, with its constant | `include/epos4/core/ObjectDictionary.hpp` |
 | [Hardware](hardware.md) | the EPOS4 variants the library recognises | `signals::HardwareName()` |
 | [Changelog](changelog.md) | what changed in each version | `CHANGELOG.md` |
-| [Credits and sources](credits.md) | where every maxon image and fact comes from | - |
+| [Credits and sources](credits.md) | where every image, logo and fact comes from | - |
 
 The object indices, bit layouts and error tables are transcribed from the **EPOS4 Firmware
 Specification, edition 2026-07** and the **EPOS4 Communication Guide, edition 2026-04**,

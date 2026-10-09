@@ -1,0 +1,7 @@
+<library path="eposlib_ros2_control">
+  <class name="eposlib_ros2_examples/EposSystem"
+         type="eposlib_ros2_examples::EposSystem"
+         base_class_type="hardware_interface::SystemInterface">
+    <description>EPOS4 joints over CANopen, through EposLib.</description>
+  </class>
+</library>

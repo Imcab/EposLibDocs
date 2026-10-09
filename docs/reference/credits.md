@@ -73,6 +73,14 @@ The images listed below are © maxon. They are reproduced, unmodified except for
 | `assets/maxon/manual/fig3-8-pvm-block.jpg` | Figure 3-8 | 3-25 |
 | `assets/maxon/manual/fig3-9-pvm-trajectory.jpg` | Figure 3-9 | 3-25 |
 
+## Other marks and artwork
+
+| | |
+|---|---|
+| ROS logo (`assets/ros/ros-logo.svg`) | from [ros-infrastructure/artwork](https://github.com/ros-infrastructure/artwork), CC BY-NC 4.0. ROS is a trademark of Open Robotics, used under its [trademark policy](https://www.ros.org/blog/media/). |
+| EposLib wordmark (`assets/logo.svg`, `assets/eposlib-wordmark.svg`, `assets/favicon.svg`) | drawn from the outlines of [Archivo Black](https://github.com/Omnibus-Type/ArchivoBlack), SIL Open Font License 1.1. |
+| Author photo | the author's GitHub avatar, loaded from github.com. |
+
 ## Everything else
 
 The plots under `assets/plots/` are drawn by `scripts/plots.py` from the formulas on these pages and from traces recorded with `epos4_sim`. The diagrams drawn in Mermaid and the text are part of this documentation, Apache-2.0 like EposLib.
