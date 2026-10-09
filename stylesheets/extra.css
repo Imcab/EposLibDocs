@@ -1,0 +1,150 @@
+/* EposLib - a classic technical manual: white paper, dark red ink, serif type,
+   thin rules, square corners, no shadows. Light scheme only. */
+
+:root {
+  --epos-red: #8b1a1a;
+  --epos-red-dark: #6b1010;
+  --epos-ink: #1c1c1c;
+  --epos-muted: #5a5a5a;
+  --epos-rule: #c9c2b8;
+  --epos-paper: #ffffff;
+  --epos-code-bg: #f4f2ee;
+}
+
+[data-md-color-scheme="default"] {
+  --md-primary-fg-color: var(--epos-red);
+  --md-primary-fg-color--light: var(--epos-red);
+  --md-primary-fg-color--dark: var(--epos-red-dark);
+  --md-primary-bg-color: #ffffff;
+  --md-accent-fg-color: var(--epos-red-dark);
+  --md-default-bg-color: var(--epos-paper);
+  --md-default-fg-color: var(--epos-ink);
+  --md-default-fg-color--light: var(--epos-muted);
+  --md-typeset-color: var(--epos-ink);
+  --md-typeset-a-color: var(--epos-red);
+  --md-code-bg-color: var(--epos-code-bg);
+  --md-code-fg-color: var(--epos-ink);
+  --md-footer-bg-color: #ffffff;
+  --md-footer-bg-color--dark: #ffffff;
+  --md-footer-fg-color: var(--epos-muted);
+  --md-footer-fg-color--light: var(--epos-muted);
+  --md-footer-fg-color--lighter: var(--epos-muted);
+}
+
+body {
+  background: var(--epos-paper);
+}
+
+/* Header: a plain red band, no shadow. */
+.md-header,
+.md-header--shadow {
+  box-shadow: none;
+}
+.md-header__topic {
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+/* Text. */
+.md-typeset {
+  font-size: 0.82rem;
+  line-height: 1.7;
+}
+.md-typeset h1,
+.md-typeset h2,
+.md-typeset h3 {
+  color: var(--epos-red);
+  font-weight: 700;
+  letter-spacing: 0;
+}
+
+/* Title with a double rule under it, like a printed manual. */
+.md-typeset h1 {
+  font-size: 2rem;
+  margin-bottom: 0.4em;
+  padding-bottom: 0.3em;
+  border-bottom: 3px double var(--epos-red);
+}
+.md-typeset h2 {
+  margin-top: 2em;
+  padding-bottom: 0.2em;
+  border-bottom: 1px solid var(--epos-rule);
+}
+.md-typeset h3 {
+  margin-top: 1.4em;
+}
+
+.md-typeset .epos-tagline {
+  font-size: 1.05rem;
+  font-style: italic;
+  color: var(--epos-muted);
+}
+
+.md-typeset a {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.md-typeset a:hover {
+  color: var(--epos-red-dark);
+}
+
+/* Code: grey paper, thin border, square corners. */
+.md-typeset pre > code,
+.md-typeset code {
+  border-radius: 0;
+}
+.md-typeset pre {
+  border: 1px solid var(--epos-rule);
+}
+
+/* Tables and admonitions: rules instead of cards. */
+.md-typeset table:not([class]) {
+  border: 1px solid var(--epos-rule);
+  border-radius: 0;
+  box-shadow: none;
+  font-size: 0.78rem;
+}
+.md-typeset table:not([class]) th,
+.md-typeset table:not([class]) td {
+  padding: 0.6em 0.9em;
+}
+/* Keep identifiers whole; a wide table scrolls inside its own box instead. */
+.md-typeset table:not([class]) code {
+  white-space: nowrap;
+}
+.md-typeset table:not([class]) th {
+  background: var(--epos-code-bg);
+  color: var(--epos-ink);
+  border-bottom: 1px solid var(--epos-rule);
+}
+
+.md-typeset .admonition,
+.md-typeset details {
+  border-radius: 0;
+  box-shadow: none;
+  border: 1px solid var(--epos-rule);
+  border-left: 4px solid var(--epos-red);
+  font-size: 0.78rem;
+}
+.md-typeset .admonition > .admonition-title,
+.md-typeset details > summary {
+  background: var(--epos-code-bg);
+  color: var(--epos-red);
+  font-weight: 700;
+}
+.md-typeset .admonition > .admonition-title::before,
+.md-typeset details > summary::before {
+  background-color: var(--epos-red);
+}
+
+/* Footer: a thin rule, no dark band. */
+.md-footer {
+  border-top: 1px solid var(--epos-rule);
+}
+.md-footer-meta {
+  background: #ffffff;
+}
+.md-footer-meta__inner,
+.md-copyright {
+  color: var(--epos-muted);
+}
