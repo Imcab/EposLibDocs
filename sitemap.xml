@@ -73,6 +73,10 @@
          <lastmod>2026-10-09</lastmod>
     </url>
     <url>
+         <loc>https://imcab.github.io/EposLibDocs/concepts/internals/</loc>
+         <lastmod>2026-10-09</lastmod>
+    </url>
+    <url>
          <loc>https://imcab.github.io/EposLibDocs/concepts/state-machine/</loc>
          <lastmod>2026-10-09</lastmod>
     </url>
@@ -82,6 +86,30 @@
     </url>
     <url>
          <loc>https://imcab.github.io/EposLibDocs/concepts/units/</loc>
+         <lastmod>2026-10-09</lastmod>
+    </url>
+    <url>
+         <loc>https://imcab.github.io/EposLibDocs/epos4/</loc>
+         <lastmod>2026-10-09</lastmod>
+    </url>
+    <url>
+         <loc>https://imcab.github.io/EposLibDocs/epos4/architecture/</loc>
+         <lastmod>2026-10-09</lastmod>
+    </url>
+    <url>
+         <loc>https://imcab.github.io/EposLibDocs/epos4/control-loops/</loc>
+         <lastmod>2026-10-09</lastmod>
+    </url>
+    <url>
+         <loc>https://imcab.github.io/EposLibDocs/epos4/motion-profiles/</loc>
+         <lastmod>2026-10-09</lastmod>
+    </url>
+    <url>
+         <loc>https://imcab.github.io/EposLibDocs/epos4/motor-and-thermal/</loc>
+         <lastmod>2026-10-09</lastmod>
+    </url>
+    <url>
+         <loc>https://imcab.github.io/EposLibDocs/epos4/operating-modes/</loc>
          <lastmod>2026-10-09</lastmod>
     </url>
     <url>
@@ -134,6 +162,14 @@
     </url>
     <url>
          <loc>https://imcab.github.io/EposLibDocs/examples/profile-velocity/</loc>
+         <lastmod>2026-10-09</lastmod>
+    </url>
+    <url>
+         <loc>https://imcab.github.io/EposLibDocs/examples/step-response/</loc>
+         <lastmod>2026-10-09</lastmod>
+    </url>
+    <url>
+         <loc>https://imcab.github.io/EposLibDocs/examples/telemetry-logger/</loc>
          <lastmod>2026-10-09</lastmod>
     </url>
     <url>
@@ -197,6 +233,10 @@
          <lastmod>2026-10-09</lastmod>
     </url>
     <url>
+         <loc>https://imcab.github.io/EposLibDocs/reference/credits/</loc>
+         <lastmod>2026-10-09</lastmod>
+    </url>
+    <url>
          <loc>https://imcab.github.io/EposLibDocs/reference/enumerations/</loc>
          <lastmod>2026-10-09</lastmod>
     </url>
@@ -214,6 +254,34 @@
     </url>
     <url>
          <loc>https://imcab.github.io/EposLibDocs/reference/sdo-abort-codes/</loc>
+         <lastmod>2026-10-09</lastmod>
+    </url>
+    <url>
+         <loc>https://imcab.github.io/EposLibDocs/reference/api/</loc>
+         <lastmod>2026-10-09</lastmod>
+    </url>
+    <url>
+         <loc>https://imcab.github.io/EposLibDocs/reference/api/canbus/</loc>
+         <lastmod>2026-10-09</lastmod>
+    </url>
+    <url>
+         <loc>https://imcab.github.io/EposLibDocs/reference/api/configurator/</loc>
+         <lastmod>2026-10-09</lastmod>
+    </url>
+    <url>
+         <loc>https://imcab.github.io/EposLibDocs/reference/api/encoder/</loc>
+         <lastmod>2026-10-09</lastmod>
+    </url>
+    <url>
+         <loc>https://imcab.github.io/EposLibDocs/reference/api/epos4/</loc>
+         <lastmod>2026-10-09</lastmod>
+    </url>
+    <url>
+         <loc>https://imcab.github.io/EposLibDocs/reference/api/mechanism-scale/</loc>
+         <lastmod>2026-10-09</lastmod>
+    </url>
+    <url>
+         <loc>https://imcab.github.io/EposLibDocs/reference/api/status-signal/</loc>
          <lastmod>2026-10-09</lastmod>
     </url>
     <url>
