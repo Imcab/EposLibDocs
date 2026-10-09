@@ -4,8 +4,8 @@
    thin rules, square corners, no shadows. Light scheme only. */
 
 :root {
-  --epos-red: #df1b25;
-  --epos-red-dark: #b8141d;
+  --epos-red: #c4161f;
+  --epos-red-dark: #9e1118;
   --epos-ink: #1c1c1c;
   --epos-muted: #5a5a5a;
   --epos-rule: #c9c2b8;
@@ -150,7 +150,14 @@ body {
 .md-banner {
   background: #ffd400;
   color: #1c1c1c;
-  font-size: 0.68rem;
+  font-size: 0.6rem;
+}
+.md-banner__inner {
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+}
+.md-banner__button {
+  color: #1c1c1c;
 }
 .md-banner strong {
   color: #1c1c1c;
@@ -205,7 +212,7 @@ body {
 /* The EPOSLIB wordmark in the header. */
 .md-header__button.md-logo img,
 .md-header__button.md-logo svg {
-  height: 0.85rem;
+  height: 1rem;
   width: auto;
 }
 .md-header__button.md-logo {
@@ -259,4 +266,58 @@ body {
 /* The wordmark replaces the site name in the header. */
 .md-header__title .md-header__topic:first-child {
   visibility: hidden;
+}
+
+/* The author card. */
+.md-typeset .author-card {
+  display: flex;
+  gap: 1.4rem;
+  align-items: flex-start;
+  border: 1px solid var(--epos-rule);
+  padding: 1rem 1.2rem;
+  margin: 1rem 0 1.6rem;
+}
+.md-typeset .author-card__photo {
+  border-radius: 50%;
+  border: 3px solid var(--epos-red);
+  flex: none;
+}
+.md-typeset .author-card h3 {
+  margin-top: 0;
+}
+@media (max-width: 600px) {
+  .md-typeset .author-card {
+    flex-direction: column;
+  }
+}
+
+/* Buttons in the site's red. */
+.md-typeset .md-button {
+  border-radius: 0;
+  font-family: var(--epos-heading-font);
+  font-weight: 600;
+}
+.md-typeset .md-button--primary {
+  background-color: var(--epos-red);
+  border-color: var(--epos-red);
+  color: #ffffff;
+}
+.md-typeset .md-button:hover {
+  background-color: var(--epos-red-dark);
+  border-color: var(--epos-red-dark);
+  color: #ffffff;
+}
+
+/* The two logos side by side on the ROS 2 pages. */
+.md-typeset .logo-row {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0.6rem 0 1rem;
+}
+.md-typeset .logo-row img {
+  border: none !important;
+  height: 46px;
+  width: auto;
 }

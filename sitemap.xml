@@ -5,6 +5,10 @@
          <lastmod>2026-10-09</lastmod>
     </url>
     <url>
+         <loc>https://imcab.github.io/EposLibDocs/about/authors/</loc>
+         <lastmod>2026-10-09</lastmod>
+    </url>
+    <url>
          <loc>https://imcab.github.io/EposLibDocs/api/</loc>
          <lastmod>2026-10-09</lastmod>
     </url>
@@ -282,6 +286,22 @@
     </url>
     <url>
          <loc>https://imcab.github.io/EposLibDocs/reference/api/status-signal/</loc>
+         <lastmod>2026-10-09</lastmod>
+    </url>
+    <url>
+         <loc>https://imcab.github.io/EposLibDocs/ros2/</loc>
+         <lastmod>2026-10-09</lastmod>
+    </url>
+    <url>
+         <loc>https://imcab.github.io/EposLibDocs/ros2/diff-drive/</loc>
+         <lastmod>2026-10-09</lastmod>
+    </url>
+    <url>
+         <loc>https://imcab.github.io/EposLibDocs/ros2/patterns/</loc>
+         <lastmod>2026-10-09</lastmod>
+    </url>
+    <url>
+         <loc>https://imcab.github.io/EposLibDocs/ros2/ros2-control/</loc>
          <lastmod>2026-10-09</lastmod>
     </url>
     <url>
